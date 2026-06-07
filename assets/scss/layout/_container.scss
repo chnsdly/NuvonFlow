@@ -1,0 +1,15 @@
+.container {
+  box-sizing: border-box;
+  max-width: var(--container);
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: calc(var(--space) * 2);
+}
+
+.container--wide {
+  --container: var(--container-wide);
+}
+
+.container--narrow {
+  --container: var(--container-narrow);
+}

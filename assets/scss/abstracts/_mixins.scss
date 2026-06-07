@@ -1,0 +1,14 @@
+
+/* 响应式断点 */
+$breakpoints: (
+  phone:   30rem,   // 480px
+  tablet:  48rem,   // 768px
+  laptop:  64rem,   // 1024px
+  desktop: 80rem,   // 1280px
+  wide:    96rem    // 1536px
+);
+@mixin mq-up($name) {
+  @media (min-width: map-get($breakpoints, $name)) {
+    @content;
+  }
+}

@@ -1,0 +1,21 @@
+baseURL = "https://example.com/"
+title = "Nuvon Flow Control"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+
+  [languages.en]
+    contentDir = "content/en"
+    label = "English"
+    locale = "en-US"
+    title = "Nuvon Flow Control"
+    weight = 1
+
+  [languages.zh]
+    contentDir = "content/zh"
+    label = "中文"
+    locale = "zh-CN"
+    title = "Nuvon Flow Control 中文站"
+    weight = 2

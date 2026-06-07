@@ -1,0 +1,173 @@
+[[main]]
+identifier = "products"
+name = "Products"
+pageRef = "/products"
+weight = 10
+
+  [[main]]
+  identifier = "plastic-valves"
+  name = "Plastic Valves"
+  pageRef = "/products/plastic-valves"
+  parent = "products"
+  weight = 11
+
+  [[main]]
+  identifier = "lined-valves"
+  name = "Lined Valves"
+  pageRef = "/products/lined-valves"
+  parent = "products"
+  weight = 12
+
+  [[main]]
+  identifier = "actuated-valves"
+  name = "Actuated Valves"
+  pageRef = "/products/actuated-valves"
+  parent = "products"
+  weight = 13
+
+  [[main]]
+  identifier = "valve-accessories"
+  name = "Valve Accessories"
+  pageRef = "/products/valve-accessories"
+  parent = "products"
+  weight = 14
+
+
+[[main]]
+identifier = "applications"
+name = "Applications"
+pageRef = "/applications"
+weight = 20
+
+  [[main]]
+  identifier = "water-treatment"
+  name = "Water Treatment"
+  pageRef = "/applications/water-treatment"
+  parent = "applications"
+  weight = 21
+
+  [[main]]
+  identifier = "industrial-wastewater"
+  name = "Industrial Wastewater"
+  pageRef = "/applications/industrial-wastewater"
+  parent = "applications"
+  weight = 22
+
+  [[main]]
+  identifier = "chemical-processing"
+  name = "Chemical Processing"
+  pageRef = "/applications/chemical-processing"
+  parent = "applications"
+  weight = 23
+
+  [[main]]
+  identifier = "corrosive-media-transfer"
+  name = "Corrosive Media Transfer"
+  pageRef = "/applications/corrosive-media-transfer"
+  parent = "applications"
+  weight = 24
+
+
+[[main]]
+identifier = "project-support"
+name = "Project Support"
+pageRef = "/project-support"
+weight = 30
+
+  [[main]]
+  identifier = "submit-duty-conditions"
+  name = "Submit Duty Conditions"
+  pageRef = "/project-support/submit-duty-conditions"
+  parent = "project-support"
+  weight = 31
+
+  [[main]]
+  identifier = "material-selection"
+  name = "Material Selection"
+  pageRef = "/project-support/material-selection"
+  parent = "project-support"
+  weight = 32
+
+  [[main]]
+  identifier = "custom-valve-support"
+  name = "Custom Valve Support"
+  pageRef = "/project-support/custom-valve-support"
+  parent = "project-support"
+  weight = 33
+
+
+[[main]]
+identifier = "resources"
+name = "Resources"
+pageRef = "/resources"
+weight = 40
+
+  [[main]]
+  identifier = "technical-articles"
+  name = "Technical Articles"
+  pageRef = "/resources/technical-articles"
+  parent = "resources"
+  weight = 41
+
+  [[main]]
+  identifier = "material-guide"
+  name = "Material Guide"
+  pageRef = "/resources/material-guide"
+  parent = "resources"
+  weight = 42
+
+  [[main]]
+  identifier = "downloads"
+  name = "Downloads"
+  pageRef = "/resources/downloads"
+  parent = "resources"
+  weight = 43
+
+
+[[main]]
+identifier = "about"
+name = "About"
+pageRef = "/about"
+weight = 50
+
+  [[main]]
+  identifier = "about-nuvon"
+  name = "About Nuvon"
+  pageRef = "/about/nuvon"
+  parent = "about"
+  weight = 51
+
+  [[main]]
+  identifier = "quality-supply"
+  name = "Quality & Supply"
+  pageRef = "/about/quality-supply"
+  parent = "about"
+  weight = 52
+
+  [[main]]
+  identifier = "contact"
+  name = "Contact"
+  pageRef = "/contact"
+  parent = "about"
+  weight = 53
+
+# footer menu
+[[footer]]
+name = "Privacy Policy"
+pageRef = "/footer/privacy-policy"
+weight = 1
+
+[[footer]]
+name = "Terms & Conditions"
+pageRef = "/footer/terms-conditions"
+weight = 2
+
+[[footer]]
+name = "Cookie Policy"
+pageRef = "/footer/cookie-policy"
+weight = 3
+
+[[footer]]
+name = "Disclaimer"
+pageRef = "/footer/disclaimer"
+weight = 4

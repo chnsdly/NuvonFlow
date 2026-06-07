@@ -1,0 +1,174 @@
+[[main]]
+identifier = "products"
+name = "产品中心"
+pageRef = "/products"
+weight = 10
+
+  [[main]]
+  identifier = "plastic-valves"
+  name = "塑料防腐阀门"
+  pageRef = "/products/plastic-valves"
+  parent = "products"
+  weight = 11
+
+  [[main]]
+  identifier = "lined-valves"
+  name = "衬里阀门"
+  pageRef = "/products/lined-valves"
+  parent = "products"
+  weight = 12
+
+  [[main]]
+  identifier = "actuated-valves"
+  name = "自动化阀门"
+  pageRef = "/products/actuated-valves"
+  parent = "products"
+  weight = 13
+
+  [[main]]
+  identifier = "valve-accessories"
+  name = "阀门配件"
+  pageRef = "/products/valve-accessories"
+  parent = "products"
+  weight = 14
+
+
+[[main]]
+identifier = "applications"
+name = "应用场景"
+pageRef = "/applications"
+weight = 20
+
+  [[main]]
+  identifier = "water-treatment"
+  name = "水处理"
+  pageRef = "/applications/water-treatment"
+  parent = "applications"
+  weight = 21
+
+  [[main]]
+  identifier = "industrial-wastewater"
+  name = "工业废水"
+  pageRef = "/applications/industrial-wastewater"
+  parent = "applications"
+  weight = 22
+
+  [[main]]
+  identifier = "chemical-processing"
+  name = "化工流体输送"
+  pageRef = "/applications/chemical-processing"
+  parent = "applications"
+  weight = 23
+
+  [[main]]
+  identifier = "corrosive-media-transfer"
+  name = "腐蚀性介质输送"
+  pageRef = "/applications/corrosive-media-transfer"
+  parent = "applications"
+  weight = 24
+
+
+[[main]]
+identifier = "project-support"
+name = "项目支持"
+pageRef = "/project-support"
+weight = 30
+
+  [[main]]
+  identifier = "submit-duty-conditions"
+  name = "提交工况参数"
+  pageRef = "/project-support/submit-duty-conditions"
+  parent = "project-support"
+  weight = 31
+
+  [[main]]
+  identifier = "material-selection"
+  name = "材料选型支持"
+  pageRef = "/project-support/material-selection"
+  parent = "project-support"
+  weight = 32
+
+  [[main]]
+  identifier = "custom-valve-support"
+  name = "定制阀门支持"
+  pageRef = "/project-support/custom-valve-support"
+  parent = "project-support"
+  weight = 33
+
+
+[[main]]
+identifier = "resources"
+name = "资源中心"
+pageRef = "/resources"
+weight = 40
+
+  [[main]]
+  identifier = "technical-articles"
+  name = "技术文章"
+  pageRef = "/resources/technical-articles"
+  parent = "resources"
+  weight = 41
+
+  [[main]]
+  identifier = "material-guide"
+  name = "材料指南"
+  pageRef = "/resources/material-guide"
+  parent = "resources"
+  weight = 42
+
+  [[main]]
+  identifier = "downloads"
+  name = "资料下载"
+  pageRef = "/resources/downloads"
+  parent = "resources"
+  weight = 43
+
+
+[[main]]
+identifier = "about"
+name = "关于我们"
+pageRef = "/about"
+weight = 50
+
+  [[main]]
+  identifier = "about-nuvon"
+  name = "关于 Nuvon"
+  pageRef = "/about/nuvon"
+  parent = "about"
+  weight = 51
+
+  [[main]]
+  identifier = "quality-supply"
+  name = "质量与供应能力"
+  pageRef = "/about/quality-supply"
+  parent = "about"
+  weight = 52
+
+  [[main]]
+  identifier = "contact"
+  name = "联系我们"
+  pageRef = "/contact"
+  parent = "about"
+  weight = 53
+
+
+# footer menu
+[[footer]]
+name = "隐私政策"
+pageRef = "/footer/privacy-policy"
+weight = 1
+
+[[footer]]
+name = "网站条款"
+pageRef = "/footer/terms-conditions"
+weight = 2
+
+[[footer]]
+name = "Cookie 政策"
+pageRef = "/footer/cookie-policy"
+weight = 3
+
+[[footer]]
+name = "免责声明"
+pageRef = "/footer/disclaimer"
+weight = 4

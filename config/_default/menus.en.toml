@@ -5,32 +5,67 @@ pageRef = "/products"
 weight = 10
 
   [[main]]
-  identifier = "plastic-valves"
-  name = "Plastic Valves"
-  pageRef = "/products/plastic-valves"
+  identifier = "ball-valves"
+  name = "Ball Valves"
+  pageRef = "/products/ball-valves"
   parent = "products"
   weight = 11
 
   [[main]]
-  identifier = "lined-valves"
-  name = "Lined Valves"
-  pageRef = "/products/lined-valves"
+  identifier = "butterfly-valves"
+  name = "Butterfly Valves"
+  pageRef = "/products/butterfly-valves"
   parent = "products"
   weight = 12
 
   [[main]]
-  identifier = "actuated-valves"
-  name = "Actuated Valves"
-  pageRef = "/products/actuated-valves"
+  identifier = "diaphragm-valves"
+  name = "Diaphragm Valves"
+  pageRef = "/products/diaphragm-valves"
   parent = "products"
   weight = 13
 
   [[main]]
-  identifier = "valve-accessories"
-  name = "Valve Accessories"
-  pageRef = "/products/valve-accessories"
+  identifier = "check-valves"
+  name = "Check Valves"
+  pageRef = "/products/check-valves"
   parent = "products"
   weight = 14
+
+  [[main]]
+  identifier = "pressure-control-chemfeed"
+  name = "Pressure Control & Chemfeed"
+  pageRef = "/products/pressure-control-chemfeed"
+  parent = "products"
+  weight = 15
+
+  [[main]]
+  identifier = "actuators"
+  name = "Actuators"
+  pageRef = "/products/actuators"
+  parent = "products"
+  weight = 16
+
+  [[main]]
+  identifier = "fittings"
+  name = "Fittings"
+  pageRef = "/products/fittings"
+  parent = "products"
+  weight = 17
+
+  [[main]]
+  identifier = "double-containment"
+  name = "Double Containment"
+  pageRef = "/products/double-containment"
+  parent = "products"
+  weight = 18
+
+  [[main]]
+  identifier = "leak-detection"
+  name = "Leak Detection"
+  pageRef = "/products/leak-detection"
+  parent = "products"
+  weight = 19
 
 
 [[main]]
@@ -40,9 +75,9 @@ pageRef = "/applications"
 weight = 20
 
   [[main]]
-  identifier = "water-treatment"
-  name = "Water Treatment"
-  pageRef = "/applications/water-treatment"
+  identifier = "industrial-water-treatment"
+  name = "Industrial Water Treatment"
+  pageRef = "/applications/industrial-water-treatment"
   parent = "applications"
   weight = 21
 
@@ -54,18 +89,25 @@ weight = 20
   weight = 22
 
   [[main]]
-  identifier = "chemical-processing"
-  name = "Chemical Processing"
-  pageRef = "/applications/chemical-processing"
+  identifier = "chemical-dosing-injection"
+  name = "Chemical Dosing & Injection"
+  pageRef = "/applications/chemical-dosing-injection"
   parent = "applications"
   weight = 23
 
   [[main]]
-  identifier = "corrosive-media-transfer"
-  name = "Corrosive Media Transfer"
-  pageRef = "/applications/corrosive-media-transfer"
+  identifier = "corrosive-chemical-transfer"
+  name = "Corrosive Chemical Transfer"
+  pageRef = "/applications/corrosive-chemical-transfer"
   parent = "applications"
   weight = 24
+
+  [[main]]
+  identifier = "chemical-processing"
+  name = "Chemical Processing"
+  pageRef = "/applications/chemical-processing"
+  parent = "applications"
+  weight = 25
 
 
 [[main]]
@@ -82,18 +124,25 @@ weight = 30
   weight = 31
 
   [[main]]
-  identifier = "material-selection"
-  name = "Material Selection"
-  pageRef = "/project-support/material-selection"
+  identifier = "material-compatibility-review"
+  name = "Material Compatibility Review"
+  pageRef = "/project-support/material-compatibility-review"
   parent = "project-support"
   weight = 32
 
   [[main]]
-  identifier = "custom-valve-support"
-  name = "Custom Valve Support"
-  pageRef = "/project-support/custom-valve-support"
+  identifier = "submittal-documentation"
+  name = "Submittal & Documentation"
+  pageRef = "/project-support/submittal-documentation"
   parent = "project-support"
   weight = 33
+
+  [[main]]
+  identifier = "compliance-delivery-warranty"
+  name = "Compliance, Delivery & Warranty"
+  pageRef = "/project-support/compliance-delivery-warranty"
+  parent = "project-support"
+  weight = 34
 
 
 [[main]]
@@ -103,23 +152,23 @@ pageRef = "/resources"
 weight = 40
 
   [[main]]
-  identifier = "technical-articles"
-  name = "Technical Articles"
-  pageRef = "/resources/technical-articles"
+  identifier = "technical-guides"
+  name = "Technical Guides"
+  pageRef = "/resources/technical-guides"
   parent = "resources"
   weight = 41
 
   [[main]]
-  identifier = "material-guide"
-  name = "Material Guide"
-  pageRef = "/resources/material-guide"
+  identifier = "rfq-submittal-inputs"
+  name = "RFQ & Submittal Inputs"
+  pageRef = "/resources/rfq-submittal-inputs"
   parent = "resources"
   weight = 42
 
   [[main]]
-  identifier = "downloads"
-  name = "Downloads"
-  pageRef = "/resources/downloads"
+  identifier = "document-request"
+  name = "Document Request"
+  pageRef = "/resources/document-request"
   parent = "resources"
   weight = 43
 
@@ -138,9 +187,9 @@ weight = 50
   weight = 51
 
   [[main]]
-  identifier = "quality-supply"
-  name = "Quality & Supply"
-  pageRef = "/about/quality-supply"
+  identifier = "quality-supply-coordination"
+  name = "Quality & Supply Coordination"
+  pageRef = "/about/quality-supply-coordination"
   parent = "about"
   weight = 52
 
@@ -150,6 +199,14 @@ weight = 50
   pageRef = "/contact"
   parent = "about"
   weight = 53
+
+
+[[main]]
+identifier = "request-a-quote"
+name = "Request a Quote"
+pageRef = "/request-a-quote"
+weight = 60
+
 
 # footer menu
 [[footer]]

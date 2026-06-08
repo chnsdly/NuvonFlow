@@ -1,71 +1,113 @@
 [[main]]
 identifier = "products"
-name = "产品中心"
+name = "产品"
 pageRef = "/products"
 weight = 10
 
   [[main]]
-  identifier = "plastic-valves"
-  name = "塑料防腐阀门"
-  pageRef = "/products/plastic-valves"
+  identifier = "ball-valves"
+  name = "球阀"
+  pageRef = "/products/ball-valves"
   parent = "products"
   weight = 11
 
   [[main]]
-  identifier = "lined-valves"
-  name = "衬里阀门"
-  pageRef = "/products/lined-valves"
+  identifier = "butterfly-valves"
+  name = "蝶阀"
+  pageRef = "/products/butterfly-valves"
   parent = "products"
   weight = 12
 
   [[main]]
-  identifier = "actuated-valves"
-  name = "自动化阀门"
-  pageRef = "/products/actuated-valves"
+  identifier = "diaphragm-valves"
+  name = "隔膜阀"
+  pageRef = "/products/diaphragm-valves"
   parent = "products"
   weight = 13
 
   [[main]]
-  identifier = "valve-accessories"
-  name = "阀门配件"
-  pageRef = "/products/valve-accessories"
+  identifier = "check-valves"
+  name = "止回阀"
+  pageRef = "/products/check-valves"
   parent = "products"
   weight = 14
+
+  [[main]]
+  identifier = "pressure-control-chemfeed"
+  name = "压力控制与加药"
+  pageRef = "/products/pressure-control-chemfeed"
+  parent = "products"
+  weight = 15
+
+  [[main]]
+  identifier = "actuators"
+  name = "执行器"
+  pageRef = "/products/actuators"
+  parent = "products"
+  weight = 16
+
+  [[main]]
+  identifier = "fittings"
+  name = "管件"
+  pageRef = "/products/fittings"
+  parent = "products"
+  weight = 17
+
+  [[main]]
+  identifier = "double-containment"
+  name = "双层安全管道"
+  pageRef = "/products/double-containment"
+  parent = "products"
+  weight = 18
+
+  [[main]]
+  identifier = "leak-detection"
+  name = "泄漏检测"
+  pageRef = "/products/leak-detection"
+  parent = "products"
+  weight = 19
 
 
 [[main]]
 identifier = "applications"
-name = "应用场景"
+name = "应用"
 pageRef = "/applications"
 weight = 20
 
   [[main]]
-  identifier = "water-treatment"
-  name = "水处理"
-  pageRef = "/applications/water-treatment"
+  identifier = "industrial-water-treatment"
+  name = "工业水处理"
+  pageRef = "/applications/industrial-water-treatment"
   parent = "applications"
   weight = 21
 
   [[main]]
   identifier = "industrial-wastewater"
-  name = "工业废水"
+  name = "工业废水处理"
   pageRef = "/applications/industrial-wastewater"
   parent = "applications"
   weight = 22
 
   [[main]]
-  identifier = "chemical-processing"
-  name = "化工流体输送"
-  pageRef = "/applications/chemical-processing"
+  identifier = "chemical-dosing-injection"
+  name = "化学加药与注入"
+  pageRef = "/applications/chemical-dosing-injection"
   parent = "applications"
   weight = 23
 
   [[main]]
-  identifier = "corrosive-media-transfer"
-  name = "腐蚀性介质输送"
-  pageRef = "/applications/corrosive-media-transfer"
+  identifier = "corrosive-chemical-transfer"
+  name = "腐蚀性化学品输送"
+  pageRef = "/applications/corrosive-chemical-transfer"
   parent = "applications"
   weight = 24
+
+  [[main]]
+  identifier = "chemical-processing"
+  name = "化工流程"
+  pageRef = "/applications/chemical-processing"
+  parent = "applications"
+  weight = 25
 
 
 [[main]]
@@ -82,51 +124,58 @@ weight = 30
   weight = 31
 
   [[main]]
-  identifier = "material-selection"
-  name = "材料选型支持"
-  pageRef = "/project-support/material-selection"
+  identifier = "material-compatibility-review"
+  name = "材料兼容性评审"
+  pageRef = "/project-support/material-compatibility-review"
   parent = "project-support"
   weight = 32
 
   [[main]]
-  identifier = "custom-valve-support"
-  name = "定制阀门支持"
-  pageRef = "/project-support/custom-valve-support"
+  identifier = "submittal-documentation"
+  name = "技术文件与送审资料"
+  pageRef = "/project-support/submittal-documentation"
   parent = "project-support"
   weight = 33
+
+  [[main]]
+  identifier = "compliance-delivery-warranty"
+  name = "合规、交付与质保"
+  pageRef = "/project-support/compliance-delivery-warranty"
+  parent = "project-support"
+  weight = 34
 
 
 [[main]]
 identifier = "resources"
-name = "资源中心"
+name = "资源"
 pageRef = "/resources"
 weight = 40
 
   [[main]]
-  identifier = "technical-articles"
-  name = "技术文章"
-  pageRef = "/resources/technical-articles"
+  identifier = "technical-guides"
+  name = "技术指南"
+  pageRef = "/resources/technical-guides"
   parent = "resources"
   weight = 41
 
   [[main]]
-  identifier = "material-guide"
-  name = "材料指南"
-  pageRef = "/resources/material-guide"
+  identifier = "rfq-submittal-inputs"
+  name = "RFQ 与送审输入"
+  pageRef = "/resources/rfq-submittal-inputs"
   parent = "resources"
   weight = 42
 
   [[main]]
-  identifier = "downloads"
-  name = "资料下载"
-  pageRef = "/resources/downloads"
+  identifier = "document-request"
+  name = "文件申请"
+  pageRef = "/resources/document-request"
   parent = "resources"
   weight = 43
 
 
 [[main]]
 identifier = "about"
-name = "关于我们"
+name = "关于"
 pageRef = "/about"
 weight = 50
 
@@ -138,9 +187,9 @@ weight = 50
   weight = 51
 
   [[main]]
-  identifier = "quality-supply"
-  name = "质量与供应能力"
-  pageRef = "/about/quality-supply"
+  identifier = "quality-supply-coordination"
+  name = "质量与供应协调"
+  pageRef = "/about/quality-supply-coordination"
   parent = "about"
   weight = 52
 
@@ -150,6 +199,13 @@ weight = 50
   pageRef = "/contact"
   parent = "about"
   weight = 53
+
+
+[[main]]
+identifier = "request-a-quote"
+name = "提交询价"
+pageRef = "/request-a-quote"
+weight = 60
 
 
 # footer menu

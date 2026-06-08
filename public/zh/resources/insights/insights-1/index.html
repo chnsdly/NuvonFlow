@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>如何为波动负载工厂配置配电变压器容量 | Nuvon Flow Control 中文站</title>
+    <meta name="description" content="以叙事方式讲清工厂项目中的配电变压器选型：在可靠性、扩产与全生命周期成本之间找到平衡。">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="canonical" href="http://localhost:1313/zh/resources/insights/insights-1/">
+    
+      
+        <link rel="alternate" hreflang="en-US" href="http://localhost:1313/resources/insights/insights-1/">
+      
+        <link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/resources/insights/insights-1/">
+      
+    
+
+  </head>
+  <body>
+    
+
+<header class="site-header" data-site-header>
+  <div class="site-header__bar">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="/zh/">
+        <img class="site-header__logo-image" src="/images/logo.webp" alt="Nuvon Flow Control 中文站" width="160"
+          height="160" decoding="async">
+      </a>
+
+      <div class="site-header__actions">
+        
+        <details class="site-header__language" data-language-switcher>
+          <summary class="site-header__icon-button">
+            <span class="site-header__language-label font-meta">中文</span>
+            <svg class="site-header__language-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.8" />
+            </svg>
+          </summary>
+          <ul class="site-header__language-list">
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+              <a class="site-header__language-link font-meta "
+                href="/resources/insights/insights-1/" lang="en-US" >
+                English
+              </a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+              <a class="site-header__language-link font-meta  site-header__language-link--current"
+                href="/zh/resources/insights/insights-1/" lang="zh-CN" aria-current="true" >
+                中文
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+
+        <button class="site-header__menu-toggle" type="button" aria-expanded="false"
+          aria-controls="site-header-drawer" aria-label='打开菜单' data-menu-toggle>
+          <span class="site-header__menu-toggle-box" aria-hidden="true">
+            <span class="site-header__menu-toggle-line"></span>
+            <span class="site-header__menu-toggle-line"></span>
+            <span class="site-header__menu-toggle-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <nav class="site-header__nav" aria-label='主导航'>
+        <ul class="site-header__nav-list">
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>产品中心</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  塑料防腐阀门
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  衬里阀门
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  自动化阀门
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  阀门配件
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>应用场景</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  水处理
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  工业废水
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  化工流体输送
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  腐蚀性介质输送
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>项目支持</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  提交工况参数
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  材料选型支持
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  定制阀门支持
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle site-header__nav-link--current" type="button">
+              <span>资源中心</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  技术文章
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  材料指南
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  资料下载
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>关于我们</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  关于 Nuvon
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/" >
+                  质量与供应能力
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/zh/contact/" >
+                  联系我们
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="site-header__drawer" id="site-header-drawer" data-menu-drawer hidden>
+    <div class="site-header__drawer-inner">
+      <div class="site-header__mobile-head">
+        <button class="site-header__back" type="button" data-menu-back hidden>
+          <span aria-hidden="true">&lt;</span>
+        </button>
+      </div>
+
+      <div class="site-header__mobile-panels">
+        <div class="site-header__mobile-panel site-header__mobile-panel--root" data-menu-panel="root">
+          <ul class="site-header__mobile-list">
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="products">
+                <span>产品中心</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="applications">
+                <span>应用场景</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="project-support">
+                <span>项目支持</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="resources">
+                <span>资源中心</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="about">
+                <span>关于我们</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+          </ul>
+        </div>
+
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="products" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">塑料防腐阀门</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">衬里阀门</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">自动化阀门</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">阀门配件</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="applications" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">水处理</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">工业废水</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">化工流体输送</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">腐蚀性介质输送</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="project-support" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">提交工况参数</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">材料选型支持</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">定制阀门支持</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="resources" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">技术文章</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">材料指南</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">资料下载</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="about" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">关于 Nuvon</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/">质量与供应能力</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/zh/contact/">联系我们</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  (() => {
+    const header = document.querySelector('[data-site-header]');
+    if (!header) return;
+
+    const toggle = header.querySelector('[data-menu-toggle]');
+    const drawer = header.querySelector('[data-menu-drawer]');
+    const backButton = header.querySelector('[data-menu-back]');
+    const title = header.querySelector('[data-menu-title]');
+    const languageSwitcher = header.querySelector('[data-language-switcher]');
+    const menuTitles = {
+      root: "\"菜单\"",
+      "\"products\"": "\"产品中心\"","\"applications\"": "\"应用场景\"","\"project-support\"": "\"项目支持\"","\"resources\"": "\"资源中心\"","\"about\"": "\"关于我们\"",
+    };
+
+    let activePanel = 'root';
+
+    const closeLanguageSwitcher = () => {
+      if (languageSwitcher) languageSwitcher.removeAttribute('open');
+    };
+
+    const showPanel = (panelName) => {
+      activePanel = panelName;
+      header.querySelectorAll('[data-menu-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.menuPanel !== panelName;
+      });
+      backButton.hidden = panelName === 'root';
+      title.textContent = menuTitles[panelName] || menuTitles.root;
+    };
+
+    const closeDrawer = () => {
+      header.dataset.menuState = 'closed';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', "\"打开菜单\"");
+      drawer.hidden = true;
+      document.body.classList.remove('is-menu-open');
+      showPanel('root');
+    };
+
+    const openDrawer = () => {
+      closeLanguageSwitcher();
+      drawer.hidden = false;
+      requestAnimationFrame(() => {
+        header.dataset.menuState = 'open';
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', "\"Close menu\"");
+        document.body.classList.add('is-menu-open');
+      });
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = header.dataset.menuState === 'open';
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    header.querySelectorAll('[data-menu-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        showPanel(button.dataset.menuOpen);
+      });
+    });
+
+    backButton.addEventListener('click', () => showPanel('root'));
+
+    document.addEventListener('click', (event) => {
+      if (!languageSwitcher || !languageSwitcher.hasAttribute('open')) return;
+      if (!languageSwitcher.contains(event.target)) {
+        closeLanguageSwitcher();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeDrawer();
+      }
+    });
+
+    showPanel('root');
+    closeDrawer();
+  })();
+</script>
+    
+  
+  
+  
+  
+  
+    
+  
+
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <div class="container container--narrow">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/zh/">首页</a>
+        </li>
+
+        
+          
+        
+          
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/zh/resources/">资源中心</a>
+            </li>
+          
+        
+          
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/zh/resources/insights/">洞察</a>
+            </li>
+          
+        
+
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current" aria-current="page">如何为波动负载工厂配置配电变压器容量</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+
+    
+<main class="section resources-page" aria-labelledby="resources-page-title">
+  <div class="container container--narrow">
+    <article class="resources-page__article">
+      
+      <div class="resources-page__media">
+        <img class="resources-page__image" src="/images/resources/insights/insights-1.webp" alt="如何为波动负载工厂配置配电变压器容量" loading="lazy" decoding="async">
+      </div>
+      
+
+      <div class="resources-page__meta font-meta">
+        <time class="resources-page__meta-item" datetime="2026-03-20">2026年3月20日</time>
+        <span class="resources-page__meta-item">作者: 恒立技术团队</span>
+        <span class="resources-page__meta-item">阅读时长: 9 分钟</span>
+      </div>
+
+      <h1 id="resources-page-title" class="resources-page__title font-title-l">如何为波动负载工厂配置配电变压器容量</h1>
+
+      <div class="resources-page__content font-body">
+        <p>海外客户第一次联系 transformer supplier 时，需求往往很直接：“我们新厂要上一台变压器。”第二天收到负载清单，过几天又更新：某条产线节拍提高了，明年可能再加一条线。</p>
+<p>这在工业配电项目里非常常见。真实工厂不是固定点运行，而是随班次、季节、订单节奏变化。</p>
+<p>因此，distribution transformer 的容量设计，不应只看“设备铭牌总和”，而要从实际运行行为出发。</p>
+<h2 id="第一步先看工厂如何真实用电">第一步：先看工厂如何“真实用电”</h2>
+<p>在一个食品加工项目里，客户初始负载汇总对应约 2500 kVA。但我们复核工况后发现，大功率电机与制冷环节并非同时满载，日常稳定区间明显低于“并发总和”，短时峰值主要出现在清洗和重启阶段。</p>
+<p>我们把负载分为三类：</p>
+<ul>
+<li><strong>基础负载</strong>（公用工程、常开系统）</li>
+<li><strong>生产负载</strong>（正常生产时段）</li>
+<li><strong>短时峰值负载</strong>（启动、压缩机切换、批次切换）</li>
+</ul>
+<p>这个看似简单的拆分，往往能避免“过度放大容量”，同时守住工艺连续性。</p>
+<h2 id="第二步为扩产留余量但要有边界">第二步：为扩产留余量，但要有边界</h2>
+<p>工业客户担心未来扩产非常合理，但“先翻倍再说”通常会把成本花在不该花的地方。容量过大意味着更高空载损耗，也占用不必要的资金。</p>
+<p>更稳妥的 custom transformer solution 往往是分阶段策略：</p>
+<ol>
+<li>首期容量覆盖当前需求和近期可验证扩产；</li>
+<li>土建与电气接口预留二期并机或回路扩展空间；</li>
+<li>提前确认开关柜、电缆路径和保护整定如何随扩展演进。</li>
+</ol>
+<p>对中型工厂而言，这种方式通常比“一次配满”更经济，也更能适应业务变化。</p>
+<h2 id="第三步除了-kva还要看电压质量">第三步：除了 kVA，还要看电压质量</h2>
+<p>对 industrial project 来说，真正容易出问题的常常不是“额定容量不够”，而是电机启动压降、变频器谐波、峰值切换时控制系统波动。</p>
+<p>某金属加工项目中，现场痛点并非过载，而是控制柜偶发跳闸。后续联合排查发现，关键在于阻抗匹配、启动时序与补偿策略协同不足。</p>
+<p>一个有经验的 transformer supplier，应该在项目早期就能与客户讨论这些系统层面的联动，而不是等设备到场后再被动处理。</p>
+<h2 id="第四步变压器类型要服从场景约束">第四步：变压器类型要服从场景约束</h2>
+<p>若设备位于室内、靠近人员密集区，dry-type transformer 往往在消防与运维管理上更有优势；若为室外场站、容量较高且土建条件成熟，oil-immersed transformer 常在散热能力与经济性方面更突出。</p>
+<p>正确答案取决于环境条件、规范要求、运维能力和扩展路径，而不是“惯例”。</p>
+<h2 id="成熟采购团队通常会问的五个问题">成熟采购团队通常会问的五个问题</h2>
+<ul>
+<li>推荐容量是基于哪些运行曲线得出的？</li>
+<li>同时系数与增长假设如何设定？</li>
+<li>峰值工况下电压稳定如何保障？</li>
+<li>如果扩产延后，当前投资影响是什么？</li>
+<li>调试阶段由谁与 EPC、现场电工协同闭环？</li>
+</ul>
+<p>这些问题本质上不是“买一台设备”，而是降低项目不确定性。</p>
+<h2 id="真正建立信任的是项目思维">真正建立信任的是“项目思维”</h2>
+<p>transformer for factory 不是孤立采购，而是生产连续性策略的一部分。供应商价值不在宣传语，而在是否能清晰解释取舍、严谨验证假设、稳定支持交付与投运。</p>
+<p>在 B2B 工业项目里，信任往往是静默建立的：一次准确选型、一次透明澄清、一次准时交付、一次投运后的及时响应。</p>
+<p>这才是从一次询盘走向长期合作的起点。</p>
+
+      </div>
+    </article>
+  </div>
+</main>
+
+    
+
+<footer class="site-footer" aria-label='网站底部'>
+  <div class="site-footer__main section">
+    <div class="container">
+      <div class="site-footer__grid">
+        <section class="site-footer__column" aria-labelledby="footer-menu-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-menu-title">快捷导航</h2>
+          <ul class="site-footer__list">
+            
+              <li>
+                <a class="site-footer__link" href="/zh/">产品中心</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/">应用场景</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/">项目支持</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/resources/">资源中心</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/about/">关于我们</a>
+              </li>
+            
+          </ul>
+        </section>
+
+        <section class="site-footer__column" aria-labelledby="footer-legal-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-legal-title">法律与合规</h2>
+          <ul class="site-footer__list">
+            
+              <li>
+                <a class="site-footer__link" href="/zh/footer/privacy-policy/">隐私政策</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/footer/terms-conditions/">网站条款</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/footer/cookie-policy/">Cookie 政策</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/zh/footer/disclaimer/">免责声明</a>
+              </li>
+            
+          </ul>
+        </section>
+
+        <section class="site-footer__column" aria-labelledby="footer-contact-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-contact-title">联系方式</h2>
+          <ul class="site-footer__list">
+            
+              <li><a class="site-footer__link" href="mailto:nuvon@gmail.com">邮箱: nuvon@gmail.com</a></li>
+            
+            
+              <li><a class="site-footer__link" href="tel:&#43;861312345678">电话 / WhatsApp: &#43;86 1312345678</a></li>
+            
+            
+              <li class="site-footer__meta">办公时间: Mon–Sat, 8:00 AM–5:00 PM (GMT&#43;8)</li>
+            
+            
+              <li class="site-footer__meta">地址: Linyi City, Shandong, China</li>
+            
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__copyright">
+    <div class="container">
+      <p class="site-footer__copyright-text font-meta">© 2000-2026 恒锂新能源科技（临沂）有限公司</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

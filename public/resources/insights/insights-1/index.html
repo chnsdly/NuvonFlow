@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sizing a Distribution Transformer for a Factory with Variable Loads | Nuvon Flow Control</title>
+    <meta name="description" content="A narrative guide to sizing a distribution transformer for shift-based manufacturing, balancing reliability, expansion, and lifecycle cost.">
+    
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="canonical" href="http://localhost:1313/resources/insights/insights-1/">
+    
+      
+        <link rel="alternate" hreflang="en-US" href="http://localhost:1313/resources/insights/insights-1/">
+      
+        <link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/resources/insights/insights-1/">
+      
+    
+
+  </head>
+  <body>
+    
+
+<header class="site-header" data-site-header>
+  <div class="site-header__bar">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="/">
+        <img class="site-header__logo-image" src="/images/logo.webp" alt="Nuvon Flow Control" width="160"
+          height="160" decoding="async">
+      </a>
+
+      <div class="site-header__actions">
+        
+        <details class="site-header__language" data-language-switcher>
+          <summary class="site-header__icon-button">
+            <span class="site-header__language-label font-meta">English</span>
+            <svg class="site-header__language-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.8" />
+            </svg>
+          </summary>
+          <ul class="site-header__language-list">
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+              <a class="site-header__language-link font-meta  site-header__language-link--current"
+                href="/resources/insights/insights-1/" lang="en-US" aria-current="true" >
+                English
+              </a>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            <li>
+              <a class="site-header__language-link font-meta "
+                href="/zh/resources/insights/insights-1/" lang="zh-CN" >
+                中文
+              </a>
+            </li>
+            
+          </ul>
+        </details>
+        
+
+        <button class="site-header__menu-toggle" type="button" aria-expanded="false"
+          aria-controls="site-header-drawer" aria-label='open menu' data-menu-toggle>
+          <span class="site-header__menu-toggle-box" aria-hidden="true">
+            <span class="site-header__menu-toggle-line"></span>
+            <span class="site-header__menu-toggle-line"></span>
+            <span class="site-header__menu-toggle-line"></span>
+          </span>
+        </button>
+      </div>
+
+      <nav class="site-header__nav" aria-label='primary navigation'>
+        <ul class="site-header__nav-list">
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>Products</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Plastic Valves
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Lined Valves
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Actuated Valves
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Valve Accessories
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>Applications</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Water Treatment
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Industrial Wastewater
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Chemical Processing
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Corrosive Media Transfer
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>Project Support</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Submit Duty Conditions
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Material Selection
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Custom Valve Support
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle site-header__nav-link--current" type="button">
+              <span>Resources</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Technical Articles
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Material Guide
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Downloads
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+          
+          <li class="site-header__nav-item site-header__nav-item--has-children">
+            
+            <button class="site-header__nav-link site-header__nav-toggle" type="button">
+              <span>About</span>
+              <svg class="site-header__nav-caret" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.8" />
+              </svg>
+            </button>
+            <ul class="site-header__submenu">
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  About Nuvon
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/" >
+                  Quality &amp; Supply
+                </a>
+              </li>
+              
+              <li class="site-header__submenu-item">
+                <a class="site-header__submenu-link" href="/contact/" >
+                  Contact
+                </a>
+              </li>
+              
+            </ul>
+            
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="site-header__drawer" id="site-header-drawer" data-menu-drawer hidden>
+    <div class="site-header__drawer-inner">
+      <div class="site-header__mobile-head">
+        <button class="site-header__back" type="button" data-menu-back hidden>
+          <span aria-hidden="true">&lt;</span>
+        </button>
+      </div>
+
+      <div class="site-header__mobile-panels">
+        <div class="site-header__mobile-panel site-header__mobile-panel--root" data-menu-panel="root">
+          <ul class="site-header__mobile-list">
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="products">
+                <span>Products</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="applications">
+                <span>Applications</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="project-support">
+                <span>Project Support</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="resources">
+                <span>Resources</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+            
+            <li class="site-header__mobile-item">
+              
+              <button class="site-header__mobile-link site-header__mobile-link--submenu" type="button"
+                data-menu-open="about">
+                <span>About</span>
+                <svg class="site-header__mobile-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 7l5 5-5 5" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="1.8" />
+                </svg>
+              </button>
+              
+            </li>
+            
+          </ul>
+        </div>
+
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="products" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Plastic Valves</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Lined Valves</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Actuated Valves</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Valve Accessories</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="applications" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Water Treatment</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Industrial Wastewater</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Chemical Processing</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Corrosive Media Transfer</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="project-support" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Submit Duty Conditions</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Material Selection</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Custom Valve Support</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="resources" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Technical Articles</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Material Guide</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Downloads</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+        
+        
+        <div class="site-header__mobile-panel" data-menu-panel="about" hidden>
+          <ul class="site-header__mobile-list">
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">About Nuvon</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/">Quality &amp; Supply</a>
+            </li>
+            
+            <li class="site-header__mobile-item">
+              <a class="site-header__mobile-link" href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  (() => {
+    const header = document.querySelector('[data-site-header]');
+    if (!header) return;
+
+    const toggle = header.querySelector('[data-menu-toggle]');
+    const drawer = header.querySelector('[data-menu-drawer]');
+    const backButton = header.querySelector('[data-menu-back]');
+    const title = header.querySelector('[data-menu-title]');
+    const languageSwitcher = header.querySelector('[data-language-switcher]');
+    const menuTitles = {
+      root: "\"菜单\"",
+      "\"products\"": "\"Products\"","\"applications\"": "\"Applications\"","\"project-support\"": "\"Project Support\"","\"resources\"": "\"Resources\"","\"about\"": "\"About\"",
+    };
+
+    let activePanel = 'root';
+
+    const closeLanguageSwitcher = () => {
+      if (languageSwitcher) languageSwitcher.removeAttribute('open');
+    };
+
+    const showPanel = (panelName) => {
+      activePanel = panelName;
+      header.querySelectorAll('[data-menu-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.menuPanel !== panelName;
+      });
+      backButton.hidden = panelName === 'root';
+      title.textContent = menuTitles[panelName] || menuTitles.root;
+    };
+
+    const closeDrawer = () => {
+      header.dataset.menuState = 'closed';
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', "\"open menu\"");
+      drawer.hidden = true;
+      document.body.classList.remove('is-menu-open');
+      showPanel('root');
+    };
+
+    const openDrawer = () => {
+      closeLanguageSwitcher();
+      drawer.hidden = false;
+      requestAnimationFrame(() => {
+        header.dataset.menuState = 'open';
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', "\"Close menu\"");
+        document.body.classList.add('is-menu-open');
+      });
+    };
+
+    toggle.addEventListener('click', () => {
+      const isOpen = header.dataset.menuState === 'open';
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    header.querySelectorAll('[data-menu-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        showPanel(button.dataset.menuOpen);
+      });
+    });
+
+    backButton.addEventListener('click', () => showPanel('root'));
+
+    document.addEventListener('click', (event) => {
+      if (!languageSwitcher || !languageSwitcher.hasAttribute('open')) return;
+      if (!languageSwitcher.contains(event.target)) {
+        closeLanguageSwitcher();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeDrawer();
+      }
+    });
+
+    showPanel('root');
+    closeDrawer();
+  })();
+</script>
+    
+  
+  
+  
+  
+  
+    
+  
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+    <div class="container container--narrow">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="/">Home</a>
+        </li>
+
+        
+          
+        
+          
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/resources/">Resources</a>
+            </li>
+          
+        
+          
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/resources/insights/">Insights</a>
+            </li>
+          
+        
+
+        <li class="breadcrumbs__item">
+          <span class="breadcrumbs__current" aria-current="page">Sizing a Distribution Transformer for a Factory with Variable Loads</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+
+    
+<main class="section resources-page" aria-labelledby="resources-page-title">
+  <div class="container container--narrow">
+    <article class="resources-page__article">
+      
+      <div class="resources-page__media">
+        <img class="resources-page__image" src="/images/resources/insights/insights-1.webp" alt="Sizing a Distribution Transformer for a Factory with Variable Loads" loading="lazy" decoding="async">
+      </div>
+      
+
+      <div class="resources-page__meta font-meta">
+        <time class="resources-page__meta-item" datetime="2026-03-20">March 20, 2026</time>
+        <span class="resources-page__meta-item">Author: Hengli Technical Team</span>
+        <span class="resources-page__meta-item">Reading Time: 9 min</span>
+      </div>
+
+      <h1 id="resources-page-title" class="resources-page__title font-title-l">Sizing a Distribution Transformer for a Factory with Variable Loads</h1>
+
+      <div class="resources-page__content font-body">
+        <p>When an overseas buyer first contacts a transformer supplier, the request often sounds simple: “We need a transformer for our new factory.” A day later, the load list arrives. A week later, the load list changes again because one production line is moving faster than planned, and a second line may be added next year.</p>
+<p>This is normal in industrial power distribution projects. Real factories do not run at one fixed point. They run by shift, by season, by order cycle, and sometimes by uncertainty.</p>
+<p>That is why distribution transformer sizing should begin with operating behavior, not only with a spreadsheet total.</p>
+<h2 id="step-1-understand-how-the-plant-actually-uses-power">Step 1: Understand how the plant actually uses power</h2>
+<p>In one food-processing project, the customer gave us a connected load total that suggested a 2500 kVA unit. But when we reviewed duty cycles, we found that large motors and refrigeration stages were staggered through the day. The stable operating window was far below the connected total, while short peaks appeared during cleaning and restart periods.</p>
+<p>Instead of treating all equipment as “simultaneous full load,” we mapped three practical load zones:</p>
+<ul>
+<li><strong>Base load</strong> (utilities and always-on systems)</li>
+<li><strong>Production load</strong> (normal manufacturing period)</li>
+<li><strong>Short-duration peak load</strong> (startup, compressor cycling, batch transitions)</li>
+</ul>
+<p>This simple distinction changed the decision process. It helped the customer avoid oversizing while still protecting process stability.</p>
+<h2 id="step-2-build-margin-for-expansion-but-with-discipline">Step 2: Build margin for expansion, but with discipline</h2>
+<p>Many industrial buyers worry about future growth, and that concern is valid. However, doubling capacity “just in case” is often expensive in the wrong places. Oversized units bring higher no-load losses and unnecessary capital tie-up.</p>
+<p>A better path for a custom transformer solution is staged planning:</p>
+<ol>
+<li>Size the first unit for current operations plus realistic near-term expansion.</li>
+<li>Reserve physical and electrical space for a second unit or feeder path.</li>
+<li>Confirm how switchgear, cable routing, and protection settings will scale.</li>
+</ol>
+<p>For many mid-size facilities, this approach improves lifecycle economics without compromising reliability. It is especially useful when production forecasting is still evolving.</p>
+<h2 id="step-3-check-voltage-quality-not-only-kva-nameplate">Step 3: Check voltage quality, not only kVA nameplate</h2>
+<p>For industrial project teams, kVA is only one part of the story. The more painful problems usually come from voltage dip during motor starting, harmonics from variable-frequency drives, or unstable process equipment during peak transitions.</p>
+<p>In one metalworking facility, the key issue was not transformer overload. It was intermittent nuisance trips caused by voltage sensitivity in control cabinets. The fix involved coordinated review of transformer impedance, starting sequence, and compensation strategy.</p>
+<p>A capable transformer supplier should be comfortable discussing these system interactions early, before equipment arrives on site.</p>
+<h2 id="step-4-match-transformer-type-to-site-constraints">Step 4: Match transformer type to site constraints</h2>
+<p>If the transformer is installed indoors near occupied production space, a <strong>dry-type transformer</strong> may be preferred for fire-safety and maintenance management reasons. If the site is an outdoor yard with higher capacity demand and robust civil access, an <strong>oil-immersed transformer</strong> may provide stronger cooling performance and cost efficiency.</p>
+<p>The right answer depends on environment, local code requirements, maintenance capability, and expansion plan. It should not depend on habit alone.</p>
+<h2 id="what-experienced-buyers-usually-ask-before-placing-an-order">What experienced buyers usually ask before placing an order</h2>
+<p>Over time, we have noticed that strong procurement and engineering teams focus on five practical questions:</p>
+<ul>
+<li>How was the recommended capacity calculated from operating profiles?</li>
+<li>What assumptions were made about simultaneity and load growth?</li>
+<li>How will voltage performance be controlled under peak events?</li>
+<li>If expansion is delayed, what are the cost implications today?</li>
+<li>During commissioning, who will coordinate with EPC and plant electricians?</li>
+</ul>
+<p>These questions are not about buying a box. They are about reducing project uncertainty.</p>
+<h2 id="a-project-mindset-that-builds-long-term-trust">A project mindset that builds long-term trust</h2>
+<p>A transformer for factory use is rarely an isolated product purchase. It is part of a production continuity strategy. The supplier’s value is proven not by brochure language, but by how clearly they communicate trade-offs, how carefully they validate assumptions, and how consistently they support commissioning and operation.</p>
+<p>In B2B industrial work, trust is usually built quietly: one accurate sizing decision, one transparent technical clarification, one on-time delivery milestone, and one dependable response after energization.</p>
+<p>That is what turns a one-time RFQ into a long-term partnership.</p>
+
+      </div>
+    </article>
+  </div>
+</main>
+
+    
+
+<footer class="site-footer" aria-label='Site footer'>
+  <div class="site-footer__main section">
+    <div class="container">
+      <div class="site-footer__grid">
+        <section class="site-footer__column" aria-labelledby="footer-menu-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-menu-title">Site Menu</h2>
+          <ul class="site-footer__list">
+            
+              <li>
+                <a class="site-footer__link" href="/">Products</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/">Applications</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/">Project Support</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/resources/">Resources</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/about/">About</a>
+              </li>
+            
+          </ul>
+        </section>
+
+        <section class="site-footer__column" aria-labelledby="footer-legal-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-legal-title">Legal &amp; Compliance</h2>
+          <ul class="site-footer__list">
+            
+              <li>
+                <a class="site-footer__link" href="/footer/privacy-policy/">Privacy Policy</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/footer/terms-conditions/">Terms &amp; Conditions</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/footer/cookie-policy/">Cookie Policy</a>
+              </li>
+            
+              <li>
+                <a class="site-footer__link" href="/footer/disclaimer/">Disclaimer</a>
+              </li>
+            
+          </ul>
+        </section>
+
+        <section class="site-footer__column" aria-labelledby="footer-contact-title">
+          <h2 class="site-footer__title font-title-xs" id="footer-contact-title">Contact</h2>
+          <ul class="site-footer__list">
+            
+              <li><a class="site-footer__link" href="mailto:nuvon@gmail.com">EMAIL: nuvon@gmail.com</a></li>
+            
+            
+              <li><a class="site-footer__link" href="tel:&#43;861312345678">PHONE / WHATSAPP: &#43;86 1312345678</a></li>
+            
+            
+              <li class="site-footer__meta">BUSINESS HOURS: Mon–Sat, 8:00 AM–5:00 PM (GMT&#43;8)</li>
+            
+            
+              <li class="site-footer__meta">ADDRESS: Linyi City, Shandong, China</li>
+            
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__copyright">
+    <div class="container">
+      <p class="site-footer__copyright-text font-meta">© 2000-2026 Hengli New Energy Technology (Linyi) Co., Ltd.</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

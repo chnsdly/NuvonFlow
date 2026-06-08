@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Case Studies on Nuvon Flow Control</title>
+    <link>http://localhost:1313/resources/case-studies/</link>
+    <description>Recent content in Case Studies on Nuvon Flow Control</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 26 Mar 2026 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/resources/case-studies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Urban Distribution Reliability Upgrade with Smart Monitoring</title>
+      <link>http://localhost:1313/resources/case-studies/case-3/</link>
+      <pubDate>Thu, 26 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/case-3/</guid>
+      <description>&lt;h2 id=&#34;project-snapshot&#34;&gt;Project Snapshot&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Client (anonymous):&lt;/strong&gt; NorthBridge Industrial Park Operations Office, East Africa&lt;br&gt;&#xA;&lt;strong&gt;Industry:&lt;/strong&gt; Mixed-use urban industrial park (food processing, cold storage, light assembly)&lt;br&gt;&#xA;&lt;strong&gt;Scope:&lt;/strong&gt; Distribution transformer replacement + smart monitoring deployment&lt;br&gt;&#xA;&lt;strong&gt;Primary Product:&lt;/strong&gt; Oil-immersed distribution transformer for industrial power distribution&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;why-this-project-started&#34;&gt;Why This Project Started&lt;/h2&gt;&#xA;&lt;p&gt;NorthBridge Industrial Park was built in phases over nearly 15 years. Like many urban industrial zones, it grew faster than its original electrical design. New tenants added refrigeration lines, packaging equipment, and small automation cells, while the existing distribution network remained mostly unchanged.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Oil-Immersed Transformer for a Utility-Scale Solar Project</title>
+      <link>http://localhost:1313/resources/case-studies/case-2/</link>
+      <pubDate>Thu, 19 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/case-2/</guid>
+      <description>&lt;p&gt;When people talk about utility-scale solar, they often focus on module efficiency, inverter brands, or tracker design. In this project, the decisive work happened one level deeper: at the transformer layer.&lt;/p&gt;&#xA;&lt;p&gt;This case study covers how a regional renewable energy developer in Southern Europe (we will call them &lt;strong&gt;Solterra Grid Partners&lt;/strong&gt;) selected an &lt;strong&gt;oil-immersed transformer&lt;/strong&gt; package for a 120 MW solar site, and how the project team reduced technical uncertainty from design review to grid energization.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dry-Type Transformer Upgrade for an Electronics Plant</title>
+      <link>http://localhost:1313/resources/case-studies/case-1/</link>
+      <pubDate>Thu, 12 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/case-1/</guid>
+      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;When the operations manager of &lt;strong&gt;NorthRiver Components Park&lt;/strong&gt; (name adjusted for confidentiality), an electronics manufacturing facility in Southeast Asia, sent us the first message, the request sounded simple:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“We need to replace two old units before peak season. But we can’t afford production uncertainty.”&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;In reality, this was not only a replacement job. It was an &lt;strong&gt;industrial power distribution&lt;/strong&gt; upgrade under tight operational constraints. The plant was running mixed loads—SMT lines, automated optical inspection systems, reflow ovens, compressed air systems, and variable-speed HVAC equipment. Power quality had become a limiting factor for stable production.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

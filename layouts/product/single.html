@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main class="section product-single" aria-labelledby="product-single-title">
+    <div class="container container--narrow">
+      <div class="section__inner">
+        <div class="product-single__overview">
+          {{ with .Params.image }}
+          <div class="product-single__media">
+            <img class="product-single__image" src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+          </div>
+          {{ end }}
+      
+          <div class="product-single__summary">
+            {{with .Title}}
+            <h1 id="product-single-title" class="product-single__title font-title-s">{{ . }}</h1>
+            {{ end }}
+      
+            {{ with .Description }}
+            <p class="font-body">{{ . }}</p>
+            {{ end }}
+      
+            <a class="button product-single__quote" href='{{ "/contact/" | relLangURL }}'>
+              {{ i18n "request_quote" | default "Request a Quote" }}
+            </a>
+          </div>
+        </div>
+      
+        <section class="product-single__details" aria-labelledby="product-single-details-title">
+          <h2 id="product-single-details-title" class="product-single__details-title font-title-s">
+            {{ i18n "product_details" | default "Product Details" }}
+          </h2>
+      
+          <div class="product-single__content font-body">
+            {{ .Content }}
+          </div>
+        </section>
+      </div>
+    </div>
+</main>
+{{ end }}

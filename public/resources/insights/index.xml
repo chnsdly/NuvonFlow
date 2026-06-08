@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Insights on Nuvon Flow Control</title>
+    <link>http://localhost:1313/resources/insights/</link>
+    <description>Recent content in Insights on Nuvon Flow Control</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 04 Jun 2026 09:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/resources/insights/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When Does a Factory Need an On-Load Tap-Changing Transformer?</title>
+      <link>http://localhost:1313/resources/insights/when-factory-needs-on-load-tap-changing-transformer/</link>
+      <pubDate>Thu, 04 Jun 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/when-factory-needs-on-load-tap-changing-transformer/</guid>
+      <description>&lt;p&gt;A factory can have enough transformer capacity and still suffer from unstable production if voltage moves outside the operating window of its equipment. This is especially common in plants with large motors, welding lines, compressors, furnaces, variable production shifts, or a weak incoming utility network.&lt;/p&gt;&#xA;&lt;p&gt;In these situations, the procurement question is not only “How many kVA do we need?” It becomes: “Can the transformer keep the secondary voltage stable while the plant is running?”&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dry-Type or Oil-Immersed Transformer? A Decision Framework for Industrial Projects</title>
+      <link>http://localhost:1313/resources/insights/insights-3/</link>
+      <pubDate>Mon, 30 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/insights-3/</guid>
+      <description>&lt;p&gt;One of the most common questions in industrial RFQs is direct: should we choose a dry-type transformer or an oil-immersed transformer?&lt;/p&gt;&#xA;&lt;p&gt;The shortest honest answer is: it depends on the site, the risk profile, and the way the plant team will operate the asset over time.&lt;/p&gt;&#xA;&lt;p&gt;In real projects, this choice is rarely about product preference alone. It sits at the intersection of safety policy, installation environment, maintenance resources, and commercial priorities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>From Temperature Rise to Service Life: What Industrial Buyers Should Watch</title>
+      <link>http://localhost:1313/resources/insights/insights-2/</link>
+      <pubDate>Wed, 25 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/insights-2/</guid>
+      <description>&lt;p&gt;In many transformer discussions, temperature rise appears as a line item on a test sheet. For experienced industrial teams, it is much more than that. It is an early indicator of whether a transformer will age gracefully or enter a cycle of increasing maintenance pressure.&lt;/p&gt;&#xA;&lt;p&gt;A distribution transformer can pass factory tests and still face thermal stress later if the site environment is harsher than expected: enclosed rooms with poor airflow, high harmonic content, seasonal overload patterns, or dust accumulation on cooling paths.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sizing a Distribution Transformer for a Factory with Variable Loads</title>
+      <link>http://localhost:1313/resources/insights/insights-1/</link>
+      <pubDate>Fri, 20 Mar 2026 09:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/insights-1/</guid>
+      <description>&lt;p&gt;When an overseas buyer first contacts a transformer supplier, the request often sounds simple: “We need a transformer for our new factory.” A day later, the load list arrives. A week later, the load list changes again because one production line is moving faster than planned, and a second line may be added next year.&lt;/p&gt;&#xA;&lt;p&gt;This is normal in industrial power distribution projects. Real factories do not run at one fixed point. They run by shift, by season, by order cycle, and sometimes by uncertainty.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Compact Substations on Nuvon Flow Control</title>
+    <link>http://localhost:1313/product/substation/</link>
+    <description>Recent content in Compact Substations on Nuvon Flow Control</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <atom:link href="http://localhost:1313/product/substation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prefabricated Compact Substation A</title>
+      <link>http://localhost:1313/product/substation/box-type-substation-a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/product/substation/box-type-substation-a/</guid>
+      <description>&lt;p&gt;This model follows a European-style prefabricated concept that combines medium-voltage switchgear, distribution transformer, and low-voltage assemblies inside one compact enclosure. The internal arrangement can be configured in triangular or linear compartment layouts, enabling efficient deployment where installation area and civil interface complexity must be controlled.&lt;/p&gt;&#xA;&lt;p&gt;Its base and structural frame are manufactured with channel steel for robust rigidity during transportation and long-term operation. The enclosure can be specified in non-metallic panels, stainless steel, or cold-rolled steel depending on site conditions and corrosion expectations. Inter-compartment partitions, double-layer roof and side walls, plus temperature-controlled ventilation in transformer and LV rooms help improve thermal performance, operational reliability, and maintenance accessibility.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prefabricated Compact Substation B</title>
+      <link>http://localhost:1313/product/substation/box-type-substation-b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/product/substation/box-type-substation-b/</guid>
+      <description>&lt;p&gt;Substation B is optimized for industrial duty where continuity of supply and maintainability are key project targets. It integrates MV incoming section, transformer step-down section, and LV outgoing section into a factory-assembled package, reducing field assembly work and lowering schedule risk compared with multi-equipment on-site integration.&lt;/p&gt;&#xA;&lt;p&gt;The product uses a high-strength channel-steel base and skeleton to handle lifting, relocation, and long service cycles. Enclosure material can be selected according to corrosion class and appearance requirements, while compartmentalized separation and interlock philosophy reduce cross-interference during inspection. Transformer rating, wiring method, and key MV/LV component selection can be customized to match load profile and project-specific engineering standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prefabricated Compact Substation C</title>
+      <link>http://localhost:1313/product/substation/box-type-substation-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/product/substation/box-type-substation-c/</guid>
+      <description>&lt;p&gt;This configuration is tailored for outdoor distribution points including wind farm auxiliaries, scenic-area feeders, road lighting power nodes, and municipal service infrastructure. The MV room, transformer room, and LV room are pre-integrated in one station body, so on-site work is largely limited to foundation, cable termination, and commissioning.&lt;/p&gt;&#xA;&lt;p&gt;Its compact architecture supports easier placement in land-constrained projects and offers practical flexibility for relocation or phased expansion. A double-layer roof and side-wall design helps limit solar heat impact, while automatic temperature-controlled ventilation improves internal cooling conditions. Enclosure materials can be selected for coastal humidity, dusty environments, or standard urban exposure, balancing environmental protection, appearance quality, and routine inspection convenience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prefabricated Compact Substation D</title>
+      <link>http://localhost:1313/product/substation/box-type-substation-d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/product/substation/box-type-substation-d/</guid>
+      <description>&lt;p&gt;Substation D is suitable for construction sites, temporary event venues, emergency backup tasks, and staged capacity expansion projects. By integrating MV intake, transformer section, and LV distribution in one enclosed package, it supports a rapid “deliver-install-energize” workflow that shortens temporary power preparation time.&lt;/p&gt;&#xA;&lt;p&gt;The unit adopts a channel-steel base and frame for high mechanical strength and repeatable lifting/transport performance. It can be used as a node in ring-main distribution systems or as a radial terminal supply point, depending on field topology requirements. Compartment segregation, interlocked protection logic, and service-oriented internal access support safer inspection and component replacement under demanding temporary operation conditions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prefabricated Compact Substation E</title>
+      <link>http://localhost:1313/product/substation/box-type-substation-e/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/product/substation/box-type-substation-e/</guid>
+      <description>&lt;p&gt;This model targets building distribution applications in residential communities, mixed-use complexes, high-rise developments, and public service facilities. MV room, transformer room, and LV room are factory-integrated and tested before delivery, improving on-site installation consistency and reducing dependence on conventional indoor substation construction schedules.&lt;/p&gt;&#xA;&lt;p&gt;In project execution, customers can specify transformer capacity classes, metering or compensation units, and the number of MV/LV outgoing circuits. The enclosure is available in non-metallic, stainless steel, or cold-rolled steel variants to align environmental durability with façade requirements. With its compact footprint and maintainable internal layout, the series supports reliable power distribution in dense urban areas while keeping lifecycle service efficiency manageable.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

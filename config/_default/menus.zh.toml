@@ -180,7 +180,7 @@ weight = 50
   weight = 52
 
 
-[[main]]
+[[header_cta]]
 identifier = "request-a-quote"
 name = "提交询价"
 pageRef = "/request-a-quote"

@@ -56,7 +56,7 @@ weight = 10
 
 [[main]]
 identifier = "applications"
-name = "应用"
+name = "应用场景"
 pageRef = "/applications"
 weight = 20
 
@@ -133,7 +133,7 @@ weight = 30
 
 [[main]]
 identifier = "resources"
-name = "资源"
+name = "资源中心"
 pageRef = "/resources"
 weight = 40
 
@@ -161,7 +161,7 @@ weight = 40
 
 [[main]]
 identifier = "about"
-name = "关于"
+name = "关于公司"
 pageRef = "/about"
 weight = 50
 
@@ -182,7 +182,7 @@ weight = 50
 
 [[header_cta]]
 identifier = "request-a-quote"
-name = "提交询价"
+name = "获取报价"
 pageRef = "/request-a-quote"
 weight = 60
 

@@ -13,7 +13,7 @@
   align-items: center;
   padding: 0 space(3);
   gap: space(2);
-  min-height: 4.5rem;
+  min-height: 4.2rem;
 }
 
 .site-header__logo {
@@ -168,13 +168,10 @@
   padding: space(2) space(2);
 }
 
-.site-header__mobile-section[open] .site-header__mobile-submenu {
-  background-color: color-mix(in oklab, var(--brand) 9%, var(--surface) 91%);
-}
-
 .site-header__mobile-link {
   display: block;
   padding: space(2) space(1);
+  border-bottom: var(--border);
   border-radius: var(--radius-s);
   color: var(--muted-text);
 }
@@ -315,6 +312,7 @@
   .site-header__submenu-link {
     display: block;
     padding: space(1.5) space(1);
+    border-bottom: var(--border);
     border-radius: var(--radius-s);
     color: var(--muted-text);
     font-size: 0.95rem;

@@ -275,7 +275,7 @@ body {
   align-items: center;
   padding: 0 calc(var(--space) * 3);
   gap: calc(var(--space) * 2);
-  min-height: 4.5rem; }
+  min-height: 4.2rem; }
 
 .site-header__logo {
   display: inline-flex;
@@ -401,12 +401,10 @@ body {
   display: grid;
   padding: calc(var(--space) * 2) calc(var(--space) * 2); }
 
-.site-header__mobile-section[open] .site-header__mobile-submenu {
-  background-color: color-mix(in oklab, var(--brand) 9%, var(--surface) 91%); }
-
 .site-header__mobile-link {
   display: block;
   padding: calc(var(--space) * 2) calc(var(--space) * 1);
+  border-bottom: var(--border);
   border-radius: var(--radius-s);
   color: var(--muted-text); }
 
@@ -511,6 +509,7 @@ body {
   .site-header__submenu-link {
     display: block;
     padding: calc(var(--space) * 1.5) calc(var(--space) * 1);
+    border-bottom: var(--border);
     border-radius: var(--radius-s);
     color: var(--muted-text);
     font-size: 0.95rem;

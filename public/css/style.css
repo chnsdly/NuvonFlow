@@ -39,11 +39,11 @@
   --font-sans: "Inter", "Noto Sans SC", Arial, sans-serif;
   --border:       1px solid #E7E5DD;
   /* 全站统一边框 */
-  --radius-s: 12px;
+  --radius-s: 4px;
   /* 按钮、输入框、小标签 */
-  --radius-m: 16px;
+  --radius-m: 8px;
   /* 卡片 */
-  --radius-l: 24px;
+  --radius-l: 16px;
   /* 大面板 */
   --radius-pill: 999px;
   /* 胶囊 */

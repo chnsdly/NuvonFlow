@@ -53,20 +53,6 @@ weight = 10
   parent = "products"
   weight = 17
 
-  [[main]]
-  identifier = "double-containment"
-  name = "Double Containment"
-  pageRef = "/products/double-containment"
-  parent = "products"
-  weight = 18
-
-  [[main]]
-  identifier = "leak-detection"
-  name = "Leak Detection"
-  pageRef = "/products/leak-detection"
-  parent = "products"
-  weight = 19
-
 
 [[main]]
 identifier = "applications"
@@ -138,9 +124,9 @@ weight = 30
   weight = 33
 
   [[main]]
-  identifier = "compliance-delivery-warranty"
-  name = "Compliance, Delivery & Warranty"
-  pageRef = "/project-support/compliance-delivery-warranty"
+  identifier = "rfq-bom-support"
+  name = "RFQ & BOM Support"
+  pageRef = "/project-support/rfq-bom-support"
   parent = "project-support"
   weight = 34
 

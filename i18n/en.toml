@@ -1,14 +1,12 @@
-[nav_hub_products]
-other = "All Products"
-
-[nav_hub_applications]
-other = "Applications Overview"
-
-[nav_hub_project_support]
-other = "Project Support Overview"
-
-[nav_hub_resources]
-other = "Resources Overview"
-
-[nav_hub_about]
-other = "About Nuvon"
+nav_hub_products = "All Products"
+nav_hub_applications = "Applications Overview"
+nav_hub_project_support = "Project Support Overview"
+nav_hub_resources = "Resources Overview"
+nav_hub_about = "About Nuvon"
+header_primary_navigation = "Primary navigation"
+header_mobile_primary_navigation = "Mobile primary navigation"
+header_open_primary_navigation = "Open primary navigation"
+header_language_selector = "Language selector"
+header_language_label = "Language"
+header_logo_home_aria = "%s home"
+header_submenu_aria = "%s submenu"

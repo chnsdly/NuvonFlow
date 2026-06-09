@@ -166,25 +166,18 @@ pageRef = "/about"
 weight = 50
 
   [[main]]
-  identifier = "about-nuvon"
-  name = "关于 Nuvon"
-  pageRef = "/about/nuvon"
-  parent = "about"
-  weight = 51
-
-  [[main]]
   identifier = "quality-supply-coordination"
   name = "质量与供应协调"
   pageRef = "/about/quality-supply-coordination"
   parent = "about"
-  weight = 52
+  weight = 51
 
   [[main]]
   identifier = "contact"
   name = "联系我们"
   pageRef = "/contact"
   parent = "about"
-  weight = 53
+  weight = 52
 
 
 [[main]]

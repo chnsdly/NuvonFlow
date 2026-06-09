@@ -1,7 +1,7 @@
 {{ $current := . }}
-{{ $quoteItems := where .Site.Menus.main "Identifier" "request-a-quote" }}
+{{ $quoteItems := .Site.Menus.header_cta }}
 {{ $quoteItem := index $quoteItems 0 }}
-{{ $primaryItems := where .Site.Menus.main "Identifier" "ne" "request-a-quote" }}
+{{ $primaryItems := .Site.Menus.main }}
 {{ $lang := .Site.Language.Lang }}
 {{ $languageLabels := dict "en" "English" "zh" "中文" }}
 

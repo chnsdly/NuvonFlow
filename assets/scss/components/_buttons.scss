@@ -1,0 +1,94 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: space(0.75);
+  min-height: 2.75rem;
+  padding: space(0.75) space(2);
+  border: var(--border);
+  border-radius: var(--radius-s);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  appearance: none;
+  user-select: none;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    color var(--transition-base),
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.button:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+
+.button:where(:not(:disabled):not([aria-disabled="true"]):not(.button--disabled)):active {
+  transform: translateY(1px);
+}
+
+.button:disabled,
+.button[aria-disabled="true"],
+.button.is-disabled {
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+  pointer-events: none;
+  transform: none;
+}
+
+.button__icon,
+.button > svg {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 1.125em;
+  height: 1.125em;
+}
+
+.button__icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.button__text {
+  min-width: 0;
+}
+
+.button--primary {
+  border-color: var(--brand);
+  background-color: var(--brand);
+  color: var(--on-brand);
+  box-shadow: var(--shadow-inset);
+}
+
+.button--primary:where(:not(:disabled):not([aria-disabled="true"]):not(.button--disabled)):hover {
+  border-color: color-mix(in oklab, var(--brand) 84%, var(--on-surface) 16%);
+  background-color: color-mix(in oklab, var(--brand) 88%, var(--on-surface) 12%);
+  color: var(--on-brand);
+  box-shadow: var(--shadow-hover);
+}
+
+.button--secondary {
+  border-color: color-mix(in oklab, var(--brand) 42%, var(--surface) 58%);
+  background-color: color-mix(in oklab, var(--surface) 92%, white 8%);
+  color: var(--brand);
+}
+
+.button--secondary:where(:not(:disabled):not([aria-disabled="true"]):not(.button--disabled)):hover {
+  border-color: var(--brand);
+  background-color: color-mix(in oklab, var(--brand) 10%, var(--surface) 90%);
+  color: color-mix(in oklab, var(--brand) 84%, var(--on-surface) 16%);
+}
+
+.button--full {
+  width: 100%;
+}

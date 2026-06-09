@@ -1,0 +1,106 @@
+{{ $current := . }}
+{{ $quoteItems := where .Site.Menus.main "Identifier" "request-a-quote" }}
+{{ $quoteItem := index $quoteItems 0 }}
+{{ $primaryItems := where .Site.Menus.main "Identifier" "ne" "request-a-quote" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $languageLabels := dict "en" "English" "zh" "中文" }}
+{{ $hubLabels := dict
+  "products" (dict "en" "All Products" "zh" "全部产品")
+  "applications" (dict "en" "Applications Overview" "zh" "应用总览")
+  "project-support" (dict "en" "Project Support Overview" "zh" "项目支持总览")
+  "resources" (dict "en" "Resources Overview" "zh" "资源总览")
+  "about" (dict "en" "About Nuvon" "zh" "关于纽沃")
+}}
+
+<header class="site-header">
+  <div class="site-header__inner container container--wide">
+    <a class="site-header__logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
+      <span class="site-header__logo-mark" aria-hidden="true">NF</span>
+      <span class="site-header__logo-text">Nuvon Flow Control</span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Primary navigation">
+      <ul class="site-header__menu">
+        {{ range $primaryItems }}
+          {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          <li class="site-header__item{{ if .HasChildren }} site-header__item--has-children{{ end }}{{ if $isActive }} is-active{{ end }}">
+            <a class="site-header__link" href="{{ .URL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+              <span>{{ .Name }}</span>
+              {{ if .HasChildren }}<span class="site-header__chevron" aria-hidden="true">⌄</span>{{ end }}
+            </a>
+            {{ if .HasChildren }}
+              <ul class="site-header__submenu" aria-label="{{ .Name }} submenu">
+                {{ range .Children }}
+                  {{ $childActive := $current.IsMenuCurrent "main" . }}
+                  <li class="site-header__submenu-item{{ if $childActive }} is-active{{ end }}">
+                    <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    {{ with $quoteItem }}
+      <a class="site-header__cta button button--primary" href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+
+    <details class="site-header__mobile">
+      <summary class="site-header__toggle" aria-label="Open primary navigation">
+        <span class="site-header__toggle-line" aria-hidden="true"></span>
+        <span class="site-header__toggle-line" aria-hidden="true"></span>
+        <span class="site-header__toggle-line" aria-hidden="true"></span>
+      </summary>
+
+      <nav class="site-header__mobile-panel" aria-label="Mobile primary navigation">
+        <ul class="site-header__mobile-menu">
+          {{ range $primaryItems }}
+            {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+            {{ $hubLabelSet := index $hubLabels .Identifier }}
+            {{ $hubLabel := cond (and $hubLabelSet (isset $hubLabelSet $lang)) (index $hubLabelSet $lang) .Name }}
+            <li class="site-header__mobile-item{{ if $isActive }} is-active{{ end }}">
+              <details class="site-header__mobile-section"{{ if $isActive }} open{{ end }}>
+                <summary class="site-header__mobile-summary">
+                  <span>{{ .Name }}</span>
+                  <span class="site-header__mobile-chevron" aria-hidden="true">⌄</span>
+                </summary>
+                <ul class="site-header__mobile-submenu">
+                  <li>
+                    <a class="site-header__mobile-link site-header__mobile-link--hub" href="{{ .URL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ $hubLabel }}</a>
+                  </li>
+                  {{ range .Children }}
+                    {{ $childActive := $current.IsMenuCurrent "main" . }}
+                    <li>
+                      <a class="site-header__mobile-link" href="{{ .URL }}"{{ if $childActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </details>
+            </li>
+          {{ end }}
+        </ul>
+
+        <div class="site-header__mobile-footer">
+          <div class="site-header__language" aria-label="Language selector">
+            <span class="site-header__language-label">{{ if eq $lang "zh" }}语言{{ else }}Language{{ end }}</span>
+            <ul class="site-header__language-list">
+              {{ range .Site.Languages }}
+                {{ $translation := index (where $current.AllTranslations "Lang" .Lang) 0 }}
+                {{ $label := cond (isset $languageLabels .Lang) (index $languageLabels .Lang) .Lang }}
+                <li>
+                  <a class="site-header__language-link{{ if eq $.Site.Language.Lang .Lang }} is-active{{ end }}" href="{{ with $translation }}{{ .RelPermalink }}{{ else }}{{ relLangURL .Lang }}{{ end }}" hreflang="{{ .Lang }}"{{ if eq $.Site.Language.Lang .Lang }} aria-current="true"{{ end }}>{{ $label }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          {{ with $quoteItem }}
+            <a class="site-header__mobile-cta button button--primary button--full" href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </nav>
+    </details>
+  </div>
+</header>

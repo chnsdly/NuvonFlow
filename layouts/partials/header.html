@@ -2,17 +2,16 @@
 {{ $quoteItems := .Site.Menus.header_cta }}
 {{ $quoteItem := index $quoteItems 0 }}
 {{ $primaryItems := .Site.Menus.main }}
-{{ $lang := .Site.Language.Lang }}
 {{ $languageLabels := dict "en" "English" "zh" "中文" }}
 
 <header class="site-header">
   <div class="site-header__inner container container--wide">
-    <a class="site-header__logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Title }} home">
+    <a class="site-header__logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ printf (i18n "header_logo_home_aria") .Site.Title }}">
       <span class="site-header__logo-mark" aria-hidden="true">NF</span>
       <span class="site-header__logo-text">Nuvon Flow Control</span>
     </a>
 
-    <nav class="site-header__nav" aria-label="Primary navigation">
+    <nav class="site-header__nav" aria-label="{{ i18n "header_primary_navigation" }}">
       <ul class="site-header__menu">
         {{ range $primaryItems }}
           {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
@@ -22,7 +21,7 @@
               {{ if .HasChildren }}<span class="site-header__chevron" aria-hidden="true">⌄</span>{{ end }}
             </a>
             {{ if .HasChildren }}
-              <ul class="site-header__submenu" aria-label="{{ .Name }} submenu">
+              <ul class="site-header__submenu" aria-label="{{ printf (i18n "header_submenu_aria") .Name }}">
                 {{ range .Children }}
                   {{ $childActive := $current.IsMenuCurrent "main" . }}
                   <li class="site-header__submenu-item{{ if $childActive }} is-active{{ end }}">
@@ -41,13 +40,13 @@
     {{ end }}
     
     <details class="site-header__mobile">
-      <summary class="site-header__toggle" aria-label="Open primary navigation">
+      <summary class="site-header__toggle" aria-label="{{ i18n "header_open_primary_navigation" }}">
         <span class="site-header__toggle-line" aria-hidden="true"></span>
         <span class="site-header__toggle-line" aria-hidden="true"></span>
         <span class="site-header__toggle-line" aria-hidden="true"></span>
       </summary>
 
-      <nav class="site-header__mobile-panel" aria-label="Mobile primary navigation">
+      <nav class="site-header__mobile-panel" aria-label="{{ i18n "header_mobile_primary_navigation" }}">
         <ul class="site-header__mobile-menu">
           {{ range $primaryItems }}
             {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
@@ -76,8 +75,8 @@
         </ul>
 
         <div class="site-header__mobile-footer">
-          <div class="site-header__language" aria-label="Language selector">
-            <span class="site-header__language-label">{{ if eq $lang "zh" }}语言{{ else }}Language{{ end }}</span>
+          <div class="site-header__language" aria-label="{{ i18n "header_language_selector" }}">
+            <span class="site-header__language-label">{{ i18n "header_language_label" }}</span>
             <ul class="site-header__language-list">
               {{ range .Site.Languages }}
                 {{ $translation := index (where $current.AllTranslations "Lang" .Lang) 0 }}

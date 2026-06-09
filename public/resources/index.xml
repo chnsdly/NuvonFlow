@@ -6,7 +6,20 @@
     <description>Recent content in Resources on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RFQ &amp; Submittal Inputs</title>
+      <link>http://localhost:1313/resources/rfq-submittal-inputs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/rfq-submittal-inputs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Document Request</title>
+      <link>http://localhost:1313/resources/document-request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/document-request/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

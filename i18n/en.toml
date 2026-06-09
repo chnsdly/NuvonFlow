@@ -1,0 +1,14 @@
+[nav_hub_products]
+other = "All Products"
+
+[nav_hub_applications]
+other = "Applications Overview"
+
+[nav_hub_project_support]
+other = "Project Support Overview"
+
+[nav_hub_resources]
+other = "Resources Overview"
+
+[nav_hub_about]
+other = "About Nuvon"

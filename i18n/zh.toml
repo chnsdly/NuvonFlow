@@ -1,0 +1,14 @@
+[nav_hub_products]
+other = "全部产品"
+
+[nav_hub_applications]
+other = "应用总览"
+
+[nav_hub_project_support]
+other = "项目支持总览"
+
+[nav_hub_resources]
+other = "资源总览"
+
+[nav_hub_about]
+other = "关于纽沃"

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Products on Nuvon Flow Control</title>
+    <link>http://localhost:1313/products/</link>
+    <description>Recent content in Products on Nuvon Flow Control</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <atom:link href="http://localhost:1313/products/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ball Valves</title>
+      <link>http://localhost:1313/products/ball-valves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/ball-valves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Butterfly Valves</title>
+      <link>http://localhost:1313/products/butterfly-valves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/butterfly-valves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diaphragm Valves</title>
+      <link>http://localhost:1313/products/diaphragm-valves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/diaphragm-valves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Check Valves</title>
+      <link>http://localhost:1313/products/check-valves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/check-valves/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pressure Control &amp; Chemfeed</title>
+      <link>http://localhost:1313/products/pressure-control-chemfeed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/pressure-control-chemfeed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Actuators</title>
+      <link>http://localhost:1313/products/actuators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/actuators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fittings</title>
+      <link>http://localhost:1313/products/fittings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/fittings/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

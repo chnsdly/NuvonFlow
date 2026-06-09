@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>项目支持 on Nuvon Flow Control 中文站</title>
+    <link>http://localhost:1313/zh/project-support/</link>
+    <description>Recent content in 项目支持 on Nuvon Flow Control 中文站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <atom:link href="http://localhost:1313/zh/project-support/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>提交工况参数</title>
+      <link>http://localhost:1313/zh/project-support/submit-duty-conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/project-support/submit-duty-conditions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>材料兼容性评审</title>
+      <link>http://localhost:1313/zh/project-support/material-compatibility-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/project-support/material-compatibility-review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术文件与送审资料</title>
+      <link>http://localhost:1313/zh/project-support/submittal-documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/project-support/submittal-documentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>询价与物料清单支持</title>
+      <link>http://localhost:1313/zh/project-support/rfq-bom-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/project-support/rfq-bom-support/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

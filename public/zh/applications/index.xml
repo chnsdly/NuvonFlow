@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>应用 on Nuvon Flow Control 中文站</title>
+    <link>http://localhost:1313/zh/applications/</link>
+    <description>Recent content in 应用 on Nuvon Flow Control 中文站</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <atom:link href="http://localhost:1313/zh/applications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>工业水处理</title>
+      <link>http://localhost:1313/zh/applications/industrial-water-treatment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/applications/industrial-water-treatment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工业废水处理</title>
+      <link>http://localhost:1313/zh/applications/industrial-wastewater/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/applications/industrial-wastewater/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>化学加药与注入</title>
+      <link>http://localhost:1313/zh/applications/chemical-dosing-injection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/applications/chemical-dosing-injection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>腐蚀性化学品输送</title>
+      <link>http://localhost:1313/zh/applications/corrosive-chemical-transfer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/applications/corrosive-chemical-transfer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>化工流程</title>
+      <link>http://localhost:1313/zh/applications/chemical-processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/applications/chemical-processing/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

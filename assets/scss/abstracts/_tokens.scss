@@ -15,7 +15,7 @@
   --on-surface:   #121212;   /* 正文前景色 */
 
   --card:         color-mix(in oklab, var(--surface) 38%, white);
-  --secondary:        color-mix(in oklab, var(--on-surface) 70%, var(--surface) 30%);
+  --muted-text:       color-mix(in oklab, var(--on-surface) 60%, var(--surface) 40%);
   --img-bg: linear-gradient(to top, #EAF4FF 0%, #B9DAFA 50%, #76AFE8 100%); /* 透明图片的背景色 */
 
 

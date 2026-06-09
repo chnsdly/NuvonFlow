@@ -43,4 +43,4 @@ body {
 .section__inner { display: grid; gap: space(3); }
 .section__header { display: grid; gap: space(2); text-align: center; }
 .section__title { color: var(--on-surface); }
-.section__description { margin: 0 auto; max-width: 120ch; color: var(--secondary); }
+.section__description { margin: 0 auto; max-width: 120ch; color: var(--muted-text); }

@@ -329,6 +329,8 @@
   .site-header__cta {
     display: inline-flex;
     justify-self: end;
+    width: fit-content;
+    white-space: nowrap;
   }
 
   .site-header__mobile {

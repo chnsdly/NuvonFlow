@@ -2051,7 +2051,7 @@ button.site-header__link::-moz-focus-inner {
   .home-hero__inner {
     padding-block: calc(var(--space) * 7) calc(var(--space) * 6); }
   .home-hero__title {
-    max-width: 15ch;
+    max-width: 16ch;
     font-size: 3.25rem; }
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr)); }

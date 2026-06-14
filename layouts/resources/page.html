@@ -1,25 +1,51 @@
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section resources-page" aria-labelledby="resources-page-title">
-  <div class="container container--narrow">
-    <article class="resources-page__article">
-      {{ with .Params.image }}
-      <div class="resources-page__media">
-        <img class="resources-page__image" src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
-      </div>
-      {{ end }}
+  <div class="{{ $containerClass }}">
+    <div class="resources-page__layout">
+      <article class="resources-page__article">
+        {{ with .Params.image }}
+        {{ $isGenericImage := in (slice "/images/background.webp" "/images/abc.webp") . }}
+        <div class="resources-page__media">
+          {{ if $isGenericImage }}
+          {{ partial "technical-visual.html" (dict "title" $.Title "label" (cond $isZh "技术指南" "Technical guide") "variant" "document" "size" "article") }}
+          {{ else }}
+          <img class="resources-page__image" src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+          {{ end }}
+        </div>
+        {{ end }}
 
-      <div class="resources-page__meta font-meta">
-        {{ with .Date }}<time class="resources-page__meta-item" datetime="{{ .Format "2006-01-02" }}">{{ . | time.Format ":date_long" }}</time>{{ end }}
-        {{ with .Params.author }}<span class="resources-page__meta-item">{{ i18n "author" }}: {{ . }}</span>{{ end }}
-        {{ with .Params.readingTime }}<span class="resources-page__meta-item">{{ i18n "readingTime" }}: {{ . }}</span>{{ end }}
-      </div>
+        <div class="resources-page__meta font-meta">
+          {{ with .Date }}<time class="resources-page__meta-item" datetime="{{ .Format "2006-01-02" }}">{{ . | time.Format ":date_long" }}</time>{{ end }}
+          {{ with .Params.author }}<span class="resources-page__meta-item">{{ i18n "author" }}: {{ . }}</span>{{ end }}
+          {{ with .Params.readingTime }}<span class="resources-page__meta-item">{{ i18n "readingTime" }}: {{ . }}</span>{{ end }}
+        </div>
 
-      <h1 id="resources-page-title" class="resources-page__title font-title-l">{{ .Title }}</h1>
+        <h1 id="resources-page-title" class="resources-page__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}<p class="resources-page__description font-body">{{ . }}</p>{{ end }}
 
-      <div class="resources-page__content font-body">
-        {{ .Content }}
-      </div>
-    </article>
+        <div class="resources-page__content content-prose font-body">
+          {{ .Content }}
+        </div>
+      </article>
+
+      <aside class="resources-page__aside" aria-label="{{ if $isZh }}文章导航{{ else }}Article navigation{{ end }}">
+        <div class="resources-page__aside-card">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}阅读重点{{ else }}Reading Focus{{ end }}</p>
+          <h2 class="font-title-xs">{{ if $isZh }}把指南转化为询价输入{{ else }}Turn the guide into RFQ inputs{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}阅读后可先对照 RFQ 输入清单整理介质、材料、压力、连接和文件要求，再提交可评审的询价。{{ else }}After reading, use the RFQ checklist to organize media, material, pressure, connection, and document requirements before submitting a reviewable inquiry.{{ end }}</p>
+          <a class="button button--primary button--full" href='{{ "/resources/rfq-submittal-inputs/" | relLangURL }}'>{{ if $isZh }}查看 RFQ 输入清单{{ else }}View RFQ Input Checklist{{ end }}</a>
+          <a class="button button--secondary button--full" href='{{ "/request-a-quote/" | relLangURL }}'>{{ if $isZh }}提交询价{{ else }}Request a Quote{{ end }}</a>
+        </div>
+        {{ with .TableOfContents }}
+        <div class="resources-page__toc">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}目录{{ else }}Contents{{ end }}</p>
+          {{ . }}
+        </div>
+        {{ end }}
+      </aside>
+    </div>
   </div>
 </main>
 {{ end }}

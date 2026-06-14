@@ -6,20 +6,21 @@
     <description>Recent content in 资源 on Nuvon Flow Control 中文站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/zh/resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RFQ 与送审输入</title>
       <link>http://localhost:1313/zh/resources/rfq-submittal-inputs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/zh/resources/rfq-submittal-inputs/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;rfq-输入&#34;&gt;RFQ 输入&lt;/h2&gt;&#xA;&lt;p&gt;清晰的 RFQ 应描述所需产品，也应说明产品背后的工况。至少建议准备介质、浓度、温度、压力、流量或泵能力、口径、连接、材料偏好、操作方式、数量、目的地和文件要求。&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;输入项&lt;/th&gt;&#xA;          &lt;th&gt;为什么重要&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;介质和浓度&lt;/td&gt;&#xA;          &lt;td&gt;影响材料、阀座、密封、隔膜、垫片和附件评审。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;温度和压力&lt;/td&gt;&#xA;          &lt;td&gt;用于确认压力温度边界、安全裕量和产品系列适配。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;口径和连接&lt;/td&gt;&#xA;          &lt;td&gt;避免与管道标准、法兰、软管或设备接口不匹配。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;阀门功能&lt;/td&gt;&#xA;          &lt;td&gt;区分切断、调节、止回保护、加药、泄压和自动化。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;数量和目的地&lt;/td&gt;&#xA;          &lt;td&gt;影响报价结构、包装、运费、备件和交付计划。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;文件要求&lt;/td&gt;&#xA;          &lt;td&gt;帮助尽早纳入数据表、图纸、声明、测试记录和包装文件。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;送审输入&#34;&gt;送审输入&lt;/h2&gt;&#xA;&lt;p&gt;如果项目需要批准文件，应在报价阶段列出。常见文件包括数据表、图纸、安装维护手册、材料声明、检验记录、证书、包装信息和备件清单。&lt;/p&gt;&#xA;&lt;p&gt;如果客户使用文件登记表，请提供位号、版本规则、语言要求、文件命名格式、审批状态流程和截止时间。&lt;/p&gt;&#xA;&lt;h2 id=&#34;有用结构&#34;&gt;有用结构&lt;/h2&gt;&#xA;&lt;p&gt;对于基于 BOM 的需求，建议按行项目整理产品系列、口径、材料、连接、数量、工况说明和所需文件。这样假设更可见，也更容易修正。&lt;/p&gt;&#xA;&lt;h2 id=&#34;发送前&#34;&gt;发送前&lt;/h2&gt;&#xA;&lt;p&gt;如果未知项被明确标记，不完整 RFQ 也可以先提交。有价值的首次回复可以识别缺失信息、建议产品方向，并区分已确认项目和假设。&lt;/p&gt;&#xA;&lt;p&gt;当你已有足够信息描述工况时，可以从&lt;a href=&#34;http://localhost:1313/zh/request-a-quote/&#34;&gt;提交询价&lt;/a&gt;表单开始。&lt;/p&gt;</description>
     </item>
     <item>
       <title>文件申请</title>
       <link>http://localhost:1313/zh/resources/document-request/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/zh/resources/document-request/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;文件申请范围&#34;&gt;文件申请范围&lt;/h2&gt;&#xA;&lt;p&gt;文件申请应说明产品系列、项目名称或参考、预期文件类型、语言、版本需求和截止时间。如果文件必须匹配客户登记表，应提供登记表格式或命名规则。&lt;/p&gt;&#xA;&lt;p&gt;当产品范围稳定时，文件最容易协调。如果材料、连接、数量、执行器或附件要求仍在变化，文件包应被视为初版或预备版本。&lt;/p&gt;&#xA;&lt;h2 id=&#34;常见文件类型&#34;&gt;常见文件类型&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;文件&lt;/th&gt;&#xA;          &lt;th&gt;典型用途&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;数据表&lt;/td&gt;&#xA;          &lt;td&gt;确认基本配置、口径、材料、压力等级和附件范围。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;尺寸图&lt;/td&gt;&#xA;          &lt;td&gt;支持布置、安装空间、管道连接和审批评审。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;安装维护手册&lt;/td&gt;&#xA;          &lt;td&gt;提供安装、运行、储存和维护指导。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;材料或符合性声明&lt;/td&gt;&#xA;          &lt;td&gt;用于客户要求声明文件的评审场景。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;检验和测试记录&lt;/td&gt;&#xA;          &lt;td&gt;可用于质量评审、压力测试或功能确认。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;包装和标识信息&lt;/td&gt;&#xA;          &lt;td&gt;帮助收货团队检查发运、标签、备件和文件。&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;申请最终文件前&#34;&gt;申请最终文件前&lt;/h2&gt;&#xA;&lt;p&gt;建议确认产品范围、材料、连接、数量、文件语言、位号和版本预期已经稳定。最终受控文件应与确认后的报价或采购订单范围一致。&lt;/p&gt;&#xA;&lt;h2 id=&#34;nuvon-如何协助&#34;&gt;Nuvon 如何协助&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon 可以按产品系列、行项目、位号或发运批次整理文件申请。如果还不清楚具体文件包，请发送项目登记表或客户要求，Nuvon 可以识别哪些项目通常可提供，哪些需要进一步确认。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

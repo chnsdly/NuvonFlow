@@ -1,7 +1,8 @@
-
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section products-list" aria-labelledby="products-list-page-title">
-  <div class="container">
+  <div class="{{ $containerClass }}">
     <div class="section__inner">
       <header class="section__header">
         <h1 id="products-list-page-title" class="section__title font-title-l">{{ .Title }}</h1>
@@ -10,19 +11,51 @@
         {{ end }}
       </header>
 
+      {{ with .Content }}
+      <div class="content-prose section-page__content">
+        {{ . }}
+      </div>
+      {{ end }}
+
+      <section class="selection-lens" aria-labelledby="products-selection-lens-title">
+        <div class="selection-lens__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}产品导航{{ else }}Product Navigation{{ end }}</p>
+          <h2 id="products-selection-lens-title" class="font-title-s">{{ if $isZh }}先按功能和工况缩小产品范围{{ else }}Start by narrowing function and duty{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}先按阀门功能、材料边界、执行方式和文件需求缩小范围，再用实际介质、压力、温度和连接标准确认最终选型。{{ else }}Start by narrowing valve function, material boundaries, actuation, and documentation needs, then confirm the final selection against actual media, pressure, temperature, and connection standard.{{ end }}</p>
+        </div>
+        <ul class="selection-lens__list">
+          <li>{{ if $isZh }}开关切断{{ else }}On/off isolation{{ end }}</li>
+          <li>{{ if $isZh }}较大口径管线{{ else }}Larger pipe sizes{{ end }}</li>
+          <li>{{ if $isZh }}化学加药{{ else }}Chemical dosing{{ end }}</li>
+          <li>{{ if $isZh }}自动化控制{{ else }}Valve automation{{ end }}</li>
+        </ul>
+      </section>
+
       <ul class="products-list__grid">
         {{ range .RegularPages.ByWeight.ByTitle }}
         {{ $item := . }}
         <li class="products-list__item">
           <a class="products-list__card" href="{{ .RelPermalink }}">
             {{ with .Params.image }}
+            {{ $isGenericImage := in (slice "/images/background.webp" "/images/abc.webp") . }}
             <div class="products-list__media">
-              <img class="products-list__image" src="{{ . | relURL }}" alt="{{ $item.Title }}" loading="lazy"
-                decoding="async">
+              {{ if $isGenericImage }}
+              {{ partial "technical-visual.html" (dict "title" $item.Title "label" (cond $isZh "选型示意" "Selection view") "variant" $item.File.BaseFileName "size" "card") }}
+              {{ else }}
+              <img class="products-list__image" src="{{ . | relURL }}" alt="{{ $item.Title }}" loading="lazy" decoding="async">
+              {{ end }}
             </div>
             {{ end }}
             <div class="products-list__content">
-              <h2 class="font-body">{{ .Title }}</h2>
+              <h2 class="products-list__title font-title-xs">{{ .Title }}</h2>
+              {{ with .Description }}
+              <p class="products-list__text font-body">{{ . }}</p>
+              {{ end }}
+              {{ with .Params.service_tags }}
+              <ul class="tag-list">
+                {{ range first 3 . }}<li>{{ . }}</li>{{ end }}
+              </ul>
+              {{ end }}
             </div>
           </a>
         </li>

@@ -1,112 +1,157 @@
 # AGENTS.md
 
-## Project Purpose
+## Mission
 
-This repository is used to build the international website for **Nuvon Flow Control**.
+Build the Nuvon Flow Control website as a qualified inquiry and RFQ acquisition system.
 
-The main goals are:
+Success means a buyer or engineer can quickly understand:
 
-1. Help target customers quickly understand the industries, applications, and operating conditions Nuvon serves.
-2. Keep important commercial and technical SEO content directly visible in the generated HTML.
-3. Use Hugo as the core static site generator and avoid unnecessary client-side complexity.
-4. Maintain a code structure that Codex can safely extend module by module in future tasks.
+1. What Nuvon supports.
+2. Which product family or application path may fit.
+3. What duty conditions and documents are needed.
+4. How to submit an RFQ or contact Nuvon.
 
-## Technology Stack
+Do not treat the site as a decorative company brochure.
 
-* Hugo
-* GitHub
-* Cloudflare Pages
-* Cloudflare CDN
-* Cloudflare Pages Functions or Workers
-* Cloudflare D1
-* Cloudflare Turnstile
-* SCSS
-* BEM
+## Stack
 
-## General Development Principles
+Use the existing Hugo multilingual static site with SCSS and BEM. Deployment target is Cloudflare Pages, with future Cloudflare Pages Functions or Workers for forms.
 
-1. Stabilize structure before refining visual details.
-2. Prioritize maintainability, readability, and verifiability over clever or overly complex solutions.
-3. Do not introduce large frontend frameworks unless there is a clear, necessary, and approved reason.
-4. Critical SEO content must be server-rendered and visible in HTML. Do not rely on client-side JavaScript to render essential content.
-5. Each task must focus on one clear objective. Avoid broad cross-module changes.
-6. Before modifying code, understand the existing directory structure, template hierarchy, and partial relationships. Do not casually refactor the whole site.
+Do not add large frontend frameworks or heavy JavaScript unless explicitly approved.
 
-## Directory Rules
+## Working Rules
 
-The repository already has a base directory structure. When modifying, adding, or moving code, work within the existing structure by default. Do not redesign the directory architecture based on personal preference.
+1. Before modifying files, state the exact files you expect to change.
+2. Read existing templates, content, and SCSS before editing.
+3. Keep each task focused. Avoid broad refactors during content or visual work.
+4. Use `rg` for search and `apply_patch` for manual edits.
+5. Work with the current dirty tree. Do not revert user or previous-agent changes unless asked.
+6. After changes, run Hugo build or explain why it was not possible.
 
-A new directory may be added only when all of the following are true:
+## Content Rules
 
-* The existing directories cannot reasonably contain the new responsibility.
-* The new directory has a clear and limited purpose.
-* The new directory does not duplicate the role of an existing directory.
-* The final response explains why the new directory was added.
+Write for buyers, engineers, OEMs, skid builders, distributors, and project teams.
 
-## Hugo Rules
+Use practical industry knowledge boldly, but do not invent verifiable evidence.
 
-1. Keep responsibilities separated between content, templates, components, assets, and configuration.
-2. For internal menu links, prefer `pageRef`.
-3. Use `url` for external links, anchor links, and file links.
-4. Do not modify foundational Hugo settings during ordinary page or component work unless the task explicitly requires it. This includes multilingual settings, taxonomies, outputs, permalinks, robots, and sitemap configuration.
+Allowed:
 
-## SCSS Rules
+* General product-family guidance.
+* Common application conditions.
+* Typical RFQ inputs.
+* Selection risks and review reminders.
 
-1. `abstracts` is for design tokens, mixins, functions, and other abstract utilities.
-2. `base` is for reset styles, global element defaults, and a small number of global helper styles.
-3. `layout` is for site-level structure such as header, footer, grid wrappers, and major layout shells.
-4. `components` is for reusable UI components.
-5. `pages` is for page-specific styles. Page styles must not leak back into the component layer.
-6. Do not scatter unexplained hard-coded values. Prefer design tokens, CSS custom properties, and the shared spacing scale.
-7. BEM class names must stay within the boundary of the component or module that owns them. Do not create cross-component naming or style one component through another component’s selector.
+Do not invent:
 
-## Semantics and Accessibility
+* Real model specifications.
+* Certification numbers.
+* Factory ownership, capacity, or photos.
+* Test data.
+* Customer names or project references.
+* Claims such as "global leading", "factory direct", or "fully certified".
 
-1. Use semantic regions such as `header`, `nav`, `main`, and `footer`.
-2. Maintain a logical heading hierarchy. Do not skip heading levels without a valid reason.
-3. Form controls must have associated labels.
-4. Interactive elements must have a clear focus state.
-5. Keep reduced-motion support in mind when adding motion or transitions.
-6. Images must have appropriate `alt` text. Purely decorative images must use an empty `alt`.
+Prefer customer-facing language. Avoid text that explains the website to the site owner, such as "this page is used to...".
 
-## SEO Rules
+Use careful wording:
 
-1. Each page must have one clear primary topic.
-2. URLs must be short, stable, and readable.
-3. Page title, meta description, H1, breadcrumbs, internal links, and structured data must describe the same page intent.
-4. Multilingual pages must account for a proper `hreflang` strategy.
-5. Product pages, application pages, and technical article pages must form a logical internal linking network.
-6. Structured data must match content that is actually visible on the page.
-7. Do not stuff keywords for SEO.
+* "review"
+* "confirm"
+* "subject to product series"
+* "subject to project documents"
+* "based on actual duty conditions"
 
-## Assets and Performance
+## Site Structure
 
-1. Prefer Hugo’s asset pipeline for organizing and processing images and static assets.
-2. Do not add heavy JavaScript dependencies to solve small problems.
-3. If a problem can be solved cleanly with CSS, do not default to JavaScript.
-4. Product images, certificate images, factory images, and social media images must follow a clear generation and naming strategy.
+The navigation follows the customer decision path:
 
-## Forms and Cloudflare Rules
+* Products: product family fit and RFQ inputs.
+* Applications: operating scenario to product direction.
+* Project Support: duty conditions, documents, RFQ/BOM, supply coordination.
+* Resources: guides, FAQs, cases, and sourcing articles.
+* About: honest positioning and working method.
+* Conversion pages: Request a Quote, Contact, Document Request, Submit Duty Conditions.
 
-1. Keep frontend form behavior separate from backend validation logic.
-2. Turnstile is only responsible for the frontend challenge and token collection. The server must verify the token.
-3. Do not hard-code D1 bindings, environment variables, secrets, or database IDs in the repository.
-4. Prefer placing Functions under a clear `/functions/api/` path.
-5. If using the advanced `_worker.js` mode, explain why the standard `/functions` approach is not sufficient.
+Every important page should include a clear next action.
 
-## Execution Rules for Codex
+## Page Standard
 
-1. Before making changes, list the files that will be modified.
-2. After completing the task, provide validation results or explain what could not be completed.
-3. If requirements conflict or information is missing, do not invent a new architecture. Refer back to the relevant research or planning document.
-4. Do not modify files unrelated to the current task.
-5. Do not break modules that already pass validation.
+Each page should have:
 
-## Minimum Acceptance Criteria
+1. One clear primary topic.
+2. A customer problem or operating context.
+3. Useful selection, documentation, or RFQ information.
+4. Internal links to related products, applications, resources, or forms.
+5. Server-rendered SEO content visible in HTML.
+6. A visible CTA without pressure or hype.
 
-1. Hugo builds successfully.
-2. Main templates and partials have clear responsibilities.
-3. Key pages are usable on both desktop and mobile.
-4. Critical SEO content is visible in the generated HTML.
-5. Form flow boundaries are clear.
-6. There are no obvious accessibility issues.
+## Visual Direction
+
+The site should feel professional, restrained, scannable, and technically credible.
+
+Use:
+
+* Consistent spacing, typography, and card rhythm.
+* Tables, comparison blocks, process blocks, and technical diagrams.
+* Real product, system, application, or document visuals when available.
+* Technical schematic visuals when real images are not available.
+
+Avoid:
+
+* Generic repeated city photos as primary content visuals.
+* Decorative clutter.
+* Marketing-heavy hero sections on functional pages.
+* Text overlap, oversized cards, or inconsistent page rhythm.
+
+For major visual changes, check desktop and mobile screenshots when possible.
+
+## Code Rules
+
+Keep responsibilities separated:
+
+* `content/`: page content and front matter.
+* `layouts/`: Hugo templates and page structure.
+* `layouts/partials/`: reusable template parts.
+* `assets/scss/`: design system and styles.
+* `static/images/`: public image assets.
+
+SCSS rules:
+
+* Use BEM class names.
+* Keep reusable card/form/header/footer styles in components or layout.
+* Keep page-specific styling in `pages`.
+* Prefer tokens, CSS variables, and shared spacing helpers.
+* Prefer CSS over JavaScript for layout and visual behavior.
+
+## Forms and Cloudflare
+
+Frontend forms can be built now, but backend behavior must stay clearly separated.
+
+Do not hard-code secrets, D1 bindings, Turnstile secrets, email keys, or CRM credentials.
+
+Future form handlers should live under a clear `/functions/api/` path unless there is a documented reason to use `_worker.js`.
+
+## SEO and Assets
+
+SEO content must be server-rendered.
+
+Keep title, description, H1, breadcrumb, internal links, and structured data aligned with the same page intent.
+
+Image organization should follow content purpose:
+
+* Product visuals: `static/images/products/<slug>/`
+* Application visuals: `static/images/applications/<slug>/`
+* Resource article visuals: `static/images/resources/<section>/<slug>/`
+* Shared temporary visuals: `static/images/shared/` or the existing shared image location.
+
+Use clear filenames such as `cover.webp`, `diagram.webp`, `detail-01.webp`.
+
+## Validation Checklist
+
+Before finishing, aim to run:
+
+1. `hugo --destination .hugo-visual-output --cleanDestinationDir --noBuildLock`
+2. `git diff --check -- content layouts assets/scss`
+3. Internal link check when link structure changes.
+4. Visual screenshot review when layout or design changes.
+
+Report what passed and what could not be checked.

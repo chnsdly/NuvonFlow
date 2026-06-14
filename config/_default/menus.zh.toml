@@ -5,6 +5,13 @@ pageRef = "/products"
 weight = 10
 
   [[main]]
+  identifier = "products-overview"
+  name = "全部产品"
+  pageRef = "/products"
+  parent = "products"
+  weight = 10
+
+  [[main]]
   identifier = "ball-valves"
   name = "球阀"
   pageRef = "/products/ball-valves"
@@ -53,12 +60,18 @@ weight = 10
   parent = "products"
   weight = 17
 
-
 [[main]]
 identifier = "applications"
-name = "应用场景"
+name = "应用"
 pageRef = "/applications"
 weight = 20
+
+  [[main]]
+  identifier = "applications-overview"
+  name = "全部应用"
+  pageRef = "/applications"
+  parent = "applications"
+  weight = 20
 
   [[main]]
   identifier = "industrial-water-treatment"
@@ -69,7 +82,7 @@ weight = 20
 
   [[main]]
   identifier = "industrial-wastewater"
-  name = "工业废水处理"
+  name = "工业废水"
   pageRef = "/applications/industrial-wastewater"
   parent = "applications"
   weight = 22
@@ -94,7 +107,6 @@ weight = 20
   pageRef = "/applications/chemical-processing"
   parent = "applications"
   weight = 25
-
 
 [[main]]
 identifier = "project-support"
@@ -130,10 +142,9 @@ weight = 30
   parent = "project-support"
   weight = 34
 
-
 [[main]]
 identifier = "resources"
-name = "资源中心"
+name = "资源"
 pageRef = "/resources"
 weight = 40
 
@@ -158,12 +169,39 @@ weight = 40
   parent = "resources"
   weight = 43
 
+  [[main]]
+  identifier = "case-studies"
+  name = "案例"
+  pageRef = "/resources/case-studies"
+  parent = "resources"
+  weight = 44
+
+  [[main]]
+  identifier = "faq"
+  name = "常见问题"
+  pageRef = "/resources/faq"
+  parent = "resources"
+  weight = 45
+
+  [[main]]
+  identifier = "insights"
+  name = "洞察"
+  pageRef = "/resources/insights"
+  parent = "resources"
+  weight = 46
 
 [[main]]
 identifier = "about"
-name = "关于公司"
+name = "关于"
 pageRef = "/about"
 weight = 50
+
+  [[main]]
+  identifier = "about-overview"
+  name = "关于 Nuvon"
+  pageRef = "/about"
+  parent = "about"
+  weight = 50
 
   [[main]]
   identifier = "quality-supply-coordination"
@@ -179,15 +217,12 @@ weight = 50
   parent = "about"
   weight = 52
 
-
 [[header_cta]]
 identifier = "request-a-quote"
-name = "获取报价"
+name = "提交询价"
 pageRef = "/request-a-quote"
 weight = 60
 
-
-# footer menu
 [[footer]]
 name = "隐私政策"
 pageRef = "/footer/privacy-policy"

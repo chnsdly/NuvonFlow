@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $typeLabel := .Type | humanize }}
+{{ $containerClass := partial "page-container-class.html" . }}
+{{ if eq .Type "conversion" }}
+  {{ $typeLabel = cond $isZh "询价" "Request" }}
+{{ else if $isZh }}
+  {{ if eq .Type "product" }}{{ $typeLabel = "产品" }}{{ end }}
+  {{ if eq .Type "applications" }}{{ $typeLabel = "应用" }}{{ end }}
+  {{ if eq .Type "project-support" }}{{ $typeLabel = "项目支持" }}{{ end }}
+  {{ if eq .Type "resources" }}{{ $typeLabel = "资源" }}{{ end }}
+  {{ if eq .Type "about" }}{{ $typeLabel = "关于" }}{{ end }}
+  {{ if eq .Type "footer" }}{{ $typeLabel = "网站信息" }}{{ end }}
+{{ end }}
+
+<main class="section content-page" aria-labelledby="content-page-title">
+  <div class="{{ $containerClass }}">
+    <article class="content-page__article">
+      <header class="content-page__header">
+        <p class="content-page__eyebrow font-meta">{{ $typeLabel }}</p>
+        <h1 id="content-page-title" class="content-page__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="content-page__description font-body">{{ . }}</p>
+        {{ end }}
+      </header>
+
+      {{ with .Params.quick_points }}
+      <ul class="feature-grid feature-grid--compact">
+        {{ range . }}
+        <li class="feature-card">
+          <h2 class="feature-card__title font-title-xs">{{ .title }}</h2>
+          <p class="feature-card__text font-body">{{ .text }}</p>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ if eq .Type "applications" }}
+      <section class="application-context" aria-labelledby="application-context-title">
+        <div class="application-context__visual">
+          {{ partial "technical-visual.html" (dict "title" .Title "label" (cond $isZh "应用流程" "Application flow") "variant" .File.BaseFileName "size" "application") }}
+        </div>
+        <div class="application-context__body">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}场景评审{{ else }}Application Review{{ end }}</p>
+          <h2 id="application-context-title" class="font-title-s">{{ if $isZh }}先确认流程位置，再匹配产品系列{{ else }}Confirm process position before matching product families{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}把系统区域、介质风险、压力温度边界和文件目标放在同一语境里，可以更快收敛产品评审和询价准备。{{ else }}Place system area, media risk, pressure-temperature limits, and document goals in one context so product review and RFQ preparation can narrow faster.{{ end }}</p>
+          <ul class="signal-list">
+            <li>{{ if $isZh }}典型介质与浓度范围{{ else }}Typical media and concentration range{{ end }}</li>
+            <li>{{ if $isZh }}常见阀门功能与安装位置{{ else }}Common valve function and installation position{{ end }}</li>
+            <li>{{ if $isZh }}送审资料和检验要求{{ else }}Submittal and inspection expectations{{ end }}</li>
+          </ul>
+        </div>
+      </section>
+      {{ else if eq .Type "project-support" }}
+      <section class="review-strip" aria-labelledby="project-support-rhythm-title">
+        <div class="review-strip__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}项目协同{{ else }}Project Coordination{{ end }}</p>
+          <h2 id="project-support-rhythm-title" class="font-title-s">{{ if $isZh }}把分散需求整理成可执行范围{{ else }}Turn scattered requirements into an executable scope{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}清晰的范围信息有助于对齐报价、文件、交付和后续审查，减少反复澄清和隐藏假设。{{ else }}Clear scope information helps align quotation, documentation, delivery, and later review while reducing repeated clarification and hidden assumptions.{{ end }}</p>
+        </div>
+        <ul class="review-strip__list">
+          <li>
+            <span>01</span>
+            <strong>{{ if $isZh }}范围清晰{{ else }}Scope clarity{{ end }}</strong>
+            <small>{{ if $isZh }}产品、数量、材料、压力、连接{{ else }}Products, quantity, material, pressure, connection{{ end }}</small>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>{{ if $isZh }}文件一致{{ else }}Document control{{ end }}</strong>
+            <small>{{ if $isZh }}数据表、图纸、版本、证书{{ else }}Datasheets, drawings, revisions, certificates{{ end }}</small>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>{{ if $isZh }}交付可审{{ else }}Reviewable delivery{{ end }}</strong>
+            <small>{{ if $isZh }}包装、检验、交期、沟通节点{{ else }}Packing, inspection, lead time, communication points{{ end }}</small>
+          </li>
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ with .Content }}
+      <div class="content-prose content-page__body">
+        {{ . }}
+      </div>
+      {{ end }}
+
+      {{ if and (eq .Type "conversion") .Params.form.enable }}
+      <section class="submission-guide" aria-labelledby="submission-guide-title">
+        <div>
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}提交前检查{{ else }}Before You Submit{{ end }}</p>
+          <h2 id="submission-guide-title" class="font-title-s">{{ if $isZh }}第一次提交不需要完美，但要足够可评审{{ else }}The first submission does not need to be perfect, but it should be reviewable{{ end }}</h2>
+        </div>
+        <ul class="submission-guide__list">
+          <li>{{ if $isZh }}介质名称、浓度和温度{{ else }}Media name, concentration, and temperature{{ end }}</li>
+          <li>{{ if $isZh }}压力、口径、连接标准和数量{{ else }}Pressure, size, connection standard, and quantity{{ end }}</li>
+          <li>{{ if $isZh }}阀门功能、执行方式和文件需求{{ else }}Valve function, actuation, and document needs{{ end }}</li>
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ if .Params.form.enable }}
+      <section class="content-page__form" aria-labelledby="content-page-form-title">
+        <h2 id="content-page-form-title" class="font-title-s">{{ .Params.form.title | default (cond $isZh "提交项目需求" "Submit Project Requirements") }}</h2>
+        {{ with .Params.form.description }}<p class="font-body">{{ . }}</p>{{ end }}
+        {{ partial "form.html" (dict "page" . "sitekey" .Site.Params.turnstile_sitekey "id" (.File.BaseFileName | default "request")) }}
+      </section>
+      {{ end }}
+
+      {{ if ne .Type "footer" }}
+      {{ $primaryHref := "/request-a-quote/" }}
+      {{ $primaryLabel := cond $isZh "提交询价" "Request a Quote" }}
+      {{ $secondaryHref := "/products/" }}
+      {{ $secondaryLabel := cond $isZh "查看产品" "View Products" }}
+      {{ if eq .Type "applications" }}
+        {{ $primaryHref = "/project-support/submit-duty-conditions/" }}
+        {{ $primaryLabel = cond $isZh "提交工况参数" "Submit Duty Conditions" }}
+        {{ $secondaryLabel = cond $isZh "查看产品系列" "View Product Families" }}
+      {{ else if eq .Type "project-support" }}
+        {{ $secondaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $secondaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
+      {{ else if eq .Type "resources" }}
+        {{ $primaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $primaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
+        {{ $secondaryHref = "/request-a-quote/" }}
+        {{ $secondaryLabel = cond $isZh "提交询价" "Request a Quote" }}
+      {{ else if eq .Type "conversion" }}
+        {{ $secondaryHref = "/contact/" }}
+        {{ $secondaryLabel = cond $isZh "联系 Nuvon" "Contact Nuvon" }}
+      {{ end }}
+      <footer class="content-page__footer">
+        {{ if ne .RelPermalink ($primaryHref | relLangURL) }}
+        <a class="button button--primary" href='{{ $primaryHref | relLangURL }}'>{{ $primaryLabel }}</a>
+        {{ end }}
+        {{ if ne .RelPermalink ($secondaryHref | relLangURL) }}
+        <a class="button button--secondary" href='{{ $secondaryHref | relLangURL }}'>{{ $secondaryLabel }}</a>
+        {{ end }}
+      </footer>
+      {{ end }}
+    </article>
+  </div>
+</main>
+{{ end }}

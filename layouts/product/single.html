@@ -1,39 +1,119 @@
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $image := .Params.image }}
+{{ $containerClass := partial "page-container-class.html" . }}
+{{ $isGenericImage := or (not $image) (in (slice "/images/background.webp" "/images/abc.webp") $image) }}
 <main class="section product-single" aria-labelledby="product-single-title">
-    <div class="container container--narrow">
-      <div class="section__inner">
-        <div class="product-single__overview">
-          {{ with .Params.image }}
-          <div class="product-single__media">
-            <img class="product-single__image" src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+  <div class="{{ $containerClass }}">
+    <div class="section__inner">
+      <div class="product-single__overview">
+        <div class="product-single__media">
+          {{ if and $image (not $isGenericImage) }}
+          <img class="product-single__image" src="{{ $image | relURL }}" alt="{{ $.Title }}" loading="lazy" decoding="async">
+          {{ else }}
+          {{ partial "technical-visual.html" (dict "title" .Title "label" (cond $isZh "产品系列评审" "Product family review") "variant" .File.BaseFileName "size" "single") }}
+          {{ end }}
+        </div>
+
+        <div class="product-single__summary">
+          {{ with .Title }}
+          <h1 id="product-single-title" class="product-single__title font-title-s">{{ . }}</h1>
+          {{ end }}
+
+          {{ with .Description }}
+          <p class="font-body">{{ . }}</p>
+          {{ end }}
+
+          {{ with .Params.service_tags }}
+          <ul class="tag-list">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+
+          <a class="button button--primary product-single__quote" href='{{ "/request-a-quote/" | relLangURL }}'>
+            {{ i18n "request_quote" | default "Request a Quote" }}
+          </a>
+        </div>
+      </div>
+
+      {{ with .Params.quick_specs }}
+      <section class="product-single__specs" aria-labelledby="product-single-specs-title">
+        <h2 id="product-single-specs-title" class="font-title-s">{{ if $isZh }}常见选型参数{{ else }}Common Selection Data{{ end }}</h2>
+        <dl class="spec-list">
+          {{ range . }}
+          <div class="spec-list__item">
+            <dt>{{ .label }}</dt>
+            <dd>{{ .value }}</dd>
           </div>
           {{ end }}
-      
-          <div class="product-single__summary">
-            {{with .Title}}
-            <h1 id="product-single-title" class="product-single__title font-title-s">{{ . }}</h1>
-            {{ end }}
-      
-            {{ with .Description }}
-            <p class="font-body">{{ . }}</p>
-            {{ end }}
-      
-            <a class="button product-single__quote" href='{{ "/contact/" | relLangURL }}'>
-              {{ i18n "request_quote" | default "Request a Quote" }}
-            </a>
-          </div>
+        </dl>
+      </section>
+      {{ end }}
+
+      {{ with .Params.features }}
+      <section class="product-single__features" aria-labelledby="product-single-features-title">
+        <h2 id="product-single-features-title" class="font-title-s">{{ if $isZh }}适用重点{{ else }}Selection Focus{{ end }}</h2>
+        <ul class="feature-grid feature-grid--compact">
+          {{ range . }}
+          <li class="feature-card">
+            <h3 class="feature-card__title font-title-xs">{{ .title }}</h3>
+            <p class="feature-card__text font-body">{{ .text }}</p>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+
+      <section class="review-strip" aria-labelledby="product-single-review-title">
+        <div class="review-strip__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}评审路径{{ else }}Review Path{{ end }}</p>
+          <h2 id="product-single-review-title" class="font-title-s">{{ if $isZh }}从产品名称进入，但用工况完成确认{{ else }}Start with the product name, confirm with duty data{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}把常见选型关注点转化为可评审的询价信息，避免只凭型号或阀门名称做判断。{{ else }}Turn common selection concerns into reviewable RFQ information, avoiding decisions based only on a model name or valve label.{{ end }}</p>
         </div>
-      
-        <section class="product-single__details" aria-labelledby="product-single-details-title">
-          <h2 id="product-single-details-title" class="product-single__details-title font-title-s">
-            {{ i18n "product_details" | default "Product Details" }}
-          </h2>
-      
-          <div class="product-single__content font-body">
-            {{ .Content }}
-          </div>
-        </section>
-      </div>
+        <ul class="review-strip__list">
+          <li>
+            <span>01</span>
+            <strong>{{ if $isZh }}确认介质{{ else }}Confirm media{{ end }}</strong>
+            <small>{{ if $isZh }}名称、浓度、温度、固体与清洗条件{{ else }}Name, concentration, temperature, solids, cleaning{{ end }}</small>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>{{ if $isZh }}匹配结构{{ else }}Match construction{{ end }}</strong>
+            <small>{{ if $isZh }}阀体、密封、连接、执行方式{{ else }}Body, seal, connection, actuation{{ end }}</small>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>{{ if $isZh }}整理文件{{ else }}Organize documents{{ end }}</strong>
+            <small>{{ if $isZh }}数据表、图纸、说明书、证书和检验要求{{ else }}Datasheet, drawing, manual, certificates, inspection{{ end }}</small>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-single__details" aria-labelledby="product-single-details-title">
+        <h2 id="product-single-details-title" class="product-single__details-title font-title-s">
+          {{ i18n "product_details" | default "Product Details" }}
+        </h2>
+
+        <div class="product-single__content content-prose font-body">
+          {{ .Content }}
+        </div>
+      </section>
+
+      {{ $apps := where .Site.RegularPages "Type" "applications" }}
+      {{ if gt (len $apps) 0 }}
+      <section class="related-strip" aria-labelledby="product-related-title">
+        <div>
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}相关应用{{ else }}Related Applications{{ end }}</p>
+          <h2 id="product-related-title" class="font-title-s">{{ if $isZh }}把产品放回实际流程中评审{{ else }}Review the product inside the process context{{ end }}</h2>
+        </div>
+        <ul class="related-strip__list">
+          {{ range first 3 $apps.ByWeight }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
     </div>
+  </div>
 </main>
 {{ end }}

@@ -1,6 +1,11 @@
 {{ define "main" }}
+{{ $items := .Sections.ByWeight }}
+{{ if eq (len $items) 0 }}
+  {{ $items = .RegularPages.ByWeight }}
+{{ end }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section products-list" aria-labelledby="resources-list-page-title">
-  <div class="container">
+  <div class="{{ $containerClass }}">
     <div class="section__inner">
       <header class="section__header">
         <h1 id="resources-list-page-title" class="section__title font-title-l">{{ .Title }}</h1>
@@ -9,14 +14,20 @@
         {{ end }}
       </header>
 
+      {{ with .Content }}
+      <div class="content-prose section-page__content">
+        {{ . }}
+      </div>
+      {{ end }}
+
       <ul class="products-list__grid">
-        {{ range .Sections.ByWeight.ByTitle }}
+        {{ range $items }}
         <li class="products-list__item">
           <a class="products-list__card" href="{{ .RelPermalink }}">
             <div class="products-list__content">
-              <h2 class="font-body">{{ .Title }}</h2>
+              <h2 class="products-list__title font-title-xs">{{ .Title }}</h2>
               {{ with .Description }}
-              <p class="section__description font-body">{{ . }}</p>
+              <p class="products-list__text font-body">{{ . }}</p>
               {{ end }}
             </div>
           </a>

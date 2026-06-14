@@ -1,0 +1,28 @@
+{{ $title := .title | default "" }}
+{{ $label := .label | default "" }}
+{{ $variant := .variant | default "flow" }}
+{{ $size := .size | default "" }}
+{{ $sizeNames := slice "card" "single" "application" "article" }}
+{{ if and (not $size) (in $sizeNames $variant) }}
+  {{ $size = $variant }}
+  {{ $variant = "flow" }}
+{{ end }}
+{{ if not $size }}{{ $size = "flow" }}{{ end }}
+
+<div class="technical-visual technical-visual--{{ $size }} technical-visual--{{ $variant }}" aria-hidden="true">
+  <div class="technical-visual__grid"></div>
+  <div class="technical-visual__line technical-visual__line--main"></div>
+  <div class="technical-visual__line technical-visual__line--branch"></div>
+  <span class="technical-visual__node technical-visual__node--inlet"></span>
+  <span class="technical-visual__node technical-visual__node--valve"></span>
+  <span class="technical-visual__node technical-visual__node--outlet"></span>
+  <span class="technical-visual__gauge technical-visual__gauge--pressure"></span>
+  <span class="technical-visual__gauge technical-visual__gauge--document"></span>
+  <span class="technical-visual__shape technical-visual__shape--primary"></span>
+  <span class="technical-visual__shape technical-visual__shape--secondary"></span>
+  <span class="technical-visual__shape technical-visual__shape--tertiary"></span>
+  <div class="technical-visual__legend">
+    {{ with $label }}<span>{{ . }}</span>{{ end }}
+    {{ with $title }}<strong>{{ . }}</strong>{{ end }}
+  </div>
+</div>

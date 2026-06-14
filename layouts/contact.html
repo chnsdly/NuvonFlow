@@ -1,12 +1,19 @@
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 
 <main class="section contact" aria-labelledby="contact-page-title">
-  <div class="container container--narrow">
+  <div class="{{ $containerClass }}">
     <div class="section__inner contact__layout">
-      <section class="contact__form">
+      <header class="contact__header">
+        <p class="section-page__eyebrow font-meta">{{ if $isZh }}联系 Nuvon{{ else }}Contact Nuvon{{ end }}</p>
+        <h1 id="contact-page-title" class="section-page__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}<p class="section-page__description font-body">{{ . }}</p>{{ end }}
+      </header>
+
+      <section class="contact__form" aria-labelledby="contact-form-title">
         {{ with .Params.form }}
         <div class="contact__form-header">
-
           {{ with .title }}
           <h2 id="contact-form-title" class="contact-page__panel-title font-body">{{ . }}</h2>
           {{ end }}
@@ -25,7 +32,6 @@
       <section class="contact__direct" aria-labelledby="contact-direct-title">
         {{ with .Params.direct }}
         <div class="contact__direct-header">
-
           {{ with .title }}
           <h2 id="contact-direct-title" class="contact__direct-title font-body">{{ . }}</h2>
           {{ end }}
@@ -33,7 +39,6 @@
           {{ with .description }}
           <p class="contact__direct-description font-body">{{ . }}</p>
           {{ end }}
-
         </div>
         {{ end }}
 
@@ -66,7 +71,6 @@
           </div>
           {{ end }}
         </div>
-
       </section>
     </div>
   </div>

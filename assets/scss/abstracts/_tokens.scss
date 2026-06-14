@@ -1,63 +1,60 @@
 /* ==========================================================================
-   Tokens
+   Design Tokens
    --------------------------------------------------------------------------
-   集中管理全站可复用的设计令牌
+   Shared visual decisions for the site. Keep these tokens restrained:
+   industrial, technical, legible, and calm rather than decorative.
    ========================================================================== */
 
 :root {
-  /* ==========================================================================
-     色彩
-     ========================================================================== */
+  /* Color */
+  --brand: #0b6f7a;
+  --brand-light: #d8ecee;
+  --brand-dark: #064b56;
+  --accent: #5f7f3a;
+  --on-brand: #f8fbf7;
+  --surface: #f7f8f4;
+  --surface-alt: #eef3ee;
+  --on-surface: #162027;
+  --muted-text: color-mix(in oklab, var(--on-surface) 62%, var(--surface) 38%);
+  --line: #d8ded6;
+  --steel: #53636b;
+  --card: color-mix(in oklab, var(--surface) 72%, white 28%);
+  --img-bg:
+    linear-gradient(135deg, #edf5f2 0%, #d7e7e3 46%, #b9d0cf 100%);
 
-  --brand:        #1279e8;   /* 品牌色 */
-  --on-brand:     #FAFAF7;   /* 品牌色上的文本/图标 */
-  --surface:      #FAFAF7;   /* 页面默认底色：提亮整体背景 */
-  --on-surface:   #121212;   /* 正文前景色 */
+  /* Layout */
+  --container: 72rem;
+  --container-wide: 80rem;
+  --container-narrow: 56rem;
+  --space: 0.5rem;
 
-  --card:         color-mix(in oklab, var(--surface) 38%, white);
-  --muted-text:       color-mix(in oklab, var(--on-surface) 60%, var(--surface) 40%);
-  --img-bg: linear-gradient(to top, #EAF4FF 0%, #B9DAFA 50%, #76AFE8 100%); /* 透明图片的背景色 */
-
-
-  /* ==========================================================================
-     布局
-     ========================================================================== */
-
-  --container:        72rem; /* 默认：常规页面 */
-  --container-wide:   80rem; /* 宽版：营销/视觉模块 */
-  --container-narrow: 56rem; /* 窄版：以阅读为主 */
-
-  --space: 0.5rem; /* 基准间距步长 */
-
-  /* ==========================================================================
-     外观
-     ========================================================================== */
-
+  /* Appearance */
   --font-sans: "Inter", "Noto Sans SC", Arial, sans-serif;
+  --border: 1px solid var(--line);
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+  --radius-pill: 999px;
+  --shadow:
+    0 1px 2px rgba(22, 32, 39, 0.04),
+    0 10px 28px rgba(22, 32, 39, 0.06);
+  --shadow-hover:
+    0 2px 4px rgba(22, 32, 39, 0.05),
+    0 18px 40px rgba(22, 32, 39, 0.09);
+  --shadow-inset:
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    inset 0 1px 2px rgba(22, 32, 39, 0.08),
+    inset 0 0 0 1px rgba(22, 32, 39, 0.04);
+  --header-height: 4.2rem;
 
-  --border:       1px solid #E7E5DD;   /* 全站统一边框 */
-
-  --radius-s: 4px;  /* 按钮、输入框、小标签 */
-  --radius-m: 8px;  /* 卡片 */
-  --radius-l: 16px;  /* 大面板 */
-  --radius-pill: 999px; /* 胶囊 */
-
-  --shadow: 0 1px 2px rgba(18, 18, 18, 0.03), 0 10px 28px rgba(18, 18, 18, 0.05);
-  --shadow-hover: 0 2px 4px rgba(18, 18, 18, 0.04), 0 18px 40px rgba(18, 18, 18, 0.08);
-  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.32), inset 0 1px 2px rgba(18, 18, 18, 0.08), inset 0 0 0 1px rgba(18, 18, 18, 0.04);
-
-
-  /* ==========================================================================
-     交互
-     ========================================================================== */
-
+  /* Interaction */
   --transition-base: 180ms cubic-bezier(0.22, 0.72, 0.18, 1);
-
   --focus-outline: 2px solid color-mix(in oklab, var(--brand) 45%, white);
   --focus-offset: 2px;
 
-  --z-base: 0;       /* 普通内容 */
-  --z-header: 10;    /* 吸顶头部 */
-  --z-panel: 20;     /* 下拉、弹出层、抽屉 */
-  --z-modal: 30;     /* 遮罩、弹窗这类最高层 */
+  /* Layers */
+  --z-base: 0;
+  --z-header: 10;
+  --z-panel: 20;
+  --z-modal: 30;
 }

@@ -6,188 +6,231 @@
     <description>Recent content on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
+    <lastBuildDate>Sat, 06 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Duty Conditions Improve Flow Control Sourcing</title>
+      <link>http://localhost:1313/resources/insights/why-duty-conditions-improve-sourcing/</link>
+      <pubDate>Sat, 06 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/why-duty-conditions-improve-sourcing/</guid>
+      <description>&lt;p&gt;When a buyer sends only a product name, the supplier must guess the media, pressure, connection, material, and document scope. Those assumptions can make the first price fast but weak.&lt;/p&gt;&#xA;&lt;p&gt;Duty conditions improve sourcing because they move the conversation from catalog matching to project fit. They also make it easier to identify which documents, tests, drawings, and spare parts should be included before the order is placed.&lt;/p&gt;&#xA;&lt;h2 id=&#34;assumptions-become-visible&#34;&gt;Assumptions become visible&lt;/h2&gt;&#xA;&lt;p&gt;A request for “PVDF ball valves” may still leave open questions about concentration, temperature, pipe standard, pressure, actuator needs, spare seals, and project documents. Listing the duty conditions turns those hidden assumptions into visible review points.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wastewater Neutralization Valve Package</title>
+      <link>http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/</link>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/</guid>
+      <description>&lt;h2 id=&#34;scenario&#34;&gt;Scenario&lt;/h2&gt;&#xA;&lt;p&gt;This representative scenario involves a wastewater neutralization area with acid, alkali, transfer, and drain lines. The project required isolation valves, check valves, compatible fittings, and a basic document package, but the early RFQ mixed product names, pipe sizes, and partial BOM notes without clear service conditions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;initial-rfq-gaps&#34;&gt;Initial RFQ gaps&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Media concentration was missing for several acid and alkali lines&lt;/li&gt;&#xA;&lt;li&gt;Some line items listed pipe size but not connection standard&lt;/li&gt;&#xA;&lt;li&gt;Check valve orientation and pump discharge conditions were unclear&lt;/li&gt;&#xA;&lt;li&gt;Several fittings were required for installation but not listed in the BOM&lt;/li&gt;&#xA;&lt;li&gt;The customer needed datasheets and packing information but had not linked documents to line items&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;organized-scope&#34;&gt;Organized scope&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Line group&lt;/th&gt;&#xA;          &lt;th&gt;Review focus&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Acid dosing and transfer&lt;/td&gt;&#xA;          &lt;td&gt;Material direction, seal compatibility, pump protection, injection or discharge details&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Alkali neutralization&lt;/td&gt;&#xA;          &lt;td&gt;Temperature, concentration, check protection, flushing, and maintenance isolation&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Wastewater transfer&lt;/td&gt;&#xA;          &lt;td&gt;Solids, intermittent flow, drain points, and maintenance access&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Fittings and adapters&lt;/td&gt;&#xA;          &lt;td&gt;Pipe standard, connection transitions, gaskets, fasteners, and spare parts&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Documents&lt;/td&gt;&#xA;          &lt;td&gt;Datasheets, basic dimensional notes, material declarations, packing list, and revision control&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;practical-lesson&#34;&gt;Practical lesson&lt;/h2&gt;&#xA;&lt;p&gt;For wastewater chemical areas, a clearer RFQ often comes from grouping the BOM by service rather than by product name alone. A line item called “valve” becomes much more reviewable when it is tied to media, function, connection, pressure, quantity, and document needs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What information is needed for a valve RFQ?</title>
+      <link>http://localhost:1313/resources/faq/what-information-is-needed-for-a-valve-rfq/</link>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/faq/what-information-is-needed-for-a-valve-rfq/</guid>
+      <description>&lt;p&gt;At minimum, provide the media, concentration, temperature, pressure, size, connection, valve function, operation mode, quantity, destination, and document requirements. For chemical service, also include cleaning chemicals, solids, oxidizing behavior, and whether the service is continuous, intermittent, or batch-based.&lt;/p&gt;&#xA;&lt;h2 id=&#34;recommended-rfq-fields&#34;&gt;Recommended RFQ fields&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Product family or valve function&lt;/li&gt;&#xA;&lt;li&gt;Media name, concentration, and pH range if relevant&lt;/li&gt;&#xA;&lt;li&gt;Operating and design temperature&lt;/li&gt;&#xA;&lt;li&gt;Operating and design pressure&lt;/li&gt;&#xA;&lt;li&gt;Pipe size, tubing size, or equipment port&lt;/li&gt;&#xA;&lt;li&gt;Connection standard and installation orientation&lt;/li&gt;&#xA;&lt;li&gt;Manual, pneumatic, electric, or control accessory needs&lt;/li&gt;&#xA;&lt;li&gt;Quantity, spare parts, destination, and project stage&lt;/li&gt;&#xA;&lt;li&gt;Required documents, drawings, declarations, or inspection records&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-if-some-information-is-unknown&#34;&gt;What if some information is unknown?&lt;/h2&gt;&#xA;&lt;p&gt;Send the known information and mark the unknowns. A useful first response can list assumptions, product directions, and clarification questions. This is better than forcing a complete but inaccurate RFQ.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Material Selection for Corrosive Service</title>
+      <link>http://localhost:1313/resources/technical-guides/material-selection-for-corrosive-service/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/technical-guides/material-selection-for-corrosive-service/</guid>
+      <description>&lt;h2 id=&#34;start-with-the-complete-fluid-picture&#34;&gt;Start with the complete fluid picture&lt;/h2&gt;&#xA;&lt;p&gt;Material selection should begin with the media name, concentration, temperature, pressure, exposure time, solids content, and cleaning method. A chemical name without concentration or temperature is not enough for a reliable review.&lt;/p&gt;&#xA;&lt;p&gt;If the line sees more than one chemical, list all credible exposures. Many failures happen during cleaning, flushing, startup, shutdown, intermittent drying, or an occasional batch condition rather than during the normal operating step.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Ball Valves</title>
       <link>http://localhost:1313/products/ball-valves/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/ball-valves/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-ball-valves-fit-in-a-system&#34;&gt;Where ball valves fit in a system&lt;/h2&gt;&#xA;&lt;p&gt;Ball valves are commonly selected when a line needs compact, fast on/off isolation. In corrosion-resistant piping systems, they are often considered for clean water, treated water, chemical feed lines, dosing skids, tank outlets, sample points, utility headers, and maintenance bypasses.&lt;/p&gt;&#xA;&lt;p&gt;For most corrosive-service projects, a ball valve is not selected by the valve name alone. The body material, ball and stem design, seat material, seal set, end connection, pressure-temperature boundary, operating frequency, and actuator interface should all be reviewed against the actual duty.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Butterfly Valves</title>
       <link>http://localhost:1313/products/butterfly-valves/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/butterfly-valves/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-butterfly-valves-fit-in-a-system&#34;&gt;Where butterfly valves fit in a system&lt;/h2&gt;&#xA;&lt;p&gt;Butterfly valves are often selected for larger pipe sizes where a compact, relatively lightweight valve is preferred for isolation or basic flow control. They are common in industrial water treatment, wastewater treatment, cooling water, utility headers, pretreatment systems, filtration lines, and selected chemical service where the liner, disc, and shaft materials match the duty.&lt;/p&gt;&#xA;&lt;p&gt;Butterfly valves can be simple to install, but they are not simple to specify. The pipe standard, flange standard, valve style, liner material, disc material, shaft sealing, operating mode, and allowable leakage expectation should be reviewed before quotation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Diaphragm Valves</title>
       <link>http://localhost:1313/products/diaphragm-valves/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/diaphragm-valves/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-diaphragm-valves-fit-in-a-system&#34;&gt;Where diaphragm valves fit in a system&lt;/h2&gt;&#xA;&lt;p&gt;Diaphragm valves are considered when the process fluid should be isolated from the operating mechanism, when the line contains corrosive chemicals or suspended solids, or when a replaceable diaphragm is preferred as a known wear component. They are often reviewed for chemical dosing, wastewater treatment, neutralization lines, slurry-like service, aggressive cleaning fluids, and selected throttling duties.&lt;/p&gt;&#xA;&lt;p&gt;The valve is usually selected around the combination of body or lining material and diaphragm compound. The correct choice depends on media, concentration, temperature, pressure, vacuum exposure, solids, cycle frequency, and whether the valve is used for simple isolation or more frequent adjustment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Check Valves</title>
       <link>http://localhost:1313/products/check-valves/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/check-valves/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-check-valves-fit-in-a-system&#34;&gt;Where check valves fit in a system&lt;/h2&gt;&#xA;&lt;p&gt;Check valves are installed where reverse flow could damage equipment, contaminate a line, drain a system, reduce metering accuracy, or disrupt process stability. They are common on pump discharge lines, chemical dosing systems, transfer lines, water treatment piping, wastewater equipment, and utility service.&lt;/p&gt;&#xA;&lt;p&gt;A check valve should be selected around the actual flow condition, not only the pipe size. Flow velocity, cracking pressure, pressure drop, pump behavior, line orientation, solids, pulsation, and chemical compatibility can all affect performance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pressure Control &amp; Chemfeed</title>
       <link>http://localhost:1313/products/pressure-control-chemfeed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/pressure-control-chemfeed/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-pressure-control-and-chemfeed-items-fit-in-a-system&#34;&gt;Where pressure control and chemfeed items fit in a system&lt;/h2&gt;&#xA;&lt;p&gt;Chemical dosing lines often need more than an isolation valve. Back pressure valves, relief valves, injection assemblies, calibration columns, pulsation dampeners, strainers, anti-siphon devices, tubing adapters, and pipe accessories may be required to make the system stable, maintainable, and reviewable.&lt;/p&gt;&#xA;&lt;p&gt;These components should be selected around the metering pump and the actual injection point. Pump capacity, stroke behavior, suction arrangement, discharge pressure, injection pressure, chemical concentration, line size, connection type, and maintenance expectations all affect the recommended package.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Actuators</title>
       <link>http://localhost:1313/products/actuators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/actuators/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-actuators-fit-in-a-valve-package&#34;&gt;Where actuators fit in a valve package&lt;/h2&gt;&#xA;&lt;p&gt;Actuators convert manual valves into remotely operated or automated valve packages. They are commonly used on ball valves, butterfly valves, diaphragm valves, and selected pressure control or process assemblies where the plant needs remote open/close operation, interlock, sequencing, feedback, or modulating control.&lt;/p&gt;&#xA;&lt;p&gt;Actuator selection should begin with the valve and duty. A valve that operates easily by hand may still require a larger actuator because of pressure differential, seat load, media behavior, temperature, cycle frequency, or safety factor requirements.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fittings</title>
       <link>http://localhost:1313/products/fittings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/products/fittings/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;where-fittings-fit-in-a-piping-package&#34;&gt;Where fittings fit in a piping package&lt;/h2&gt;&#xA;&lt;p&gt;Fittings connect valves, pumps, tanks, dosing accessories, instruments, and piping into a workable system. In corrosion-resistant projects, installation problems often come from mismatched pipe standards, connection methods, gasket materials, flange drilling, thread standards, or missing adapters rather than from the valve body itself.&lt;/p&gt;&#xA;&lt;p&gt;Fittings should be reviewed as part of the complete piping package. The material, pressure rating, temperature boundary, chemical exposure, installation method, maintenance access, and document requirements should match the valve and pipe system.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Can Nuvon help with material compatibility?</title>
+      <link>http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/</link>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
+      <description>&lt;p&gt;Nuvon can help organize the compatibility review by listing the media, concentration, temperature, wetted materials, elastomer options, and missing information. Final approval should be confirmed against the actual project duty and customer standards.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-the-review-can-cover&#34;&gt;What the review can cover&lt;/h2&gt;&#xA;&lt;p&gt;The review can include valve body, lining, seat, seal, diaphragm, gasket, fitting, tubing, fastener, and accessory exposure. For automated valves, the surrounding environment may also affect actuator housing, coating, fastener, and accessory selection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Valve Selection by Application</title>
+      <link>http://localhost:1313/resources/technical-guides/valve-selection-by-application/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/technical-guides/valve-selection-by-application/</guid>
+      <description>&lt;h2 id=&#34;begin-with-the-function&#34;&gt;Begin with the function&lt;/h2&gt;&#xA;&lt;p&gt;A valve selected for isolation, throttling, backflow prevention, sampling, dosing, pressure relief, or automated sequencing will have different priorities. Function should be named before the product family is fixed.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Function&lt;/th&gt;&#xA;          &lt;th&gt;Common starting point&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Compact on/off isolation for clean liquids&lt;/td&gt;&#xA;          &lt;td&gt;Ball valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Larger water or low-pressure headers&lt;/td&gt;&#xA;          &lt;td&gt;Butterfly valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Corrosive, dirty, or containment-focused isolation&lt;/td&gt;&#xA;          &lt;td&gt;Diaphragm valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Reverse-flow prevention or pump protection&lt;/td&gt;&#xA;          &lt;td&gt;Check valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Chemical dosing pressure control&lt;/td&gt;&#xA;          &lt;td&gt;Back pressure, relief, injection, and chemfeed accessories&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Remote or automated operation&lt;/td&gt;&#xA;          &lt;td&gt;Valve and actuator package&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;match-the-product-family-to-the-duty&#34;&gt;Match the product family to the duty&lt;/h2&gt;&#xA;&lt;p&gt;Product family selection should follow the media, pressure, temperature, solids, leakage expectations, cycle frequency, and maintenance method. A product name by itself is rarely enough; a ball valve, diaphragm valve, or check valve can be appropriate or inappropriate depending on the actual service.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Industrial Water Treatment</title>
       <link>http://localhost:1313/applications/industrial-water-treatment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/industrial-water-treatment/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Industrial water treatment systems combine mechanical filtration, chemical conditioning, membrane protection, disinfection, cleaning steps, and treated-water distribution. A single project may include clean water lines, oxidizing chemicals, acid or alkali dosing, antiscalant injection, backwash headers, sample points, and packaged skids.&lt;/p&gt;&#xA;&lt;p&gt;The practical selection question is not only which valve type fits the line. The review should connect water chemistry, dosing chemicals, pipe standard, automation sequence, maintenance access, and document expectations so the quoted scope is usable for purchasing and project review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Industrial Wastewater</title>
       <link>http://localhost:1313/applications/industrial-wastewater/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/industrial-wastewater/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Industrial wastewater service is often less predictable than clean water service. Media can change by production batch, cleaning cycle, pH adjustment, precipitation step, or discharge requirement. Lines may carry suspended solids, precipitates, biological content, oils, oxidizers, acids, alkalis, salts, or cleaning waste.&lt;/p&gt;&#xA;&lt;p&gt;The useful discussion starts with how difficult the line is to isolate, drain, flush, and maintain. A low-cost valve that works on clean water may be the wrong choice if solids settle, scale builds, elastomers are attacked, or a pump cycles intermittently.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chemical Dosing &amp; Injection</title>
       <link>http://localhost:1313/applications/chemical-dosing-injection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/chemical-dosing-injection/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Chemical dosing and injection systems depend on predictable pump output, compatible wetted materials, and clear accessory selection. The visible valve package may be small, but the duty can be demanding: concentrated chemicals, intermittent injection, tubing transitions, blocked discharge risk, siphoning, crystallization, or off-gassing.&lt;/p&gt;&#xA;&lt;p&gt;For a reviewable quotation, the scope should identify whether the request is for individual valves, a pump discharge accessory set, an injection assembly, a dosing skid, replacement stock, or a project BOM.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Corrosive Chemical Transfer</title>
       <link>http://localhost:1313/applications/corrosive-chemical-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/corrosive-chemical-transfer/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Corrosive chemical transfer lines can involve acids, alkalis, oxidizers, solvents, salt solutions, mixed streams, or cleaning chemicals. The selection challenge is rarely pressure rating alone. Media concentration, temperature, exposure time, velocity, outdoor conditions, cleaning method, and maintenance practice can all change the acceptable material set.&lt;/p&gt;&#xA;&lt;p&gt;The strongest RFQ describes the transfer path, not just a product name. It should show where the chemical comes from, where it goes, how the line is isolated, how it is drained or flushed, and which documents are needed for project review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chemical Processing</title>
       <link>http://localhost:1313/applications/chemical-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/chemical-processing/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Chemical processing facilities often need a coordinated mix of manual valves, automated valves, check valves, fittings, pressure control items, and documentation. The same plant may include clean transfer, corrosive service, intermittent batches, flushing steps, utility chemicals, and maintenance bypasses.&lt;/p&gt;&#xA;&lt;p&gt;The useful scope is organized by process step. Reactor feed, storage transfer, neutralization, washdown, and packaged skids can each require a different balance of material compatibility, shutoff reliability, automation, cleanability, and inspection documents.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Submit Duty Conditions</title>
       <link>http://localhost:1313/project-support/submit-duty-conditions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project-support/submit-duty-conditions/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;why-duty-conditions-matter&#34;&gt;Why duty conditions matter&lt;/h2&gt;&#xA;&lt;p&gt;Most selection delays begin with missing operating information. A valve name alone is not enough for corrosive or chemical service because body material, seat material, elastomer, actuator size, end connection, pressure class, and document package all depend on the actual duty.&lt;/p&gt;&#xA;&lt;p&gt;Clear duty conditions help the first response move from broad guessing to useful clarification: which product families fit, which assumptions are risky, which documents are needed, and which items require customer or engineering confirmation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Material Compatibility Review</title>
       <link>http://localhost:1313/project-support/material-compatibility-review/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project-support/material-compatibility-review/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;what-compatibility-review-covers&#34;&gt;What compatibility review covers&lt;/h2&gt;&#xA;&lt;p&gt;Material compatibility is a structured review, not a single yes-or-no answer. The same chemical can behave differently depending on concentration, temperature, pressure, aeration, contaminants, exposure time, intermittent drying, and cleaning practice.&lt;/p&gt;&#xA;&lt;p&gt;For flow control products, the weak point is not always the valve body. Seats, seals, diaphragms, liners, gaskets, fasteners, tubing, adapters, and instrument accessories may all need attention.&lt;/p&gt;&#xA;&lt;h2 id=&#34;typical-questions&#34;&gt;Typical questions&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Question&lt;/th&gt;&#xA;          &lt;th&gt;Why it matters&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;What is the exact media and concentration?&lt;/td&gt;&#xA;          &lt;td&gt;A broad chemical family can include very different corrosion behavior.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;What is the temperature range?&lt;/td&gt;&#xA;          &lt;td&gt;Compatibility may change sharply at elevated temperature or during cleaning.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Is the service oxidizing, abrasive, crystallizing, or solvent-based?&lt;/td&gt;&#xA;          &lt;td&gt;The risk may shift from body corrosion to seat, seal, diaphragm, or wear issues.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Is exposure continuous or intermittent?&lt;/td&gt;&#xA;          &lt;td&gt;Drying, crystallization, flushing, and startup conditions can affect the recommendation.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Are there outdoor or corrosive atmosphere conditions?&lt;/td&gt;&#xA;          &lt;td&gt;External fasteners, actuator housings, coatings, and accessories may need review.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;what-nuvon-can-provide&#34;&gt;What Nuvon can provide&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon can organize a material direction, a shortlist of product families, missing information, and points requiring customer or engineering confirmation. Where uncertainty remains, the quotation should state assumptions clearly instead of implying that a final engineering approval has already been completed.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Submittal &amp; Documentation</title>
       <link>http://localhost:1313/project-support/submittal-documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project-support/submittal-documentation/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;why-documentation-belongs-in-the-scope&#34;&gt;Why documentation belongs in the scope&lt;/h2&gt;&#xA;&lt;p&gt;For many international projects, the document package is part of the product. A valve can be physically correct but still delay approval if datasheets, drawings, material declarations, test records, or packing documents are missing or inconsistent.&lt;/p&gt;&#xA;&lt;p&gt;Nuvon treats documentation as a scope item that should be discussed during RFQ preparation, not as an afterthought once goods are ready to ship.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-submittal-items&#34;&gt;Common submittal items&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Document type&lt;/th&gt;&#xA;          &lt;th&gt;Typical use&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Technical datasheet&lt;/td&gt;&#xA;          &lt;td&gt;Confirms product family, size, material, connection, pressure class, and accessory scope.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;General arrangement or dimensional drawing&lt;/td&gt;&#xA;          &lt;td&gt;Supports layout, pipe connection, installation clearance, and drawing review.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;IOM manual&lt;/td&gt;&#xA;          &lt;td&gt;Helps project teams check installation, operation, maintenance, and storage expectations.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Material or compliance declaration&lt;/td&gt;&#xA;          &lt;td&gt;Supports customer review where material traceability or compliance statements are required.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Inspection or test record&lt;/td&gt;&#xA;          &lt;td&gt;May be requested for pressure tests, functional checks, or project quality review.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Packing and marking documents&lt;/td&gt;&#xA;          &lt;td&gt;Helps coordinate shipment, labeling, spare parts, and receiving inspection.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;document-control-notes&#34;&gt;Document control notes&lt;/h2&gt;&#xA;&lt;p&gt;If a project uses a document register, tag list, revision table, file naming rule, language requirement, or approval status workflow, include those requirements at the RFQ stage. Document revisions should be traceable so that quotation scope, production confirmation, and shipment documents do not drift apart.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RFQ &amp; BOM Support</title>
       <link>http://localhost:1313/project-support/rfq-bom-support/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/project-support/rfq-bom-support/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;rfq-and-bom-challenges&#34;&gt;RFQ and BOM challenges&lt;/h2&gt;&#xA;&lt;p&gt;Many project requests start as screenshots, partial line lists, mixed valve names, pipe sizes, or copied BOM rows. That is normal, but it can create hidden assumptions: one line may be missing material, another may omit end connection, and another may require an actuator or document package that is not visible.&lt;/p&gt;&#xA;&lt;p&gt;Nuvon can help organize the request so both sides can see what is being quoted, what is assumed, and what still needs confirmation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RFQ &amp; Submittal Inputs</title>
       <link>http://localhost:1313/resources/rfq-submittal-inputs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/resources/rfq-submittal-inputs/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;rfq-inputs&#34;&gt;RFQ inputs&lt;/h2&gt;&#xA;&lt;p&gt;A clear RFQ should describe the requested product and the service behind it. At minimum, prepare media, concentration, temperature, pressure, flow or pump capacity, size, connection, material preference, operation mode, quantity, destination, and document requirements.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Input&lt;/th&gt;&#xA;          &lt;th&gt;Why it matters&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Media and concentration&lt;/td&gt;&#xA;          &lt;td&gt;Drives material, seat, seal, diaphragm, gasket, and accessory review.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Temperature and pressure&lt;/td&gt;&#xA;          &lt;td&gt;Confirms pressure-temperature limits, safety margin, and product family fit.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Size and connection&lt;/td&gt;&#xA;          &lt;td&gt;Prevents mismatch with pipe standard, flange pattern, tubing, or equipment ports.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Valve function&lt;/td&gt;&#xA;          &lt;td&gt;Distinguishes isolation, throttling, check protection, dosing, relief, and automation.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Quantity and destination&lt;/td&gt;&#xA;          &lt;td&gt;Affects quotation structure, packaging, freight, spare parts, and delivery planning.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Document requirements&lt;/td&gt;&#xA;          &lt;td&gt;Helps include datasheets, drawings, declarations, test records, and packing documents early.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;submittal-inputs&#34;&gt;Submittal inputs&lt;/h2&gt;&#xA;&lt;p&gt;If the project requires approval documents, list them during the quotation stage. Common items include datasheets, drawings, IOM manuals, material declarations, inspection records, certificates, packing details, and spare parts lists.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Document Request</title>
       <link>http://localhost:1313/resources/document-request/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/resources/document-request/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;document-request-scope&#34;&gt;Document request scope&lt;/h2&gt;&#xA;&lt;p&gt;Document requests should identify the product family, project name or reference, expected document type, language, revision needs, and deadline. If the document must match a customer register, include the register format or naming rule.&lt;/p&gt;&#xA;&lt;p&gt;Documents are easiest to coordinate when the product scope is stable. If material, connection, quantity, actuator, or accessory requirements are still changing, the document package should be treated as preliminary.&lt;/p&gt;&#xA;&lt;h2 id=&#34;common-document-types&#34;&gt;Common document types&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Document&lt;/th&gt;&#xA;          &lt;th&gt;Typical purpose&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Datasheet&lt;/td&gt;&#xA;          &lt;td&gt;Confirms basic configuration, size, materials, pressure class, and accessory scope.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Dimensional drawing&lt;/td&gt;&#xA;          &lt;td&gt;Supports layout, installation clearance, pipe connection, and approval review.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;IOM manual&lt;/td&gt;&#xA;          &lt;td&gt;Gives installation, operation, storage, and maintenance guidance.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Material or compliance declaration&lt;/td&gt;&#xA;          &lt;td&gt;Supports customer review where declaration documents are requested.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Inspection and test record&lt;/td&gt;&#xA;          &lt;td&gt;May be used for quality review, pressure testing, or functional confirmation.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Packing and marking information&lt;/td&gt;&#xA;          &lt;td&gt;Helps receiving teams check shipment, labels, spare parts, and documentation.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;before-requesting-final-files&#34;&gt;Before requesting final files&lt;/h2&gt;&#xA;&lt;p&gt;Confirm that the product scope, material, connection, quantity, document language, tag numbers, and revision expectations are stable. Final controlled documents should match the confirmed quotation or purchase order scope.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About Nuvon</title>
       <link>http://localhost:1313/about/nuvon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/nuvon/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;application-oriented-support&#34;&gt;Application-oriented support&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon is organized around the practical needs of corrosion-resistant flow control projects. The starting point is usually not a catalog number; it is the application, operating conditions, material question, connection standard, and document scope.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-nuvon-helps-organize&#34;&gt;What Nuvon helps organize&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon helps buyers, distributors, and engineering teams prepare clearer requests for valves, actuators, fittings, pressure control items, and chemfeed accessories. Typical applications include industrial water treatment, wastewater handling, chemical dosing, corrosive chemical transfer, and chemical processing utility lines.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Quality &amp; Supply Coordination</title>
       <link>http://localhost:1313/about/quality-supply-coordination/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/quality-supply-coordination/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;quality-coordination&#34;&gt;Quality coordination&lt;/h2&gt;&#xA;&lt;p&gt;Quality coordination begins by making the requested scope visible: product family, material, pressure rating, connection, quantity, inspection expectations, documents, packaging, and any customer-specific requirements. This reduces the risk of quoting one scope and delivering another.&lt;/p&gt;&#xA;&lt;h2 id=&#34;supply-coordination&#34;&gt;Supply coordination&lt;/h2&gt;&#xA;&lt;p&gt;For project orders, Nuvon can organize line items by service, material, document requirement, and shipment group. This helps align supplier confirmation, packing details, shipping documents, spare parts, and customer review.&lt;/p&gt;&#xA;&lt;h2 id=&#34;practical-controls&#34;&gt;Practical controls&lt;/h2&gt;&#xA;&lt;p&gt;Useful controls include RFQ checklists, clear assumptions in quotations, revision-aware datasheets, drawing confirmation, inspection notes, packing requirements, label requirements, and document registers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description></description>
+      <description>&lt;p&gt;Send a short note when the request is not ready for a formal RFQ, when the right product family is still unclear, or when a document request should be discussed before quotation.&lt;/p&gt;&#xA;&lt;p&gt;For urgent purchasing or project communication, include the project name, destination, product family, duty conditions, and target response date in the first message.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Request a Quote</title>
       <link>http://localhost:1313/request-a-quote/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/request-a-quote/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;what-to-include&#34;&gt;What to include&lt;/h2&gt;&#xA;&lt;p&gt;For a faster first review, include the operating medium, concentration, temperature, working pressure, pipe size, end connection, valve function, actuation requirement, quantity, destination country, and any document requirements.&lt;/p&gt;&#xA;&lt;p&gt;If the service is abrasive, oxidizing, high cycle, vacuum, outdoor, intermittent, crystallizing, solvent-based, or cleaned with a different chemical, mention that as well. These details often affect body material, seat and seal choice, actuator sizing, check valve behavior, and accessory scope.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Privacy Policy</title>
       <link>http://localhost:1313/footer/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/footer/privacy-policy/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;&#xA;&lt;p&gt;This privacy policy explains how Nuvon Flow Control handles information submitted through this website, including contact forms, RFQ requests, document requests, email communication, and normal website usage data.&lt;/p&gt;&#xA;&lt;p&gt;This notice is a practical privacy baseline for website inquiries. It may need to be reviewed and adapted for the final legal company name, operating jurisdiction, CRM setup, analytics tools, and form processing workflow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-collected&#34;&gt;Information collected&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon may collect the following information when it is submitted or generated through normal website use:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terms &amp; Conditions</title>
       <link>http://localhost:1313/footer/terms-conditions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/footer/terms-conditions/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;website-use&#34;&gt;Website use&lt;/h2&gt;&#xA;&lt;p&gt;The information on this website is provided for general product, application, documentation, and project communication. It is intended to help users prepare RFQs, organize duty conditions, and understand possible product families for corrosion-resistant flow control projects.&lt;/p&gt;&#xA;&lt;p&gt;Website content should not be treated as final engineering approval, a binding technical specification, a guaranteed material recommendation, or a complete statement of legal, regulatory, or project compliance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;product-and-application-information&#34;&gt;Product and application information&lt;/h2&gt;&#xA;&lt;p&gt;Product descriptions, materials, configurations, diagrams, examples, and application notes are provided for preliminary selection and RFQ preparation. Final scope must be confirmed through quotation, purchase order, approved drawings, datasheets, project specifications, and any applicable customer review process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cookie Policy</title>
       <link>http://localhost:1313/footer/cookie-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/footer/cookie-policy/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;cookies-and-similar-technologies&#34;&gt;Cookies and similar technologies&lt;/h2&gt;&#xA;&lt;p&gt;This website may use cookies, local storage, pixels, server logs, or similar technologies to operate the site, protect forms, understand usage, remember preferences, and improve performance.&lt;/p&gt;&#xA;&lt;p&gt;Cookies are small files stored by the browser. Some are necessary for the website to work normally, while others may support analytics, security, or user experience improvements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;types-of-cookies-that-may-be-used&#34;&gt;Types of cookies that may be used&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Type&lt;/th&gt;&#xA;          &lt;th&gt;Purpose&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Essential cookies&lt;/td&gt;&#xA;          &lt;td&gt;Support basic website operation, page delivery, form behavior, and security checks.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Security cookies&lt;/td&gt;&#xA;          &lt;td&gt;Help protect forms and traffic from spam, abuse, automated submissions, or suspicious activity.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Analytics cookies&lt;/td&gt;&#xA;          &lt;td&gt;Help understand page visits, traffic sources, device types, and content performance.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Preference cookies&lt;/td&gt;&#xA;          &lt;td&gt;Remember user choices such as language, region, or display preferences when enabled.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;If Cloudflare Turnstile, analytics tools, CDN security features, or form services are enabled, those tools may set cookies or process technical information according to their own service behavior.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Disclaimer</title>
       <link>http://localhost:1313/footer/disclaimer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/footer/disclaimer/</guid>
-      <description></description>
+      <description>&lt;h2 id=&#34;technical-information&#34;&gt;Technical information&lt;/h2&gt;&#xA;&lt;p&gt;Website content is intended for preliminary product, application, and project communication. It may help users prepare RFQs and organize duty conditions, but it is not a substitute for project-specific engineering review.&lt;/p&gt;&#xA;&lt;p&gt;Chemical compatibility, pressure-temperature limits, installation method, actuator sizing, connection standard, inspection requirements, and compliance obligations must be confirmed against actual project conditions, applicable standards, customer specifications, and approved documents.&lt;/p&gt;&#xA;&lt;h2 id=&#34;material-compatibility&#34;&gt;Material compatibility&lt;/h2&gt;&#xA;&lt;p&gt;Material guidance on this website is general and may not account for all concentration, temperature, impurity, abrasion, solvent, oxidizing, cleaning, intermittent exposure, outdoor, or mixed-service conditions. Final material selection should be confirmed by qualified project stakeholders.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

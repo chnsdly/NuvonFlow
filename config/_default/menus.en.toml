@@ -5,6 +5,13 @@ pageRef = "/products"
 weight = 10
 
   [[main]]
+  identifier = "products-overview"
+  name = "All Products"
+  pageRef = "/products"
+  parent = "products"
+  weight = 10
+
+  [[main]]
   identifier = "ball-valves"
   name = "Ball Valves"
   pageRef = "/products/ball-valves"
@@ -53,12 +60,18 @@ weight = 10
   parent = "products"
   weight = 17
 
-
 [[main]]
 identifier = "applications"
 name = "Applications"
 pageRef = "/applications"
 weight = 20
+
+  [[main]]
+  identifier = "applications-overview"
+  name = "All Applications"
+  pageRef = "/applications"
+  parent = "applications"
+  weight = 20
 
   [[main]]
   identifier = "industrial-water-treatment"
@@ -95,7 +108,6 @@ weight = 20
   parent = "applications"
   weight = 25
 
-
 [[main]]
 identifier = "project-support"
 name = "Project Support"
@@ -130,7 +142,6 @@ weight = 30
   parent = "project-support"
   weight = 34
 
-
 [[main]]
 identifier = "resources"
 name = "Resources"
@@ -158,12 +169,39 @@ weight = 40
   parent = "resources"
   weight = 43
 
+  [[main]]
+  identifier = "case-studies"
+  name = "Case Studies"
+  pageRef = "/resources/case-studies"
+  parent = "resources"
+  weight = 44
+
+  [[main]]
+  identifier = "faq"
+  name = "FAQ"
+  pageRef = "/resources/faq"
+  parent = "resources"
+  weight = 45
+
+  [[main]]
+  identifier = "insights"
+  name = "Insights"
+  pageRef = "/resources/insights"
+  parent = "resources"
+  weight = 46
 
 [[main]]
 identifier = "about"
 name = "About"
 pageRef = "/about"
 weight = 50
+
+  [[main]]
+  identifier = "about-overview"
+  name = "About Nuvon"
+  pageRef = "/about"
+  parent = "about"
+  weight = 50
 
   [[main]]
   identifier = "quality-supply-coordination"
@@ -179,15 +217,12 @@ weight = 50
   parent = "about"
   weight = 52
 
-
 [[header_cta]]
 identifier = "request-a-quote"
 name = "Request a Quote"
 pageRef = "/request-a-quote"
 weight = 60
 
-
-# footer menu
 [[footer]]
 name = "Privacy Policy"
 pageRef = "/footer/privacy-policy"

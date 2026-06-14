@@ -3,6 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/zh/</loc>
+    <lastmod>2026-06-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -12,6 +13,58 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/why-duty-conditions-improve-sourcing/</loc>
+    <lastmod>2026-06-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/why-duty-conditions-improve-sourcing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/why-duty-conditions-improve-sourcing/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/wastewater-neutralization-valve-package/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/wastewater-neutralization-valve-package/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/</loc>
+    <lastmod>2026-06-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/faq/what-information-is-needed-for-a-valve-rfq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/technical-guides/material-selection-for-corrosive-service/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/technical-guides/material-selection-for-corrosive-service/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/technical-guides/material-selection-for-corrosive-service/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/products/</loc>
@@ -108,6 +161,32 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/products/fittings/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/faq/can-nuvon-help-with-material-compatibility/</loc>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/faq/can-nuvon-help-with-material-compatibility/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/technical-guides/valve-selection-by-application/</loc>
+    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/technical-guides/valve-selection-by-application/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/technical-guides/valve-selection-by-application/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/applications/</loc>
@@ -243,6 +322,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/zh/resources/</loc>
+    <lastmod>2026-06-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -255,6 +335,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/zh/resources/technical-guides/</loc>
+    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -288,6 +369,45 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/resources/document-request/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/faq/</loc>
+    <lastmod>2026-06-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/faq/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/faq/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/</loc>
+    <lastmod>2026-06-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/about/</loc>
@@ -408,30 +528,6 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/footer/disclaimer/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/zh/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="http://localhost:1313/zh/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/zh/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="http://localhost:1313/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-CN"
-                href="http://localhost:1313/zh/tags/"
                 />
   </url>
 </urlset>

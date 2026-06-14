@@ -1,21 +1,26 @@
-baseURL = "https://example.com/"
+baseURL = "https://www.nuvonflow.com/"
 title = "Nuvon Flow Control"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term"]
 
 [languages]
 
   [languages.en]
     contentDir = "content/en"
     label = "English"
+    languageCode = "en-US"
+    languageName = "English"
     locale = "en-US"
     title = "Nuvon Flow Control"
     weight = 1
 
   [languages.zh]
     contentDir = "content/zh"
-    label = "中文"
+    label = "\u7b80\u4f53\u4e2d\u6587"
+    languageCode = "zh-CN"
+    languageName = "\u7b80\u4f53\u4e2d\u6587"
     locale = "zh-CN"
-    title = "Nuvon Flow Control 中文站"
+    title = "Nuvon Flow Control \u4e2d\u6587\u7ad9"
     weight = 2

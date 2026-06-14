@@ -1,0 +1,65 @@
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $products := first 6 (where .Site.RegularPages "Type" "product").ByWeight }}
+{{ $applications := first 5 (where .Site.RegularPages "Type" "applications").ByWeight }}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <section class="site-footer__brand" aria-labelledby="site-footer-brand-title">
+        <div class="site-footer__logo" aria-hidden="true">
+          <img class="site-footer__logo-image" src="{{ "Logo_Nuvon.webp" | relURL }}" width="600" height="127" alt="">
+        </div>
+        <h2 id="site-footer-brand-title" class="site-footer__title">
+          {{ if $isZh }}防腐流体控制项目支持{{ else }}Anticorrosive Flow Control Support{{ end }}
+        </h2>
+        <p class="site-footer__text">
+          {{ if $isZh }}
+            面向水处理、废水处理、化学加药和腐蚀性介质输送项目，提供阀门、执行器、管件和文件协调支持。
+          {{ else }}
+            Valve, actuator, fitting, and documentation support for water treatment, wastewater, chemical dosing, and corrosive media handling projects.
+          {{ end }}
+        </p>
+      </section>
+
+      <nav class="site-footer__nav" aria-label="{{ if $isZh }}页脚产品导航{{ else }}Footer product navigation{{ end }}">
+        <h2 class="site-footer__heading">{{ if $isZh }}产品{{ else }}Products{{ end }}</h2>
+        <ul class="site-footer__list">
+          {{ range $products }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav" aria-label="{{ if $isZh }}页脚应用导航{{ else }}Footer application navigation{{ end }}">
+        <h2 class="site-footer__heading">{{ if $isZh }}应用{{ else }}Applications{{ end }}</h2>
+        <ul class="site-footer__list">
+          {{ range $applications }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+
+      <section class="site-footer__contact" aria-labelledby="site-footer-contact-title">
+        <h2 id="site-footer-contact-title" class="site-footer__heading">{{ if $isZh }}联系{{ else }}Contact{{ end }}</h2>
+        <ul class="site-footer__list">
+          {{ with .Site.Params.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+          {{ with .Site.Params.phone }}<li><a href="tel:{{ . | replaceRE "[^+0-9]" "" }}">{{ . }}</a></li>{{ end }}
+          {{ with .Site.Params.address }}<li><span>{{ . }}</span></li>{{ end }}
+        </ul>
+      </section>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.company_name | default .Site.Title }}. {{ if $isZh }}保留所有权利。{{ else }}All rights reserved.{{ end }}</p>
+      {{ with .Site.Menus.footer }}
+      <nav aria-label="{{ if $isZh }}法律页面{{ else }}Legal pages{{ end }}">
+        <ul class="site-footer__legal">
+          {{ range . }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      {{ end }}
+    </div>
+  </div>
+</footer>

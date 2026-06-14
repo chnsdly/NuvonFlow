@@ -1,17 +1,29 @@
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section insights-list" aria-labelledby="insights-list-page-title">
-  <div class="container container--narrow">
+  <div class="{{ $containerClass }}">
+    <div class="section__inner">
+      <header class="section__header">
+        <h1 id="insights-list-page-title" class="section__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}<p class="section__description font-body">{{ . }}</p>{{ end }}
+      </header>
+
       <ul class="insights-list__list">
         {{ range .RegularPages.ByDate.Reverse }}
         {{ $item := . }}
         {{ $summary := .Summary | plainify | truncate 160 }}
+        {{ $image := .Params.image }}
+        {{ $isGenericImage := or (not $image) (in (slice "/images/background.webp" "/images/abc.webp") $image) }}
         <li class="insights-list__item">
           <a class="insights-list__card" href="{{ .RelPermalink }}">
-            {{ with .Params.image }}
             <div class="insights-list__media">
-              <img class="insights-list__image" src="{{ . | relURL }}" alt="{{ $item.Title }}" loading="lazy" decoding="async">
+              {{ if $isGenericImage }}
+              {{ partial "technical-visual.html" (dict "title" $item.Title "label" (cond $isZh "行业观察" "Field note") "variant" "insight" "size" "card") }}
+              {{ else }}
+              <img class="insights-list__image" src="{{ $image | relURL }}" alt="{{ $item.Title }}" loading="lazy" decoding="async">
+              {{ end }}
             </div>
-            {{ end }}
 
             <div class="insights-list__content">
               <h2 class="insights-list__title font-title-xs">{{ .Title }}</h2>
@@ -29,6 +41,7 @@
         </li>
         {{ end }}
       </ul>
+    </div>
   </div>
 </main>
 {{ end }}

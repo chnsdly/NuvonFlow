@@ -1,0 +1,53 @@
+{{ $title := cond .IsHome (.Title | default .Site.Title) (printf "%s | %s" .Title .Site.Title) }}
+{{ $description := .Description | default (i18n "site_description") | default .Site.Params.description }}
+{{ $locale := .Site.Language.LanguageCode | default .Site.Language.Lang }}
+{{ $image := "" }}
+{{ $genericImages := slice "/images/background.webp" "/images/abc.webp" }}
+{{ with .Params.image }}
+  {{ if not (in $genericImages .) }}{{ $image = . | absURL }}{{ end }}
+{{ else with .Params.home_hero.images }}
+  {{ $candidate := index . 0 }}
+  {{ if not (in $genericImages $candidate) }}{{ $image = $candidate | absURL }}{{ end }}
+{{ end }}
+
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+{{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ replace $locale "-" "_" }}">
+{{ with $image }}<meta property="og:image" content="{{ . }}">{{ end }}
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+{{ with $description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+
+{{ $organization := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" (.Site.Params.company_name | default .Site.Title)
+  "url" .Site.BaseURL
+  "email" .Site.Params.email
+  "address" (dict "@type" "PostalAddress" "addressLocality" "Linyi" "addressRegion" "Shandong" "addressCountry" "CN")
+}}
+<script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
+
+{{ if .IsHome }}
+  {{ $website := dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" .Site.Title
+    "url" .Site.BaseURL
+    "description" $description
+  }}
+  <script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ else }}
+  {{ $webpage := dict
+    "@context" "https://schema.org"
+    "@type" "WebPage"
+    "name" .Title
+    "url" .Permalink
+    "description" $description
+    "isPartOf" (dict "@type" "WebSite" "name" .Site.Title "url" .Site.BaseURL)
+  }}
+  <script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>
+{{ end }}

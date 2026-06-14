@@ -1,0 +1,127 @@
+{{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $typeLabel := .Type | humanize }}
+{{ if $isZh }}
+  {{ if eq .Type "product" }}{{ $typeLabel = "产品" }}{{ end }}
+  {{ if eq .Type "applications" }}{{ $typeLabel = "应用" }}{{ end }}
+  {{ if eq .Type "project-support" }}{{ $typeLabel = "项目支持" }}{{ end }}
+  {{ if eq .Type "resources" }}{{ $typeLabel = "资源" }}{{ end }}
+  {{ if eq .Type "about" }}{{ $typeLabel = "关于" }}{{ end }}
+{{ end }}
+{{ $items := .RegularPages.ByWeight }}
+{{ if eq (len $items) 0 }}
+  {{ $items = .Sections.ByWeight }}
+{{ end }}
+{{ $containerClass := partial "page-container-class.html" . }}
+
+<main class="section section-page" aria-labelledby="section-page-title">
+  <div class="{{ $containerClass }}">
+    <div class="section__inner">
+      <header class="section-page__hero">
+        <p class="section-page__eyebrow font-meta">{{ $typeLabel }}</p>
+        <h1 id="section-page-title" class="section-page__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}
+        <p class="section-page__description font-body">{{ . }}</p>
+        {{ end }}
+      </header>
+
+      {{ with .Content }}
+      <div class="content-prose section-page__content">
+        {{ . }}
+      </div>
+      {{ end }}
+
+      {{ if eq .Type "applications" }}
+      <section class="selection-lens" aria-labelledby="applications-selection-lens-title">
+        <div class="selection-lens__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}应用入口{{ else }}Application Entry{{ end }}</p>
+          <h2 id="applications-selection-lens-title" class="font-title-s">{{ if $isZh }}按场景进入，比直接找型号更可靠{{ else }}Application context is more reliable than starting with model names{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}先讲清楚流程区域和腐蚀风险，再逐步匹配阀门、执行器、管件和文件范围。{{ else }}Describe the process area and corrosion risk first, then narrow valves, actuators, fittings, and document scope.{{ end }}</p>
+        </div>
+        <ul class="selection-lens__list">
+          <li>{{ if $isZh }}水处理{{ else }}Water treatment{{ end }}</li>
+          <li>{{ if $isZh }}废水与污泥{{ else }}Wastewater and sludge{{ end }}</li>
+          <li>{{ if $isZh }}酸碱与氧化剂{{ else }}Acids, alkalis, oxidizers{{ end }}</li>
+          <li>{{ if $isZh }}文件送审{{ else }}Project submittals{{ end }}</li>
+        </ul>
+      </section>
+      {{ else if eq .Type "project-support" }}
+      <section class="selection-lens" aria-labelledby="support-selection-lens-title">
+        <div class="selection-lens__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}支持范围{{ else }}Support Scope{{ end }}</p>
+          <h2 id="support-selection-lens-title" class="font-title-s">{{ if $isZh }}把询价、文件和交付放在同一条线上{{ else }}Keep RFQ, documents, and delivery on the same line{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}清晰的项目输入可以减少反复澄清，让报价范围、技术文件和供应协调更容易被审查。{{ else }}Clear project inputs reduce repeated clarification and make quotation scope, technical documents, and supply coordination easier to review.{{ end }}</p>
+        </div>
+        <ul class="selection-lens__list">
+          <li>{{ if $isZh }}工况输入{{ else }}Duty inputs{{ end }}</li>
+          <li>{{ if $isZh }}物料清单{{ else }}BOM review{{ end }}</li>
+          <li>{{ if $isZh }}材料兼容{{ else }}Material fit{{ end }}</li>
+          <li>{{ if $isZh }}送审文件{{ else }}Submittals{{ end }}</li>
+        </ul>
+      </section>
+      {{ else if eq .Type "resources" }}
+      <section class="selection-lens" aria-labelledby="resources-selection-lens-title">
+        <div class="selection-lens__intro">
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}知识库{{ else }}Knowledge Base{{ end }}</p>
+          <h2 id="resources-selection-lens-title" class="font-title-s">{{ if $isZh }}用资料页面补足选型逻辑{{ else }}Use resources to make selection logic visible{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}技术指南、常见问题、案例和采购准备内容可以帮助客户形成更完整的询价输入，也便于项目团队反复参考。{{ else }}Technical guides, FAQs, cases, and sourcing preparation notes help customers build more complete RFQ inputs and give project teams a practical reference base.{{ end }}</p>
+        </div>
+        <ul class="selection-lens__list">
+          <li>{{ if $isZh }}技术指南{{ else }}Technical guides{{ end }}</li>
+          <li>{{ if $isZh }}询价准备{{ else }}RFQ preparation{{ end }}</li>
+          <li>{{ if $isZh }}案例场景{{ else }}Case context{{ end }}</li>
+          <li>{{ if $isZh }}常见问题{{ else }}FAQ{{ end }}</li>
+        </ul>
+      </section>
+      {{ end }}
+
+      {{ with .Params.highlights }}
+      <ul class="feature-grid">
+        {{ range . }}
+        <li class="feature-card">
+          <h2 class="feature-card__title font-title-xs">{{ .title }}</h2>
+          <p class="feature-card__text font-body">{{ .text }}</p>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ if gt (len $items) 0 }}
+      <ul class="content-card-grid">
+        {{ range $items }}
+        <li class="content-card-grid__item">
+          <a class="content-card" href="{{ .RelPermalink }}">
+            <span class="content-card__kicker font-meta">{{ $typeLabel }}</span>
+            <h2 class="content-card__title font-title-xs">{{ .LinkTitle }}</h2>
+            {{ with .Description }}
+            <p class="content-card__text font-body">{{ . }}</p>
+            {{ end }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ if ne .Type "footer" }}
+      {{ $primaryHref := "/request-a-quote/" }}
+      {{ $primaryLabel := cond $isZh "提交询价" "Request a Quote" }}
+      {{ $secondaryHref := "/contact/" }}
+      {{ $secondaryLabel := cond $isZh "联系项目支持" "Contact Support" }}
+      {{ if eq .Type "applications" }}
+        {{ $primaryHref = "/project-support/submit-duty-conditions/" }}
+        {{ $primaryLabel = cond $isZh "提交工况参数" "Submit Duty Conditions" }}
+        {{ $secondaryHref = "/products/" }}
+        {{ $secondaryLabel = cond $isZh "查看产品系列" "View Product Families" }}
+      {{ else if eq .Type "resources" }}
+        {{ $primaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $primaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
+      {{ end }}
+      <div class="section-page__cta">
+        <a class="button button--primary" href='{{ $primaryHref | relLangURL }}'>{{ $primaryLabel }}</a>
+        <a class="button button--secondary" href='{{ $secondaryHref | relLangURL }}'>{{ $secondaryLabel }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</main>
+{{ end }}

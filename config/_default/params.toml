@@ -1,7 +1,7 @@
-company_name = "Nuvon Flow"
-logo = "images/logo.png"
+company_name = "Nuvon Flow Control"
 
-email = "nuvon@gmail.com"
-phone = "+86 1312345678"
-business_hours = "Mon–Sat, 8:00 AM–5:00 PM (GMT+8)"
+email = "sales@nuvonflow.com"
+phone = ""
+business_hours = "China business hours (GMT+8); project notes can be sent anytime."
 address = "Linyi City, Shandong, China"
+description = "Nuvon Flow Control supports corrosion-resistant valves, actuators, fittings, and project documentation for water treatment, wastewater, chemical dosing, and corrosive media handling."

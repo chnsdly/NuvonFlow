@@ -2,128 +2,219 @@
 {{ $quoteItems := .Site.Menus.header_cta }}
 {{ $quoteItem := index $quoteItems 0 }}
 {{ $primaryItems := .Site.Menus.main }}
-{{ $languageLabels := dict "en" "English" "zh" "简体中文" }}
+{{ $activeLanguageLabel := .Site.Language.LanguageName | default .Site.Language.Params.label | default .Site.Language.Lang }}
 
-<header class="site-header">
+<header class="site-header" data-site-header>
   <div class="site-header__inner">
     <a class="site-header__logo" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ printf (i18n "header_logo_home_aria") .Site.Title }}">
-      <span class="site-header__logo-mark" aria-hidden="true">NF</span>
-      <span class="site-header__logo-text">Nuvon Flow Control</span>
+      <img class="site-header__logo-image" src="{{ "Logo_Nuvon.webp" | relURL }}" width="600" height="127" alt="" aria-hidden="true">
     </a>
 
-    <nav class="site-header__nav" aria-label="{{ i18n "header_primary_navigation" }}">
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-label="{{ i18n "header_open_primary_navigation" }}"
+      aria-controls="site-header-primary-navigation"
+      aria-expanded="false"
+      data-open-label="{{ i18n "header_open_primary_navigation" }}"
+      data-close-label="{{ i18n "header_close_primary_navigation" }}"
+      data-site-header-toggle>
+      <span class="site-header__toggle-line" aria-hidden="true"></span>
+      <span class="site-header__toggle-line" aria-hidden="true"></span>
+      <span class="site-header__toggle-line" aria-hidden="true"></span>
+    </button>
+
+    <nav
+      class="site-header__nav"
+      id="site-header-primary-navigation"
+      aria-label="{{ i18n "header_primary_navigation" }}"
+      data-site-header-nav>
       <ul class="site-header__menu">
         {{ range $primaryItems }}
           {{ $isExact := $current.IsMenuCurrent "main" . }}
-          {{ with .Page }}
-            {{ $isExact = eq $current.RelPermalink .RelPermalink }}
-          {{ end }}
-          {{ $isCurrentSection := false }}
-          {{ with .Page }}
-            {{ $isCurrentSection = or (eq $current.RelPermalink .RelPermalink) ($current.IsDescendant .) }}
-          {{ end }}
-          {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) $isCurrentSection }}
-          <li class="site-header__item{{ if .HasChildren }} site-header__item--has-children{{ end }}{{ if $isActive }} is-active{{ end }}">
-            <a class="site-header__link" href="{{ .URL }}"{{ if $isExact }} aria-current="page"{{ end }}>
-              <span>{{ .Name }}</span>
-              {{ if .HasChildren }}<span class="site-header__chevron" aria-hidden="true">⌄</span>{{ end }}
-            </a>
+          {{ $isActive := or $isExact ($current.HasMenuCurrent "main" .) }}
+          {{ $isProductsMenu := eq .Identifier "products" }}
+          {{ $isApplicationsMenu := eq .Identifier "applications" }}
+          {{ $isMegaMenu := or $isProductsMenu $isApplicationsMenu }}
+          {{ $submenuId := printf "site-header-submenu-%s" .Identifier }}
+          <li class="site-header__item{{ if .HasChildren }} site-header__item--has-children{{ end }}{{ if $isMegaMenu }} site-header__item--mega{{ end }}{{ if $isActive }} is-active{{ end }}">
+            <div class="site-header__item-control">
+              {{ if .HasChildren }}
+                <button
+                  class="site-header__link site-header__link--toggle"
+                  type="button"
+                  aria-label="{{ printf (i18n "header_submenu_aria") .Name }}"
+                  aria-controls="{{ $submenuId }}"
+                  aria-expanded="false"
+                  data-site-header-submenu-toggle>
+                  <span>{{ .Name }}</span>
+                  <span class="site-header__chevron" aria-hidden="true">&#9662;</span>
+                </button>
+              {{ else }}
+                <a class="site-header__link" href="{{ .URL }}"{{ if $isExact }} aria-current="page"{{ end }}>
+                  <span>{{ .Name }}</span>
+                </a>
+              {{ end }}
+            </div>
+
             {{ if .HasChildren }}
-              <ul class="site-header__submenu" aria-label="{{ printf (i18n "header_submenu_aria") .Name }}">
-                {{ range .Children }}
-                  {{ $childExact := $current.IsMenuCurrent "main" . }}
-                  {{ with .Page }}
-                    {{ $childExact = eq $current.RelPermalink .RelPermalink }}
-                  {{ end }}
-                  <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
-                    <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+              <ul class="site-header__submenu{{ if $isMegaMenu }} site-header__submenu--mega{{ end }}" id="{{ $submenuId }}" aria-label="{{ printf (i18n "header_submenu_aria") .Name }}">
+                {{ if $isProductsMenu }}
+                  {{ $valveGroup := slice "ball-valves" "butterfly-valves" "diaphragm-valves" "check-valves" }}
+                  {{ $supportGroup := slice "pressure-control-chemfeed" "actuators" "fittings" }}
+                  <li class="site-header__mega-intro">
+                    <span class="site-header__mega-kicker font-meta">{{ i18n "header_products_mega_kicker" }}</span>
+                    <p class="site-header__mega-title">{{ i18n "header_products_mega_title" }}</p>
+                    <p class="site-header__mega-text">{{ i18n "header_products_mega_text" }}</p>
+                    {{ range .Children }}
+                      {{ if eq .Identifier "products-overview" }}
+                        {{ $childExact := $current.IsMenuCurrent "main" . }}
+                        <a class="site-header__mega-overview" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                      {{ end }}
+                    {{ end }}
                   </li>
+
+                  <li class="site-header__mega-section">
+                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_products_mega_valve_group" }}</span>
+                    <ul class="site-header__mega-list">
+                      {{ range .Children }}
+                        {{ if in $valveGroup .Identifier }}
+                          {{ $childExact := $current.IsMenuCurrent "main" . }}
+                          <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
+                            <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                          </li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </li>
+
+                  <li class="site-header__mega-section">
+                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_products_mega_support_group" }}</span>
+                    <ul class="site-header__mega-list">
+                      {{ range .Children }}
+                        {{ if or (in $supportGroup .Identifier) (and (ne .Identifier "products-overview") (not (in $valveGroup .Identifier)) (not (in $supportGroup .Identifier))) }}
+                          {{ $childExact := $current.IsMenuCurrent "main" . }}
+                          <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
+                            <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                          </li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </li>
+
+                  <li class="site-header__mega-visual">
+                    <span class="site-header__mega-visual-kicker font-meta">{{ i18n "header_products_mega_visual_kicker" }}</span>
+                    <p class="site-header__mega-visual-title">{{ i18n "header_products_mega_visual_title" }}</p>
+                    <p class="site-header__mega-visual-text">{{ i18n "header_products_mega_visual_text" }}</p>
+                  </li>
+                {{ else if $isApplicationsMenu }}
+                  {{ $waterGroup := slice "industrial-water-treatment" "industrial-wastewater" }}
+                  <li class="site-header__mega-intro">
+                    <span class="site-header__mega-kicker font-meta">{{ i18n "header_applications_mega_kicker" }}</span>
+                    <p class="site-header__mega-title">{{ i18n "header_applications_mega_title" }}</p>
+                    <p class="site-header__mega-text">{{ i18n "header_applications_mega_text" }}</p>
+                    {{ range .Children }}
+                      {{ if eq .Identifier "applications-overview" }}
+                        {{ $childExact := $current.IsMenuCurrent "main" . }}
+                        <a class="site-header__mega-overview" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                      {{ end }}
+                    {{ end }}
+                  </li>
+
+                  <li class="site-header__mega-section">
+                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_applications_mega_water_group" }}</span>
+                    <ul class="site-header__mega-list">
+                      {{ range .Children }}
+                        {{ if in $waterGroup .Identifier }}
+                          {{ $childExact := $current.IsMenuCurrent "main" . }}
+                          <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
+                            <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                          </li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </li>
+
+                  <li class="site-header__mega-section">
+                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_applications_mega_process_group" }}</span>
+                    <ul class="site-header__mega-list">
+                      {{ range .Children }}
+                        {{ if and (ne .Identifier "applications-overview") (not (in $waterGroup .Identifier)) }}
+                          {{ $childExact := $current.IsMenuCurrent "main" . }}
+                          <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
+                            <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                          </li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </li>
+
+                  <li class="site-header__mega-visual">
+                    <span class="site-header__mega-visual-kicker font-meta">{{ i18n "header_applications_mega_visual_kicker" }}</span>
+                    <p class="site-header__mega-visual-title">{{ i18n "header_applications_mega_visual_title" }}</p>
+                    <p class="site-header__mega-visual-text">{{ i18n "header_applications_mega_visual_text" }}</p>
+                  </li>
+                {{ else }}
+                  {{ range .Children }}
+                    {{ $childExact := $current.IsMenuCurrent "main" . }}
+                    <li class="site-header__submenu-item{{ if $childExact }} is-active{{ end }}">
+                      <a class="site-header__submenu-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                    </li>
+                  {{ end }}
                 {{ end }}
               </ul>
             {{ end }}
           </li>
         {{ end }}
       </ul>
+
+      <div class="site-header__nav-footer">
+        <div class="site-header__language" aria-labelledby="site-header-language-label">
+          <span class="site-header__language-label font-meta" id="site-header-language-label">{{ i18n "header_language_label" }}</span>
+          <ul class="site-header__language-list">
+            {{ range .Site.Languages }}
+              {{ $translation := index (where $current.AllTranslations "Lang" .Lang) 0 }}
+              {{ $fallback := index (where $current.Site.Home.AllTranslations "Lang" .Lang) 0 }}
+              {{ $languagePage := $translation | default $fallback }}
+              {{ $label := .LanguageName | default .Params.label | default .Lang }}
+              {{ $hreflang := .LanguageCode | default .Lang }}
+              <li>
+                <a class="site-header__language-link{{ if eq $.Site.Language.Lang .Lang }} is-active{{ end }}" href="{{ $languagePage.RelPermalink }}" hreflang="{{ $hreflang }}"{{ if eq $.Site.Language.Lang .Lang }} aria-current="true"{{ end }}>{{ $label }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+
+        {{ with $quoteItem }}
+          <a class="site-header__nav-cta button button--primary button--full" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
     </nav>
 
-    {{ with $quoteItem }}
-      <a class="site-header__cta button button--primary" href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
-
-    <details class="site-header__mobile">
-      <summary class="site-header__toggle" aria-label="{{ i18n "header_open_primary_navigation" }}">
-        <span class="site-header__toggle-line" aria-hidden="true"></span>
-        <span class="site-header__toggle-line" aria-hidden="true"></span>
-        <span class="site-header__toggle-line" aria-hidden="true"></span>
-      </summary>
-
-      <nav class="site-header__mobile-panel" aria-label="{{ i18n "header_mobile_primary_navigation" }}">
-        <ul class="site-header__mobile-menu">
-          {{ range $primaryItems }}
-            {{ $isExact := $current.IsMenuCurrent "main" . }}
-            {{ with .Page }}
-              {{ $isExact = eq $current.RelPermalink .RelPermalink }}
-            {{ end }}
-            {{ $isCurrentSection := false }}
-            {{ with .Page }}
-              {{ $isCurrentSection = or (eq $current.RelPermalink .RelPermalink) ($current.IsDescendant .) }}
-            {{ end }}
-            {{ $isActive := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) $isCurrentSection }}
-            {{ $hubKey := printf "nav_hub_%s" (replace .Identifier "-" "_") }}
-            {{ $hubLabel := i18n $hubKey | default .Name }}
-            <li class="site-header__mobile-item{{ if $isActive }} is-active{{ end }}">
-              <details class="site-header__mobile-section"{{ if $isActive }} open{{ end }}>
-                <summary class="site-header__mobile-summary font-title-xs">
-                  <span>{{ .Name }}</span>
-                  <span class="site-header__mobile-chevron" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="site-header__mobile-submenu">
-                  <li>
-                    <a class="site-header__mobile-link site-header__mobile-link--hub" href="{{ .URL }}"{{ if $isExact }} aria-current="page"{{ end }}>{{ $hubLabel }}</a>
-                  </li>
-                  {{ range .Children }}
-                    {{ $childExact := $current.IsMenuCurrent "main" . }}
-                    {{ with .Page }}
-                      {{ $childExact = eq $current.RelPermalink .RelPermalink }}
-                    {{ end }}
-                    <li>
-                      <a class="site-header__mobile-link" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
-                    </li>
-                  {{ end }}
-                </ul>
-              </details>
+    <div class="site-header__actions">
+      <details class="site-header__language-switcher">
+        <summary class="site-header__language-current" aria-label="{{ i18n "header_language_selector" }}">
+          <span class="site-header__language-current-label">{{ $activeLanguageLabel }}</span>
+        </summary>
+        <ul class="site-header__language-menu" aria-label="{{ i18n "header_language_label" }}">
+          {{ range .Site.Languages }}
+            {{ $translation := index (where $current.AllTranslations "Lang" .Lang) 0 }}
+            {{ $fallback := index (where $current.Site.Home.AllTranslations "Lang" .Lang) 0 }}
+            {{ $languagePage := $translation | default $fallback }}
+            {{ $label := .LanguageName | default .Params.label | default .Lang }}
+            {{ $hreflang := .LanguageCode | default .Lang }}
+            <li>
+              <a class="site-header__language-menu-link{{ if eq $.Site.Language.Lang .Lang }} is-active{{ end }}" href="{{ $languagePage.RelPermalink }}" hreflang="{{ $hreflang }}"{{ if eq $.Site.Language.Lang .Lang }} aria-current="true"{{ end }}>
+                <span>{{ $label }}</span>
+              </a>
             </li>
           {{ end }}
         </ul>
+      </details>
 
-        <div class="site-header__mobile-footer">
-          <div class="site-header__language" aria-labelledby="site-header-language-label">
-            <span class="site-header__language-label font-meta" id="site-header-language-label">{{ i18n "header_language_label" }}</span>
-            <ul class="site-header__language-list">
-              {{ range .Site.Languages }}
-                {{ $translation := index (where $current.AllTranslations "Lang" .Lang) 0 }}
-                {{ $languageSite := index (where site.Sites "Language.Lang" .Lang) 0 }}
-                {{ $languageURL := "" }}
-                {{ with $translation }}
-                  {{ $languageURL = .RelPermalink }}
-                {{ else }}
-                  {{ with $languageSite }}
-                    {{ $languageURL = .Home.RelPermalink }}
-                  {{ end }}
-                {{ end }}
-                {{ $label := cond (isset $languageLabels .Lang) (index $languageLabels .Lang) .LanguageName }}
-                <li>
-                  <a class="site-header__language-link{{ if eq $.Site.Language.Lang .Lang }} is-active{{ end }}" href="{{ $languageURL }}" hreflang="{{ .Lang }}"{{ if eq $.Site.Language.Lang .Lang }} aria-current="true"{{ end }}>{{ $label }}</a>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
-
-          {{ with $quoteItem }}
-            <a class="site-header__mobile-cta button button--primary button--full" href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
-        </div>
-      </nav>
-    </details>
+      {{ with $quoteItem }}
+        <a class="site-header__cta button button--primary" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </div>
   </div>
 </header>

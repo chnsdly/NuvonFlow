@@ -1,0 +1,15 @@
+{{- $containerClass := "container" -}}
+{{- $isContact := eq .Type "contact" -}}
+{{- $isResourceArticle := and .IsPage (eq .Type "resources") -}}
+{{- $isNarrowResourceList := and .IsSection (or (in .RelPermalink "/resources/insights/") (in .RelPermalink "/resources/faq/")) -}}
+{{- $containerParam := .Params.container | default "" -}}
+
+{{- if $containerParam -}}
+  {{- $containerClass = printf "container container--%s" $containerParam -}}
+{{- else if $isResourceArticle -}}
+  {{- $containerClass = "container container--wide" -}}
+{{- else if or (and .IsPage (not $isContact)) $isNarrowResourceList -}}
+  {{- $containerClass = "container container--narrow" -}}
+{{- end -}}
+
+{{- $containerClass -}}

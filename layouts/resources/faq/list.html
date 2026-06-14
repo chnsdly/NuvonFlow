@@ -1,6 +1,13 @@
 {{ define "main" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section insights-list faq-list" aria-labelledby="faq-list-page-title">
-  <div class="container container--narrow">
+  <div class="{{ $containerClass }}">
+    <div class="section__inner">
+      <header class="section__header">
+        <h1 id="faq-list-page-title" class="section__title font-title-l">{{ .Title }}</h1>
+        {{ with .Description }}<p class="section__description font-body">{{ . }}</p>{{ end }}
+      </header>
+
     <ul class="insights-list__list">
       {{ range .RegularPages.ByDate.Reverse }}
       {{ $summary := .Summary | plainify | truncate 220 }}
@@ -16,6 +23,7 @@
       </li>
       {{ end }}
     </ul>
+    </div>
   </div>
 </main>
 {{ end }}

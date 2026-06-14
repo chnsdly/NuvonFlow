@@ -1,6 +1,8 @@
 {{ define "main" }}
+{{ $isZh := eq .Site.Language.Lang "zh" }}
+{{ $containerClass := partial "page-container-class.html" . }}
 <main class="section case-studies-list" aria-labelledby="case-studies-list-page-title">
-  <div class="container">
+  <div class="{{ $containerClass }}">
     <div class="section__inner">
       <header class="section__header">
         <h1 id="case-studies-list-page-title" class="section__title font-title-l">{{ .Title }}</h1>
@@ -13,14 +15,17 @@
         {{ range .RegularPages.ByDate.Reverse }}
         {{ $item := . }}
         {{ $summary := .Summary | plainify | truncate 160 }}
+        {{ $image := .Params.image }}
+        {{ $isGenericImage := or (not $image) (in (slice "/images/background.webp" "/images/abc.webp") $image) }}
         <li class="case-studies-list__item">
           <a class="case-studies-list__card" href="{{ .RelPermalink }}">
-            {{ with .Params.image }}
             <div class="case-studies-list__media">
-              <img class="case-studies-list__image" src="{{ . | relURL }}" alt="{{ $item.Title }}" loading="lazy"
-                decoding="async">
+              {{ if $isGenericImage }}
+              {{ partial "technical-visual.html" (dict "title" $item.Title "label" (cond $isZh "项目场景" "Case review") "variant" "case" "size" "card") }}
+              {{ else }}
+              <img class="case-studies-list__image" src="{{ $image | relURL }}" alt="{{ $item.Title }}" loading="lazy" decoding="async">
+              {{ end }}
             </div>
-            {{ end }}
 
             <div class="case-studies-list__content">
               <h2 class="case-studies-list__title font-title-xs">{{ .Title }}</h2>

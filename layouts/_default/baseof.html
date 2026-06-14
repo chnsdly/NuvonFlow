@@ -1,23 +1,28 @@
+{{ $lang := or .Site.Language.LanguageCode .Site.Language.Lang }}
+{{ $description := .Description | default (i18n "site_description") | default .Site.Params.description }}
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.LanguageCode }}">
+<html lang="{{ $lang }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ if .IsHome }}{{ .Title | default .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ i18n "site_description" }}{{ end }}">
+    {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ $scss := resources.Get "scss/main.scss" | toCSS (dict "targetPath" "css/style.css") }}
     <link rel="stylesheet" href="{{ $scss.RelPermalink }}">
 
-    {{/* SEO：声明当前页规范地址，并输出多语言版本对应关系 */}}
     <link rel="canonical" href="{{ .Permalink }}">
     {{ if .IsTranslated }}
       {{ range .AllTranslations }}
         <link rel="alternate" hreflang="{{ or .Language.LanguageCode .Language.Lang }}" href="{{ .Permalink }}">
       {{ end }}
     {{ end }}
-
+    {{ partial "seo.html" . }}
+    {{ with resources.Get "js/header.js" }}
+      {{ $headerJS := . | minify | fingerprint }}
+      <script src="{{ $headerJS.RelPermalink }}" integrity="{{ $headerJS.Data.Integrity }}" defer></script>
+    {{ end }}
   </head>
-  <body>
+  <body class="site-body site-body--{{ .Kind }} site-body--{{ .Type | default "default" }}">
     {{ partial "header.html" . }}
     {{ partial "breadcrumbs.html" . }}
     {{ block "main" . }}{{ end }}

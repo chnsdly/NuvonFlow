@@ -1,11 +1,7 @@
 {{ if not .IsHome }}
   {{ $homeLabel := i18n "breadcrumb_home" | default "Home" }}
   {{ $navLabel := i18n "breadcrumbs_navigation" | default "Breadcrumb" }}
-  
-  {{ $containerClass := "container" }}
-  {{ if and .IsPage (in (slice "product" "insights" "contact" "resources") .Type) }}
-    {{ $containerClass = "container container--narrow" }}
-  {{ end }}
+  {{ $containerClass := partial "page-container-class.html" . }}
 
   <nav class="breadcrumbs" aria-label="{{ $navLabel }}">
     <div class="{{ $containerClass }}">

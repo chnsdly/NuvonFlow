@@ -62,7 +62,7 @@ weight = 10
 
 [[main]]
 identifier = "applications"
-name = "应用"
+name = "应用场景"
 pageRef = "/applications"
 weight = 20
 
@@ -110,9 +110,16 @@ weight = 20
 
 [[main]]
 identifier = "project-support"
-name = "项目支持"
+name = "询价支持"
 pageRef = "/project-support"
 weight = 30
+
+  [[main]]
+  identifier = "project-support-overview"
+  name = "询价支持总览"
+  pageRef = "/project-support"
+  parent = "project-support"
+  weight = 30
 
   [[main]]
   identifier = "submit-duty-conditions"
@@ -144,9 +151,16 @@ weight = 30
 
 [[main]]
 identifier = "resources"
-name = "资源"
+name = "资源中心"
 pageRef = "/resources"
 weight = 40
+
+  [[main]]
+  identifier = "resources-overview"
+  name = "全部资源"
+  pageRef = "/resources"
+  parent = "resources"
+  weight = 40
 
   [[main]]
   identifier = "technical-guides"
@@ -192,30 +206,9 @@ weight = 40
 
 [[main]]
 identifier = "about"
-name = "关于"
+name = "关于我们"
 pageRef = "/about"
 weight = 50
-
-  [[main]]
-  identifier = "about-overview"
-  name = "关于 Nuvon"
-  pageRef = "/about"
-  parent = "about"
-  weight = 50
-
-  [[main]]
-  identifier = "quality-supply-coordination"
-  name = "质量与供应协调"
-  pageRef = "/about/quality-supply-coordination"
-  parent = "about"
-  weight = 51
-
-  [[main]]
-  identifier = "contact"
-  name = "联系我们"
-  pageRef = "/contact"
-  parent = "about"
-  weight = 52
 
 [[header_cta]]
 identifier = "request-a-quote"

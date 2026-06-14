@@ -110,9 +110,16 @@ weight = 20
 
 [[main]]
 identifier = "project-support"
-name = "Project Support"
+name = "RFQ Support"
 pageRef = "/project-support"
 weight = 30
+
+  [[main]]
+  identifier = "project-support-overview"
+  name = "RFQ Support Overview"
+  pageRef = "/project-support"
+  parent = "project-support"
+  weight = 30
 
   [[main]]
   identifier = "submit-duty-conditions"
@@ -147,6 +154,13 @@ identifier = "resources"
 name = "Resources"
 pageRef = "/resources"
 weight = 40
+
+  [[main]]
+  identifier = "resources-overview"
+  name = "All Resources"
+  pageRef = "/resources"
+  parent = "resources"
+  weight = 40
 
   [[main]]
   identifier = "technical-guides"
@@ -195,27 +209,6 @@ identifier = "about"
 name = "About"
 pageRef = "/about"
 weight = 50
-
-  [[main]]
-  identifier = "about-overview"
-  name = "About Nuvon"
-  pageRef = "/about"
-  parent = "about"
-  weight = 50
-
-  [[main]]
-  identifier = "quality-supply-coordination"
-  name = "Quality & Supply Coordination"
-  pageRef = "/about/quality-supply-coordination"
-  parent = "about"
-  weight = 51
-
-  [[main]]
-  identifier = "contact"
-  name = "Contact"
-  pageRef = "/contact"
-  parent = "about"
-  weight = 52
 
 [[header_cta]]
 identifier = "request-a-quote"

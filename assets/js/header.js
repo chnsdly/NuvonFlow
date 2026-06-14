@@ -7,6 +7,7 @@
 
   const menuToggle = header.querySelector("[data-site-header-toggle]");
   const submenuToggles = Array.from(header.querySelectorAll("[data-site-header-submenu-toggle]"));
+  const languageSwitchers = Array.from(header.querySelectorAll(".site-header__language-switcher"));
   const desktopQuery = window.matchMedia("(min-width: 64rem)");
   const openLabel = menuToggle?.dataset.openLabel || menuToggle?.getAttribute("aria-label") || "";
   const closeLabel = menuToggle?.dataset.closeLabel || openLabel;
@@ -71,6 +72,14 @@
     });
   };
 
+  const closeLanguageSwitchers = (exceptSwitcher) => {
+    languageSwitchers.forEach((switcher) => {
+      if (switcher !== exceptSwitcher) {
+        switcher.open = false;
+      }
+    });
+  };
+
   header.classList.add("is-enhanced");
 
   if (menuToggle) {
@@ -113,6 +122,10 @@
   });
 
   document.addEventListener("click", (event) => {
+    const activeLanguageSwitcher = languageSwitchers.find((switcher) => switcher.contains(event.target));
+
+    closeLanguageSwitchers(activeLanguageSwitcher);
+
     if (header.contains(event.target)) {
       return;
     }
@@ -128,6 +141,7 @@
 
     setMenuOpen(false);
     closeSubmenus();
+    closeLanguageSwitchers();
   });
 
   const handleViewportChange = (event) => {

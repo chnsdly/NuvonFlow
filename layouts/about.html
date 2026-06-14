@@ -68,5 +68,21 @@
   </section>
   {{ end }}
   {{ end }}
+
+  <section class="section about-related" aria-labelledby="about-related-title">
+    <div class="container">
+      <div class="related-strip">
+        <div>
+          <p class="section-page__eyebrow font-meta">{{ if $isZh }}相关支持入口{{ else }}Related Support Paths{{ end }}</p>
+          <h2 id="about-related-title" class="font-title-s">{{ if $isZh }}继续了解协作与联系路径{{ else }}Continue to coordination and contact details{{ end }}</h2>
+          <p>{{ if $isZh }}如果需要了解项目协调方式或直接联系 Nuvon，可从这些页面继续。{{ else }}Use these pages when you need more detail about project coordination or a direct way to contact Nuvon.{{ end }}</p>
+        </div>
+        <ul class="related-strip__list">
+          <li><a href='{{ "/about/quality-supply-coordination/" | relLangURL }}'>{{ if $isZh }}质量与供应协调{{ else }}Quality & Supply Coordination{{ end }}</a></li>
+          <li><a href='{{ "/contact/" | relLangURL }}'>{{ if $isZh }}联系 Nuvon{{ else }}Contact Nuvon{{ end }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
 {{ end }}

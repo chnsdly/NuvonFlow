@@ -10,19 +10,8 @@
     {{ if and $heroImage (not $isGenericHero) }}
     <img class="home-hero__bg" src="{{ $heroImage | relURL }}" alt="" fetchpriority="high" decoding="async">
     {{ else }}
-    <div class="home-hero__technical" aria-hidden="true">
-      <span class="home-hero__grid"></span>
-      <span class="home-hero__pipe home-hero__pipe--main"></span>
-      <span class="home-hero__pipe home-hero__pipe--bypass"></span>
-      <span class="home-hero__pipe home-hero__pipe--dosing"></span>
-      <span class="home-hero__node home-hero__node--inlet"></span>
-      <span class="home-hero__node home-hero__node--valve"></span>
-      <span class="home-hero__node home-hero__node--check"></span>
-      <span class="home-hero__node home-hero__node--outlet"></span>
-      <span class="home-hero__gauge home-hero__gauge--pressure"></span>
-      <span class="home-hero__gauge home-hero__gauge--document"></span>
-      <span class="home-hero__panel home-hero__panel--media"></span>
-      <span class="home-hero__panel home-hero__panel--rfq"></span>
+    <div class="home-hero__technical">
+      {{- partial "home-hero-system.html" . -}}
     </div>
     {{ end }}
     <div class="container home-hero__inner">

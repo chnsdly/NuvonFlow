@@ -1499,7 +1499,7 @@ button.site-header__link::-moz-focus-inner {
   isolation: isolate;
   min-height: 34rem;
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
   background-color: color-mix(in oklab, var(--brand) 30%, var(--on-surface) 70%); }
 
@@ -1516,133 +1516,395 @@ button.site-header__link::-moz-focus-inner {
   inset: 0;
   z-index: -2;
   overflow: hidden;
-  background: linear-gradient(115deg, rgba(95, 127, 58, 0.18), transparent 34%), linear-gradient(135deg, #061b1f 0%, #0a3137 48%, #254d45 100%); }
+  pointer-events: none;
+  background: radial-gradient(circle at 74% 42%, rgba(78, 194, 190, 0.22), transparent 34%), radial-gradient(circle at 98% 72%, rgba(95, 127, 58, 0.2), transparent 30%), linear-gradient(135deg, #06171d 0%, #0a2c34 48%, #153c3f 100%); }
 
-.home-hero__grid,
-.home-hero__pipe,
-.home-hero__node,
-.home-hero__gauge,
-.home-hero__panel {
-  position: absolute; }
-
-.home-hero__grid {
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 2rem 2rem;
-  mask-image: linear-gradient(110deg, rgba(0, 0, 0, 0.35), black); }
-
-.home-hero__pipe {
-  height: 0.35rem;
-  border-radius: var(--radius-pill);
-  background-color: color-mix(in oklab, var(--brand-light) 78%, white 22%);
-  box-shadow: 0 0 30px rgba(11, 111, 122, 0.25); }
-
-.home-hero__pipe--main {
-  right: 8%;
-  bottom: 34%;
-  left: 42%; }
-
-.home-hero__pipe--bypass {
-  right: 18%;
-  bottom: 47%;
-  width: 28%;
-  transform: rotate(-24deg);
-  transform-origin: right center; }
-
-.home-hero__pipe--dosing {
-  right: 42%;
-  bottom: 34%;
-  width: 12%;
-  transform: rotate(58deg);
-  transform-origin: right center; }
-
-.home-hero__node {
-  width: 1.7rem;
-  height: 1.7rem;
-  border: 2px solid color-mix(in oklab, var(--brand-light) 76%, white 24%);
-  border-radius: var(--radius-s);
-  background-color: #082a30; }
-
-.home-hero__node--inlet {
-  bottom: calc(34% - 0.7rem);
-  left: 41%; }
-
-.home-hero__node--valve {
-  bottom: calc(34% - 0.7rem);
-  left: 52%;
-  transform: rotate(45deg); }
-
-.home-hero__node--check {
-  right: 31%;
-  bottom: calc(34% - 0.7rem); }
-
-.home-hero__node--outlet {
-  right: 7%;
-  bottom: calc(34% - 0.7rem); }
-
-.home-hero__gauge,
-.home-hero__panel {
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--radius-s);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18); }
-
-.home-hero__gauge {
-  width: 5rem;
-  height: 3rem; }
-
-.home-hero__gauge--pressure {
-  right: 15%;
-  top: 22%; }
-
-.home-hero__gauge--document {
-  right: 38%;
-  top: 31%; }
-
-.home-hero__panel {
-  width: 11rem;
-  height: 7rem; }
-
-.home-hero__panel::before,
-.home-hero__panel::after {
+.home-hero__technical::before,
+.home-hero__technical::after {
   position: absolute;
-  right: 1rem;
-  left: 1rem;
-  height: 0.45rem;
-  border-radius: var(--radius-pill);
-  background-color: rgba(255, 255, 255, 0.22);
+  inset: 0;
   content: ""; }
 
-.home-hero__panel::before {
-  top: 1.5rem; }
+.home-hero__technical::before {
+  background-image: linear-gradient(rgba(219, 247, 246, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(219, 247, 246, 0.07) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  opacity: 0.72; }
 
-.home-hero__panel::after {
-  top: 3rem;
-  width: 62%; }
+.home-hero__technical::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 18%), linear-gradient(0deg, rgba(3, 18, 25, 0.22), transparent 42%); }
 
-.home-hero__panel--media {
-  right: 8%;
-  bottom: 50%; }
+.home-hero-system {
+  position: absolute;
+  top: 50%;
+  right: max(4.25rem, calc((100vw - var(--container-wide)) / 2 + 1rem));
+  width: clamp(33.5rem, 55vw, 51.5rem);
+  max-width: none;
+  overflow: visible;
+  transform: translateY(-48%);
+  animation: home-hero-system-enter 900ms var(--transition-base) both; }
 
-.home-hero__panel--rfq {
-  right: 28%;
-  bottom: 12%; }
+.home-hero-system__diagram {
+  transform-origin: center; }
+
+.home-hero-system__field {
+  fill: none;
+  stroke: rgba(226, 250, 249, 0.065);
+  stroke-width: 1.5; }
+
+.home-hero-system__grid path {
+  fill: none;
+  stroke: rgba(226, 250, 249, 0.052);
+  stroke-width: 1; }
+
+.home-hero-system__equipment--tank {
+  opacity: 0.54; }
+
+.home-hero-system__equipment--unit {
+  opacity: 0.56; }
+
+.home-hero-system__stand,
+.home-hero-system__tank-detail,
+.home-hero-system__unit-media,
+.home-hero-system__pump-base,
+.home-hero-system__pump-impeller,
+.home-hero-system__monitor-line,
+.home-hero-system__monitor-needle,
+.home-hero-system__monitor-ticks {
+  fill: none;
+  stroke: rgba(218, 243, 242, 0.66);
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.home-hero-system__stand {
+  stroke-width: 5; }
+
+.home-hero-system__tank-detail,
+.home-hero-system__unit-media,
+.home-hero-system__pump-base,
+.home-hero-system__pump-impeller,
+.home-hero-system__monitor-line,
+.home-hero-system__monitor-needle,
+.home-hero-system__monitor-ticks {
+  stroke-width: 2.5; }
+
+.home-hero-system__tank-body,
+.home-hero-system__small-vessel,
+.home-hero-system__unit-shell {
+  stroke: rgba(235, 255, 254, 0.72);
+  stroke-width: 2; }
+
+.home-hero-system__tank-lip,
+.home-hero-system__small-vessel-lip {
+  fill: rgba(225, 247, 247, 0.26);
+  stroke: rgba(235, 255, 254, 0.72);
+  stroke-width: 2; }
+
+.home-hero-system__tank-liquid {
+  fill: rgba(45, 153, 154, 0.36); }
+
+.home-hero-system__tank-line {
+  fill: none;
+  stroke: rgba(145, 224, 218, 0.72);
+  stroke-width: 2; }
+
+.home-hero-system__small-vessel {
+  fill-opacity: 0.82; }
+
+.home-hero-system__pump-motor,
+.home-hero-system__pump-casing,
+.home-hero-system__unit-shell,
+.home-hero-system__check-body,
+.home-hero-system__leak-sensor {
+  stroke: rgba(226, 250, 249, 0.74);
+  stroke-width: 2; }
+
+.home-hero-system__monitor-face {
+  fill: rgba(8, 39, 47, 0.82);
+  stroke: rgba(226, 250, 249, 0.74);
+  stroke-width: 2.5; }
+
+.home-hero-system__pump-motor,
+.home-hero-system__pump-casing {
+  fill: rgba(8, 39, 47, 0.88); }
+
+.home-hero-system__transfer-pump {
+  opacity: 0.92; }
+
+.home-hero-system__pipe-shell {
+  fill: none;
+  stroke: rgba(190, 220, 220, 0.7);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 20; }
+
+.home-hero-system__pipe-core {
+  fill: none;
+  stroke: rgba(5, 38, 47, 0.96);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 10; }
+
+.home-hero-system__pipe-highlight {
+  fill: none;
+  stroke: rgba(240, 255, 254, 0.52);
+  stroke-linecap: round;
+  stroke-width: 3; }
+
+.home-hero-system__pipe-shell--bypass {
+  stroke-width: 14;
+  opacity: 0.7; }
+
+.home-hero-system__pipe-core--bypass {
+  stroke-width: 7; }
+
+.home-hero-system__pipe-shell--branch {
+  stroke: rgba(123, 201, 197, 0.64);
+  opacity: 0.58;
+  stroke-width: 10; }
+
+.home-hero-system__pipe-core--branch {
+  opacity: 0.86;
+  stroke-width: 5; }
+
+.home-hero-system__optional-branch {
+  opacity: 0.58; }
+
+.home-hero-system__containment {
+  opacity: 0.54; }
+
+.home-hero-system__containment-shell,
+.home-hero-system__containment-core {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.home-hero-system__containment-shell {
+  stroke: rgba(190, 220, 220, 0.42);
+  stroke-width: 12; }
+
+.home-hero-system__containment-core {
+  stroke: rgba(114, 229, 218, 0.46);
+  stroke-dasharray: 16 28;
+  stroke-width: 3.5; }
+
+.home-hero-system__flow {
+  fill: none;
+  stroke: rgba(123, 230, 219, 0.94);
+  stroke-dasharray: 18 30;
+  stroke-linecap: round;
+  stroke-width: 4.5;
+  animation: home-hero-flow 6s linear infinite; }
+
+.home-hero-system__flow-arrows path {
+  fill: rgba(123, 230, 219, 0.82);
+  opacity: 0.78; }
+
+.home-hero-system__small-valve path {
+  fill: rgba(11, 57, 64, 0.92);
+  stroke: rgba(226, 250, 249, 0.7);
+  stroke-linejoin: round;
+  stroke-width: 2; }
+
+.home-hero-system__small-valve rect {
+  fill: rgba(143, 196, 193, 0.82);
+  stroke: rgba(226, 250, 249, 0.72);
+  stroke-width: 2; }
+
+.home-hero-system__module-frame {
+  fill: rgba(8, 39, 47, 0.28);
+  stroke: rgba(226, 250, 249, 0.2);
+  stroke-width: 1.5; }
+
+.home-hero-system__review {
+  opacity: 0.84; }
+
+.home-hero-system__review-panel {
+  fill: rgba(8, 39, 47, 0.54);
+  stroke: rgba(226, 250, 249, 0.18);
+  stroke-width: 1.25; }
+
+.home-hero-system__review-line {
+  fill: none;
+  stroke: rgba(226, 250, 249, 0.3);
+  stroke-linecap: round;
+  stroke-width: 2; }
+
+.home-hero-system__review-text {
+  fill: rgba(218, 243, 242, 0.78);
+  font-size: 11px;
+  font-weight: 700; }
+
+.home-hero-system__review-meta {
+  fill: rgba(156, 232, 224, 0.68);
+  font-size: 10.5px;
+  font-weight: 600; }
+
+.home-hero-system__valve-package {
+  opacity: 0.8; }
+
+.home-hero-system__valve-stem,
+.home-hero-system__valve-actuator {
+  fill: rgba(164, 211, 207, 0.96);
+  stroke: rgba(241, 255, 254, 0.9);
+  stroke-width: 2.5; }
+
+.home-hero-system__valve-halo {
+  fill: rgba(116, 198, 193, 0.06);
+  stroke: rgba(214, 250, 248, 0.07);
+  stroke-width: 1.5; }
+
+.home-hero-system__valve-body {
+  stroke: rgba(248, 255, 254, 0.84);
+  stroke-width: 2.5; }
+
+.home-hero-system__valve-body-line {
+  fill: none;
+  stroke: rgba(7, 40, 48, 0.66);
+  stroke-linecap: round;
+  stroke-width: 6; }
+
+.home-hero-system__valve-symbol {
+  fill: rgba(7, 46, 54, 0.78);
+  stroke: rgba(241, 255, 254, 0.72);
+  stroke-linejoin: round;
+  stroke-width: 2.5; }
+
+.home-hero-system__valve-actuator-line {
+  fill: none;
+  stroke: rgba(230, 250, 249, 0.72);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5; }
+
+.home-hero-system__check-symbol {
+  fill: rgba(136, 210, 205, 0.9); }
+
+.home-hero-system__check-stop {
+  stroke: rgba(239, 255, 254, 0.78);
+  stroke-linecap: round;
+  stroke-width: 4; }
+
+.home-hero-system__monitor-pulse {
+  fill: rgba(114, 229, 218, 0.09);
+  stroke: rgba(114, 229, 218, 0.54);
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: home-hero-monitor-pulse 4.8s ease-in-out infinite; }
+
+.home-hero-system__monitor--leak {
+  opacity: 0.84; }
+
+.home-hero-system__monitor--pressure {
+  opacity: 0.96; }
+
+.home-hero-system__leak-sensor-mark {
+  fill: none;
+  stroke: rgba(128, 226, 218, 0.7);
+  stroke-linecap: round;
+  stroke-width: 2; }
+
+.home-hero-system__label,
+.home-hero-system__review-text,
+.home-hero-system__review-meta {
+  font-family: var(--font-sans);
+  letter-spacing: 0; }
+
+.home-hero-system__label {
+  fill: rgba(235, 255, 254, 0.78);
+  font-size: 12px;
+  font-weight: 700; }
+
+.home-hero-system__label--secondary {
+  fill: rgba(156, 232, 224, 0.68);
+  font-size: 11px; }
 
 .home-hero::after {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(7, 20, 34, 0.94) 0%, rgba(7, 20, 34, 0.86) 38%, rgba(7, 20, 34, 0.34) 70%, rgba(7, 20, 34, 0.14) 100%), linear-gradient(0deg, rgba(7, 20, 34, 0.72), rgba(7, 20, 34, 0.1));
+  background: linear-gradient(90deg, rgba(7, 20, 34, 0.84) 0%, rgba(7, 20, 34, 0.78) 45%, rgba(7, 20, 34, 0.52) 58%, rgba(7, 20, 34, 0.12) 84%, rgba(7, 20, 34, 0.03) 100%), linear-gradient(0deg, rgba(7, 20, 34, 0.34), rgba(7, 20, 34, 0.02));
   content: ""; }
 
+@keyframes home-hero-flow {
+  to {
+    stroke-dashoffset: -96; } }
+
+@keyframes home-hero-monitor-pulse {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: scale(1); }
+  50% {
+    opacity: 0.82;
+    transform: scale(1.16); } }
+
+@keyframes home-hero-system-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-46%) translateX(1rem); }
+  to {
+    opacity: 1;
+    transform: translateY(-48%) translateX(0); } }
+
+@media (max-width: 47.98rem) {
+  .home-hero {
+    min-height: 39rem; }
+  .home-hero__technical {
+    background: radial-gradient(circle at 50% 55%, rgba(78, 194, 190, 0.32), transparent 46%), radial-gradient(circle at 88% 58%, rgba(95, 127, 58, 0.14), transparent 36%), linear-gradient(135deg, #07212a 0%, #0d3940 100%); }
+  .home-hero__technical::before {
+    background-size: 1.5rem 1.5rem;
+    opacity: 0.28; }
+  .home-hero__technical::after {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 22%), linear-gradient(0deg, rgba(3, 18, 25, 0.1), transparent 46%); }
+  .home-hero::after {
+    background: linear-gradient(180deg, rgba(7, 20, 34, 0.74) 0%, rgba(7, 20, 34, 0.58) 44%, rgba(7, 20, 34, 0.48) 100%), radial-gradient(ellipse at 50% 56%, rgba(7, 20, 34, 0.02) 0%, rgba(7, 20, 34, 0.12) 44%, rgba(7, 20, 34, 0.48) 100%); }
+  .home-hero-system {
+    top: 56%;
+    right: auto;
+    left: 50%;
+    width: clamp(42rem, 190vw, 58rem);
+    opacity: 0.64;
+    transform: translate(-54%, -44%);
+    animation: none; }
+  .home-hero__content {
+    text-shadow: 0 0.08rem 1.2rem rgba(3, 14, 20, 0.46); }
+  .home-hero-system__equipment--unit {
+    opacity: 0.46; }
+  .home-hero-system__field,
+  .home-hero-system__grid {
+    opacity: 0.38; }
+  .home-hero-system__bypass,
+  .home-hero-system__optional-branch,
+  .home-hero-system__review,
+  .home-hero-system__containment,
+  .home-hero-system__flow-arrows,
+  .home-hero-system__monitor,
+  .home-hero-system__label {
+    display: none; }
+  .home-hero-system__flow {
+    opacity: 0.58;
+    animation: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-system,
+  .home-hero-system__flow,
+  .home-hero-system__monitor-pulse {
+    animation: none; }
+  .home-hero-system__flow {
+    opacity: 0.52;
+    stroke-dashoffset: 0; } }
+
 .home-hero__inner {
-  padding-block: calc(var(--space) * 5); }
+  --container: var(--container-wide);
+  padding-block: calc(var(--space) * 5);
+  padding-inline: clamp(1rem, 2.4vw, 1.75rem); }
 
 .home-hero__content {
   display: grid;
   gap: calc(var(--space) * 2);
   justify-items: start;
-  max-width: 39rem;
+  max-width: 38.5rem;
   color: white; }
 
 .home-hero__kicker {

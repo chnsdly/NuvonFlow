@@ -1,0 +1,151 @@
+{{- /* Inline SVG keeps the homepage hero dependency-free and easy to tune. */ -}}
+<svg class="home-hero-system" viewBox="0 0 1040 620" role="img" aria-labelledby="home-hero-system-title home-hero-system-desc" focusable="false">
+  <title id="home-hero-system-title">Corrosion-resistant fluid control system schematic</title>
+  <desc id="home-hero-system-desc">A modular corrosion-resistant fluid control system showing source storage, transfer, optional dosing, a flow control module with bypass and isolation valves, monitoring, leak detection, secondary containment, and a process unit.</desc>
+  <defs>
+    <linearGradient id="homeHeroPanelGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6ffff" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#7fcdd0" stop-opacity="0.07" />
+    </linearGradient>
+    <linearGradient id="homeHeroTankGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9ecee" stop-opacity="0.52" />
+      <stop offset="100%" stop-color="#78989a" stop-opacity="0.27" />
+    </linearGradient>
+    <linearGradient id="homeHeroValveGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3f4f1" />
+      <stop offset="48%" stop-color="#94c8c4" />
+      <stop offset="100%" stop-color="#547f80" />
+    </linearGradient>
+    <linearGradient id="homeHeroUnitGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dce8e7" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#46666a" stop-opacity="0.24" />
+    </linearGradient>
+  </defs>
+
+  <g class="home-hero-system__diagram">
+    <path class="home-hero-system__field" d="M276 102H944C970 102 990 122 990 148V474C990 500 970 520 944 520H306" />
+    <g class="home-hero-system__grid" aria-hidden="true">
+      <path d="M304 136H954M304 220H954M304 304H954M304 388H954M304 472H954M388 118V500M508 118V500M628 118V500M748 118V500M868 118V500" />
+    </g>
+
+    <g class="home-hero-system__equipment home-hero-system__equipment--tank">
+      <path class="home-hero-system__stand" d="M120 342V394M200 342V394M106 394H214" />
+      <path class="home-hero-system__tank-body" fill="url(#homeHeroTankGradient)" d="M88 166C88 149 121 136 160 136C199 136 232 149 232 166V318C232 335 199 348 160 348C121 348 88 335 88 318Z" />
+      <ellipse class="home-hero-system__tank-lip" cx="160" cy="166" rx="72" ry="30" />
+      <path class="home-hero-system__tank-liquid" d="M96 258C115 270 205 270 224 258V318C224 331 195 341 160 341C125 341 96 331 96 318Z" />
+      <ellipse class="home-hero-system__tank-line" cx="160" cy="258" rx="64" ry="17" />
+      <path class="home-hero-system__tank-detail" d="M116 202H204M116 232H204" />
+      <text class="home-hero-system__label home-hero-system__label--secondary" x="160" y="376" text-anchor="middle">SOURCE</text>
+    </g>
+
+    <g class="home-hero-system__equipment home-hero-system__equipment--unit">
+      <rect class="home-hero-system__unit-shell" fill="url(#homeHeroUnitGradient)" x="844" y="184" width="146" height="234" rx="28" />
+      <path class="home-hero-system__unit-media" d="M860 286H974M860 338H974" />
+      <text class="home-hero-system__label home-hero-system__label--secondary" x="917" y="438" text-anchor="middle">PROCESS UNIT</text>
+    </g>
+
+    <g class="home-hero-system__pipes">
+      <path class="home-hero-system__pipe-shell home-hero-system__pipe-shell--main" d="M230 342C250 342 248 388 270 388H844" />
+      <path class="home-hero-system__pipe-core home-hero-system__pipe-core--main" d="M230 342C250 342 248 388 270 388H844" />
+      <path class="home-hero-system__pipe-highlight" d="M300 379H836" />
+    </g>
+
+    <g class="home-hero-system__containment">
+      <path class="home-hero-system__containment-shell" d="M642 424H844" />
+      <path class="home-hero-system__containment-core" d="M670 424H812" />
+    </g>
+
+    <g class="home-hero-system__flow-paths" aria-hidden="true">
+      <path class="home-hero-system__flow home-hero-system__flow--main" d="M230 342C250 342 248 388 270 388H836" />
+    </g>
+
+    <g class="home-hero-system__flow-arrows" aria-hidden="true">
+      <path d="M408 377L430 388L408 399Z" />
+      <path d="M790 377L812 388L790 399Z" />
+    </g>
+
+    <g class="home-hero-system__transfer-pump" transform="translate(318 388)">
+      <rect class="home-hero-system__pump-motor" x="-58" y="-18" width="32" height="36" rx="6" />
+      <circle class="home-hero-system__pump-casing" cx="0" cy="0" r="28" />
+      <path class="home-hero-system__pump-impeller" d="M-13 -10L0 0L13 -10M-13 10L0 0L13 10" />
+      <path class="home-hero-system__pump-base" d="M-52 30H30" />
+      <text class="home-hero-system__label home-hero-system__label--secondary" x="0" y="58" text-anchor="middle">TRANSFER</text>
+    </g>
+
+    <g class="home-hero-system__optional-branch">
+      <path class="home-hero-system__pipe-shell home-hero-system__pipe-shell--branch" d="M350 238V306C350 330 372 344 372 388" />
+      <path class="home-hero-system__pipe-core home-hero-system__pipe-core--branch" d="M350 238V306C350 330 372 344 372 388" />
+      <path class="home-hero-system__small-vessel" fill="url(#homeHeroTankGradient)" d="M308 154C308 145 327 138 350 138C373 138 392 145 392 154V226C392 235 373 242 350 242C327 242 308 235 308 226Z" />
+      <ellipse class="home-hero-system__small-vessel-lip" cx="350" cy="154" rx="42" ry="16" />
+      <text class="home-hero-system__label home-hero-system__label--secondary" x="350" y="274" text-anchor="middle">OPTIONAL DOSING</text>
+    </g>
+
+    <g class="home-hero-system__control-module">
+      <rect class="home-hero-system__module-frame" x="432" y="132" width="284" height="338" rx="22" />
+      <text class="home-hero-system__label" x="574" y="456" text-anchor="middle">FLOW CONTROL MODULE</text>
+
+      <g class="home-hero-system__bypass">
+        <path class="home-hero-system__pipe-shell home-hero-system__pipe-shell--bypass" d="M458 388V292C458 276 470 264 486 264H662C678 264 690 276 690 292V388" />
+        <path class="home-hero-system__pipe-core home-hero-system__pipe-core--bypass" d="M458 388V292C458 276 470 264 486 264H662C678 264 690 276 690 292V388" />
+        <g class="home-hero-system__small-valve" transform="translate(574 264)">
+          <path d="M-28 -17L0 0L-28 17Z" />
+          <path d="M28 -17L0 0L28 17Z" />
+          <rect x="-7" y="-36" width="14" height="23" rx="4" />
+        </g>
+      </g>
+
+      <g class="home-hero-system__review" transform="translate(468 146)">
+        <rect class="home-hero-system__review-panel" x="0" y="0" width="212" height="60" rx="10" />
+        <text class="home-hero-system__review-text" x="18" y="20">CONFIGURATION REVIEW</text>
+        <path class="home-hero-system__review-line" d="M18 34H194" />
+        <text class="home-hero-system__review-meta" x="18" y="50">Duty / material / connection</text>
+      </g>
+
+      <ellipse class="home-hero-system__valve-halo" cx="574" cy="392" rx="106" ry="72" />
+
+      <g class="home-hero-system__small-valve home-hero-system__small-valve--cutoff" transform="translate(494 388) scale(0.55)">
+        <path d="M-28 -17L0 0L-28 17Z" />
+        <path d="M28 -17L0 0L28 17Z" />
+        <rect x="-7" y="-36" width="14" height="23" rx="4" />
+      </g>
+
+      <g class="home-hero-system__small-valve home-hero-system__small-valve--cutoff" transform="translate(654 388) scale(0.55)">
+        <path d="M-28 -17L0 0L-28 17Z" />
+        <path d="M28 -17L0 0L28 17Z" />
+        <rect x="-7" y="-36" width="14" height="23" rx="4" />
+      </g>
+
+      <g class="home-hero-system__valve-package" transform="translate(574 388) scale(0.68)">
+        <rect class="home-hero-system__valve-body" fill="url(#homeHeroValveGradient)" x="-90" y="-34" width="180" height="68" rx="14" />
+        <path class="home-hero-system__valve-body-line" d="M-80 0H80" />
+        <path class="home-hero-system__valve-symbol" d="M-32 -17L0 0L-32 17Z M32 -17L0 0L32 17Z" />
+        <rect class="home-hero-system__valve-stem" x="-6" y="-72" width="12" height="38" rx="5" />
+        <rect class="home-hero-system__valve-actuator" x="-38" y="-112" width="76" height="40" rx="8" />
+        <path class="home-hero-system__valve-actuator-line" d="M-20 -92H20M0 -112V-72" />
+      </g>
+    </g>
+
+    <g class="home-hero-system__check-valve" transform="translate(742 388)">
+      <rect class="home-hero-system__check-body" fill="url(#homeHeroUnitGradient)" x="-36" y="-22" width="72" height="44" rx="8" />
+      <path class="home-hero-system__check-symbol" d="M-18 -13L10 0L-18 13Z" />
+      <path class="home-hero-system__check-stop" d="M18 -14V14" />
+    </g>
+
+    <g class="home-hero-system__monitor home-hero-system__monitor--pressure" transform="translate(790 252)">
+      <path class="home-hero-system__monitor-line" d="M0 136V48" />
+      <circle class="home-hero-system__monitor-pulse" cx="0" cy="0" r="29" />
+      <circle class="home-hero-system__monitor-face" cx="0" cy="0" r="24" />
+      <path class="home-hero-system__monitor-needle" d="M0 0L14 -11" />
+      <path class="home-hero-system__monitor-ticks" d="M-13 9L-18 14M0 -17V-24M13 9L18 14" />
+      <text class="home-hero-system__label home-hero-system__label--secondary" x="0" y="-42" text-anchor="middle">MONITORING</text>
+    </g>
+
+    <g class="home-hero-system__monitor home-hero-system__monitor--leak" transform="translate(742 460)">
+      <path class="home-hero-system__monitor-line" d="M0 -36V0" />
+      <circle class="home-hero-system__monitor-pulse" cx="0" cy="18" r="25" />
+      <rect class="home-hero-system__leak-sensor" fill="url(#homeHeroUnitGradient)" x="-18" y="0" width="36" height="36" rx="8" />
+      <circle class="home-hero-system__leak-sensor-mark" cx="0" cy="18" r="8" />
+      <path class="home-hero-system__leak-sensor-mark" d="M-5 18H5" />
+    </g>
+  </g>
+</svg>

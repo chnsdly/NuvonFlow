@@ -1902,7 +1902,7 @@ button.site-header__link::-moz-focus-inner {
 
 .home-hero__content {
   display: grid;
-  gap: calc(var(--space) * 2);
+  gap: calc(var(--space) * 1.5);
   justify-items: start;
   max-width: 38.5rem;
   color: white; }
@@ -1915,12 +1915,12 @@ button.site-header__link::-moz-focus-inner {
 .home-hero__title {
   max-width: 100%;
   font-size: 2.15rem;
-  line-height: 1.05; }
+  line-height: 1.15; }
 
 .home-hero__description {
-  max-width: 35rem;
+  max-width: 35.5rem;
   color: color-mix(in oklab, white 82%, var(--brand-light) 18%);
-  line-height: 1.5; }
+  line-height: 1.62; }
 
 .home-hero__bullets {
   display: flex;
@@ -1946,7 +1946,8 @@ button.site-header__link::-moz-focus-inner {
 
 .home-hero__actions {
   width: 100%;
-  max-width: 35rem; }
+  max-width: 35.5rem;
+  margin-top: calc(var(--space) * 1.5); }
 
 .home-hero__actions .button,
 .home-cta__actions .button,
@@ -2421,8 +2422,8 @@ button.site-header__link::-moz-focus-inner {
   .home-hero__inner {
     padding-block: calc(var(--space) * 7) calc(var(--space) * 6); }
   .home-hero__title {
-    max-width: 16ch;
-    font-size: 3.25rem; }
+    max-width: 18ch;
+    font-size: 3.05rem; }
   .process-list {
     grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .spec-list {

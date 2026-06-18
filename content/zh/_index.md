@@ -7,16 +7,10 @@ type: "home"
 draft: false
 home_hero:
   enable: true
-  kicker: "防腐流体控制"
-  title: "面向水处理与化学品工况的防腐流体控制支持"
-  description: "Nuvon 协助采购、OEM、成套设备商和项目团队，根据实际工况评审阀门、执行器、管件和加药相关需求：介质、浓度、温度、压力、连接、执行方式、数量和送审文件。"
+  title: "面向水处理与化学品系统的防腐流体控制"
+  description: "Nuvon 协助采购、OEM、成套设备商和项目团队，根据实际工况选择阀门、执行器、管件及加药组件。"
   images:
     - "/images/background.webp"
-  bullets:
-    - "工业水处理与废水"
-    - "化学加药与注入"
-    - "腐蚀性流体输送"
-    - "询价与送审资料支持"
   actions:
     - label: "提交询价"
       url: "/request-a-quote/"

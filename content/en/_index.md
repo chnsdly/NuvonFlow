@@ -7,16 +7,10 @@ type: "home"
 draft: false
 home_hero:
   enable: true
-  kicker: "Corrosion-resistant flow control"
-  title: "Corrosion-resistant flow control for water and chemical service"
-  description: "Nuvon helps buyers, OEMs, skid builders, and project teams review valve, actuator, fitting, and chemfeed requirements against the actual duty: media, concentration, temperature, pressure, connection, actuation, quantity, and submittal documents."
+  title: "Corrosion-Resistant Flow Control for Water & Chemical Systems"
+  description: "Nuvon helps buyers, OEMs, skid builders, and project teams select valves, actuators, fittings, and chemical-feed components for real operating conditions."
   images:
     - "/images/background.webp"
-  bullets:
-    - "Industrial water and wastewater"
-    - "Chemical dosing and injection"
-    - "Corrosive fluid transfer"
-    - "RFQ and submittal support"
   actions:
     - label: "Request a Quote"
       url: "/request-a-quote/"

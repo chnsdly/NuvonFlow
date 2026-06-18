@@ -523,7 +523,7 @@
 
 .home-hero__content {
   display: grid;
-  gap: space(2);
+  gap: space(1.5);
   justify-items: start;
   max-width: 38.5rem;
   color: white;
@@ -538,13 +538,13 @@
 .home-hero__title {
   max-width: 100%;
   font-size: 2.15rem;
-  line-height: 1.05;
+  line-height: 1.15;
 }
 
 .home-hero__description {
-  max-width: 35rem;
+  max-width: 35.5rem;
   color: color-mix(in oklab, white 82%, var(--brand-light) 18%);
-  line-height: 1.5;
+  line-height: 1.62;
 }
 
 .home-hero__bullets {
@@ -574,7 +574,8 @@
 
 .home-hero__actions {
   width: 100%;
-  max-width: 35rem;
+  max-width: 35.5rem;
+  margin-top: space(1.5);
 }
 
 .home-hero__actions .button,
@@ -1139,8 +1140,8 @@
   }
 
   .home-hero__title {
-    max-width: 16ch;
-    font-size: 3.25rem;
+    max-width: 18ch;
+    font-size: 3.05rem;
   }
 
   .process-list {

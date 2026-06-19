@@ -17,8 +17,24 @@ $breakpoints: (
   desktop: 80rem,    // 1280
   wide: 96rem        // 1536
 );
+
+$breakpoint-step: 0.001rem;
+
 @mixin mq-up($name) {
   @media (min-width: map-get($breakpoints, $name)) {
     @content;
   }
+}
+
+@mixin mq-down($name) {
+  @media (max-width: #{map-get($breakpoints, $name) - $breakpoint-step}) {
+    @content;
+  }
+}
+
+@mixin panel-frame($padding, $radius: var(--radius-m), $shadow: var(--shadow)) {
+  padding: $padding;
+  border: var(--border);
+  border-radius: $radius;
+  box-shadow: $shadow;
 }

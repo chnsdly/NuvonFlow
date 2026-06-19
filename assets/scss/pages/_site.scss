@@ -433,7 +433,7 @@
   }
 }
 
-@media (max-width: 47.98rem) {
+@include mq-down(tablet) {
   .home-hero {
     min-height: 39rem;
   }
@@ -535,12 +535,6 @@
   text-transform: uppercase;
 }
 
-.home-hero__title {
-  max-width: 100%;
-  font-size: 2.15rem;
-  line-height: 1.15;
-}
-
 .home-hero__description {
   max-width: 35.5rem;
   color: color-mix(in oklab, white 82%, var(--brand-light) 18%);
@@ -593,12 +587,9 @@
 .home-condition__panel {
   display: grid;
   gap: space(3);
-  padding: space(3);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(3));
   background:
     linear-gradient(135deg, color-mix(in oklab, var(--surface) 88%, white 12%), color-mix(in oklab, var(--brand-light) 18%, var(--surface) 82%));
-  box-shadow: var(--shadow);
 }
 
 .home-condition__intro {
@@ -651,11 +642,8 @@
   position: relative;
   display: grid;
   gap: space(1);
-  padding: space(2);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(2));
   background-color: var(--card);
-  box-shadow: var(--shadow);
   counter-increment: process;
 }
 
@@ -771,6 +759,22 @@
 .content-prose {
   color: var(--on-surface);
   line-height: 1.72;
+}
+
+.content-prose a {
+  color: var(--interactive-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--interactive-text) 34%, transparent);
+  text-underline-offset: 0.18em;
+  transition:
+    color var(--transition-color),
+    text-decoration-color var(--transition-color);
+}
+
+.content-prose a:hover,
+.content-prose a:focus-visible {
+  color: var(--brand-dark);
+  text-decoration-color: currentColor;
 }
 
 .content-prose > * + * {
@@ -894,11 +898,8 @@
 .contact__form,
 .contact__direct,
 .content-page__form {
-  padding: space(2);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(2));
   background-color: var(--card);
-  box-shadow: var(--shadow);
 }
 
 .contact__direct-body {
@@ -972,11 +973,8 @@
 .resources-page__toc {
   display: grid;
   gap: space(1.25);
-  padding: space(2);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(2));
   background-color: var(--card);
-  box-shadow: var(--shadow);
 }
 
 .resources-page__aside-card p {
@@ -1002,11 +1000,12 @@
   color: var(--muted-text);
   font-size: 0.95rem;
   line-height: 1.45;
+  transition: color var(--transition-color);
 }
 
 .resources-page__toc a:hover,
 .resources-page__toc a:focus-visible {
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .selection-lens,
@@ -1016,11 +1015,8 @@
 .related-strip {
   display: grid;
   gap: space(2);
-  padding: space(2);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(2));
   background-color: color-mix(in oklab, var(--surface) 86%, white 14%);
-  box-shadow: var(--shadow);
 }
 
 .selection-lens__intro,
@@ -1126,12 +1122,17 @@
   color: var(--brand);
   font-weight: 600;
   text-decoration: none;
+  transition:
+    background-color var(--transition-color),
+    border-color var(--transition-color),
+    color var(--transition-color);
 }
 
 .related-strip__list a:hover,
 .related-strip__list a:focus-visible {
-  border-color: var(--brand);
-  background-color: color-mix(in oklab, var(--brand-light) 22%, var(--surface) 78%);
+  border-color: var(--interactive-border-strong);
+  background-color: var(--interactive-surface-quiet);
+  color: var(--interactive-text);
 }
 
 @include mq-up(tablet) {

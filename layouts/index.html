@@ -99,7 +99,7 @@
           <h2 id="home-featured-title" class="section__title font-title-l">{{ .Params.home_featured.title | default (cond $isZh "产品系列" "Product Families") }}</h2>
           {{ with .Params.home_featured.description }}<p class="section__description font-body">{{ . }}</p>{{ end }}
         </header>
-        <ul class="products-list__grid">
+        <ul class="products-list__grid products-list__grid--media">
           {{ range $featuredProducts.ByWeight }}
           {{ $item := . }}
           <li class="products-list__item">

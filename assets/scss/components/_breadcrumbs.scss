@@ -1,6 +1,6 @@
 .breadcrumbs {
   padding-block: space(1);
-  border-bottom: 1px solid #E7E5DD;
+  border-bottom: var(--border);
 }
 
 .breadcrumbs__list {
@@ -35,23 +35,17 @@
   border-radius: var(--radius-s);
   color: inherit;
   transition:
-    color var(--transition-base),
-    background-color var(--transition-base),
-    transform var(--transition-base);
+    color var(--transition-color);
 }
 
 .breadcrumbs__link:hover,
 .breadcrumbs__link:focus-visible {
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .breadcrumbs__link:focus-visible {
   outline: var(--focus-outline);
   outline-offset: var(--focus-offset);
-}
-
-.breadcrumbs__link:active {
-  transform: translateY(1px);
 }
 
 .breadcrumbs__link[aria-disabled="true"],

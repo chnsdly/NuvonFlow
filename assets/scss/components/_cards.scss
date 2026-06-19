@@ -1,9 +1,18 @@
 .feature-grid,
-.content-card-grid,
+.content-card-grid {
+  display: grid;
+  gap: space(2);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
 .products-list__grid {
   display: grid;
   gap: space(2);
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.products-list__grid--media {
+  grid-template-columns: 1fr;
 }
 
 .case-studies-list__grid,
@@ -23,17 +32,13 @@
   display: grid;
   gap: space(1.25);
   height: 100%;
-  padding: space(2);
-  border: var(--border);
-  border-radius: var(--radius-m);
+  @include panel-frame(space(2));
   background-color: var(--card);
-  box-shadow: var(--shadow);
   color: inherit;
   text-decoration: none;
   transition:
-    border-color var(--transition-base),
-    box-shadow var(--transition-base),
-    transform var(--transition-base);
+    border-color var(--transition-color),
+    box-shadow var(--transition-shadow);
 }
 
 .content-card:hover,
@@ -44,9 +49,24 @@
 .case-studies-list__card:focus-visible,
 .insights-list__card:hover,
 .insights-list__card:focus-visible {
-  border-color: color-mix(in oklab, var(--brand) 35%, var(--surface) 65%);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  border-color: var(--interactive-border);
+  box-shadow: var(--shadow-interactive);
+}
+
+.products-list__grid--media .products-list__card {
+  align-content: start;
+  gap: space(1.25);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  grid-template-rows: auto auto;
+}
+
+.products-list__grid--media .products-list__card:hover,
+.products-list__grid--media .products-list__card:focus-visible {
+  box-shadow: none;
 }
 
 .feature-card__title,
@@ -56,6 +76,50 @@
 .insights-list__title {
   color: var(--on-surface);
   line-height: 1.25;
+}
+
+.content-card__title,
+.products-list__title,
+.case-studies-list__title,
+.insights-list__title {
+  transition: color var(--transition-color);
+}
+
+.content-card__title::after,
+.case-studies-list__title::after,
+.insights-list__title::after {
+  display: inline-block;
+  margin-left: space(0.6);
+  color: var(--interactive-text);
+  content: "\2192";
+  font-size: 0.86em;
+  line-height: 1;
+  opacity: 0.48;
+  transform: translateX(-0.15rem);
+  transition:
+    opacity var(--transition-color),
+    transform var(--transition-transform);
+}
+
+.content-card:hover .content-card__title,
+.content-card:focus-visible .content-card__title,
+.products-list__card:hover .products-list__title,
+.products-list__card:focus-visible .products-list__title,
+.case-studies-list__card:hover .case-studies-list__title,
+.case-studies-list__card:focus-visible .case-studies-list__title,
+.insights-list__card:hover .insights-list__title,
+.insights-list__card:focus-visible .insights-list__title {
+  color: var(--interactive-text);
+}
+
+.content-card:hover .content-card__title::after,
+.content-card:focus-visible .content-card__title::after,
+.case-studies-list__card:hover .case-studies-list__title::after,
+.case-studies-list__card:focus-visible .case-studies-list__title::after,
+.insights-list__card:hover .insights-list__title::after,
+.insights-list__card:focus-visible .insights-list__title::after {
+  opacity: 1;
+  transform: translateX(0.1rem);
 }
 
 .feature-card__text,
@@ -79,7 +143,23 @@
   margin: space(-2) space(-2) 0;
   border-radius: var(--radius-m) var(--radius-m) 0 0;
   background: var(--img-bg);
-  aspect-ratio: 16 / 10;
+}
+
+.products-list__media {
+  margin: 0;
+  border: var(--border);
+  border-radius: var(--radius-m);
+  aspect-ratio: 1 / 1;
+  box-shadow: var(--shadow);
+  transition:
+    border-color var(--transition-color),
+    box-shadow var(--transition-shadow);
+}
+
+.products-list__grid--media .products-list__card:hover .products-list__media,
+.products-list__grid--media .products-list__card:focus-visible .products-list__media {
+  border-color: var(--interactive-border);
+  box-shadow: var(--shadow-interactive);
 }
 
 .case-studies-list__media,
@@ -90,6 +170,7 @@
 .products-list__media .technical-visual,
 .case-studies-list__media .technical-visual,
 .insights-list__media .technical-visual {
+  height: 100%;
   min-height: 100%;
 }
 
@@ -99,13 +180,61 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform var(--transition-media);
+}
+
+.products-list__media .technical-visual,
+.case-studies-list__media .technical-visual,
+.insights-list__media .technical-visual {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform var(--transition-media);
+}
+
+.products-list__card:hover .products-list__image,
+.products-list__card:focus-visible .products-list__image,
+.products-list__card:hover .products-list__media .technical-visual,
+.products-list__card:focus-visible .products-list__media .technical-visual,
+.case-studies-list__card:hover .case-studies-list__image,
+.case-studies-list__card:focus-visible .case-studies-list__image,
+.case-studies-list__card:hover .case-studies-list__media .technical-visual,
+.case-studies-list__card:focus-visible .case-studies-list__media .technical-visual,
+.insights-list__card:hover .insights-list__image,
+.insights-list__card:focus-visible .insights-list__image,
+.insights-list__card:hover .insights-list__media .technical-visual,
+.insights-list__card:focus-visible .insights-list__media .technical-visual {
+  transform: scale(var(--interactive-media-scale));
 }
 
 .products-list__content,
 .case-studies-list__content,
 .insights-list__content {
   display: grid;
+  align-content: start;
   gap: space(1);
+}
+
+.products-list__grid--media .products-list__content {
+  justify-items: center;
+  text-align: center;
+}
+
+.products-list__grid--media .products-list__text {
+  max-width: 34ch;
+}
+
+.products-list__grid--media .tag-list {
+  justify-content: center;
+}
+
+.products-list__grid--media .tag-list li {
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .tag-list {
@@ -450,4 +579,16 @@
 .technical-visual--about .technical-visual__shape--primary::after {
   top: 2.3rem;
   right: 1.7rem;
+}
+
+@include mq-up(tablet) {
+  .products-list__grid--media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include mq-up(laptop) {
+  .products-list__grid--media {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

@@ -18,12 +18,12 @@
   user-select: none;
   cursor: pointer;
   transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    box-shadow var(--transition-base),
-    color var(--transition-base),
-    opacity var(--transition-base),
-    transform var(--transition-base);
+    background-color var(--transition-color),
+    border-color var(--transition-color),
+    box-shadow var(--transition-shadow),
+    color var(--transition-color),
+    opacity var(--transition-color),
+    transform var(--transition-transform);
 }
 
 .button:focus-visible {
@@ -74,7 +74,7 @@
   border-color: color-mix(in oklab, var(--brand) 84%, var(--on-surface) 16%);
   background-color: color-mix(in oklab, var(--brand) 88%, var(--on-surface) 12%);
   color: var(--on-brand);
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-interactive);
 }
 
 .button--secondary {
@@ -84,9 +84,9 @@
 }
 
 .button--secondary:where(:not(:disabled):not([aria-disabled="true"]):not(.button--disabled)):hover {
-  border-color: var(--brand);
-  background-color: color-mix(in oklab, var(--brand) 10%, var(--surface) 90%);
-  color: color-mix(in oklab, var(--brand) 84%, var(--on-surface) 16%);
+  border-color: var(--interactive-border-strong);
+  background-color: var(--interactive-surface-quiet);
+  color: var(--interactive-text);
 }
 
 .button--full {

@@ -5,8 +5,10 @@
   background-color: var(--surface);
   box-shadow: var(--shadow);
   --site-header-color-transition:
-    background-color var(--transition-base),
-    color var(--transition-base);
+    color var(--transition-color);
+  --site-header-toggle-transition:
+    background-color var(--transition-color),
+    color var(--transition-color);
 }
 
 .site-header__inner {
@@ -54,7 +56,7 @@
   background-color: var(--surface);
   color: var(--on-surface);
   cursor: pointer;
-  transition: var(--site-header-color-transition);
+  transition: var(--site-header-toggle-transition);
 }
 
 .site-header.is-enhanced .site-header__toggle {
@@ -87,8 +89,8 @@
   background-color: currentColor;
   transform-origin: center;
   transition:
-    opacity var(--transition-base),
-    transform var(--transition-base);
+    opacity var(--transition-color),
+    transform var(--transition-transform);
 }
 
 .site-header__nav {
@@ -157,6 +159,10 @@
   width: 100%;
 }
 
+.site-header__link--parent {
+  display: none;
+}
+
 button.site-header__link::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -165,12 +171,11 @@ button.site-header__link::-moz-focus-inner {
 .site-header__link:hover,
 .site-header__link:focus-visible,
 .site-header__item.is-active > .site-header__item-control .site-header__link {
-  background-color: var(--brand-light);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__link:focus-visible {
-  outline: 2px solid var(--brand);
+  outline: var(--focus-outline);
   outline-offset: var(--focus-offset);
 }
 
@@ -178,7 +183,7 @@ button.site-header__link::-moz-focus-inner {
   color: currentColor;
   font-size: 0.85em;
   line-height: 1;
-  transition: transform var(--transition-base);
+  transition: transform var(--transition-transform);
 }
 
 .site-header__item.is-submenu-open .site-header__chevron {
@@ -244,8 +249,7 @@ button.site-header__link::-moz-focus-inner {
 .site-header__mega-overview:hover,
 .site-header__mega-overview:focus-visible,
 .site-header__mega-overview[aria-current="page"] {
-  background-color: var(--brand-light);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__mega-list {
@@ -270,12 +274,6 @@ button.site-header__link::-moz-focus-inner {
   border-radius: inherit;
   color: inherit;
   text-decoration: none;
-  transition: background-color var(--transition-base);
-}
-
-.site-header__mega-visual-link:hover,
-.site-header__mega-visual-link:focus-visible {
-  background-color: color-mix(in oklab, var(--brand-light) 48%, var(--surface) 52%);
 }
 
 .site-header__mega-visual-link:focus-visible {
@@ -298,16 +296,7 @@ button.site-header__link::-moz-focus-inner {
   border-radius: var(--radius-s);
   color: var(--muted-text);
   font-size: 0.95rem;
-  transition: var(--site-header-color-transition);
-}
-
-.site-header__submenu-link::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-bottom: var(--border);
-  content: "";
+  transition: color var(--transition-color);
 }
 
 .site-header__submenu-link--plain {
@@ -340,15 +329,15 @@ button.site-header__link::-moz-focus-inner {
 .site-header__submenu-link--entry .site-header__submenu-link-title::after,
 .site-header__submenu-link--described .site-header__submenu-link-title::after {
   flex: 0 0 auto;
-  color: color-mix(in oklab, var(--brand) 78%, var(--muted-text) 22%);
+  color: var(--interactive-text);
   content: "\2192";
   font-size: 0.9rem;
   line-height: 1;
-  opacity: 0.72;
+  opacity: 0.5;
   transform: translateX(-0.15rem);
   transition:
-    opacity var(--transition-base),
-    transform var(--transition-base);
+    opacity var(--transition-color),
+    transform var(--transition-transform);
 }
 
 .site-header__submenu-link-description {
@@ -367,9 +356,7 @@ button.site-header__link::-moz-focus-inner {
 .site-header__submenu-link--described:hover,
 .site-header__submenu-link--described:focus-visible,
 .site-header__submenu-link--described[aria-current="page"] {
-  border-color: color-mix(in oklab, var(--brand) 18%, var(--surface) 82%);
-  background-color: color-mix(in oklab, var(--brand-light) 34%, var(--surface) 66%);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__submenu-link--entry:hover .site-header__submenu-link-title,
@@ -378,7 +365,7 @@ button.site-header__link::-moz-focus-inner {
 .site-header__submenu-link--described:hover .site-header__submenu-link-title,
 .site-header__submenu-link--described:focus-visible .site-header__submenu-link-title,
 .site-header__submenu-link--described[aria-current="page"] .site-header__submenu-link-title {
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__submenu-link--entry:hover .site-header__submenu-link-title::after,
@@ -388,13 +375,13 @@ button.site-header__link::-moz-focus-inner {
 .site-header__submenu-link--described:focus-visible .site-header__submenu-link-title::after,
 .site-header__submenu-link--described[aria-current="page"] .site-header__submenu-link-title::after {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0.1rem);
 }
 
 .site-header__submenu-link--described:hover .site-header__submenu-link-description,
 .site-header__submenu-link--described:focus-visible .site-header__submenu-link-description,
 .site-header__submenu-link--described[aria-current="page"] .site-header__submenu-link-description {
-  color: color-mix(in oklab, var(--brand) 72%, var(--muted-text) 28%);
+  color: color-mix(in oklab, var(--interactive-text) 70%, var(--muted-text) 30%);
 }
 
 .site-header__nav-footer {
@@ -425,18 +412,13 @@ button.site-header__link::-moz-focus-inner {
   background-color: transparent;
   color: var(--muted-text);
   font-size: 0.95rem;
-  transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    color var(--transition-base);
+  transition: color var(--transition-color);
 }
 
 .site-header__language-link:hover,
 .site-header__language-link:focus-visible,
 .site-header__language-link.is-active {
-  border-color: transparent;
-  background-color: color-mix(in oklab, var(--brand-light) 72%, var(--surface) 28%);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__actions {
@@ -462,10 +444,7 @@ button.site-header__link::-moz-focus-inner {
   font-weight: 600;
   list-style: none;
   white-space: nowrap;
-  transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    color var(--transition-base);
+  transition: color var(--transition-color);
 }
 
 .site-header__language-current::-webkit-details-marker {
@@ -482,9 +461,7 @@ button.site-header__link::-moz-focus-inner {
 .site-header__language-current:hover,
 .site-header__language-current:focus-visible,
 .site-header__language-switcher[open] .site-header__language-current {
-  border-color: transparent;
-  background-color: color-mix(in oklab, var(--brand-light) 56%, var(--surface) 44%);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
 .site-header__language-current:focus-visible {
@@ -527,9 +504,7 @@ button.site-header__link::-moz-focus-inner {
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
-  transition:
-    background-color var(--transition-base),
-    color var(--transition-base);
+  transition: color var(--transition-color);
 }
 
 .site-header__language-menu-link::before {
@@ -553,11 +528,10 @@ button.site-header__link::-moz-focus-inner {
 .site-header__language-menu-link:hover,
 .site-header__language-menu-link:focus-visible,
 .site-header__language-menu-link.is-active {
-  background-color: var(--brand-light);
-  color: var(--brand);
+  color: var(--interactive-text);
 }
 
-@media (max-width: 63.999rem) {
+@include mq-down(laptop) {
   .site-header.is-enhanced .site-header__item--has-children:not(.is-submenu-open) > .site-header__submenu {
     display: none;
   }
@@ -618,9 +592,16 @@ button.site-header__link::-moz-focus-inner {
   }
 
   .site-header__link--toggle {
+    display: none;
     justify-content: flex-start;
     gap: space(0.5);
     width: auto;
+  }
+
+  .site-header__link--parent {
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: space(0.5);
   }
 
   .site-header__item--has-children:hover .site-header__chevron,
@@ -642,8 +623,8 @@ button.site-header__link::-moz-focus-inner {
     transform: translate(-50%, -0.25rem);
     visibility: hidden;
     transition:
-      opacity var(--transition-base),
-      transform var(--transition-base);
+      opacity var(--transition-color),
+      transform var(--transition-transform);
   }
 
   .site-header__item--has-children:hover > .site-header__submenu,

@@ -40,7 +40,10 @@
     0 10px 28px rgba(22, 32, 39, 0.06);
   --shadow-hover:
     0 2px 4px rgba(22, 32, 39, 0.05),
-    0 18px 40px rgba(22, 32, 39, 0.09);
+    0 14px 32px rgba(22, 32, 39, 0.075);
+  --shadow-interactive:
+    0 1px 3px rgba(22, 32, 39, 0.045),
+    0 12px 28px rgba(22, 32, 39, 0.065);
   --shadow-inset:
     inset 0 1px 0 rgba(255, 255, 255, 0.32),
     inset 0 1px 2px rgba(22, 32, 39, 0.08),
@@ -48,7 +51,19 @@
   --header-height: 4.2rem;
 
   /* Interaction */
-  --transition-base: 180ms cubic-bezier(0.22, 0.72, 0.18, 1);
+  --ease-standard: cubic-bezier(0.22, 0.72, 0.18, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 180ms var(--ease-standard);
+  --transition-color: 180ms var(--ease-standard);
+  --transition-shadow: 220ms var(--ease-standard);
+  --transition-transform: 220ms var(--ease-standard);
+  --transition-media: 400ms var(--ease-out-soft);
+  --interactive-text: color-mix(in oklab, var(--brand) 84%, var(--on-surface) 16%);
+  --interactive-border: color-mix(in oklab, var(--brand) 24%, var(--line) 76%);
+  --interactive-border-strong: color-mix(in oklab, var(--brand) 42%, var(--line) 58%);
+  --interactive-surface: color-mix(in oklab, var(--brand-light) 44%, var(--surface) 56%);
+  --interactive-surface-quiet: color-mix(in oklab, var(--brand-light) 28%, var(--surface) 72%);
+  --interactive-media-scale: 1.03;
   --focus-outline: 2px solid color-mix(in oklab, var(--brand) 45%, white);
   --focus-offset: 2px;
 

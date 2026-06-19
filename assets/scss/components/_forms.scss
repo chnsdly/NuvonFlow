@@ -29,8 +29,8 @@
   color: var(--on-surface);
   font: inherit;
   transition:
-    border-color var(--transition-base),
-    box-shadow var(--transition-base);
+    border-color var(--transition-color),
+    box-shadow var(--transition-shadow);
 }
 
 .inquiry-form__control::placeholder {
@@ -39,7 +39,7 @@
 }
 
 .inquiry-form__control:focus {
-  border-color: var(--brand);
+  border-color: var(--interactive-border-strong);
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 18%, transparent);
   outline: none;
 }

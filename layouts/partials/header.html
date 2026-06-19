@@ -48,6 +48,10 @@
           <li class="site-header__item{{ if .HasChildren }} site-header__item--has-children{{ end }}{{ if $isMegaMenu }} site-header__item--mega{{ end }}{{ if $isActive }} is-active{{ end }}">
             <div class="site-header__item-control">
               {{ if .HasChildren }}
+                <a class="site-header__link site-header__link--parent" href="{{ .URL }}"{{ if $isExact }} aria-current="page"{{ end }}>
+                  <span>{{ .Name }}</span>
+                  <span class="site-header__chevron" aria-hidden="true">&#9662;</span>
+                </a>
                 <button
                   class="site-header__link site-header__link--toggle"
                   type="button"

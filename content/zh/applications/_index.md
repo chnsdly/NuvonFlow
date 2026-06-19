@@ -1,5 +1,5 @@
 ---
-title: "应用"
+title: "应用场景"
 description: "面向工业水处理、工业废水、化学加药、腐蚀性化学品输送和化工流程项目的应用页面，帮助在报价前整理介质、压力、材料、执行方式和文件要求。"
 weight: 20
 translationKey: "applications"

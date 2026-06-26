@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Technical Guides on Nuvon Flow Control</title>
-    <link>http://localhost:1313/resources/technical-guides/</link>
+    <link>http://localhost:23180/resources/technical-guides/</link>
     <description>Recent content in Technical Guides on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/resources/technical-guides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:23180/resources/technical-guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Material Selection for Corrosive Service</title>
-      <link>http://localhost:1313/resources/technical-guides/material-selection-for-corrosive-service/</link>
+      <link>http://localhost:23180/resources/technical-guides/material-selection-for-corrosive-service/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resources/technical-guides/material-selection-for-corrosive-service/</guid>
+      <guid>http://localhost:23180/resources/technical-guides/material-selection-for-corrosive-service/</guid>
       <description>&lt;h2 id=&#34;start-with-the-complete-fluid-picture&#34;&gt;Start with the complete fluid picture&lt;/h2&gt;&#xA;&lt;p&gt;Material selection should begin with the media name, concentration, temperature, pressure, exposure time, solids content, and cleaning method. A chemical name without concentration or temperature is not enough for a reliable review.&lt;/p&gt;&#xA;&lt;p&gt;If the line sees more than one chemical, list all credible exposures. Many failures happen during cleaning, flushing, startup, shutdown, intermittent drying, or an occasional batch condition rather than during the normal operating step.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Valve Selection by Application</title>
-      <link>http://localhost:1313/resources/technical-guides/valve-selection-by-application/</link>
+      <link>http://localhost:23180/resources/technical-guides/valve-selection-by-application/</link>
       <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/resources/technical-guides/valve-selection-by-application/</guid>
+      <guid>http://localhost:23180/resources/technical-guides/valve-selection-by-application/</guid>
       <description>&lt;h2 id=&#34;begin-with-the-function&#34;&gt;Begin with the function&lt;/h2&gt;&#xA;&lt;p&gt;A valve selected for isolation, throttling, backflow prevention, sampling, dosing, pressure relief, or automated sequencing will have different priorities. Function should be named before the product family is fixed.&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Function&lt;/th&gt;&#xA;          &lt;th&gt;Common starting point&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Compact on/off isolation for clean liquids&lt;/td&gt;&#xA;          &lt;td&gt;Ball valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Larger water or low-pressure headers&lt;/td&gt;&#xA;          &lt;td&gt;Butterfly valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Corrosive, dirty, or containment-focused isolation&lt;/td&gt;&#xA;          &lt;td&gt;Diaphragm valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Reverse-flow prevention or pump protection&lt;/td&gt;&#xA;          &lt;td&gt;Check valves&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Chemical dosing pressure control&lt;/td&gt;&#xA;          &lt;td&gt;Back pressure, relief, injection, and chemfeed accessories&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Remote or automated operation&lt;/td&gt;&#xA;          &lt;td&gt;Valve and actuator package&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;match-the-product-family-to-the-duty&#34;&gt;Match the product family to the duty&lt;/h2&gt;&#xA;&lt;p&gt;Product family selection should follow the media, pressure, temperature, solids, leakage expectations, cycle frequency, and maintenance method. A product name by itself is rarely enough; a ball valve, diaphragm valve, or check valve can be appropriate or inappropriate depending on the actual service.&lt;/p&gt;</description>
     </item>
   </channel>

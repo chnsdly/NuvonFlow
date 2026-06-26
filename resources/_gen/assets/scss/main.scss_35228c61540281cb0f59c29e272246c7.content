@@ -349,17 +349,24 @@ body {
 
 .site-header.is-enhanced.is-mobile-open .site-header__nav {
   position: absolute;
-  top: calc(100% + 1px);
+  top: 100%;
   right: 0;
   left: 0;
-  display: grid;
-  max-height: calc(100dvh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  height: calc(100dvh - var(--header-height));
+  max-height: none;
   padding: calc(var(--space) * 2);
   overflow-y: auto;
+  overscroll-behavior: contain;
   box-shadow: var(--shadow); }
 
 .site-header__menu {
   display: grid; }
+
+.site-header.is-enhanced.is-mobile-open .site-header__menu {
+  align-content: start; }
 
 .site-header__item {
   padding-block: calc(var(--space) * 0.5); }
@@ -594,6 +601,9 @@ button.site-header__link::-moz-focus-inner {
   padding-top: calc(var(--space) * 1.5);
   border-top: var(--border); }
 
+.site-header.is-enhanced.is-mobile-open .site-header__nav-footer {
+  margin-top: auto; }
+
 .site-header__language {
   display: grid;
   gap: calc(var(--space) * 0.75); }
@@ -733,9 +743,11 @@ button.site-header__link::-moz-focus-inner {
     grid-column: auto;
     display: block;
     justify-self: center;
+    height: auto;
     max-height: none;
     padding: 0;
     overflow: visible;
+    overscroll-behavior: auto;
     box-shadow: none; }
   .site-header__menu {
     display: flex;
@@ -1668,11 +1680,6 @@ button.site-header__link::-moz-focus-inner {
 .home-hero-system__diagram {
   transform-origin: center; }
 
-.home-hero-system__field {
-  fill: none;
-  stroke: rgba(226, 250, 249, 0.065);
-  stroke-width: 1.5; }
-
 .home-hero-system__grid path {
   fill: none;
   stroke: rgba(226, 250, 249, 0.052);
@@ -1870,11 +1877,6 @@ button.site-header__link::-moz-focus-inner {
   stroke: rgba(241, 255, 254, 0.9);
   stroke-width: 2.5; }
 
-.home-hero-system__valve-halo {
-  fill: rgba(116, 198, 193, 0.06);
-  stroke: rgba(214, 250, 248, 0.07);
-  stroke-width: 1.5; }
-
 .home-hero-system__valve-body {
   stroke: rgba(248, 255, 254, 0.84);
   stroke-width: 2.5; }
@@ -1993,7 +1995,6 @@ button.site-header__link::-moz-focus-inner {
     text-shadow: 0 0.08rem 1.2rem rgba(3, 14, 20, 0.46); }
   .home-hero-system__equipment--unit {
     opacity: 0.46; }
-  .home-hero-system__field,
   .home-hero-system__grid {
     opacity: 0.38; }
   .home-hero-system__bypass,

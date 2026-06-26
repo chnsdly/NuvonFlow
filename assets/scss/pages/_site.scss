@@ -65,12 +65,6 @@
   transform-origin: center;
 }
 
-.home-hero-system__field {
-  fill: none;
-  stroke: rgba(226, 250, 249, 0.065);
-  stroke-width: 1.5;
-}
-
 .home-hero-system__grid path {
   fill: none;
   stroke: rgba(226, 250, 249, 0.052);
@@ -307,12 +301,6 @@
   stroke-width: 2.5;
 }
 
-.home-hero-system__valve-halo {
-  fill: rgba(116, 198, 193, 0.06);
-  stroke: rgba(214, 250, 248, 0.07);
-  stroke-width: 1.5;
-}
-
 .home-hero-system__valve-body {
   stroke: rgba(248, 255, 254, 0.84);
   stroke-width: 2.5;
@@ -480,7 +468,6 @@
     opacity: 0.46;
   }
 
-  .home-hero-system__field,
   .home-hero-system__grid {
     opacity: 0.38;
   }

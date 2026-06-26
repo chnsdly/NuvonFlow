@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Applications on Nuvon Flow Control</title>
-    <link>http://localhost:23180/applications/</link>
+    <link>http://localhost:35779/applications/</link>
     <description>Recent content in Applications on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="http://localhost:23180/applications/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:35779/applications/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Industrial Water Treatment</title>
-      <link>http://localhost:23180/applications/industrial-water-treatment/</link>
+      <link>http://localhost:35779/applications/industrial-water-treatment/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/applications/industrial-water-treatment/</guid>
+      <guid>http://localhost:35779/applications/industrial-water-treatment/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Industrial water treatment systems combine mechanical filtration, chemical conditioning, membrane protection, disinfection, cleaning steps, and treated-water distribution. A single project may include clean water lines, oxidizing chemicals, acid or alkali dosing, antiscalant injection, backwash headers, sample points, and packaged skids.&lt;/p&gt;&#xA;&lt;p&gt;The practical selection question is not only which valve type fits the line. The review should connect water chemistry, dosing chemicals, pipe standard, automation sequence, maintenance access, and document expectations so the quoted scope is usable for purchasing and project review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Industrial Wastewater</title>
-      <link>http://localhost:23180/applications/industrial-wastewater/</link>
+      <link>http://localhost:35779/applications/industrial-wastewater/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/applications/industrial-wastewater/</guid>
+      <guid>http://localhost:35779/applications/industrial-wastewater/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Industrial wastewater service is often less predictable than clean water service. Media can change by production batch, cleaning cycle, pH adjustment, precipitation step, or discharge requirement. Lines may carry suspended solids, precipitates, biological content, oils, oxidizers, acids, alkalis, salts, or cleaning waste.&lt;/p&gt;&#xA;&lt;p&gt;The useful discussion starts with how difficult the line is to isolate, drain, flush, and maintain. A low-cost valve that works on clean water may be the wrong choice if solids settle, scale builds, elastomers are attacked, or a pump cycles intermittently.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chemical Dosing &amp; Injection</title>
-      <link>http://localhost:23180/applications/chemical-dosing-injection/</link>
+      <link>http://localhost:35779/applications/chemical-dosing-injection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/applications/chemical-dosing-injection/</guid>
+      <guid>http://localhost:35779/applications/chemical-dosing-injection/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Chemical dosing and injection systems depend on predictable pump output, compatible wetted materials, and clear accessory selection. The visible valve package may be small, but the duty can be demanding: concentrated chemicals, intermittent injection, tubing transitions, blocked discharge risk, siphoning, crystallization, or off-gassing.&lt;/p&gt;&#xA;&lt;p&gt;For a reviewable quotation, the scope should identify whether the request is for individual valves, a pump discharge accessory set, an injection assembly, a dosing skid, replacement stock, or a project BOM.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Corrosive Chemical Transfer</title>
-      <link>http://localhost:23180/applications/corrosive-chemical-transfer/</link>
+      <link>http://localhost:35779/applications/corrosive-chemical-transfer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/applications/corrosive-chemical-transfer/</guid>
+      <guid>http://localhost:35779/applications/corrosive-chemical-transfer/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Corrosive chemical transfer lines can involve acids, alkalis, oxidizers, solvents, salt solutions, mixed streams, or cleaning chemicals. The selection challenge is rarely pressure rating alone. Media concentration, temperature, exposure time, velocity, outdoor conditions, cleaning method, and maintenance practice can all change the acceptable material set.&lt;/p&gt;&#xA;&lt;p&gt;The strongest RFQ describes the transfer path, not just a product name. It should show where the chemical comes from, where it goes, how the line is isolated, how it is drained or flushed, and which documents are needed for project review.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chemical Processing</title>
-      <link>http://localhost:23180/applications/chemical-processing/</link>
+      <link>http://localhost:35779/applications/chemical-processing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/applications/chemical-processing/</guid>
+      <guid>http://localhost:35779/applications/chemical-processing/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Chemical processing facilities often need a coordinated mix of manual valves, automated valves, check valves, fittings, pressure control items, and documentation. The same plant may include clean transfer, corrosive service, intermittent batches, flushing steps, utility chemicals, and maintenance bypasses.&lt;/p&gt;&#xA;&lt;p&gt;The useful scope is organized by process step. Reactor feed, storage transfer, neutralization, washdown, and packaged skids can each require a different balance of material compatibility, shutoff reliability, automation, cleanability, and inspection documents.&lt;/p&gt;</description>
     </item>
   </channel>

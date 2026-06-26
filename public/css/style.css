@@ -262,11 +262,16 @@ body {
   z-index: var(--z-header);
   background-color: var(--surface);
   box-shadow: var(--shadow);
+  transform: translateY(0);
+  transition: transform var(--transition-transform);
   --site-header-color-transition:
     color var(--transition-color);
   --site-header-toggle-transition:
     background-color var(--transition-color),
     color var(--transition-color); }
+
+.site-header.is-scroll-hidden {
+  transform: translateY(calc(-100% - 1px)); }
 
 .site-header__inner {
   display: grid;

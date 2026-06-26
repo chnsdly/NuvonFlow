@@ -13,6 +13,19 @@
   const closeLabel = menuToggle?.dataset.closeLabel || openLabel;
   const submenuCloseDelay = 180;
   const submenuCloseTimers = new WeakMap();
+  let lastScrollY = Math.max(window.scrollY, 0);
+  let scrollTicking = false;
+  let headerHeight = header.offsetHeight;
+  let isKeyboardNavigation = false;
+
+  const setHeaderHidden = (isHidden) => {
+    header.classList.toggle("is-scroll-hidden", isHidden);
+  };
+
+  const revealHeader = () => {
+    setHeaderHidden(false);
+    lastScrollY = Math.max(window.scrollY, 0);
+  };
 
   const clearSubmenuCloseTimer = (item) => {
     const timer = submenuCloseTimers.get(item);
@@ -31,6 +44,10 @@
     header.classList.toggle("is-mobile-open", isOpen);
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     menuToggle.setAttribute("aria-label", isOpen ? closeLabel : openLabel);
+
+    if (isOpen) {
+      revealHeader();
+    }
   };
 
   const setSubmenuOpen = (item, isOpen) => {
@@ -45,6 +62,10 @@
 
     if (toggle) {
       toggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    if (isOpen) {
+      revealHeader();
     }
   };
 
@@ -80,7 +101,62 @@
     });
   };
 
+  const hasOpenSubmenu = () => submenuToggles.some((toggle) => {
+    const item = toggle.closest(".site-header__item--has-children");
+
+    return item?.classList.contains("is-submenu-open") || false;
+  });
+
+  const hasOpenLanguageSwitcher = () => languageSwitchers.some((switcher) => switcher.open);
+
+  const hasHeaderKeyboardFocus = () => isKeyboardNavigation && header.contains(document.activeElement);
+
+  const isHeaderInteractionActive = () => (
+    header.classList.contains("is-mobile-open") ||
+    hasHeaderKeyboardFocus() ||
+    hasOpenSubmenu() ||
+    hasOpenLanguageSwitcher()
+  );
+
+  const updateHeaderVisibility = () => {
+    const currentScrollY = Math.max(window.scrollY, 0);
+    const isScrollingUp = currentScrollY < lastScrollY;
+    const isPastHeader = currentScrollY > headerHeight;
+
+    if (!isPastHeader || isScrollingUp || isHeaderInteractionActive()) {
+      setHeaderHidden(false);
+    } else if (currentScrollY > lastScrollY) {
+      setHeaderHidden(true);
+    }
+
+    lastScrollY = currentScrollY;
+    scrollTicking = false;
+  };
+
+  const requestHeaderVisibilityUpdate = () => {
+    if (scrollTicking) {
+      return;
+    }
+
+    scrollTicking = true;
+    window.requestAnimationFrame(updateHeaderVisibility);
+  };
+
+  const updateHeaderHeight = () => {
+    headerHeight = header.offsetHeight;
+    requestHeaderVisibilityUpdate();
+  };
+
   header.classList.add("is-enhanced");
+  header.addEventListener("focusin", revealHeader);
+
+  languageSwitchers.forEach((switcher) => {
+    switcher.addEventListener("toggle", () => {
+      if (switcher.open) {
+        revealHeader();
+      }
+    });
+  });
 
   if (menuToggle) {
     menuToggle.addEventListener("click", () => {
@@ -121,6 +197,10 @@
     });
   });
 
+  document.addEventListener("pointerdown", () => {
+    isKeyboardNavigation = false;
+  }, true);
+
   document.addEventListener("click", (event) => {
     const activeLanguageSwitcher = languageSwitchers.find((switcher) => switcher.contains(event.target));
 
@@ -135,6 +215,11 @@
   });
 
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      isKeyboardNavigation = true;
+      return;
+    }
+
     if (event.key !== "Escape") {
       return;
     }
@@ -145,10 +230,17 @@
   });
 
   const handleViewportChange = (event) => {
+    updateHeaderHeight();
+    revealHeader();
+
     if (event.matches) {
       setMenuOpen(false);
     }
   };
+
+  window.addEventListener("scroll", requestHeaderVisibilityUpdate, { passive: true });
+  document.addEventListener("scroll", requestHeaderVisibilityUpdate, { passive: true });
+  window.addEventListener("resize", updateHeaderHeight);
 
   if (desktopQuery.addEventListener) {
     desktopQuery.addEventListener("change", handleViewportChange);

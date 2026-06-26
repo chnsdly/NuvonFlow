@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Nuvon Flow Control</title>
-    <link>http://localhost:23180/about/</link>
+    <link>http://localhost:35779/about/</link>
     <description>Recent content in About on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="http://localhost:23180/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:35779/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Nuvon</title>
-      <link>http://localhost:23180/about/nuvon/</link>
+      <link>http://localhost:35779/about/nuvon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/about/nuvon/</guid>
+      <guid>http://localhost:35779/about/nuvon/</guid>
       <description>&lt;h2 id=&#34;application-oriented-support&#34;&gt;Application-oriented support&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon is organized around the practical needs of corrosion-resistant flow control projects. The starting point is usually not a catalog number; it is the application, operating conditions, material question, connection standard, and document scope.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-nuvon-helps-organize&#34;&gt;What Nuvon helps organize&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon helps buyers, distributors, and engineering teams prepare clearer requests for valves, actuators, fittings, pressure control items, and chemfeed accessories. Typical applications include industrial water treatment, wastewater handling, chemical dosing, corrosive chemical transfer, and chemical processing utility lines.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Quality &amp; Supply Coordination</title>
-      <link>http://localhost:23180/about/quality-supply-coordination/</link>
+      <link>http://localhost:35779/about/quality-supply-coordination/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:23180/about/quality-supply-coordination/</guid>
+      <guid>http://localhost:35779/about/quality-supply-coordination/</guid>
       <description>&lt;h2 id=&#34;quality-coordination&#34;&gt;Quality coordination&lt;/h2&gt;&#xA;&lt;p&gt;Quality coordination begins by making the requested scope visible: product family, material, pressure rating, connection, quantity, inspection expectations, documents, packaging, and any customer-specific requirements. This reduces the risk of quoting one scope and delivering another.&lt;/p&gt;&#xA;&lt;h2 id=&#34;supply-coordination&#34;&gt;Supply coordination&lt;/h2&gt;&#xA;&lt;p&gt;For project orders, Nuvon can organize line items by service, material, document requirement, and shipment group. This helps align supplier confirmation, packing details, shipping documents, spare parts, and customer review.&lt;/p&gt;&#xA;&lt;h2 id=&#34;practical-controls&#34;&gt;Practical controls&lt;/h2&gt;&#xA;&lt;p&gt;Useful controls include RFQ checklists, clear assumptions in quotations, revision-aware datasheets, drawing confirmation, inspection notes, packing requirements, label requirements, and document registers.&lt;/p&gt;</description>
     </item>
   </channel>

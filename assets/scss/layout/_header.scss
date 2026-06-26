@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: 0 space(3);
+  padding: 0 space(2);
   gap: space(2);
   min-height: var(--header-height);
 }
@@ -701,7 +701,7 @@ button.site-header__link::-moz-focus-inner {
 @include mq-up(desktop) {
   .site-header__inner {
     grid-template-columns: minmax(12rem, 1fr) auto minmax(12rem, 1fr);
-    padding-inline: space(3);
+    padding-inline: space(2);
   }
 
   .site-header__menu {

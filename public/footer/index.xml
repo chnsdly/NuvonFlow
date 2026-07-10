@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Footer Information on Nuvon Flow Control</title>
-    <link>http://localhost:35779/footer/</link>
+    <link>http://localhost:1313/footer/</link>
     <description>Recent content in Footer Information on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="http://localhost:35779/footer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/footer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:35779/footer/privacy-policy/</link>
+      <link>http://localhost:1313/footer/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/footer/privacy-policy/</guid>
+      <guid>http://localhost:1313/footer/privacy-policy/</guid>
       <description>&lt;h2 id=&#34;scope&#34;&gt;Scope&lt;/h2&gt;&#xA;&lt;p&gt;This privacy policy explains how Nuvon Flow Control handles information submitted through this website, including contact forms, RFQ requests, document requests, email communication, and normal website usage data.&lt;/p&gt;&#xA;&lt;p&gt;This notice is a practical privacy baseline for website inquiries. It may need to be reviewed and adapted for the final legal company name, operating jurisdiction, CRM setup, analytics tools, and form processing workflow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-collected&#34;&gt;Information collected&lt;/h2&gt;&#xA;&lt;p&gt;Nuvon may collect the following information when it is submitted or generated through normal website use:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terms &amp; Conditions</title>
-      <link>http://localhost:35779/footer/terms-conditions/</link>
+      <link>http://localhost:1313/footer/terms-conditions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/footer/terms-conditions/</guid>
+      <guid>http://localhost:1313/footer/terms-conditions/</guid>
       <description>&lt;h2 id=&#34;website-use&#34;&gt;Website use&lt;/h2&gt;&#xA;&lt;p&gt;The information on this website is provided for general product, application, documentation, and project communication. It is intended to help users prepare RFQs, organize duty conditions, and understand possible product families for corrosion-resistant flow control projects.&lt;/p&gt;&#xA;&lt;p&gt;Website content should not be treated as final engineering approval, a binding technical specification, a guaranteed material recommendation, or a complete statement of legal, regulatory, or project compliance.&lt;/p&gt;&#xA;&lt;h2 id=&#34;product-and-application-information&#34;&gt;Product and application information&lt;/h2&gt;&#xA;&lt;p&gt;Product descriptions, materials, configurations, diagrams, examples, and application notes are provided for preliminary selection and RFQ preparation. Final scope must be confirmed through quotation, purchase order, approved drawings, datasheets, project specifications, and any applicable customer review process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cookie Policy</title>
-      <link>http://localhost:35779/footer/cookie-policy/</link>
+      <link>http://localhost:1313/footer/cookie-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/footer/cookie-policy/</guid>
+      <guid>http://localhost:1313/footer/cookie-policy/</guid>
       <description>&lt;h2 id=&#34;cookies-and-similar-technologies&#34;&gt;Cookies and similar technologies&lt;/h2&gt;&#xA;&lt;p&gt;This website may use cookies, local storage, pixels, server logs, or similar technologies to operate the site, protect forms, understand usage, remember preferences, and improve performance.&lt;/p&gt;&#xA;&lt;p&gt;Cookies are small files stored by the browser. Some are necessary for the website to work normally, while others may support analytics, security, or user experience improvements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;types-of-cookies-that-may-be-used&#34;&gt;Types of cookies that may be used&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Type&lt;/th&gt;&#xA;          &lt;th&gt;Purpose&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Essential cookies&lt;/td&gt;&#xA;          &lt;td&gt;Support basic website operation, page delivery, form behavior, and security checks.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Security cookies&lt;/td&gt;&#xA;          &lt;td&gt;Help protect forms and traffic from spam, abuse, automated submissions, or suspicious activity.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Analytics cookies&lt;/td&gt;&#xA;          &lt;td&gt;Help understand page visits, traffic sources, device types, and content performance.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Preference cookies&lt;/td&gt;&#xA;          &lt;td&gt;Remember user choices such as language, region, or display preferences when enabled.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;If Cloudflare Turnstile, analytics tools, CDN security features, or form services are enabled, those tools may set cookies or process technical information according to their own service behavior.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Disclaimer</title>
-      <link>http://localhost:35779/footer/disclaimer/</link>
+      <link>http://localhost:1313/footer/disclaimer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/footer/disclaimer/</guid>
+      <guid>http://localhost:1313/footer/disclaimer/</guid>
       <description>&lt;h2 id=&#34;technical-information&#34;&gt;Technical information&lt;/h2&gt;&#xA;&lt;p&gt;Website content is intended for preliminary product, application, and project communication. It may help users prepare RFQs and organize duty conditions, but it is not a substitute for project-specific engineering review.&lt;/p&gt;&#xA;&lt;p&gt;Chemical compatibility, pressure-temperature limits, installation method, actuator sizing, connection standard, inspection requirements, and compliance obligations must be confirmed against actual project conditions, applicable standards, customer specifications, and approved documents.&lt;/p&gt;&#xA;&lt;h2 id=&#34;material-compatibility&#34;&gt;Material compatibility&lt;/h2&gt;&#xA;&lt;p&gt;Material guidance on this website is general and may not account for all concentration, temperature, impurity, abrasion, solvent, oxidizing, cleaning, intermittent exposure, outdoor, or mixed-service conditions. Final material selection should be confirmed by qualified project stakeholders.&lt;/p&gt;</description>
     </item>
   </channel>

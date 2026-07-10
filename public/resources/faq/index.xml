@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FAQ on Nuvon Flow Control</title>
-    <link>http://localhost:35779/resources/faq/</link>
+    <link>http://localhost:1313/resources/faq/</link>
     <description>Recent content in FAQ on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:35779/resources/faq/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/resources/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What information is needed for a valve RFQ?</title>
-      <link>http://localhost:35779/resources/faq/what-information-is-needed-for-a-valve-rfq/</link>
+      <link>http://localhost:1313/resources/faq/what-information-is-needed-for-a-valve-rfq/</link>
       <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/resources/faq/what-information-is-needed-for-a-valve-rfq/</guid>
+      <guid>http://localhost:1313/resources/faq/what-information-is-needed-for-a-valve-rfq/</guid>
       <description>&lt;p&gt;At minimum, provide the media, concentration, temperature, pressure, size, connection, valve function, operation mode, quantity, destination, and document requirements. For chemical service, also include cleaning chemicals, solids, oxidizing behavior, and whether the service is continuous, intermittent, or batch-based.&lt;/p&gt;&#xA;&lt;h2 id=&#34;recommended-rfq-fields&#34;&gt;Recommended RFQ fields&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Product family or valve function&lt;/li&gt;&#xA;&lt;li&gt;Media name, concentration, and pH range if relevant&lt;/li&gt;&#xA;&lt;li&gt;Operating and design temperature&lt;/li&gt;&#xA;&lt;li&gt;Operating and design pressure&lt;/li&gt;&#xA;&lt;li&gt;Pipe size, tubing size, or equipment port&lt;/li&gt;&#xA;&lt;li&gt;Connection standard and installation orientation&lt;/li&gt;&#xA;&lt;li&gt;Manual, pneumatic, electric, or control accessory needs&lt;/li&gt;&#xA;&lt;li&gt;Quantity, spare parts, destination, and project stage&lt;/li&gt;&#xA;&lt;li&gt;Required documents, drawings, declarations, or inspection records&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-if-some-information-is-unknown&#34;&gt;What if some information is unknown?&lt;/h2&gt;&#xA;&lt;p&gt;Send the known information and mark the unknowns. A useful first response can list assumptions, product directions, and clarification questions. This is better than forcing a complete but inaccurate RFQ.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Can Nuvon help with material compatibility?</title>
-      <link>http://localhost:35779/resources/faq/can-nuvon-help-with-material-compatibility/</link>
+      <link>http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/</link>
       <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
+      <guid>http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
       <description>&lt;p&gt;Nuvon can help organize the compatibility review by listing the media, concentration, temperature, wetted materials, elastomer options, and missing information. Final approval should be confirmed against the actual project duty and customer standards.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-the-review-can-cover&#34;&gt;What the review can cover&lt;/h2&gt;&#xA;&lt;p&gt;The review can include valve body, lining, seat, seal, diaphragm, gasket, fitting, tubing, fastener, and accessory exposure. For automated valves, the surrounding environment may also affect actuator housing, coating, fastener, and accessory selection.&lt;/p&gt;</description>
     </item>
   </channel>

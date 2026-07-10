@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>常见问题 on Nuvon Flow Control 中文站</title>
-    <link>http://localhost:35779/zh/resources/faq/</link>
+    <link>http://localhost:1313/zh/resources/faq/</link>
     <description>Recent content in 常见问题 on Nuvon Flow Control 中文站</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 04 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:35779/zh/resources/faq/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh/resources/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>阀门询价需要哪些信息？</title>
-      <link>http://localhost:35779/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/</link>
+      <link>http://localhost:1313/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/</link>
       <pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/</guid>
+      <guid>http://localhost:1313/zh/resources/faq/what-information-is-needed-for-a-valve-rfq/</guid>
       <description>&lt;p&gt;至少建议提供介质、浓度、温度、压力、口径、连接、阀门功能、操作方式、数量、目的地和文件需求。对于化学品工况，还应提供清洗化学品、固体含量、氧化性，以及连续、间歇或批次运行情况。&lt;/p&gt;&#xA;&lt;h2 id=&#34;推荐-rfq-字段&#34;&gt;推荐 RFQ 字段&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;产品系列或阀门功能&lt;/li&gt;&#xA;&lt;li&gt;介质名称、浓度和相关 pH 范围&lt;/li&gt;&#xA;&lt;li&gt;运行和设计温度&lt;/li&gt;&#xA;&lt;li&gt;运行和设计压力&lt;/li&gt;&#xA;&lt;li&gt;管径、软管尺寸或设备接口&lt;/li&gt;&#xA;&lt;li&gt;连接标准和安装方向&lt;/li&gt;&#xA;&lt;li&gt;手动、气动、电动或控制附件需求&lt;/li&gt;&#xA;&lt;li&gt;数量、备件、目的地和项目阶段&lt;/li&gt;&#xA;&lt;li&gt;所需文件、图纸、声明或检验记录&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;如果部分信息未知怎么办&#34;&gt;如果部分信息未知怎么办？&lt;/h2&gt;&#xA;&lt;p&gt;可以发送已知信息，并把未知项标出来。有价值的首次回复可以列出假设、产品方向和澄清问题。这比强行提交一份完整但不准确的 RFQ 更好。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么文件要尽早纳入&#34;&gt;为什么文件要尽早纳入？&lt;/h2&gt;&#xA;&lt;p&gt;数据表、图纸、安装维护手册、声明、检验记录和包装文件可能影响供应路径、交期和报价范围。如果文件会影响项目批准，应在 RFQ 阶段就列入，而不是等价格比较之后再补。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nuvon 可以协助材料兼容性评审吗？</title>
-      <link>http://localhost:35779/zh/resources/faq/can-nuvon-help-with-material-compatibility/</link>
+      <link>http://localhost:1313/zh/resources/faq/can-nuvon-help-with-material-compatibility/</link>
       <pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:35779/zh/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
+      <guid>http://localhost:1313/zh/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
       <description>&lt;p&gt;Nuvon 可以协助整理兼容性评审，包括介质、浓度、温度、接液材料、弹性体选项和缺失信息。最终批准仍应结合实际项目工况和客户标准确认。&lt;/p&gt;&#xA;&lt;h2 id=&#34;评审可以覆盖什么&#34;&gt;评审可以覆盖什么？&lt;/h2&gt;&#xA;&lt;p&gt;评审可包括阀体、衬里、阀座、密封、隔膜、垫片、管件、软管、紧固件和附件暴露条件。对于自动阀，周围环境也可能影响执行器外壳、涂层、紧固件和附件选择。&lt;/p&gt;&#xA;&lt;h2 id=&#34;哪些信息最有用&#34;&gt;哪些信息最有用？&lt;/h2&gt;&#xA;&lt;p&gt;建议准备化学品名称、浓度、温度、压力、暴露时间、固体、清洗化学品、流动方式、管道材料、安装环境，以及客户批准材料清单。&lt;/p&gt;&#xA;&lt;h2 id=&#34;输出通常是什么&#34;&gt;输出通常是什么？&lt;/h2&gt;&#xA;&lt;p&gt;输出通常是材料方向、缺失信息清单和澄清问题。如果工况仍不确定，报价应明确假设，方便采购方在下单前确认或修正。&lt;/p&gt;</description>
     </item>
   </channel>

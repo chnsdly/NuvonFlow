@@ -7,8 +7,8 @@ type: "contact"
 draft: false
 layout: "contact"
 form:
-  title: "Send application details"
-  description: "Share the duty conditions you know. A useful first message can be short, as long as it includes the media, intended service, and product family if known."
+  title: "Send a message"
+  description: "Use this short form for general questions, document requests, cooperation, or early project communication."
 direct:
   title: "Direct contact"
   description: "Use the contact details below for purchasing, project coordination, document requests, replacement needs, or distributor inquiries."

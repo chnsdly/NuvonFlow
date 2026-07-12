@@ -1,32 +1,24 @@
 ---
 title: "What information is needed for a valve RFQ?"
-description: "The minimum information Nuvon recommends preparing before requesting corrosion-resistant valves, actuators, fittings, chemfeed accessories, or related flow control products."
-date: 2026-06-03
-weight: 10
+description: "The minimum information to identify a product direction and the additional inputs needed for a reviewable corrosion-resistant valve quotation."
+weight: 1
 translationKey: "faq-valve-rfq-information"
 type: "resources"
 draft: false
-featured: true
 ---
 
-At minimum, provide the media, concentration, temperature, pressure, size, connection, valve function, operation mode, quantity, destination, and document requirements. For chemical service, also include cleaning chemicals, solids, oxidizing behavior, and whether the service is continuous, intermittent, or batch-based.
+## Short answer
 
-## Recommended RFQ fields
+Start with the media and concentration, normal and design temperature and pressure, valve function, pipe size and connection, quantity, operation mode, destination, and required documents.
 
-- Product family or valve function
-- Media name, concentration, and pH range if relevant
-- Operating and design temperature
-- Operating and design pressure
-- Pipe size, tubing size, or equipment port
-- Connection standard and installation orientation
-- Manual, pneumatic, electric, or control accessory needs
-- Quantity, spare parts, destination, and project stage
-- Required documents, drawings, declarations, or inspection records
+For corrosive service, also identify cleaning fluids, solids, oxidizing or solvent behavior, pipe material, installation environment, and any applicable customer standard.
 
 ## What if some information is unknown?
 
-Send the known information and mark the unknowns. A useful first response can list assumptions, product directions, and clarification questions. This is better than forcing a complete but inaccurate RFQ.
+Send the known information and label unknowns instead of guessing. A useful first response can identify missing data, visible assumptions, and a likely product-family direction.
 
-## Why documents should be included early
+Attachments such as a BOM, line list, P&ID excerpt, photo, sketch, or document register can provide context that a product name alone cannot.
 
-Datasheets, drawings, IOM manuals, declarations, inspection records, and packing documents can affect supplier route, lead time, and quotation scope. If the documents matter to approval, include them in the RFQ rather than after price comparison.
+## Where is the complete checklist?
+
+Use the [RFQ input checklist](/resources/rfq-submittal-inputs/) for the full field structure and the [request a quote form](/request-a-quote/) when the request is ready to send.

@@ -109,106 +109,50 @@ weight = 20
   weight = 25
 
 [[main]]
-identifier = "project-support"
-name = "询价支持"
-pageRef = "/project-support"
-weight = 30
-
-  [[main]]
-  identifier = "project-support-overview"
-  name = "询价支持总览"
-  pageRef = "/project-support"
-  parent = "project-support"
-  weight = 30
-
-  [[main]]
-  identifier = "submit-duty-conditions"
-  name = "提交工况参数"
-  pageRef = "/project-support/submit-duty-conditions"
-  parent = "project-support"
-  weight = 31
-
-  [[main]]
-  identifier = "material-compatibility-review"
-  name = "材料兼容性评审"
-  pageRef = "/project-support/material-compatibility-review"
-  parent = "project-support"
-  weight = 32
-
-  [[main]]
-  identifier = "submittal-documentation"
-  name = "技术文件与送审资料"
-  pageRef = "/project-support/submittal-documentation"
-  parent = "project-support"
-  weight = 33
-
-  [[main]]
-  identifier = "rfq-bom-support"
-  name = "询价与物料清单支持"
-  pageRef = "/project-support/rfq-bom-support"
-  parent = "project-support"
-  weight = 34
-
-[[main]]
 identifier = "resources"
 name = "资源中心"
 pageRef = "/resources"
-weight = 40
+weight = 30
 
   [[main]]
   identifier = "resources-overview"
   name = "全部资源"
   pageRef = "/resources"
   parent = "resources"
-  weight = 40
+  weight = 30
+
+  [[main]]
+  identifier = "project-support"
+  name = "询价与项目支持"
+  pageRef = "/project-support"
+  parent = "resources"
+  weight = 31
 
   [[main]]
   identifier = "technical-guides"
   name = "技术指南"
   pageRef = "/resources/technical-guides"
   parent = "resources"
-  weight = 41
-
-  [[main]]
-  identifier = "rfq-submittal-inputs"
-  name = "RFQ 与送审输入"
-  pageRef = "/resources/rfq-submittal-inputs"
-  parent = "resources"
-  weight = 42
-
-  [[main]]
-  identifier = "document-request"
-  name = "文件申请"
-  pageRef = "/resources/document-request"
-  parent = "resources"
-  weight = 43
-
-  [[main]]
-  identifier = "case-studies"
-  name = "案例"
-  pageRef = "/resources/case-studies"
-  parent = "resources"
-  weight = 44
+  weight = 32
 
   [[main]]
   identifier = "faq"
   name = "常见问题"
   pageRef = "/resources/faq"
   parent = "resources"
-  weight = 45
-
-  [[main]]
-  identifier = "insights"
-  name = "洞察"
-  pageRef = "/resources/insights"
-  parent = "resources"
-  weight = 46
+  weight = 33
 
 [[main]]
 identifier = "about"
 name = "关于我们"
 pageRef = "/about"
-weight = 50
+weight = 40
+
+[[main]]
+identifier = "contact"
+name = "联系我们"
+pageRef = "/contact"
+weight = 45
 
 [[header_cta]]
 identifier = "request-a-quote"

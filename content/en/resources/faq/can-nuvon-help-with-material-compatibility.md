@@ -1,24 +1,20 @@
 ---
 title: "Can Nuvon help with material compatibility?"
-description: "How Nuvon organizes material compatibility questions for corrosive flow control projects before final customer or engineering confirmation."
-date: 2026-06-04
-weight: 20
+description: "How Nuvon can organize an initial material compatibility review and which decisions still require project-specific confirmation."
+weight: 2
 translationKey: "faq-material-compatibility-help"
 type: "resources"
 draft: false
-featured: true
 ---
 
-Nuvon can help organize the compatibility review by listing the media, concentration, temperature, wetted materials, elastomer options, and missing information. Final approval should be confirmed against the actual project duty and customer standards.
+## Short answer
 
-## What the review can cover
+Yes. Nuvon can organize the media, concentration, temperature, pressure, exposure, cleaning, installation, and wetted-part questions that affect a preliminary material direction.
 
-The review can include valve body, lining, seat, seal, diaphragm, gasket, fitting, tubing, fastener, and accessory exposure. For automated valves, the surrounding environment may also affect actuator housing, coating, fastener, and accessory selection.
+The review may cover bodies, liners, seats, seals, diaphragms, gaskets, fittings, tubing, fasteners, and exposed accessories. It can identify missing inputs and uncertainties that should remain visible in a quotation.
 
-## What information is most useful?
+## What is not included?
 
-Prepare the chemical name, concentration, temperature, pressure, exposure time, solids, cleaning chemicals, flow pattern, pipe material, installation environment, and any customer-approved material list.
+A preliminary review is not a universal compatibility guarantee or final engineering approval. Actual suitability may depend on impurities, mixed exposure, stress, permeation, crystallization, abrasion, cleaning practice, pressure-temperature limits, and manufacturer-specific construction.
 
-## What is the output?
-
-The output is usually a material direction, missing-information list, and clarification questions. If the condition is uncertain, the quotation should state assumptions clearly so the buyer can confirm or correct them before order placement.
+Read the [material selection guide](/resources/technical-guides/material-selection-for-corrosive-service/) for the evaluation logic, or use [Material Compatibility Review](/project-support/material-compatibility-review/) to prepare a project-specific request.

@@ -1,0 +1,30 @@
+{{ $formId := .id }}
+{{ $includeCountry := .includeCountry | default false }}
+
+<div class="inquiry-form__grid">
+  <div class="inquiry-form__field">
+    <label class="inquiry-form__label" for="{{ $formId }}-name">
+      {{ i18n "form_name" }} <span class="inquiry-form__required">{{ i18n "form_required" }}</span>
+    </label>
+    <input class="inquiry-form__control" id="{{ $formId }}-name" name="name" type="text" autocomplete="name" required>
+  </div>
+
+  <div class="inquiry-form__field">
+    <label class="inquiry-form__label" for="{{ $formId }}-email">
+      {{ i18n "form_email" }} <span class="inquiry-form__required">{{ i18n "form_required" }}</span>
+    </label>
+    <input class="inquiry-form__control" id="{{ $formId }}-email" name="email" type="email" autocomplete="email" required>
+  </div>
+
+  <div class="inquiry-form__field{{ if not $includeCountry }} inquiry-form__field--full{{ end }}">
+    <label class="inquiry-form__label" for="{{ $formId }}-company">{{ i18n "form_company" }}</label>
+    <input class="inquiry-form__control" id="{{ $formId }}-company" name="company" type="text" autocomplete="organization">
+  </div>
+
+  {{ if $includeCountry }}
+  <div class="inquiry-form__field">
+    <label class="inquiry-form__label" for="{{ $formId }}-country">{{ i18n "form_country" }}</label>
+    <input class="inquiry-form__control" id="{{ $formId }}-country" name="country" type="text" autocomplete="country-name">
+  </div>
+  {{ end }}
+</div>

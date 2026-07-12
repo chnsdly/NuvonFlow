@@ -36,3 +36,7 @@ Clear RFQs reduce assumptions. When assumptions are unavoidable, they should be 
 ## How to send a BOM
 
 Send the available list even if it is incomplete. Useful attachments include spreadsheets, screenshots, line lists, tag schedules, P&ID excerpts, existing product photos, installation notes, and document registers. Nuvon can return a cleaner structure with clarification questions and suggested line-item grouping.
+
+## Next step
+
+Use the [RFQ input checklist](/resources/rfq-submittal-inputs/) to normalize the available fields, then send the BOM and supporting files through the [request a quote form](/request-a-quote/).

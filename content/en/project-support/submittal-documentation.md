@@ -1,38 +1,46 @@
 ---
-title: "Submittal & Documentation"
-description: "Request datasheets, drawings, IOM manuals, declarations, inspection records, pressure-temperature notes, packing documents, and other reviewable submittal documents by product series."
+title: "Submittal & Documentation Support"
+description: "Define and coordinate datasheets, drawings, IOM manuals, declarations, inspection records, packing documents, revisions, and approval timing by product scope."
 weight: 33
 translationKey: "project-support-submittal-documentation"
 type: "project-support"
 draft: false
 quick_points:
-  - title: "Common documents"
-    text: "Datasheets, drawings, IOM manuals, declarations, inspection records, packing lists, marking notes, and spare parts lists."
-  - title: "Control point"
-    text: "Document scope should be agreed before production or shipment, not discovered after delivery."
+  - title: "Define the package"
+    text: "Identify required documents by product, line item, tag, language, revision rule, and project milestone."
+  - title: "Confirm availability"
+    text: "Treat document availability as product- and scope-specific rather than assuming every file exists for every configuration."
 ---
 
-## Why documentation belongs in the scope
+## Why documents belong in the RFQ scope
 
-For many international projects, the document package is part of the product. A valve can be physically correct but still delay approval if datasheets, drawings, material declarations, test records, or packing documents are missing or inconsistent.
+For many international projects, the document package is part of the supply scope. A physically suitable product can still delay approval when datasheets, drawings, declarations, inspection records, or packing documents are missing, late, or inconsistent.
 
-Nuvon treats documentation as a scope item that should be discussed during RFQ preparation, not as an afterthought once goods are ready to ship.
+State document requirements before quotation so availability, timing, language, revision control, and any commercial effect can be reviewed with the product scope.
 
-## Common submittal items
+## Common document types
 
-| Document type | Typical use |
+| Document | Typical purpose |
 | --- | --- |
-| Technical datasheet | Confirms product family, size, material, connection, pressure class, and accessory scope. |
-| General arrangement or dimensional drawing | Supports layout, pipe connection, installation clearance, and drawing review. |
-| IOM manual | Helps project teams check installation, operation, maintenance, and storage expectations. |
-| Material or compliance declaration | Supports customer review where material traceability or compliance statements are required. |
-| Inspection or test record | May be requested for pressure tests, functional checks, or project quality review. |
-| Packing and marking documents | Helps coordinate shipment, labeling, spare parts, and receiving inspection. |
+| Technical datasheet | Records the proposed product family, size, materials, connection, pressure class, and accessories |
+| General arrangement or dimensional drawing | Supports layout, connection, clearance, and approval review |
+| IOM manual | Supports storage, installation, operation, and maintenance planning |
+| Material or compliance declaration | Addresses a stated customer or project review requirement |
+| Inspection or test record | Records an agreed pressure, functional, visual, or quality check |
+| Packing and marking information | Aligns shipment grouping, labels, spare parts, and receiving checks |
 
-## Document control notes
+CAD, BIM, certificates, inspection records, and controlled drawings are not universal deliverables. Availability must be confirmed for the exact product series, configuration, order stage, and requested document status.
 
-If a project uses a document register, tag list, revision table, file naming rule, language requirement, or approval status workflow, include those requirements at the RFQ stage. Document revisions should be traceable so that quotation scope, production confirmation, and shipment documents do not drift apart.
+## Information to provide
 
-## How to request documents
+Identify the product family or quotation line, tag number where applicable, requested document, purpose, language, file format, naming convention, revision table, approval status workflow, and required date.
 
-List the required documents by product family or line item. For project packages, include tag numbers, drawing references, inspection expectations, destination requirements, and whether documents are needed before order, before production, before shipment, or after delivery.
+If the customer uses a document register, provide the register rather than rewriting it into an email. Also state whether each document is needed before order, before production, before shipment, or after delivery.
+
+## How coordination works
+
+Nuvon can group the request by product family, line item, tag, or shipment package; identify missing references; and separate documents that may be available from items that still require manufacturer confirmation.
+
+Final controlled documents should match the confirmed quotation or purchase-order scope. If the product configuration is still changing, preliminary files should be labelled and managed as preliminary.
+
+Include document requirements in the [RFQ input checklist](/resources/rfq-submittal-inputs/) or send the current register through the [request a quote form](/request-a-quote/).

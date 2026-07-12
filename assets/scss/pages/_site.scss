@@ -908,6 +908,10 @@
   color: var(--on-surface);
 }
 
+.resource-directory {
+  display: grid;
+  gap: space(2);
+}
 .resources-page__article {
   display: grid;
   gap: space(2);
@@ -998,7 +1002,6 @@
 .selection-lens,
 .review-strip,
 .application-context,
-.submission-guide,
 .related-strip {
   display: grid;
   gap: space(2);
@@ -1009,7 +1012,6 @@
 .selection-lens__intro,
 .review-strip__intro,
 .application-context__body,
-.submission-guide > div,
 .related-strip > div {
   display: grid;
   gap: space(1);
@@ -1024,7 +1026,6 @@
 
 .selection-lens__list,
 .signal-list,
-.submission-guide__list,
 .related-strip__list {
   display: flex;
   flex-wrap: wrap;
@@ -1032,8 +1033,7 @@
 }
 
 .selection-lens__list li,
-.signal-list li,
-.submission-guide__list li {
+.signal-list li {
   display: inline-flex;
   align-items: center;
   min-height: 2.25rem;
@@ -1043,6 +1043,37 @@
   background-color: color-mix(in oklab, var(--brand-light) 18%, var(--surface) 82%);
   color: color-mix(in oklab, var(--on-surface) 82%, var(--brand) 18%);
   font-size: 0.925rem;
+}
+
+.inquiry-followup {
+  display: grid;
+  gap: space(1.5);
+  padding-top: space(2.5);
+  border-top: var(--border);
+}
+
+.inquiry-followup__items {
+  display: grid;
+  gap: space(2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inquiry-followup__item {
+  display: grid;
+  align-content: start;
+  gap: space(0.75);
+}
+
+.inquiry-followup__item h3 {
+  color: var(--on-surface);
+}
+
+.inquiry-followup__item p {
+  max-width: 62ch;
+  color: var(--muted-text);
+  line-height: 1.65;
 }
 
 .review-strip__list {
@@ -1158,6 +1189,15 @@
 
   .review-strip__list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .inquiry-followup__items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .inquiry-followup__item + .inquiry-followup__item {
+    padding-left: space(2);
+    border-left: var(--border);
   }
 
   .application-context {

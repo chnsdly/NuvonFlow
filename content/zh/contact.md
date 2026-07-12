@@ -7,8 +7,8 @@ type: "contact"
 draft: false
 layout: "contact"
 form:
-  title: "发送应用信息"
-  description: "请提交已知工况。首次信息可以很简短，但建议至少包含介质、预期用途，以及已知的产品系列。"
+  title: "发送留言"
+  description: "一般咨询、文件申请、合作沟通或早期项目交流，可以使用这个简短表单。"
 direct:
   title: "直接联系"
   description: "采购、项目协调、文件申请、替换需求或经销合作，可使用以下联系方式。"

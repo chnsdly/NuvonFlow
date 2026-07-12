@@ -30,7 +30,7 @@
           </ul>
           {{ end }}
 
-          <a class="button button--primary product-single__quote" href='{{ "/request-a-quote/" | relLangURL }}'>
+          <a class="button button--primary product-single__quote" href="{{ partial "inquiry-link.html" (dict "page" .) }}">
             {{ i18n "request_quote" | default "Request a Quote" }}
           </a>
         </div>

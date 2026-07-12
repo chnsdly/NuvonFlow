@@ -4,7 +4,7 @@
 {{ $primaryItems := .Site.Menus.main }}
 {{ $activeLanguageFullLabel := .Site.Language.LanguageName | default .Site.Language.Params.label | default .Site.Language.Lang }}
 {{ $activeLanguageShortLabel := cond (eq .Site.Language.Lang "zh") "中文" (upper .Site.Language.Lang) }}
-{{ $megaReviewHref := "/project-support/submit-duty-conditions/" | relLangURL }}
+{{ $megaReviewHref := "/resources/rfq-submittal-inputs/" | relLangURL }}
 {{ $applicationSummaries := dict
   "industrial-water-treatment" (i18n "header_applications_desc_industrial_water_treatment")
   "industrial-wastewater" (i18n "header_applications_desc_industrial_wastewater")

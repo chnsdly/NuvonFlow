@@ -20,6 +20,46 @@
       </div>
       {{ end }}
 
+      {{ with .Params.pathways }}
+      <section class="resource-directory" aria-labelledby="resource-pathways-title">
+        <header class="section__header">
+          <h2 id="resource-pathways-title" class="font-title-s">{{ $.Params.pathways_heading }}</h2>
+          {{ with $.Params.pathways_intro }}<p class="section__description font-body">{{ . }}</p>{{ end }}
+        </header>
+        <ul class="products-list__grid">
+          {{ range . }}
+          <li class="products-list__item">
+            <a class="products-list__card" href="{{ .url | relLangURL }}">
+              <div class="products-list__content">
+                <h3 class="products-list__title font-title-xs">{{ .title }}</h3>
+                <p class="products-list__text font-body">{{ .text }}</p>
+              </div>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      {{ with $.Params.featured_resources }}
+      <section class="resource-directory" aria-labelledby="featured-resources-title">
+        <header class="section__header">
+          <h2 id="featured-resources-title" class="font-title-s">{{ $.Params.featured_heading }}</h2>
+        </header>
+        <ul class="products-list__grid">
+          {{ range . }}
+          <li class="products-list__item">
+            <a class="products-list__card" href="{{ .url | relLangURL }}">
+              <div class="products-list__content">
+                <h3 class="products-list__title font-title-xs">{{ .title }}</h3>
+                <p class="products-list__text font-body">{{ .text }}</p>
+              </div>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+      {{ else }}
       <ul class="products-list__grid">
         {{ range $items }}
         <li class="products-list__item">
@@ -34,6 +74,7 @@
         </li>
         {{ end }}
       </ul>
+      {{ end }}
     </div>
   </div>
 </main>

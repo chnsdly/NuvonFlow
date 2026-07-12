@@ -35,3 +35,7 @@ Nuvon 可以整理材料方向、产品系列候选、缺失信息和需要客�
 ## 建议准备的信息
 
 请提供介质名称、浓度、杂质、温度、压力、流动方式、固体、清洗化学品、暴露时长、管道材料、安装环境，以及项目标准或客户已批准材料清单。
+
+## 相关指南
+
+可先阅读[腐蚀性工况材料选择](/zh/resources/technical-guides/material-selection-for-corrosive-service/)了解评审逻辑；需要准备具体项目评审时，再对照 [RFQ 输入清单](/zh/resources/rfq-submittal-inputs/)整理信息。

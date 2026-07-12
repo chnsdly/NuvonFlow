@@ -35,3 +35,7 @@ Nuvon can organize a material direction, a shortlist of product families, missin
 ## Information to prepare
 
 Provide media name, concentration, impurities, temperature, pressure, flow pattern, solids, cleaning chemicals, exposure duration, pipe material, installation environment, and any project standard or customer-approved material list.
+
+## Related guidance
+
+Use the [material selection guide](/resources/technical-guides/material-selection-for-corrosive-service/) to understand the evaluation logic. Use the [RFQ input checklist](/resources/rfq-submittal-inputs/) when preparing a project-specific review request.

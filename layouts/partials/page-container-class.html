@@ -1,7 +1,7 @@
 {{- $containerClass := "container" -}}
 {{- $isContact := eq .Type "contact" -}}
 {{- $isResourceArticle := and .IsPage (eq .Type "resources") -}}
-{{- $isNarrowResourceList := and .IsSection (or (in .RelPermalink "/resources/insights/") (in .RelPermalink "/resources/faq/")) -}}
+{{- $isNarrowResourceList := and .IsSection (in .RelPermalink "/resources/faq/") -}}
 {{- $containerParam := .Params.container | default "" -}}
 
 {{- if $containerParam -}}

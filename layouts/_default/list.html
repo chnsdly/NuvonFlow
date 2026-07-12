@@ -108,8 +108,8 @@
       {{ $secondaryHref := "/contact/" }}
       {{ $secondaryLabel := cond $isZh "联系项目支持" "Contact Support" }}
       {{ if eq .Type "applications" }}
-        {{ $primaryHref = "/project-support/submit-duty-conditions/" }}
-        {{ $primaryLabel = cond $isZh "提交工况参数" "Submit Duty Conditions" }}
+        {{ $primaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $primaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
         {{ $secondaryHref = "/products/" }}
         {{ $secondaryLabel = cond $isZh "查看产品系列" "View Product Families" }}
       {{ else if eq .Type "resources" }}

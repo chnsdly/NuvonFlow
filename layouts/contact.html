@@ -24,7 +24,7 @@
         </div>
 
         <div class="contact__form-body">
-          {{ partial "form.html" (dict "page" $ "sitekey" $.Site.Params.turnstile_sitekey "id" "contact") }}
+          {{ partial "forms/contact.html" (dict "page" $ "sitekey" $.Site.Params.turnstile_sitekey "id" "contact") }}
         </div>
         {{ end }}
       </section>

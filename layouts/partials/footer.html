@@ -42,6 +42,7 @@
       <section class="site-footer__contact" aria-labelledby="site-footer-contact-title">
         <h2 id="site-footer-contact-title" class="site-footer__heading">{{ if $isZh }}联系{{ else }}Contact{{ end }}</h2>
         <ul class="site-footer__list">
+          {{ with .Site.GetPage "/contact" }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
           {{ with .Site.Params.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
           {{ with .Site.Params.phone }}<li><a href="tel:{{ . | replaceRE "[^+0-9]" "" }}">{{ . }}</a></li>{{ end }}
           {{ with .Site.Params.address }}<li><span>{{ . }}</span></li>{{ end }}

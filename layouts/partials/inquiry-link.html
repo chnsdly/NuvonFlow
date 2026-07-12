@@ -1,0 +1,6 @@
+{{- $page := .page -}}
+{{- $interest := .interest | default $page.Title -}}
+{{- $source := .source | default $page.RelPermalink -}}
+{{- $base := "/request-a-quote/" | relLangURL -}}
+{{- $query := querify "interest" $interest "source" $source -}}
+{{- return (printf "%s?%s" $base $query) -}}

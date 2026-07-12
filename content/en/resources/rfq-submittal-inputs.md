@@ -1,37 +1,64 @@
 ---
-title: "RFQ & Submittal Inputs"
-description: "Prepare RFQ and submittal inputs including media, concentration, temperature, pressure, size, connection, quantity, accessories, documents, and project requirements."
-weight: 42
+title: "RFQ Input Checklist"
+description: "Prepare a reviewable RFQ with media, operating limits, piping, function, quantity, accessories, documents, and project constraints."
+weight: 32
 translationKey: "resources-rfq-submittal-inputs"
 type: "resources"
 draft: false
 ---
 
-## RFQ inputs
+A useful first RFQ does not need every field to be final. It should show what is known, what is assumed, and what still needs confirmation.
 
-A clear RFQ should describe the requested product and the service behind it. At minimum, prepare media, concentration, temperature, pressure, flow or pump capacity, size, connection, material preference, operation mode, quantity, destination, and document requirements.
+## Process media
 
-| Input | Why it matters |
+Provide the chemical or fluid name, concentration or composition, pH where relevant, solids, oxidizing or solvent behavior, contaminants, cleaning fluids, and whether exposure is continuous, intermittent, or mixed.
+
+Broad labels such as “acid,” “wastewater,” or “chemical service” are rarely enough to assess body, seat, seal, diaphragm, gasket, tubing, or accessory materials.
+
+## Operating limits
+
+| Input | Details to prepare |
 | --- | --- |
-| Media and concentration | Drives material, seat, seal, diaphragm, gasket, and accessory review. |
-| Temperature and pressure | Confirms pressure-temperature limits, safety margin, and product family fit. |
-| Size and connection | Prevents mismatch with pipe standard, flange pattern, tubing, or equipment ports. |
-| Valve function | Distinguishes isolation, throttling, check protection, dosing, relief, and automation. |
-| Quantity and destination | Affects quotation structure, packaging, freight, spare parts, and delivery planning. |
-| Document requirements | Helps include datasheets, drawings, declarations, test records, and packing documents early. |
+| Temperature | Normal, minimum, maximum, startup, cleaning, and ambient conditions |
+| Pressure | Normal and design pressure, vacuum, surge, static head, and pump shutoff where relevant |
+| Flow | Normal and maximum flow, pump capacity, viscosity, solids, and cycle frequency |
+| Environment | Indoor or outdoor location, corrosive atmosphere, UV exposure, flooding, washdown, or hazardous-area needs |
 
-## Submittal inputs
+Separate normal conditions from design or upset limits. A single operating number can hide the condition that controls product selection.
 
-If the project requires approval documents, list them during the quotation stage. Common items include datasheets, drawings, IOM manuals, material declarations, inspection records, certificates, packing details, and spare parts lists.
+## Piping and product function
 
-If the customer uses a document register, provide the tag numbers, revision rules, language requirements, file naming format, approval status workflow, and deadlines.
+Record pipe size, pipe material, connection type and standard, orientation, available space, maintenance access, and existing equipment interfaces.
 
-## Useful structure
+State what the item must do: isolation, throttling, non-return protection, dosing, back-pressure control, pressure relief, automation, flushing, or another defined function. If a product family has already been specified, include it as a preference rather than treating it as proof of suitability.
 
-For BOM-based requests, organize each line item with product family, size, material, connection, quantity, duty notes, and required documents. This makes assumptions visible and easier to correct.
+## Commercial and project scope
+
+Include quantities, tag numbers, destination, project stage, required delivery window, spare parts, packaging or marking needs, inspection expectations, and any approved-vendor or customer standard that affects the supply route.
+
+For BOM requests, keep each line reviewable:
+
+| Field | Example of the required level |
+| --- | --- |
+| Item and function | Diaphragm valve for dosing-line isolation |
+| Size and connection | DN25, flanged to the stated standard |
+| Materials | Body, diaphragm, seal, gasket, and any preferred alternatives |
+| Duty note | Media, concentration, temperature, pressure, and flow context |
+| Quantity and tag | Required quantity plus line or equipment reference |
+| Documents | Datasheet, drawing, IOM, declaration, test record, or packing requirement |
+
+## Documents and submittals
+
+List required documents during the RFQ stage, not after price comparison. Identify the product or tag each document applies to, the required language, revision and file-naming rules, approval workflow, and when the document is needed.
+
+Available documents depend on the exact product series and confirmed order scope. A generic document request should not be treated as a promise that every certificate, drawing, CAD file, or inspection record exists for every configuration.
 
 ## Before sending
 
-It is acceptable to submit an incomplete RFQ if the unknowns are clearly marked. A useful first response can identify missing information, suggest product directions, and separate confirmed items from assumptions.
+- Mark unknown information clearly instead of guessing.
+- Attach available BOMs, line lists, P&ID excerpts, photos, sketches, tag schedules, or document registers.
+- Separate required conditions from preferences and acceptable alternatives.
+- Identify the person or team responsible for final technical confirmation.
+- Note any deadline that affects quotation, approval, production, inspection, or shipment.
 
-Start with the [request a quote](/request-a-quote/) form when you have enough information to describe the service.
+Send the available information through the [request a quote form](/request-a-quote/). Nuvon can respond with clarification questions, visible assumptions, a product-family direction, and a quotation structure that is easier to review.

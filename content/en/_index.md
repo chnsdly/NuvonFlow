@@ -56,7 +56,7 @@ home_cta:
     - label: "Submit Requirements"
       url: "/request-a-quote/"
       style: "button--primary"
-    - label: "View Project Support"
+    - label: "View RFQ & Project Support"
       url: "/project-support/"
       style: "button--secondary"
 ---

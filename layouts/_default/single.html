@@ -24,6 +24,7 @@
         {{ end }}
       </header>
 
+      {{ if ne .Type "conversion" }}
       {{ with .Params.quick_points }}
       <ul class="feature-grid feature-grid--compact">
         {{ range . }}
@@ -33,6 +34,7 @@
         </li>
         {{ end }}
       </ul>
+      {{ end }}
       {{ end }}
 
       {{ if eq .Type "applications" }}
@@ -78,61 +80,63 @@
       </section>
       {{ end }}
 
+      {{ if ne .Type "conversion" }}
       {{ with .Content }}
       <div class="content-prose content-page__body">
         {{ . }}
       </div>
       {{ end }}
-
-      {{ if and (eq .Type "conversion") .Params.form.enable }}
-      <section class="submission-guide" aria-labelledby="submission-guide-title">
-        <div>
-          <p class="section-page__eyebrow font-meta">{{ if $isZh }}提交前检查{{ else }}Before You Submit{{ end }}</p>
-          <h2 id="submission-guide-title" class="font-title-s">{{ if $isZh }}第一次提交不需要完美，但要足够可评审{{ else }}The first submission does not need to be perfect, but it should be reviewable{{ end }}</h2>
-        </div>
-        <ul class="submission-guide__list">
-          <li>{{ if $isZh }}介质名称、浓度和温度{{ else }}Media name, concentration, and temperature{{ end }}</li>
-          <li>{{ if $isZh }}压力、口径、连接标准和数量{{ else }}Pressure, size, connection standard, and quantity{{ end }}</li>
-          <li>{{ if $isZh }}阀门功能、执行方式和文件需求{{ else }}Valve function, actuation, and document needs{{ end }}</li>
-        </ul>
-      </section>
       {{ end }}
 
       {{ if .Params.form.enable }}
       <section class="content-page__form" aria-labelledby="content-page-form-title">
         <h2 id="content-page-form-title" class="font-title-s">{{ .Params.form.title | default (cond $isZh "提交项目需求" "Submit Project Requirements") }}</h2>
         {{ with .Params.form.description }}<p class="font-body">{{ . }}</p>{{ end }}
-        {{ partial "form.html" (dict "page" . "sitekey" .Site.Params.turnstile_sitekey "id" (.File.BaseFileName | default "request")) }}
+        {{ partial "forms/inquiry.html" (dict "page" . "sitekey" .Site.Params.turnstile_sitekey "id" (.File.BaseFileName | default "request")) }}
+      </section>
+      {{ end }}
+
+      {{ with .Params.after_submit }}
+      <section class="inquiry-followup" aria-labelledby="inquiry-followup-title">
+        <h2 id="inquiry-followup-title" class="font-title-s">{{ .heading }}</h2>
+        <ul class="inquiry-followup__items">
+          {{ range .items }}
+          <li class="inquiry-followup__item">
+            <h3 class="font-title-xs">{{ .title }}</h3>
+            <p class="font-body">{{ .text }}</p>
+          </li>
+          {{ end }}
+        </ul>
       </section>
       {{ end }}
 
       {{ if ne .Type "footer" }}
-      {{ $primaryHref := "/request-a-quote/" }}
+      {{ $primaryHref := "/request-a-quote/" | relLangURL }}
       {{ $primaryLabel := cond $isZh "提交询价" "Request a Quote" }}
-      {{ $secondaryHref := "/products/" }}
+      {{ $secondaryHref := "/products/" | relLangURL }}
       {{ $secondaryLabel := cond $isZh "查看产品" "View Products" }}
       {{ if eq .Type "applications" }}
-        {{ $primaryHref = "/project-support/submit-duty-conditions/" }}
-        {{ $primaryLabel = cond $isZh "提交工况参数" "Submit Duty Conditions" }}
+        {{ $primaryHref = partial "inquiry-link.html" (dict "page" .) }}
+        {{ $primaryLabel = cond $isZh "提交当前应用需求" "Start This Application Inquiry" }}
         {{ $secondaryLabel = cond $isZh "查看产品系列" "View Product Families" }}
       {{ else if eq .Type "project-support" }}
-        {{ $secondaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $secondaryHref = "/resources/rfq-submittal-inputs/" | relLangURL }}
         {{ $secondaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
       {{ else if eq .Type "resources" }}
-        {{ $primaryHref = "/resources/rfq-submittal-inputs/" }}
+        {{ $primaryHref = "/resources/rfq-submittal-inputs/" | relLangURL }}
         {{ $primaryLabel = cond $isZh "查看 RFQ 输入清单" "View RFQ Input Checklist" }}
-        {{ $secondaryHref = "/request-a-quote/" }}
+        {{ $secondaryHref = "/request-a-quote/" | relLangURL }}
         {{ $secondaryLabel = cond $isZh "提交询价" "Request a Quote" }}
       {{ else if eq .Type "conversion" }}
-        {{ $secondaryHref = "/contact/" }}
+        {{ $secondaryHref = "/contact/" | relLangURL }}
         {{ $secondaryLabel = cond $isZh "联系 Nuvon" "Contact Nuvon" }}
       {{ end }}
       <footer class="content-page__footer">
-        {{ if ne .RelPermalink ($primaryHref | relLangURL) }}
-        <a class="button button--primary" href='{{ $primaryHref | relLangURL }}'>{{ $primaryLabel }}</a>
+        {{ if ne .RelPermalink $primaryHref }}
+        <a class="button button--primary" href="{{ $primaryHref }}">{{ $primaryLabel }}</a>
         {{ end }}
-        {{ if ne .RelPermalink ($secondaryHref | relLangURL) }}
-        <a class="button button--secondary" href='{{ $secondaryHref | relLangURL }}'>{{ $secondaryLabel }}</a>
+        {{ if ne .RelPermalink $secondaryHref }}
+        <a class="button button--secondary" href="{{ $secondaryHref }}">{{ $secondaryLabel }}</a>
         {{ end }}
       </footer>
       {{ end }}

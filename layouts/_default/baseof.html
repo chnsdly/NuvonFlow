@@ -21,6 +21,12 @@
       {{ $headerJS := . | minify | fingerprint }}
       <script src="{{ $headerJS.RelPermalink }}" integrity="{{ $headerJS.Data.Integrity }}" defer></script>
     {{ end }}
+    {{ if eq .Type "conversion" }}
+      {{ with resources.Get "js/inquiry-form.js" }}
+        {{ $inquiryJS := . | minify | fingerprint }}
+        <script src="{{ $inquiryJS.RelPermalink }}" integrity="{{ $inquiryJS.Data.Integrity }}" defer></script>
+      {{ end }}
+    {{ end }}
   </head>
   <body class="site-body site-body--{{ .Kind }} site-body--{{ .Type | default "default" }}">
     {{ partial "header.html" . }}

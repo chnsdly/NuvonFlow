@@ -56,7 +56,7 @@ home_cta:
     - label: "提交需求"
       url: "/request-a-quote/"
       style: "button--primary"
-    - label: "查看项目支持"
+    - label: "查看询价与项目支持"
       url: "/project-support/"
       style: "button--secondary"
 ---

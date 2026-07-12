@@ -1,0 +1,24 @@
+{{ $page := .page }}
+{{ $formId := .id | default "contact" }}
+{{ $sitekey := .sitekey }}
+
+<form class="inquiry-form inquiry-form--contact" method="post" action="/api/inquiries" data-form-id="{{ $formId }}">
+  <input type="hidden" name="form_type" value="contact">
+  <input type="hidden" name="language" value="{{ $page.Site.Language.Lang }}">
+
+  {{ partial "forms/contact-fields.html" (dict "id" $formId) }}
+
+  <div class="inquiry-form__field">
+    <label class="inquiry-form__label" for="{{ $formId }}-message">
+      {{ i18n "form_message" }} <span class="inquiry-form__required">{{ i18n "form_required" }}</span>
+    </label>
+    <textarea class="inquiry-form__control inquiry-form__control--textarea" id="{{ $formId }}-message" name="message" rows="6" required placeholder="{{ i18n "form_contact_message_placeholder" }}"></textarea>
+  </div>
+
+  {{ with $sitekey }}
+  <div class="inquiry-form__turnstile" data-sitekey="{{ . }}"></div>
+  {{ end }}
+
+  <p class="inquiry-form__note">{{ i18n "form_contact_note" }}</p>
+  <button class="button button--primary" type="submit">{{ i18n "form_send_message" }}</button>
+</form>

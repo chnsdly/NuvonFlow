@@ -1,0 +1,139 @@
+{{ $page := .page }}
+{{ $formId := .id | default "inquiry" }}
+{{ $sitekey := .sitekey }}
+
+<form
+  class="inquiry-form inquiry-form--guided"
+  method="post"
+  action="/api/inquiries"
+  data-form-id="{{ $formId }}"
+  data-rfq-form
+  data-context-prefix="{{ i18n "rfq_context_prefix" }}"
+  data-context-hint="{{ i18n "rfq_context_hint" }}"
+  data-missing-prefix="{{ i18n "rfq_missing_prefix" }}"
+  data-missing-none="{{ i18n "rfq_missing_none" }}"
+  data-list-separator="{{ i18n "rfq_list_separator" }}">
+  <input type="hidden" name="form_type" value="rfq">
+  <input type="hidden" name="language" value="{{ $page.Site.Language.Lang }}">
+  <input type="hidden" name="source_page" value="" data-rfq-source>
+  <input type="hidden" name="quantity_documents" value="" data-rfq-legacy-scope>
+
+  <p class="inquiry-form__context" data-rfq-context hidden aria-live="polite"></p>
+
+  <ol class="inquiry-form__steps" aria-label="{{ i18n "rfq_steps_label" }}" data-rfq-indicators>
+    <li data-rfq-indicator="1"><span>1</span>{{ i18n "rfq_step_request" }}</li>
+    <li data-rfq-indicator="2"><span>2</span>{{ i18n "rfq_step_duty" }}</li>
+    <li data-rfq-indicator="3"><span>3</span>{{ i18n "rfq_step_review" }}</li>
+  </ol>
+
+  <fieldset class="inquiry-form__step" data-rfq-step="1">
+    <legend class="inquiry-form__legend">{{ i18n "rfq_step_request_title" }}</legend>
+    <p class="inquiry-form__step-description">{{ i18n "rfq_step_request_description" }}</p>
+
+    <div class="inquiry-form__grid">
+      <div class="inquiry-form__field inquiry-form__field--full">
+        <label class="inquiry-form__label" for="{{ $formId }}-interest">
+          {{ i18n "rfq_interest" }} <span class="inquiry-form__required">{{ i18n "form_required" }}</span>
+        </label>
+        <input class="inquiry-form__control" id="{{ $formId }}-interest" name="interest" type="text" required placeholder="{{ i18n "rfq_interest_placeholder" }}" data-rfq-interest data-summary-label="{{ i18n "rfq_interest" }}">
+        <p class="inquiry-form__help">{{ i18n "rfq_interest_help" }}</p>
+      </div>
+
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-function">{{ i18n "rfq_function" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-function" name="function" type="text" placeholder="{{ i18n "rfq_function_placeholder" }}" data-summary-label="{{ i18n "rfq_function" }}">
+      </div>
+
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-quantity">{{ i18n "rfq_quantity" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-quantity" name="quantity" type="text" inputmode="numeric" placeholder="{{ i18n "rfq_quantity_placeholder" }}" data-summary-label="{{ i18n "rfq_quantity" }}">
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="inquiry-form__step" data-rfq-step="2">
+    <legend class="inquiry-form__legend">{{ i18n "rfq_step_duty_title" }}</legend>
+    <p class="inquiry-form__step-description">{{ i18n "rfq_step_duty_description" }}</p>
+
+    <div class="inquiry-form__grid">
+      <div class="inquiry-form__field inquiry-form__field--full">
+        <label class="inquiry-form__label" for="{{ $formId }}-media">{{ i18n "rfq_media" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-media" name="media" type="text" placeholder="{{ i18n "rfq_media_placeholder" }}" data-summary-label="{{ i18n "rfq_media" }}" data-summary-important>
+      </div>
+
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-pressure-temperature">{{ i18n "rfq_pressure_temperature" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-pressure-temperature" name="pressure_temperature" type="text" placeholder="{{ i18n "rfq_pressure_temperature_placeholder" }}" data-summary-label="{{ i18n "rfq_pressure_temperature" }}" data-summary-important>
+      </div>
+
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-size-connection">{{ i18n "rfq_size_connection" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-size-connection" name="size_connection" type="text" placeholder="{{ i18n "rfq_size_connection_placeholder" }}" data-summary-label="{{ i18n "rfq_size_connection" }}" data-summary-important>
+      </div>
+    </div>
+
+    <p class="inquiry-form__help inquiry-form__help--section">{{ i18n "rfq_unknown_help" }}</p>
+  </fieldset>
+
+  <fieldset class="inquiry-form__step" data-rfq-step="3">
+    <legend class="inquiry-form__legend">{{ i18n "rfq_step_review_title" }}</legend>
+    <p class="inquiry-form__step-description">{{ i18n "rfq_step_review_description" }}</p>
+
+    <div class="inquiry-form__grid">
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-operation-installation">{{ i18n "rfq_operation_installation" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-operation-installation" name="operation_installation" type="text" placeholder="{{ i18n "rfq_operation_installation_placeholder" }}" data-summary-label="{{ i18n "rfq_operation_installation" }}">
+      </div>
+
+      <div class="inquiry-form__field">
+        <label class="inquiry-form__label" for="{{ $formId }}-documents">{{ i18n "rfq_documents" }}</label>
+        <input class="inquiry-form__control" id="{{ $formId }}-documents" name="documents" type="text" placeholder="{{ i18n "rfq_documents_placeholder" }}" data-summary-label="{{ i18n "rfq_documents" }}">
+      </div>
+
+      <div class="inquiry-form__field inquiry-form__field--full">
+        <label class="inquiry-form__label" for="{{ $formId }}-message">{{ i18n "rfq_additional" }}</label>
+        <textarea class="inquiry-form__control inquiry-form__control--textarea" id="{{ $formId }}-message" name="message" rows="5" placeholder="{{ i18n "rfq_additional_placeholder" }}" data-summary-label="{{ i18n "rfq_additional" }}"></textarea>
+      </div>
+    </div>
+
+    <details class="inquiry-form__advanced">
+      <summary>{{ i18n "rfq_advanced_toggle" }}</summary>
+      <div class="inquiry-form__grid">
+        <div class="inquiry-form__field">
+          <label class="inquiry-form__label" for="{{ $formId }}-flow-pump">{{ i18n "rfq_flow_pump" }}</label>
+          <input class="inquiry-form__control" id="{{ $formId }}-flow-pump" name="flow_pump" type="text" placeholder="{{ i18n "rfq_flow_pump_placeholder" }}" data-summary-label="{{ i18n "rfq_flow_pump" }}">
+        </div>
+
+        <div class="inquiry-form__field">
+          <label class="inquiry-form__label" for="{{ $formId }}-service-notes">{{ i18n "rfq_service_notes" }}</label>
+          <input class="inquiry-form__control" id="{{ $formId }}-service-notes" name="service_notes" type="text" placeholder="{{ i18n "rfq_service_notes_placeholder" }}" data-summary-label="{{ i18n "rfq_service_notes" }}">
+        </div>
+      </div>
+    </details>
+
+    <section class="inquiry-form__review" data-rfq-summary hidden aria-labelledby="{{ $formId }}-summary-title">
+      <h3 id="{{ $formId }}-summary-title" class="font-title-xs">{{ i18n "rfq_summary_title" }}</h3>
+      <p>{{ i18n "rfq_summary_description" }}</p>
+      <dl class="inquiry-form__summary-list" data-rfq-summary-list></dl>
+      <p class="inquiry-form__missing" data-rfq-missing></p>
+    </section>
+
+    <section class="inquiry-form__contact" aria-labelledby="{{ $formId }}-contact-title">
+      <h3 id="{{ $formId }}-contact-title" class="font-title-xs">{{ i18n "rfq_contact_title" }}</h3>
+      <p>{{ i18n "rfq_contact_description" }}</p>
+      {{ partial "forms/contact-fields.html" (dict "id" $formId "includeCountry" true) }}
+    </section>
+  </fieldset>
+
+  {{ with $sitekey }}
+  <div class="inquiry-form__turnstile" data-sitekey="{{ . }}"></div>
+  {{ end }}
+
+  <p class="inquiry-form__note">{{ i18n "rfq_submission_note" }}</p>
+
+  <div class="inquiry-form__actions">
+    <button class="button button--secondary" type="button" data-rfq-back hidden>{{ i18n "form_back" }}</button>
+    <button class="button button--primary" type="button" data-rfq-next hidden>{{ i18n "form_continue" }}</button>
+    <button class="button button--primary" type="submit" data-rfq-submit>{{ i18n "form_submit_request" }}</button>
+  </div>
+</form>

@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $isZh := eq .Site.Language.Lang "zh" }}
 {{ $containerClass := partial "page-container-class.html" . }}
+{{ $checklistHref := "/resources/rfq-submittal-inputs/" | relLangURL }}
+{{ $isChecklist := eq .RelPermalink $checklistHref }}
 <main class="section resources-page" aria-labelledby="resources-page-title">
   <div class="{{ $containerClass }}">
     <div class="resources-page__layout">
@@ -33,9 +35,15 @@
       <aside class="resources-page__aside" aria-label="{{ if $isZh }}文章导航{{ else }}Article navigation{{ end }}">
         <div class="resources-page__aside-card">
           <p class="section-page__eyebrow font-meta">{{ if $isZh }}阅读重点{{ else }}Reading Focus{{ end }}</p>
+          {{ if $isChecklist }}
+          <h2 class="font-title-xs">{{ if $isZh }}把已知条件交给项目支持{{ else }}Take the known conditions into project review{{ end }}</h2>
+          <p class="font-body">{{ if $isZh }}清单不必全部填满。明确标记未知项后，可进入询价与项目支持了解评审方式，或直接提交现有信息。{{ else }}The checklist does not need to be complete. Mark unknowns clearly, then review the support process or send the information you have.{{ end }}</p>
+          <a class="button button--primary button--full" href='{{ "/project-support/" | relLangURL }}'>{{ if $isZh }}查看询价与项目支持{{ else }}View RFQ & Project Support{{ end }}</a>
+          {{ else }}
           <h2 class="font-title-xs">{{ if $isZh }}把指南转化为询价输入{{ else }}Turn the guide into RFQ inputs{{ end }}</h2>
           <p class="font-body">{{ if $isZh }}阅读后可先对照 RFQ 输入清单整理介质、材料、压力、连接和文件要求，再提交可评审的询价。{{ else }}After reading, use the RFQ checklist to organize media, material, pressure, connection, and document requirements before submitting a reviewable inquiry.{{ end }}</p>
-          <a class="button button--primary button--full" href='{{ "/resources/rfq-submittal-inputs/" | relLangURL }}'>{{ if $isZh }}查看 RFQ 输入清单{{ else }}View RFQ Input Checklist{{ end }}</a>
+          <a class="button button--primary button--full" href="{{ $checklistHref }}">{{ if $isZh }}查看 RFQ 输入清单{{ else }}View RFQ Input Checklist{{ end }}</a>
+          {{ end }}
           <a class="button button--secondary button--full" href='{{ "/request-a-quote/" | relLangURL }}'>{{ if $isZh }}提交询价{{ else }}Request a Quote{{ end }}</a>
         </div>
         {{ with .TableOfContents }}

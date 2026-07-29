@@ -1,0 +1,994 @@
+{
+  "ui": {
+    "en": {
+      "eyebrow": "Decision support tool",
+      "title": "Thermoplastic Flow Control Atlas",
+      "intro": "Explore the decision chain from fluid and duty conditions to material families, valve functions, sealing choices, integration details, and the evidence required for final approval.",
+      "disclaimer": "Preliminary screening only. A candidate shown here is not a chemical-compatibility approval, pressure rating, certification claim, or final product recommendation. Confirm the exact chemical, concentration, temperature, pressure, complete wetted materials, product series, and current manufacturer data.",
+      "tabs": {
+        "selector": "Selection path",
+        "materials": "Materials",
+        "valves": "Products",
+        "fluids": "Fluids",
+        "rfq": "RFQ builder",
+        "sources": "Standards & sources"
+      },
+      "fields": {
+        "fluid": "Fluid family",
+        "duty": "Control duty",
+        "temperature": "Maximum temperature band",
+        "pressure": "Maximum pressure band",
+        "solids": "Fluid condition",
+        "actuation": "Operation",
+        "connection": "Connection context"
+      },
+      "result": {
+        "heading": "Preliminary review path",
+        "materials": "Body / lining starting points",
+        "valves": "Valve and accessory families",
+        "seals": "Seal / diaphragm starting points",
+        "risks": "Risk flags",
+        "questions": "Information still required",
+        "evidence": "Evidence before approval",
+        "starting": "Starting point",
+        "conditional": "Conditional",
+        "specialist": "Specialist review"
+      },
+      "library": {
+        "materialHeading": "Material family library",
+        "materialIntro": "Separate structural body materials from liners, seats, seals, diaphragms, and exposed hardware. Temperature positioning is qualitative and never replaces a product pressure-temperature curve.",
+        "sealHeading": "Seals and diaphragms",
+        "valveHeading": "Valve and accessory families",
+        "valveIntro": "Start from the process function. Similar-looking valves can differ in cavity design, flow path, shutoff, pressure drop, orientation, torque, and maintenance behavior.",
+        "fluidHeading": "Fluid-family review cards",
+        "fluidIntro": "These cards identify the questions and failure mechanisms that change selection. They deliberately avoid universal compatibility claims.",
+        "search": "Search code, use, strength, or constraint",
+        "role": "Role",
+        "strengths": "Typical strengths",
+        "constraints": "Frequent constraints",
+        "joins": "Common joining / connection",
+        "verify": "Verify",
+        "bestFor": "Often considered for",
+        "watch": "Watch",
+        "parameters": "Core parameters",
+        "drivers": "Decision drivers",
+        "startingMaterials": "Material starting points",
+        "questions": "Ask before review"
+      },
+      "rfq": {
+        "heading": "Build a reviewable RFQ summary",
+        "intro": "Unknown fields may be left blank. The output is a clarification aid, not an engineering approval.",
+        "project": "Project / customer reference",
+        "fluid": "Exact fluid or chemical name",
+        "concentration": "Concentration and impurities",
+        "temperature": "Normal / minimum / maximum temperature",
+        "pressure": "Normal / maximum pressure or vacuum",
+        "flow": "Flow range or pump data",
+        "size": "DN/NPS and pipe schedule/SDR",
+        "connection": "Connection standard and end type",
+        "function": "Required valve function",
+        "materials": "Known material preferences or exclusions",
+        "operation": "Manual / pneumatic / electric and fail position",
+        "solids": "Solids, crystallization, viscosity, or gas release",
+        "quantity": "Quantity and spare parts",
+        "documents": "Required standards, certificates, drawings, and tests",
+        "notes": "Installation, cleaning, outdoor, packaging, and delivery notes",
+        "generate": "Generate summary",
+        "copy": "Copy",
+        "download": "Download TXT",
+        "print": "Print / save PDF",
+        "copied": "Copied",
+        "output": "RFQ review summary"
+      },
+      "sources": {
+        "heading": "Standards and evidence map",
+        "intro": "Standards define test or product requirements; they do not by themselves prove that a particular product is suitable for a particular chemical duty.",
+        "modelHeading": "Portable model",
+        "modelIntro": "Download the structured knowledge model for backup, review, or later integration with CRM, quotation, training, or supplier-audit systems.",
+        "download": "Download knowledge model JSON",
+        "source": "Source",
+        "scope": "Why it matters"
+      },
+      "empty": "No matching entries.",
+      "updated": "Knowledge model version",
+      "offline": "The tool runs entirely in the browser after loading; no RFQ data is sent by this page."
+    },
+    "zh": {
+      "eyebrow": "初步决策支持工具",
+      "title": "热塑性防腐流体控制全景图",
+      "intro": "从流体与工况出发，逐层连接材料体系、阀门功能、密封内件、接口与执行方式，以及最终批准所需的技术证据。",
+      "disclaimer": "本工具只用于初步筛选。页面中的“候选”不等于化学兼容批准、压力等级承诺、认证声明或最终产品推荐。必须针对准确化学品、浓度、温度、压力、全部接液材料、具体产品系列和制造商当前资料进行确认。",
+      "tabs": {
+        "selector": "选型路径",
+        "materials": "材料体系",
+        "valves": "产品体系",
+        "fluids": "流体场景",
+        "rfq": "RFQ 生成器",
+        "sources": "标准与证据"
+      },
+      "fields": {
+        "fluid": "流体类别",
+        "duty": "控制任务",
+        "temperature": "最高温度区间",
+        "pressure": "最高压力区间",
+        "solids": "流体状态",
+        "actuation": "操作方式",
+        "connection": "连接场景"
+      },
+      "result": {
+        "heading": "初步评审路径",
+        "materials": "阀体 / 衬里材料起点",
+        "valves": "阀门与附件产品族",
+        "seals": "密封 / 隔膜材料起点",
+        "risks": "风险提示",
+        "questions": "仍需补充的信息",
+        "evidence": "批准前所需证据",
+        "starting": "常见起点",
+        "conditional": "有条件候选",
+        "specialist": "专项确认"
+      },
+      "library": {
+        "materialHeading": "材料家族库",
+        "materialIntro": "必须区分结构阀体、衬里、阀座、密封、隔膜和外露金属件。温度定位只是定性提示，不能替代具体产品的压力—温度曲线。",
+        "sealHeading": "密封与隔膜",
+        "valveHeading": "阀门与附件产品族",
+        "valveIntro": "先定义工艺功能，再选择阀名。外观相似的阀门，可能在阀腔、流道、关闭性能、压降、安装方向、扭矩和维护方式上完全不同。",
+        "fluidHeading": "流体场景评审卡",
+        "fluidIntro": "这些场景用于识别会改变选型的提问与失效机理，因此刻意不提供脱离浓度、温度和产品系列的万能兼容结论。",
+        "search": "搜索代码、用途、优势或限制",
+        "role": "主要角色",
+        "strengths": "典型优势",
+        "constraints": "常见限制",
+        "joins": "常见连接 / 加工",
+        "verify": "必须核对",
+        "bestFor": "通常考虑用于",
+        "watch": "重点注意",
+        "parameters": "核心参数",
+        "drivers": "关键影响因素",
+        "startingMaterials": "材料初筛起点",
+        "questions": "评审前必须问"
+      },
+      "rfq": {
+        "heading": "生成可评审的 RFQ 摘要",
+        "intro": "不知道的项目可以留空。输出用于澄清需求，不构成工程批准。",
+        "project": "项目 / 客户参考号",
+        "fluid": "准确流体或化学品名称",
+        "concentration": "浓度、配比与杂质",
+        "temperature": "正常 / 最低 / 最高温度",
+        "pressure": "正常 / 最大压力或真空",
+        "flow": "流量范围或计量泵数据",
+        "size": "DN/NPS 与管道 Sch/SDR",
+        "connection": "连接标准与端接形式",
+        "function": "要求的阀门功能",
+        "materials": "已知材料偏好或禁用材料",
+        "operation": "手动 / 气动 / 电动及故障位",
+        "solids": "颗粒、结晶、黏度或析气情况",
+        "quantity": "数量与备件",
+        "documents": "标准、认证、图纸与测试要求",
+        "notes": "安装、清洗、户外、包装及交期备注",
+        "generate": "生成摘要",
+        "copy": "复制",
+        "download": "下载 TXT",
+        "print": "打印 / 保存 PDF",
+        "copied": "已复制",
+        "output": "RFQ 评审摘要"
+      },
+      "sources": {
+        "heading": "标准与证据地图",
+        "intro": "标准可以规定产品或试验要求，但仅仅声称符合某项标准，并不能证明某一具体产品适用于某一化学工况。",
+        "modelHeading": "可携带的知识模型",
+        "modelIntro": "下载结构化知识模型，用于备份、复核，或以后接入 CRM、报价、培训和供应商审核系统。",
+        "download": "下载知识模型 JSON",
+        "source": "来源",
+        "scope": "为什么重要"
+      },
+      "empty": "没有匹配项目。",
+      "updated": "知识模型版本",
+      "offline": "页面加载后全部计算均在浏览器本地完成，本页不会发送 RFQ 数据。"
+    }
+  },
+  "version": "2026-07-29.1",
+  "temperatureBands": [
+    {
+      "id": "low",
+      "level": 1,
+      "label": {"en": "≤40°C", "zh": "≤40°C"},
+      "note": {
+        "en": "The broadest material range may be available, subject to the exact chemical and product curve.",
+        "zh": "候选材料通常最宽，但仍需结合准确介质和具体产品曲线。"
+      }
+    },
+    {
+      "id": "moderate",
+      "level": 2,
+      "label": {"en": "40–60°C", "zh": "40–60°C"},
+      "note": {
+        "en": "Pressure derating, seal life, thermal expansion, and joint method become more influential.",
+        "zh": "压力降额、密封寿命、热膨胀和连接工艺开始显著影响选择。"
+      }
+    },
+    {
+      "id": "high",
+      "level": 3,
+      "label": {"en": "60–90°C", "zh": "60–90°C"},
+      "note": {
+        "en": "The candidate range narrows; confirm long-term pressure capability and chemical resistance together.",
+        "zh": "候选范围明显收窄，必须同时核对长期承压能力和化学耐受性。"
+      }
+    },
+    {
+      "id": "very_high",
+      "level": 4,
+      "label": {"en": ">90°C", "zh": ">90°C"},
+      "note": {
+        "en": "Common thermoplastic ranges may be exceeded. Product-specific engineering or a lined/alternative construction is usually required.",
+        "zh": "可能超出普通热塑性产品范围，通常需要具体系列工程确认或衬里/替代结构。"
+      }
+    }
+  ],
+  "pressureBands": [
+    {
+      "id": "vacuum",
+      "label": {"en": "Vacuum / suction", "zh": "真空 / 吸入侧"},
+      "note": {
+        "en": "Confirm vacuum rating, collapse resistance, permeation, orientation, and pump suction transients.",
+        "zh": "核对真空等级、抗失稳、渗透、安装方向及泵吸入瞬态。"
+      }
+    },
+    {
+      "id": "low",
+      "label": {"en": "<3 bar", "zh": "<3 bar"},
+      "note": {
+        "en": "Low pressure does not remove chemical, water-hammer, trapped-liquid, or vacuum risk.",
+        "zh": "低压不代表没有化学、水锤、困液升压或真空风险。"
+      }
+    },
+    {
+      "id": "standard",
+      "label": {"en": "3–10 bar", "zh": "3–10 bar"},
+      "note": {
+        "en": "Confirm the product pressure-temperature curve and the rating of every connection and accessory.",
+        "zh": "核对具体产品压力—温度曲线，以及每个连接件和附件的额定值。"
+      }
+    },
+    {
+      "id": "elevated",
+      "label": {"en": "10–16 bar", "zh": "10–16 bar"},
+      "note": {
+        "en": "Series availability becomes narrower; actuator torque, surge, flange loading, and long-term creep require close review.",
+        "zh": "可选系列减少，执行器扭矩、冲击、法兰载荷与长期蠕变需要重点评审。"
+      }
+    },
+    {
+      "id": "special",
+      "label": {"en": ">16 bar", "zh": ">16 bar"},
+      "note": {
+        "en": "Treat as specialist service. Do not extrapolate a lower-pressure thermoplastic valve rating.",
+        "zh": "按专项工况处理，不得从低压热塑性阀门额定值外推。"
+      }
+    }
+  ],
+  "solidStates": [
+    {
+      "id": "clean",
+      "label": {"en": "Clean liquid", "zh": "洁净液体"},
+      "note": {
+        "en": "Compare pressure drop, cavity design, seal friction, and maintenance access.",
+        "zh": "重点比较压降、阀腔结构、密封摩擦和维护空间。"
+      }
+    },
+    {
+      "id": "suspended",
+      "label": {"en": "Suspended particles", "zh": "悬浮颗粒"},
+      "note": {
+        "en": "Review seat wear, small clearances, check-valve internals, and installation orientation.",
+        "zh": "核对阀座磨损、小间隙、止回阀内件和安装方向。"
+      }
+    },
+    {
+      "id": "crystallizing",
+      "label": {"en": "Crystallizing / gas-forming", "zh": "易结晶 / 析气"},
+      "note": {
+        "en": "Avoid trapped cavities and dead zones; define venting, flushing, draining, and shutdown behavior.",
+        "zh": "避免困液阀腔和死区，并定义排气、冲洗、排空及停机状态。"
+      }
+    },
+    {
+      "id": "abrasive",
+      "label": {"en": "Abrasive / fibrous / high solids", "zh": "磨蚀 / 纤维 / 高固含"},
+      "note": {
+        "en": "Prefer open flow paths and replaceable wear parts; verify velocity, particle hardness, and settling.",
+        "zh": "优先开阔流道和可更换磨损件，并核对流速、颗粒硬度和沉降。"
+      }
+    }
+  ],
+  "actuationModes": [
+    {
+      "id": "manual",
+      "label": {"en": "Manual", "zh": "手动"},
+      "note": {
+        "en": "Confirm operating torque, handle clearance, lockout, extension, and access.",
+        "zh": "核对操作扭矩、手柄空间、锁定、延长杆和人员可达性。"
+      }
+    },
+    {
+      "id": "pneumatic",
+      "label": {"en": "Pneumatic on/off", "zh": "气动开关"},
+      "note": {
+        "en": "Confirm valve torque with safety factor, air pressure, fail position, solenoid, switches, and cycle rate.",
+        "zh": "核对含安全系数的阀门扭矩、气源压力、故障位、电磁阀、限位开关和循环频率。"
+      }
+    },
+    {
+      "id": "electric",
+      "label": {"en": "Electric on/off", "zh": "电动开关"},
+      "note": {
+        "en": "Confirm supply, duty cycle, enclosure, travel time, manual override, feedback, and ambient conditions.",
+        "zh": "核对电源、工作制、外壳防护、行程时间、手动超越、反馈与环境条件。"
+      }
+    },
+    {
+      "id": "modulating",
+      "label": {"en": "Modulating", "zh": "连续调节"},
+      "note": {
+        "en": "Confirm control signal, positioning accuracy, valve characteristic, deadband, fail action, and valve authority.",
+        "zh": "核对控制信号、定位精度、流量特性、死区、故障动作和阀权度。"
+      }
+    }
+  ],
+  "connectionModes": [
+    {
+      "id": "union_socket",
+      "label": {"en": "Socket / true union", "zh": "承插 / 双由令"},
+      "note": {
+        "en": "Confirm pipe material, solvent-cement or fusion procedure, socket standard, union seal, and removal clearance.",
+        "zh": "核对管材、粘接或热熔工艺、承插标准、由令密封和拆卸空间。"
+      }
+    },
+    {
+      "id": "threaded",
+      "label": {"en": "Threaded", "zh": "螺纹"},
+      "note": {
+        "en": "Confirm NPT/BSP type, thread sealant compatibility, torque limits, and cyclic loading.",
+        "zh": "核对 NPT/BSP 形式、螺纹密封剂兼容性、拧紧扭矩和循环载荷。"
+      }
+    },
+    {
+      "id": "flanged",
+      "label": {"en": "Flanged", "zh": "法兰"},
+      "note": {
+        "en": "Confirm drilling standard, gasket, backing ring, bolt torque, support, alignment, and face-to-face dimension.",
+        "zh": "核对法兰孔制、垫片、背环、螺栓扭矩、支撑、对中和结构长度。"
+      }
+    },
+    {
+      "id": "fusion",
+      "label": {"en": "Butt / socket / IR fusion", "zh": "对接 / 承插 / 红外焊接"},
+      "note": {
+        "en": "Confirm compatible resin system, qualified equipment, operator procedure, bead control, and inspection records.",
+        "zh": "核对同体系树脂、合格设备、操作程序、焊珠控制和检验记录。"
+      }
+    }
+  ],
+  "duties": [
+    {
+      "id": "isolation",
+      "label": {"en": "On/off isolation", "zh": "开关隔离"},
+      "valves": ["ball", "butterfly", "diaphragm"],
+      "questions": {
+        "en": ["Is full port required?", "Is trapped-cavity relief or venting required?", "Is lockout, draining, or frequent removal required?"],
+        "zh": ["是否要求全通径？", "是否需要阀腔泄压或排气？", "是否需要锁定、排空或频繁拆卸？"]
+      }
+    },
+    {
+      "id": "modulation",
+      "label": {"en": "Continuous control", "zh": "连续调节"},
+      "valves": ["control_ball", "diaphragm", "globe"],
+      "questions": {
+        "en": ["What are minimum and maximum flow and differential pressure?", "What valve characteristic and control accuracy are required?", "What is the required fail action?"],
+        "zh": ["最小/最大流量和压差是多少？", "需要什么流量特性和控制精度？", "要求什么故障动作？"]
+      }
+    },
+    {
+      "id": "check",
+      "label": {"en": "Backflow prevention", "zh": "防倒流"},
+      "valves": ["check"],
+      "questions": {
+        "en": ["What cracking pressure is acceptable?", "What is the installation orientation?", "Are solids, pulsation, or water hammer present?"],
+        "zh": ["允许的开启压力是多少？", "安装方向是什么？", "是否存在颗粒、脉动或水锤？"]
+      }
+    },
+    {
+      "id": "dosing",
+      "label": {"en": "Chemical dosing package", "zh": "化学加药组件"},
+      "valves": ["ball", "diaphragm", "check", "pressure_control", "strainer"],
+      "questions": {
+        "en": ["What are the metering-pump capacity and stroke behavior?", "What are suction, discharge, and injection-point pressures?", "Where do relief flow and calibration return?"],
+        "zh": ["计量泵流量和冲程特性是什么？", "吸入、排出和注射点压力是多少？", "泄压回流和标定液返回哪里？"]
+      }
+    },
+    {
+      "id": "slurry",
+      "label": {"en": "Solids / slurry isolation", "zh": "含固体 / 浆液隔离"},
+      "valves": ["diaphragm", "pinch", "butterfly"],
+      "questions": {
+        "en": ["What are solids content, particle size, hardness, and settling behavior?", "How is the line flushed?", "Which wear parts must be replaceable?"],
+        "zh": ["固含量、粒径、硬度和沉降特性是什么？", "管路如何冲洗？", "哪些磨损件必须可更换？"]
+      }
+    },
+    {
+      "id": "pressure",
+      "label": {"en": "Back pressure / relief / reduction", "zh": "背压 / 泄压 / 减压"},
+      "valves": ["pressure_control"],
+      "questions": {
+        "en": ["Which equipment or pressure must be protected or stabilized?", "What are normal, minimum, and upset flow rates?", "Where will relieved fluid discharge safely?"],
+        "zh": ["需要保护或稳定哪台设备/哪个压力？", "正常、最小和异常流量是多少？", "泄放介质将安全排向哪里？"]
+      }
+    },
+    {
+      "id": "divert",
+      "label": {"en": "Divert / mix", "zh": "分流 / 混合"},
+      "valves": ["multiport_ball", "diaphragm"],
+      "questions": {
+        "en": ["Which flow paths are permitted in every position?", "Can ports overlap during travel?", "Is cross-contamination acceptable?"],
+        "zh": ["每个位置允许哪些流路？", "切换过程中端口能否重叠？", "是否允许交叉污染？"]
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "pvc_u",
+      "code": "PVC-U / UPVC",
+      "type": "structural",
+      "maxLevel": 2,
+      "name": {"en": "Unplasticized polyvinyl chloride", "zh": "硬聚氯乙烯"},
+      "role": {"en": "Valve bodies, pipe, fittings, unions, flanges", "zh": "阀体、管材、管件、由令、法兰"},
+      "strengths": {
+        "en": ["Broad water and many acid/alkali starting applications", "Rigid, widely available, multiple connection standards", "Low installed weight"],
+        "zh": ["水系统及多种酸碱工况的常见起点", "刚性好、供应广、连接标准丰富", "安装重量低"]
+      },
+      "constraints": {
+        "en": ["Temperature and pressure derating", "Brittleness/impact risk, especially at low temperature", "Solvent and some oxidizer limitations", "Solvent-cement workmanship matters"],
+        "zh": ["温升后的压力降额", "低温或冲击条件下的脆裂风险", "部分溶剂和氧化剂限制", "粘接工艺直接影响可靠性"]
+      },
+      "joins": {"en": ["Socket solvent cement", "Threaded", "True union", "Flanged"], "zh": ["承插粘接", "螺纹", "双由令", "法兰"]},
+      "verify": {"en": ["Resin/cell classification", "Pressure-temperature curve", "Impact and UV conditions", "Product-level certifications"], "zh": ["树脂/单元分类", "压力—温度曲线", "冲击与紫外环境", "产品级认证"]}
+    },
+    {
+      "id": "pvc_c",
+      "code": "PVC-C / CPVC",
+      "type": "structural",
+      "maxLevel": 3,
+      "name": {"en": "Chlorinated polyvinyl chloride", "zh": "氯化聚氯乙烯"},
+      "role": {"en": "Higher-temperature valve bodies, pipe and fittings", "zh": "较高温度阀体、管材与管件"},
+      "strengths": {
+        "en": ["Higher temperature positioning than PVC-U in many product systems", "Useful starting point for many corrosive water and chemical duties", "Available in ANSI and selected metric systems"],
+        "zh": ["在许多产品体系中比 PVC-U 具有更高温度定位", "多种腐蚀性水和化学工况的常见起点", "可提供 ANSI 及部分公制体系"]
+      },
+      "constraints": {
+        "en": ["Still requires strong pressure derating at elevated temperature", "Not universally compatible with solvents or oxidizers", "Joining compounds and pipe/valve compound compatibility matter"],
+        "zh": ["高温时仍需显著降压", "并非普遍耐受溶剂或氧化剂", "粘接剂及管阀材料体系需要匹配"]
+      },
+      "joins": {"en": ["Socket solvent cement", "Threaded", "True union", "Flanged"], "zh": ["承插粘接", "螺纹", "双由令", "法兰"]},
+      "verify": {"en": ["Compound classification", "Joint cure and procedure", "Pressure-temperature curve", "Chemical chart for exact concentration"], "zh": ["材料牌号分类", "粘接固化和工艺", "压力—温度曲线", "准确浓度下的耐化学表"]}
+    },
+    {
+      "id": "pp_h",
+      "code": "PP-H",
+      "type": "structural",
+      "maxLevel": 3,
+      "name": {"en": "Polypropylene homopolymer", "zh": "均聚聚丙烯"},
+      "role": {"en": "Industrial valve bodies, welded piping, tanks and fabricated components", "zh": "工业阀体、焊接管路、储罐与加工件"},
+      "strengths": {
+        "en": ["Broad starting resistance to many acids, alkalis and salts", "Fusion-welded systems", "Lower density and useful abrasion behavior"],
+        "zh": ["对多种酸、碱和盐具有较宽的初筛适用面", "可构成热熔焊接系统", "密度低且具有一定耐磨优势"]
+      },
+      "constraints": {
+        "en": ["Oxidizers, hydrocarbons, UV, and low-temperature impact require review", "Creep and flange/support loading matter", "PP-H, PP-R and PP-B are not interchangeable labels"],
+        "zh": ["氧化剂、烃类、紫外及低温冲击需要复核", "蠕变和法兰/支撑载荷重要", "PP-H、PP-R 与 PP-B 不能混为一谈"]
+      },
+      "joins": {"en": ["Butt fusion", "Socket fusion", "IR fusion", "Flanged", "True union"], "zh": ["热熔对接", "承插热熔", "红外焊接", "法兰", "双由令"]},
+      "verify": {"en": ["PP grade and stabilizer package", "Welding procedure", "Pressure-temperature curve", "External UV/ambient exposure"], "zh": ["PP 具体牌号和稳定剂体系", "焊接工艺", "压力—温度曲线", "外部紫外和环境暴露"]}
+    },
+    {
+      "id": "pp_r",
+      "code": "PP-R / PP-RCT",
+      "type": "structural",
+      "maxLevel": 3,
+      "name": {"en": "Random copolymer polypropylene systems", "zh": "无规共聚聚丙烯体系"},
+      "role": {"en": "Pressure piping and selected valve/fitting systems", "zh": "压力管道及部分阀门/管件体系"},
+      "strengths": {
+        "en": ["Fusion joining", "Water and selected industrial service", "Different long-term strength positioning from PP-H"],
+        "zh": ["热熔连接", "适用于水及部分工业工况", "长期强度定位与 PP-H 不同"]
+      },
+      "constraints": {
+        "en": ["Industrial chemical valve availability may be narrower", "Do not assume compatibility from the generic PP name", "Manufacturer system compatibility matters"],
+        "zh": ["工业化学阀门可选范围可能较窄", "不能仅凭“PP”名称推断兼容性", "必须确认制造商系统配套性"]
+      },
+      "joins": {"en": ["Socket fusion", "Butt fusion", "Flanged"], "zh": ["承插热熔", "热熔对接", "法兰"]},
+      "verify": {"en": ["Exact PP designation", "System pressure class", "Chemical and temperature scope", "Compatible tools and fittings"], "zh": ["准确 PP 类型", "系统压力等级", "化学与温度范围", "配套工具和管件"]}
+    },
+    {
+      "id": "pe100",
+      "code": "PE 100 / HDPE",
+      "type": "structural",
+      "maxLevel": 2,
+      "name": {"en": "High-density polyethylene pressure systems", "zh": "高密度聚乙烯压力管道体系"},
+      "role": {"en": "Utility piping, buried systems, large-diameter valves and fabricated components", "zh": "公用管路、埋地系统、大口径阀门与加工件"},
+      "strengths": {
+        "en": ["Toughness and flexibility", "Fusion joining and buried-service suitability", "Useful for water, brine and selected chemicals"],
+        "zh": ["韧性与柔性", "适合热熔连接和埋地应用", "常用于水、盐水及部分化学介质"]
+      },
+      "constraints": {
+        "en": ["Lower stiffness and temperature positioning than several engineering thermoplastics", "Permeation and hydrocarbon compatibility require review", "Valve availability and operating torque vary by size"],
+        "zh": ["刚度和温度定位低于部分工程塑料", "渗透及烃类兼容性需要核对", "不同口径的阀门供应和操作扭矩差异大"]
+      },
+      "joins": {"en": ["Butt fusion", "Electrofusion", "Flanged adapters"], "zh": ["热熔对接", "电熔", "法兰转换"]},
+      "verify": {"en": ["PE grade and SDR", "Fusion records", "Permeation", "Buried loads and surge"], "zh": ["PE 等级与 SDR", "焊接记录", "渗透", "埋地载荷与冲击压力"]}
+    },
+    {
+      "id": "abs",
+      "code": "ABS",
+      "type": "structural",
+      "maxLevel": 2,
+      "name": {"en": "Acrylonitrile butadiene styrene", "zh": "丙烯腈—丁二烯—苯乙烯"},
+      "role": {"en": "Cold-water, cooling, marine and selected low-temperature systems", "zh": "冷水、冷却、船舶及部分低温系统"},
+      "strengths": {
+        "en": ["Good toughness at lower temperatures", "Lightweight solvent-cement systems", "Common in selected water and marine applications"],
+        "zh": ["低温韧性较好", "轻量化粘接系统", "常见于部分水和船舶应用"]
+      },
+      "constraints": {
+        "en": ["Narrower chemical and high-temperature scope", "Solvents and UV exposure require close review", "Not a universal industrial-corrosion material"],
+        "zh": ["耐化学和高温范围较窄", "溶剂与紫外暴露需重点评审", "不是通用工业防腐材料"]
+      },
+      "joins": {"en": ["Socket solvent cement", "Threaded", "Flanged"], "zh": ["承插粘接", "螺纹", "法兰"]},
+      "verify": {"en": ["Exact chemical", "Temperature range", "UV protection", "Product approvals"], "zh": ["准确化学品", "温度范围", "紫外防护", "产品认证"]}
+    },
+    {
+      "id": "pvdf",
+      "code": "PVDF",
+      "type": "high_performance",
+      "maxLevel": 4,
+      "name": {"en": "Polyvinylidene fluoride", "zh": "聚偏氟乙烯"},
+      "role": {"en": "High-performance valve bodies, high-purity piping, liners and wetted components", "zh": "高性能阀体、高纯管路、衬里与接液部件"},
+      "strengths": {
+        "en": ["Broad chemical-resistance starting range", "Higher temperature positioning", "High-purity grades and good abrasion behavior"],
+        "zh": ["较宽的耐化学初筛范围", "较高温度定位", "可提供高纯等级并具有较好耐磨表现"]
+      },
+      "constraints": {
+        "en": ["Higher cost", "Grade, purity and joining process matter", "Strong alkali, some solvents, radiation, permeation and stress conditions still require review"],
+        "zh": ["成本较高", "牌号、纯度和连接工艺重要", "强碱、部分溶剂、辐照、渗透与应力条件仍需评审"]
+      },
+      "joins": {"en": ["Butt fusion", "Socket fusion", "IR/beadless fusion", "Flanged", "True union"], "zh": ["热熔对接", "承插热熔", "红外/无焊珠焊接", "法兰", "双由令"]},
+      "verify": {"en": ["PVDF grade", "Purity/cleanroom scope", "Weld procedure", "Pressure-temperature and permeation data"], "zh": ["PVDF 牌号", "纯度/洁净制造范围", "焊接工艺", "压力—温度和渗透数据"]}
+    },
+    {
+      "id": "ectfe",
+      "code": "ECTFE",
+      "type": "high_performance",
+      "maxLevel": 4,
+      "name": {"en": "Ethylene chlorotrifluoroethylene", "zh": "乙烯—三氟氯乙烯共聚物"},
+      "role": {"en": "Lining, sheet, coating and selected high-performance piping components", "zh": "衬里、板材、涂层及部分高性能管路部件"},
+      "strengths": {
+        "en": ["Broad chemical and permeation performance in selected severe duties", "Useful as a lining or fabricated-material option", "Good surface and abrasion characteristics in appropriate systems"],
+        "zh": ["在部分严苛工况中具有较宽的耐化学与抗渗透表现", "可作为衬里或加工材料方案", "在合适系统中具有良好表面和耐磨特性"]
+      },
+      "constraints": {
+        "en": ["Valve product availability is limited compared with PVC/PP/PVDF", "Fabrication and welding capability are specialized", "Supplier data and project qualification are essential"],
+        "zh": ["阀门产品可选性低于 PVC/PP/PVDF", "加工与焊接能力专业性高", "制造商数据和项目批准不可缺少"]
+      },
+      "joins": {"en": ["Specialized welding", "Lining fabrication", "Flanged assemblies"], "zh": ["专业焊接", "衬里加工", "法兰组件"]},
+      "verify": {"en": ["Grade and thickness", "Lining continuity", "Fabricator qualification", "Permeation and spark-test records"], "zh": ["牌号与厚度", "衬里连续性", "加工方资质", "渗透与电火花检测记录"]}
+    },
+    {
+      "id": "ptfe_pfa",
+      "code": "PTFE / PFA",
+      "type": "lining_seat",
+      "maxLevel": 4,
+      "name": {"en": "Fluoropolymer seats, diaphragms, liners and wetted parts", "zh": "氟塑料阀座、隔膜、衬里与接液部件"},
+      "role": {"en": "Seats, diaphragms, gaskets, liners, tubing and high-purity wetted parts", "zh": "阀座、隔膜、垫片、衬里、管材及高纯接液件"},
+      "strengths": {
+        "en": ["Very broad chemical-resistance starting range", "Low friction and useful sealing/lining behavior", "PFA supports melt-processed and high-purity constructions"],
+        "zh": ["非常宽的耐化学初筛范围", "低摩擦并适合作密封/衬里", "PFA 可用于熔融加工及高纯结构"]
+      },
+      "constraints": {
+        "en": ["PTFE is not normally a load-bearing valve-body material", "Creep, cold flow, permeation and mechanical backing matter", "Filled and modified grades differ"],
+        "zh": ["PTFE 通常不作为承载阀体材料", "蠕变、冷流、渗透和机械支撑重要", "填充及改性牌号差异明显"]
+      },
+      "joins": {"en": ["Compression sealing", "Lined construction", "PFA fusion in qualified systems"], "zh": ["压紧密封", "衬里结构", "合格体系中的 PFA 焊接"]},
+      "verify": {"en": ["Exact fluoropolymer grade", "Backing material", "Permeation", "Thickness and inspection"], "zh": ["准确氟塑料牌号", "背衬材料", "渗透", "厚度和检验"]}
+    },
+    {
+      "id": "lined_composite",
+      "code": "Lined metal / FRP composite",
+      "type": "composite",
+      "maxLevel": 4,
+      "name": {"en": "Structurally supported corrosion barrier", "zh": "结构支撑型防腐屏障"},
+      "role": {"en": "Large sizes, structural loads, vacuum or duties beyond solid-plastic geometry", "zh": "大口径、较高结构载荷、真空或超出实心塑料结构能力的工况"},
+      "strengths": {
+        "en": ["Separates structural strength from corrosion barrier", "Useful for larger equipment and severe mechanical loads", "Multiple liner options"],
+        "zh": ["把结构强度与防腐屏障分开", "适用于大型设备和较高机械载荷", "可选择多种衬里"]
+      },
+      "constraints": {
+        "en": ["Liner damage, permeation, pinholes and flange sealing can dominate life", "External corrosion of the support structure remains possible", "Repair and inspection require specialist methods"],
+        "zh": ["衬里损伤、渗透、针孔和法兰密封可能决定寿命", "支撑结构仍可能发生外腐蚀", "维修与检验需要专业方法"]
+      },
+      "joins": {"en": ["Flanged", "Fabricated lined assemblies", "Laminated FRP joints"], "zh": ["法兰", "衬里加工组件", "FRP 糊制连接"]},
+      "verify": {"en": ["Liner material/thickness", "Spark testing", "Vacuum rating", "Bonding and repair procedure"], "zh": ["衬里材料/厚度", "电火花检测", "真空等级", "粘结与维修程序"]}
+    }
+  ],
+  "seals": [
+    {
+      "id": "epdm",
+      "code": "EPDM",
+      "name": {"en": "Ethylene propylene diene rubber", "zh": "三元乙丙橡胶"},
+      "strengths": {"en": ["Water, many dilute acids/alkalis, weathering and steam in suitable grades"], "zh": ["水、多种稀酸稀碱、耐候及合适牌号下的蒸汽工况"]},
+      "constraints": {"en": ["Oils, fuels, many hydrocarbons and some concentrated chemicals"], "zh": ["油、燃料、多种烃类及部分高浓度化学品"]},
+      "verify": {"en": ["Compound formulation, cure system, temperature, compression set and certification"], "zh": ["配方、硫化体系、温度、压缩永久变形和认证"]}
+    },
+    {
+      "id": "fkm",
+      "code": "FKM / FPM",
+      "name": {"en": "Fluoroelastomer", "zh": "氟橡胶"},
+      "strengths": {"en": ["Many oils, fuels, solvents and higher-temperature duties in suitable compounds"], "zh": ["合适配方下的多种油品、燃料、溶剂及较高温工况"]},
+      "constraints": {"en": ["Strong alkalis, hot water/steam, amines and some polar chemicals vary greatly by grade"], "zh": ["强碱、热水/蒸汽、胺类及部分极性化学品对不同牌号影响差异大"]},
+      "verify": {"en": ["FKM family/grade, exact chemical, decompression, temperature and swelling"], "zh": ["FKM 具体体系/牌号、准确化学品、减压、温度和溶胀"]}
+    },
+    {
+      "id": "nbr",
+      "code": "NBR / Buna-N",
+      "name": {"en": "Nitrile rubber", "zh": "丁腈橡胶"},
+      "strengths": {"en": ["Many oils and water services, good mechanical properties, common availability"], "zh": ["多种油品和水工况、较好的机械性能、供应普遍"]},
+      "constraints": {"en": ["Weathering, ozone, strong oxidizers, ketones and many aggressive chemicals"], "zh": ["耐候、臭氧、强氧化剂、酮类及多种强腐蚀化学品"]},
+      "verify": {"en": ["Acrylonitrile content/compound, ambient exposure, temperature and exact media"], "zh": ["丙烯腈含量/配方、环境暴露、温度和准确介质"]}
+    },
+    {
+      "id": "ptfe",
+      "code": "PTFE",
+      "name": {"en": "Polytetrafluoroethylene", "zh": "聚四氟乙烯"},
+      "strengths": {"en": ["Broad chemical-resistance starting range, low friction, common seats and gaskets"], "zh": ["耐化学初筛范围宽、低摩擦、常用于阀座和垫片"]},
+      "constraints": {"en": ["Cold flow, creep, permeation, recovery and wear under cycling"], "zh": ["冷流、蠕变、渗透、回弹性及循环磨损"]},
+      "verify": {"en": ["Virgin/filled/modified grade, backing, load, temperature and seat design"], "zh": ["纯料/填充/改性牌号、背衬、载荷、温度和阀座设计"]}
+    },
+    {
+      "id": "ffkm",
+      "code": "FFKM",
+      "name": {"en": "Perfluoroelastomer", "zh": "全氟醚橡胶"},
+      "strengths": {"en": ["Very broad chemical and temperature capability in appropriate grades"], "zh": ["合适牌号下具有很宽的耐化学和温度能力"]},
+      "constraints": {"en": ["Very high cost, grade-specific limits, availability and lead time"], "zh": ["成本很高、不同牌号限制不同、供应与交期"]},
+      "verify": {"en": ["Exact grade, temperature, pressure cycling, purity and economic justification"], "zh": ["准确牌号、温度、压力循环、纯度及经济合理性"]}
+    },
+    {
+      "id": "ptfe_diaphragm",
+      "code": "PTFE/PFA-faced diaphragm",
+      "name": {"en": "Fluoropolymer-faced diaphragm with elastomer backing", "zh": "氟塑料覆层复合隔膜"},
+      "strengths": {"en": ["Combines chemical barrier with flexible backing", "Common in corrosive and high-purity diaphragm valves"], "zh": ["兼顾化学屏障与柔性背衬", "常用于腐蚀性和高纯隔膜阀"]},
+      "constraints": {"en": ["Flex life, permeation, backing compatibility, vacuum and installation compression"], "zh": ["弯曲寿命、渗透、背衬兼容性、真空及安装压缩量"]},
+      "verify": {"en": ["Face/backing materials, cycle data, pressure-temperature, orientation and maintenance interval"], "zh": ["覆层/背衬材料、循环数据、压力—温度、方向和维护周期"]}
+    }
+  ],
+  "valves": [
+    {
+      "id": "ball",
+      "code": "Ball valve",
+      "name": {"en": "Ball valve", "zh": "球阀"},
+      "bestFor": {"en": ["Compact on/off isolation", "Clean liquids", "Skids, samples, drains and dosing lines"], "zh": ["紧凑开关隔离", "洁净液体", "撬装、取样、排放和加药管路"]},
+      "watch": {"en": ["Ordinary designs are not general-purpose throttling valves", "Trapped cavity, crystallization and gas generation", "Seat torque and actuator sizing"], "zh": ["普通结构不应默认用于节流", "困液阀腔、结晶与析气", "阀座扭矩和执行器选型"]},
+      "parameters": {"en": ["Full/reduced port", "True union/flanged", "Seat and O-ring", "Cavity vent", "Torque and cycle rate"], "zh": ["全通径/缩径", "双由令/法兰", "阀座和 O 形圈", "阀腔排气", "扭矩和循环频率"]}
+    },
+    {
+      "id": "control_ball",
+      "code": "Characterized ball valve",
+      "name": {"en": "Characterized control ball valve", "zh": "特性调节球阀"},
+      "bestFor": {"en": ["Modulating flow where a characterized insert or ball is available", "Compact automated control"], "zh": ["具有特性内件/球体的连续流量调节", "紧凑型自动控制"]},
+      "watch": {"en": ["Cavitation, velocity and noise", "Valve authority and actuator resolution", "Do not use on/off Cv as a control curve"], "zh": ["汽蚀、流速和噪声", "阀权度和执行器分辨率", "不能把开关阀 Cv 当作调节特性"]},
+      "parameters": {"en": ["Cv/Kv curve", "Rangeability", "Differential pressure", "Control signal", "Fail position"], "zh": ["Cv/Kv 曲线", "可调比", "压差", "控制信号", "故障位"]}
+    },
+    {
+      "id": "multiport_ball",
+      "code": "Multiport ball valve",
+      "name": {"en": "Three-way / multiport ball valve", "zh": "三通 / 多通球阀"},
+      "bestFor": {"en": ["Diverting, selecting, mixing and bypass arrangements"], "zh": ["分流、选择、混合和旁路布置"]},
+      "watch": {"en": ["L/T-port definition", "Port overlap during travel", "Cross-contamination and blocked-port pressure"], "zh": ["L/T 型流路定义", "切换过程端口重叠", "交叉污染和封闭端升压"]},
+      "parameters": {"en": ["Port pattern", "Position table", "Flow direction", "Actuator stops", "Cavity relief"], "zh": ["流路形式", "位置表", "流向", "执行器限位", "阀腔泄压"]}
+    },
+    {
+      "id": "butterfly",
+      "code": "Butterfly valve",
+      "name": {"en": "Butterfly valve", "zh": "蝶阀"},
+      "bestFor": {"en": ["Larger line isolation", "Water, wastewater and utility service", "Compact wafer/lug installation"], "zh": ["较大口径隔离", "水、废水和公用工程", "紧凑对夹/支耳安装"]},
+      "watch": {"en": ["Disc remains in the flow path", "Liner/disc/shaft compatibility", "Flange ID, gasket practice and actuator torque"], "zh": ["蝶板始终位于流道中", "衬里/蝶板/阀轴兼容性", "法兰内径、垫片方式和执行器扭矩"]},
+      "parameters": {"en": ["Wafer/lug", "Disc and liner", "Shaft material", "Flange standard", "Torque and shutoff"], "zh": ["对夹/支耳", "蝶板和衬里", "阀轴材料", "法兰标准", "扭矩和关闭性能"]}
+    },
+    {
+      "id": "diaphragm",
+      "code": "Diaphragm valve",
+      "name": {"en": "Diaphragm valve", "zh": "隔膜阀"},
+      "bestFor": {"en": ["Corrosive, dirty, slurry, high-purity or dead-leg-sensitive duty", "Isolation and selected control service"], "zh": ["腐蚀、脏污、浆液、高纯或死区敏感工况", "隔离及部分调节服务"]},
+      "watch": {"en": ["Diaphragm life and permeation", "Weir vs full-bore geometry", "Vacuum, orientation and cycle frequency"], "zh": ["隔膜寿命和渗透", "堰式与直通式结构", "真空、安装方向和循环频率"]},
+      "parameters": {"en": ["Body/lining", "Diaphragm face/backing", "Weir/full bore", "Cycle data", "Actuator thrust"], "zh": ["阀体/衬里", "隔膜覆层/背衬", "堰式/直通", "循环数据", "执行器推力"]}
+    },
+    {
+      "id": "check",
+      "code": "Check valve",
+      "name": {"en": "Check valve", "zh": "止回阀"},
+      "bestFor": {"en": ["Pump discharge", "Dosing lines", "Backflow prevention"], "zh": ["泵出口", "加药管路", "防倒流"]},
+      "watch": {"en": ["Cracking pressure", "Orientation", "Pulsation, water hammer, solids and spring compatibility"], "zh": ["开启压力", "安装方向", "脉动、水锤、颗粒和弹簧兼容性"]},
+      "parameters": {"en": ["Ball/lift/spring/swing type", "Cracking pressure", "Pressure drop", "Closure response", "Back-pressure seal"], "zh": ["球式/升降/弹簧/旋启结构", "开启压力", "压降", "关闭响应", "背压密封"]}
+    },
+    {
+      "id": "globe",
+      "code": "Globe / control valve",
+      "name": {"en": "Globe-style control valve", "zh": "截止式调节阀"},
+      "bestFor": {"en": ["Defined throttling and control duty", "Applications needing a repeatable flow characteristic"], "zh": ["明确的节流与调节任务", "需要可重复流量特性的应用"]},
+      "watch": {"en": ["Higher pressure drop", "Trim erosion/cavitation", "Actuator thrust and control stability"], "zh": ["压降较高", "内件冲蚀/汽蚀", "执行器推力和控制稳定性"]},
+      "parameters": {"en": ["Cv/Kv", "Characteristic", "Rangeability", "Allowable differential pressure", "Seat leakage"], "zh": ["Cv/Kv", "流量特性", "可调比", "允许压差", "阀座泄漏"]}
+    },
+    {
+      "id": "pressure_control",
+      "code": "Back-pressure / relief valve",
+      "name": {"en": "Pressure-control and relief valves", "zh": "背压、泄压与减压阀"},
+      "bestFor": {"en": ["Metering-pump stabilization", "Blocked-discharge protection", "Pressure reduction or anti-siphon functions"], "zh": ["计量泵稳定运行", "堵塞出口保护", "减压或防虹吸功能"]},
+      "watch": {"en": ["Set point is system-dependent", "Flow capacity and hysteresis", "Safe relief destination and diaphragm compatibility"], "zh": ["设定值取决于系统", "流量能力和迟滞", "安全泄放位置和隔膜兼容性"]},
+      "parameters": {"en": ["Set range", "Flow curve", "Inlet/outlet pressure", "Diaphragm", "Relief routing"], "zh": ["设定范围", "流量曲线", "进出口压力", "隔膜", "泄放路径"]}
+    },
+    {
+      "id": "pinch",
+      "code": "Pinch valve",
+      "name": {"en": "Pinch valve", "zh": "夹管阀"},
+      "bestFor": {"en": ["Abrasive slurry, fibrous media and open-flow-path isolation"], "zh": ["磨蚀浆液、纤维介质及开阔流道隔离"]},
+      "watch": {"en": ["Sleeve material and fatigue", "Vacuum collapse", "Operating pressure and closure force"], "zh": ["套管材料与疲劳", "真空失稳", "工作压力和关闭力"]},
+      "parameters": {"en": ["Sleeve compound", "Full-bore geometry", "Pressure/vacuum", "Cycle life", "Actuation method"], "zh": ["套管配方", "全流道结构", "压力/真空", "循环寿命", "执行方式"]}
+    },
+    {
+      "id": "strainer",
+      "code": "Strainer / calibration accessory",
+      "name": {"en": "Strainers and chemfeed accessories", "zh": "过滤器与加药附件"},
+      "bestFor": {"en": ["Pump protection, calibration, injection, pulsation and maintainability"], "zh": ["泵保护、标定、注射、脉动控制和可维护性"]},
+      "watch": {"en": ["Screen plugging and pressure drop", "Calibration-column sizing", "Injection-point pressure and chemical crystallization"], "zh": ["滤网堵塞和压降", "标定柱容量", "注射点压力和化学品结晶"]},
+      "parameters": {"en": ["Mesh/open area", "Column volume", "Pump capacity", "Injection pressure", "Drain/flush arrangement"], "zh": ["目数/开孔面积", "标定柱容积", "泵流量", "注射压力", "排放/冲洗布置"]}
+    }
+  ],
+  "fluids": [
+    {
+      "id": "water",
+      "label": {"en": "Industrial / treated water", "zh": "工业水 / 处理水"},
+      "summary": {"en": "Water chemistry, disinfectants, suspended solids, cleaning and pressure transients still govern selection.", "zh": "即使是水，也必须考虑水质、消毒剂、悬浮物、清洗和压力瞬态。"},
+      "drivers": {"en": ["pH and dissolved salts", "Residual oxidants", "Temperature and surge", "Solids and biofouling"], "zh": ["pH 与溶解盐", "残余氧化剂", "温度与冲击压力", "固体与生物污损"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pe100", "pvdf"],
+      "conditional": ["abs", "pp_r"],
+      "specialist": [],
+      "seals": ["epdm", "fkm", "ptfe"],
+      "warnings": {"en": ["Do not assume every water-grade product is suitable for chemicals used during cleaning or disinfection."], "zh": ["不能因为产品适用于水，就默认其适用于清洗或消毒时使用的化学品。"]},
+      "questions": {"en": ["Is the water potable, ultrapure, seawater, wastewater, or process water?", "What disinfectants and cleaning chemicals contact the valve?", "Are surge, vacuum, outdoor exposure, or suspended solids present?"], "zh": ["属于饮用水、超纯水、海水、废水还是工艺水？", "阀门会接触哪些消毒剂和清洗剂？", "是否存在冲击压力、真空、户外暴露或悬浮物？"]}
+    },
+    {
+      "id": "potable",
+      "label": {"en": "Potable water", "zh": "饮用水"},
+      "summary": {"en": "Product-level hygienic approval and the exact certified size/material configuration matter in addition to corrosion resistance.", "zh": "除耐腐蚀外，还必须核对产品级卫生认证以及证书覆盖的准确口径和材料配置。"},
+      "drivers": {"en": ["Target-market approval", "Disinfectant level", "Extractables and taste/odor", "Certified size and configuration"], "zh": ["目标市场认证", "消毒剂水平", "析出物与味道/气味", "证书覆盖口径和配置"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pp_r", "pe100", "pvdf"],
+      "conditional": ["abs"],
+      "specialist": [],
+      "seals": ["epdm", "fkm", "ptfe"],
+      "warnings": {"en": ["A material name or factory ISO 9001 certificate is not a potable-water product approval."], "zh": ["材料名称或工厂 ISO 9001 证书不等于饮用水产品认证。"]},
+      "questions": {"en": ["Which market and approval scheme applies?", "Does the certificate cover the exact valve, size, seal and pressure class?", "What disinfectants and temperatures are used?"], "zh": ["适用哪个市场和认证体系？", "证书是否覆盖准确阀型、口径、密封和压力等级？", "使用什么消毒剂和温度？"]}
+    },
+    {
+      "id": "wastewater",
+      "label": {"en": "Industrial wastewater", "zh": "工业废水"},
+      "summary": {"en": "Wastewater is not one chemical. Variable pH, solvents, oxidants, solids, oils and cleaning events can create mixed failure mechanisms.", "zh": "废水不是一种化学品。波动的 pH、溶剂、氧化剂、固体、油分和清洗会形成复合失效机理。"},
+      "drivers": {"en": ["Worst-case composition", "pH excursions", "Solids/abrasion", "Intermittent drying and cleaning"], "zh": ["最不利成分", "pH 波动", "固体/磨蚀", "间歇干燥与清洗"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pvdf"],
+      "conditional": ["pe100", "lined_composite"],
+      "specialist": ["ectfe", "ptfe_pfa"],
+      "seals": ["epdm", "fkm", "ptfe", "ptfe_diaphragm"],
+      "warnings": {"en": ["Compatibility must be based on the worst credible mixture, not only an average laboratory result."], "zh": ["兼容性应基于可信的最不利混合物，而不能只看平均化验值。"]},
+      "questions": {"en": ["What chemicals can enter during upset or cleaning?", "What are maximum solids and particle size?", "Does the line dry, crystallize, or release gas?"], "zh": ["异常或清洗时可能进入哪些化学品？", "最大固含和粒径是多少？", "管路是否会干燥、结晶或析气？"]}
+    },
+    {
+      "id": "brine",
+      "label": {"en": "Seawater / brine", "zh": "海水 / 盐水"},
+      "summary": {"en": "Internal saltwater resistance and external atmospheric corrosion must be reviewed together.", "zh": "必须同时评审内部盐水腐蚀和外部盐雾/大气腐蚀。"},
+      "drivers": {"en": ["Salt concentration", "Residual chlorine", "Biofouling and solids", "External fasteners/actuator exposure"], "zh": ["盐浓度", "余氯", "生物污损与固体", "外露紧固件/执行器环境"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pe100", "pvdf"],
+      "conditional": ["abs", "lined_composite"],
+      "specialist": [],
+      "seals": ["epdm", "fkm", "ptfe"],
+      "warnings": {"en": ["A corrosion-resistant body can still contain a vulnerable shaft, spring, fastener or actuator accessory."], "zh": ["耐腐蚀阀体内部或外部仍可能存在易腐蚀的阀轴、弹簧、紧固件或执行器附件。"]},
+      "questions": {"en": ["Is the service natural seawater, concentrated brine, or chlorinated water?", "Are marine atmosphere and UV exposure present?", "What solids and biological growth are expected?"], "zh": ["介质是天然海水、浓盐水还是含氯水？", "是否有海洋大气和紫外暴露？", "预计有哪些固体和生物生长？"]}
+    },
+    {
+      "id": "acid",
+      "label": {"en": "Mineral acids", "zh": "无机酸"},
+      "summary": {"en": "Acid name alone is insufficient. Concentration, temperature, oxidizing behavior, contaminants and stress can reverse a material decision.", "zh": "只有酸名称远远不够；浓度、温度、氧化性、杂质和应力可能完全改变材料判断。"},
+      "drivers": {"en": ["Exact acid and concentration", "Oxidizing/non-oxidizing behavior", "Temperature", "Mixed acids and metallic contamination"], "zh": ["准确酸种和浓度", "氧化/非氧化特性", "温度", "混酸与金属杂质"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pvdf"],
+      "conditional": ["pe100"],
+      "specialist": ["ectfe", "ptfe_pfa", "lined_composite"],
+      "seals": ["epdm", "fkm", "ptfe", "ptfe_diaphragm", "ffkm"],
+      "warnings": {"en": ["Sulfuric, nitric, hydrofluoric, hydrochloric and mixed acids must never be treated as one compatibility group."], "zh": ["硫酸、硝酸、氢氟酸、盐酸和混酸绝不能作为同一兼容类别处理。"]},
+      "questions": {"en": ["What is the exact chemical and mass concentration?", "What are continuous and cleaning temperatures?", "Are oxidizers, dissolved metals, solvents or water dilution present?"], "zh": ["准确化学品和质量浓度是多少？", "连续运行和清洗温度是多少？", "是否含氧化剂、溶解金属、溶剂或存在稀释放热？"]}
+    },
+    {
+      "id": "alkali",
+      "label": {"en": "Strong alkalis / caustic", "zh": "强碱 / 烧碱"},
+      "summary": {"en": "Concentration and temperature affect both structural plastics and elastomers; seal selection often differs from acid duty.", "zh": "浓度和温度会同时影响结构塑料与弹性体，密封选择通常不同于酸工况。"},
+      "drivers": {"en": ["Exact alkali and concentration", "Temperature", "Crystallization", "Seal swelling or hardening"], "zh": ["准确碱种和浓度", "温度", "结晶", "密封溶胀或硬化"]},
+      "starting": ["pvc_u", "pvc_c", "pp_h", "pe100", "pvdf"],
+      "conditional": ["pp_r"],
+      "specialist": ["ptfe_pfa", "lined_composite"],
+      "seals": ["epdm", "ptfe", "ptfe_diaphragm", "ffkm"],
+      "warnings": {"en": ["Do not assume fluoroelastomer is automatically the premium choice for hot concentrated caustic."], "zh": ["不能默认氟橡胶在高温浓碱中一定是“更高级”的选择。"]},
+      "questions": {"en": ["What is the concentration across normal, dilution and cleaning conditions?", "Can the chemical crystallize during shutdown?", "What elastomer compound has the manufacturer approved?"], "zh": ["正常、稀释和清洗状态下浓度分别是多少？", "停机时是否可能结晶？", "制造商批准了哪种弹性体配方？"]}
+    },
+    {
+      "id": "oxidizer",
+      "label": {"en": "Oxidizers / sodium hypochlorite", "zh": "氧化剂 / 次氯酸钠"},
+      "summary": {"en": "Oxidizer strength, decomposition, gas generation, concentration decay and trace metals make this a system-level review.", "zh": "氧化强度、分解、析气、浓度衰减和痕量金属使其必须按系统级问题评审。"},
+      "drivers": {"en": ["Available chlorine/oxidizer concentration", "Temperature and light exposure", "Gas release and trapped cavities", "Metal contamination and crystallization"], "zh": ["有效氯/氧化剂浓度", "温度与光照", "析气与困液阀腔", "金属污染和结晶"]},
+      "starting": ["pvc_u", "pvc_c", "pvdf"],
+      "conditional": ["pp_h"],
+      "specialist": ["ectfe", "ptfe_pfa"],
+      "seals": ["epdm", "ptfe", "ptfe_diaphragm", "ffkm"],
+      "warnings": {"en": ["A standard closed-cavity ball valve may trap decomposing chemical; vented or diaphragm designs may be considered subject to manufacturer approval."], "zh": ["普通封闭阀腔球阀可能困住会分解的化学品；经制造商批准后可考虑排气球阀或隔膜阀。"]},
+      "questions": {"en": ["What is delivered and operating concentration?", "Can the valve trap liquid when closed?", "What are storage age, temperature, UV exposure and metallic contamination?"], "zh": ["交付浓度和运行浓度分别是多少？", "阀门关闭时是否会困液？", "储存时间、温度、紫外和金属污染情况如何？"]}
+    },
+    {
+      "id": "solvent",
+      "label": {"en": "Solvents / organic chemicals", "zh": "溶剂 / 有机化学品"},
+      "summary": {"en": "Swelling, dissolution, permeation and stress cracking can affect both body plastics and seals.", "zh": "溶胀、溶解、渗透和应力开裂会同时影响阀体塑料与密封。"},
+      "drivers": {"en": ["Exact solvent blend", "Polarity and water content", "Temperature", "Permeation and explosive atmosphere"], "zh": ["准确溶剂混合物", "极性和含水量", "温度", "渗透与爆炸性环境"]},
+      "starting": ["pvdf"],
+      "conditional": ["pvc_c", "pp_h"],
+      "specialist": ["ectfe", "ptfe_pfa", "lined_composite"],
+      "seals": ["fkm", "ptfe", "ffkm", "ptfe_diaphragm"],
+      "warnings": {"en": ["Generic solvent compatibility is unsafe; test the exact blend and every elastomer."], "zh": ["笼统的“耐溶剂”判断不安全，必须核对准确混合物及每一种弹性体。"]},
+      "questions": {"en": ["What is the complete composition including cleaning solvents?", "Is permeation acceptable?", "Is the area classified for flammable vapor and is static control required?"], "zh": ["包括清洗溶剂在内的完整组成是什么？", "是否允许渗透？", "区域是否属于可燃蒸气危险区并需要静电控制？"]}
+    },
+    {
+      "id": "slurry",
+      "label": {"en": "Slurry / suspended solids", "zh": "浆液 / 悬浮固体"},
+      "summary": {"en": "Chemical compatibility, abrasion, settling and geometry must be evaluated together.", "zh": "必须同时评估液相化学兼容性、磨蚀、沉降和阀门几何结构。"},
+      "drivers": {"en": ["Liquid-phase chemistry", "Solids percentage and particle size", "Hardness and velocity", "Settling, flushing and dead zones"], "zh": ["液相化学组成", "固含量与粒径", "硬度与流速", "沉降、冲洗和死区"]},
+      "starting": ["pp_h", "pe100", "pvdf"],
+      "conditional": ["pvc_u", "lined_composite"],
+      "specialist": ["ectfe"],
+      "seals": ["epdm", "ptfe_diaphragm"],
+      "warnings": {"en": ["A chemically resistant material can still fail rapidly through erosion or blockage."], "zh": ["耐化学材料仍可能因冲蚀或堵塞而快速失效。"]},
+      "questions": {"en": ["What are solids percentage, particle distribution and hardness?", "What is line velocity and minimum flow?", "How will the valve be flushed, drained and maintained?"], "zh": ["固含量、粒径分布和硬度是多少？", "管内流速和最小流量是多少？", "阀门如何冲洗、排空和维护？"]}
+    },
+    {
+      "id": "ultrapure",
+      "label": {"en": "Ultrapure water / high-purity chemicals", "zh": "超纯水 / 高纯化学品"},
+      "summary": {"en": "Purity, extractables, surface, dead legs, clean manufacturing and joining quality can matter more than basic corrosion resistance.", "zh": "纯度、析出物、表面、死区、洁净制造和连接质量可能比基本耐腐蚀性更重要。"},
+      "drivers": {"en": ["Purity and extractables", "Surface finish and particles", "Dead-leg geometry", "Cleanroom manufacturing and weld control"], "zh": ["纯度与析出物", "表面和颗粒", "死区结构", "洁净制造和焊接控制"]},
+      "starting": ["pvdf", "pp_h"],
+      "conditional": [],
+      "specialist": ["ptfe_pfa"],
+      "seals": ["ptfe", "ptfe_diaphragm", "ffkm"],
+      "warnings": {"en": ["A standard industrial PVDF or PP product is not automatically a high-purity product."], "zh": ["普通工业级 PVDF 或 PP 产品不自动等于高纯产品。"]},
+      "questions": {"en": ["What purity, TOC, ionic and particle limits apply?", "Is the exact product manufactured and packaged for the required cleanliness class?", "What welding, passivation/cleaning and validation documents are required?"], "zh": ["适用什么纯度、TOC、离子和颗粒限值？", "具体产品是否按所需洁净等级制造和包装？", "需要哪些焊接、清洗和验证文件？"]}
+    },
+    {
+      "id": "gas_vacuum",
+      "label": {"en": "Gas / compressed air / vacuum", "zh": "气体 / 压缩空气 / 真空"},
+      "summary": {"en": "Stored energy, permeation, leakage, decompression and collapse risks require explicit product approval.", "zh": "储能、渗透、泄漏、减压和失稳风险要求制造商明确批准。"},
+      "drivers": {"en": ["Gas hazard class", "Pressure or vacuum level", "Permeation/leakage", "Rapid decompression and ignition/static risk"], "zh": ["气体危险类别", "压力或真空度", "渗透/泄漏", "快速减压与点燃/静电风险"]},
+      "starting": [],
+      "conditional": [],
+      "specialist": ["pvc_u", "pvc_c", "pp_h", "pe100", "pvdf", "lined_composite"],
+      "seals": ["epdm", "fkm", "ptfe", "ffkm"],
+      "warnings": {"en": ["Never apply a liquid-service rating to compressed gas without explicit product and system approval."], "zh": ["未经具体产品和系统明确批准，绝不能把液体工况额定值直接用于压缩气体。"]},
+      "questions": {"en": ["What gas, hazard classification and allowable leak rate apply?", "Is the product series explicitly approved for gas or vacuum?", "What decompression, permeation, fire and static-control requirements apply?"], "zh": ["气体种类、危险分类和允许泄漏率是什么？", "该产品系列是否明确批准用于气体或真空？", "减压、渗透、防火和静电控制要求是什么？"]}
+    }
+  ],
+  "evidence": [
+    {
+      "id": "duty",
+      "label": {"en": "Duty definition", "zh": "工况定义"},
+      "items": {
+        "en": ["Exact media and concentration", "Normal and upset temperature/pressure", "Flow, solids, phase and cleaning", "Installation and environment"],
+        "zh": ["准确介质与浓度", "正常及异常温度/压力", "流量、固体、相态与清洗", "安装与环境"]
+      }
+    },
+    {
+      "id": "product",
+      "label": {"en": "Product definition", "zh": "产品定义"},
+      "items": {
+        "en": ["Specific series and size", "Complete wetted-material BOM", "Pressure-temperature curve", "Cv/Kv, torque and orientation"],
+        "zh": ["具体系列与口径", "完整接液材料 BOM", "压力—温度曲线", "Cv/Kv、扭矩与安装方向"]
+      }
+    },
+    {
+      "id": "documents",
+      "label": {"en": "Manufacturer documents", "zh": "制造商文件"},
+      "items": {
+        "en": ["Current datasheet and drawing", "Installation/operation/maintenance instructions", "Chemical-resistance guidance", "Written application confirmation where required"],
+        "zh": ["当前数据表与图纸", "安装/操作/维护说明", "耐化学指导", "必要时的书面工况确认"]
+      }
+    },
+    {
+      "id": "testing",
+      "label": {"en": "Testing and traceability", "zh": "测试与追溯"},
+      "items": {
+        "en": ["Applicable product/test standard", "Pressure/leak test method and records", "Material/batch traceability", "Inspection and nonconformance control"],
+        "zh": ["适用产品/试验标准", "压力/密封测试方法与记录", "材料/批次追溯", "检验和不合格控制"]
+      }
+    },
+    {
+      "id": "approval",
+      "label": {"en": "Market and project approval", "zh": "市场与项目批准"},
+      "items": {
+        "en": ["Certification covers exact product configuration", "PED or other legal scope reviewed", "Customer-approved vendor/equal process", "Quotation assumptions and exclusions visible"],
+        "zh": ["认证覆盖准确产品配置", "已评审 PED 或其他法规范围", "完成客户合格供应商/equal 流程", "报价假设与排除项清晰"]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "ISO/TC 138/SC 7 — Valves and auxiliary equipment of plastics materials",
+      "url": "https://www.iso.org/committee/52600/x/catalogue/",
+      "scope": {
+        "en": "Catalogue for thermoplastics-valve product and test standards, including ISO 16135–16139, ISO 21787, ISO 8233 and ISO 9393.",
+        "zh": "热塑性阀门产品与试验标准目录，包括 ISO 16135–16139、ISO 21787、ISO 8233 和 ISO 9393。"
+      }
+    },
+    {
+      "title": "ISO 9393-1:2004",
+      "url": "https://www.iso.org/standard/35137.html",
+      "scope": {
+        "en": "General pressure-resistance and leaktightness test methods for industrial thermoplastics valves; excludes gas applications covered elsewhere.",
+        "zh": "工业热塑性阀门耐内压和密封性试验的一般方法；不涵盖由其他产品标准规定的气体应用。"
+      }
+    },
+    {
+      "title": "ISO 9393-2:2005",
+      "url": "https://www.iso.org/standard/38446.html",
+      "scope": {
+        "en": "Hydrostatic test parameters and conditions for valves made from listed thermoplastics.",
+        "zh": "规定多种热塑性材料阀门的静液压试验参数与条件。"
+      }
+    },
+    {
+      "title": "ISO 8233:2024",
+      "url": "https://www.iso.org/standard/84107.html",
+      "scope": {
+        "en": "Opening, closing and running torque test method for thermoplastics valves.",
+        "zh": "热塑性阀门开启、关闭和运行扭矩的试验方法。"
+      }
+    },
+    {
+      "title": "ISO 8659:2020",
+      "url": "https://www.iso.org/standard/74740.html",
+      "scope": {
+        "en": "Fatigue-strength test method for hand-operated plastics valves; does not itself establish chemical resistance.",
+        "zh": "手动塑料阀门疲劳强度试验方法；该标准本身并不证明耐化学性。"
+      }
+    },
+    {
+      "title": "GF Industry Planning Fundamentals",
+      "url": "https://www.gfps.com/en-in/downloads-tools/planning-fundamentals/planning-fundamentals-is_gc.html",
+      "scope": {
+        "en": "Manufacturer planning references covering materials, design/installation, valves/actuators, and measurement/control.",
+        "zh": "制造商规划资料，覆盖材料、设计安装、阀门执行器及测量控制。"
+      }
+    },
+    {
+      "title": "Asahi/America — Chemical Resistance With Confidence",
+      "url": "https://www.asahi-america.com/wp-content/uploads/2024/07/Chemical_Resistance_With_Confidence_September_2023.pdf",
+      "scope": {
+        "en": "Explains why valve function, thermoplastic body material and elastomer compatibility must be evaluated together.",
+        "zh": "说明为什么必须同时评估阀门功能、热塑性阀体材料和弹性体兼容性。"
+      }
+    },
+    {
+      "title": "European Commission — Pressure Equipment Directive",
+      "url": "https://single-market-economy.ec.europa.eu/sectors/pressure-equipment-and-gas-appliances/pressure-equipment-sector/pressure-equipment-directive_en",
+      "scope": {
+        "en": "Official overview of PED 2014/68/EU and its scope for stationary pressure equipment.",
+        "zh": "欧盟关于 PED 2014/68/EU 及固定式压力设备适用范围的官方说明。"
+      }
+    }
+  ]
+}

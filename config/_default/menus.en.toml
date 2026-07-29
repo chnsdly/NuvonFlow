@@ -4,12 +4,30 @@ name = "Products"
 pageRef = "/products"
 weight = 10
 
+  [main.params]
+  mega = true
+  mega_kicker = "Product selection"
+  mega_title = "Start with the operating conditions"
+  mega_text = "Review product families by media, material, pressure, temperature, actuation, and documentation needs before RFQ."
+  mega_groups = [
+    { id = "valves", title = "Valve families" },
+    { id = "support", title = "System support products" }
+  ]
+  mega_visual_url = "/resources/rfq-submittal-inputs/"
+  mega_visual_kicker = "Engineering review"
+  mega_visual_title = "Prepare duty conditions early"
+  mega_visual_text = "Media, concentration, temperature, pressure, size, connection, quantity, and target documents help narrow the selection."
+  mega_visual_cta = "Prepare RFQ inputs"
+
   [[main]]
   identifier = "products-overview"
   name = "All Products"
   pageRef = "/products"
   parent = "products"
   weight = 10
+
+    [main.params]
+    mega_role = "overview"
 
   [[main]]
   identifier = "ball-valves"
@@ -18,12 +36,18 @@ weight = 10
   parent = "products"
   weight = 11
 
+    [main.params]
+    mega_group = "valves"
+
   [[main]]
   identifier = "butterfly-valves"
   name = "Butterfly Valves"
   pageRef = "/products/butterfly-valves"
   parent = "products"
   weight = 12
+
+    [main.params]
+    mega_group = "valves"
 
   [[main]]
   identifier = "diaphragm-valves"
@@ -32,12 +56,18 @@ weight = 10
   parent = "products"
   weight = 13
 
+    [main.params]
+    mega_group = "valves"
+
   [[main]]
   identifier = "check-valves"
   name = "Check Valves"
   pageRef = "/products/check-valves"
   parent = "products"
   weight = 14
+
+    [main.params]
+    mega_group = "valves"
 
   [[main]]
   identifier = "pressure-control-chemfeed"
@@ -46,12 +76,18 @@ weight = 10
   parent = "products"
   weight = 15
 
+    [main.params]
+    mega_group = "support"
+
   [[main]]
   identifier = "actuators"
   name = "Actuators"
   pageRef = "/products/actuators"
   parent = "products"
   weight = 16
+
+    [main.params]
+    mega_group = "support"
 
   [[main]]
   identifier = "fittings"
@@ -60,11 +96,29 @@ weight = 10
   parent = "products"
   weight = 17
 
+    [main.params]
+    mega_group = "support"
+
 [[main]]
 identifier = "applications"
 name = "Applications"
 pageRef = "/applications"
 weight = 20
+
+  [main.params]
+  mega = true
+  mega_kicker = "Application paths"
+  mega_title = "Start from the operating scenario"
+  mega_text = "Use application pages to connect system context, corrosion challenges, relevant product families, documentation needs, and RFQ inputs."
+  mega_groups = [
+    { id = "water", title = "Water and wastewater" },
+    { id = "process", title = "Chemical and process handling" }
+  ]
+  mega_visual_url = "/resources/rfq-submittal-inputs/"
+  mega_visual_kicker = "Selection review"
+  mega_visual_title = "Match applications to duty conditions"
+  mega_visual_text = "Before inquiry, prepare the conditions that affect material suitability, valve function, containment needs, and reviewable documents."
+  mega_visual_cta = "Prepare RFQ inputs"
 
   [[main]]
   identifier = "applications-overview"
@@ -73,12 +127,19 @@ weight = 20
   parent = "applications"
   weight = 20
 
+    [main.params]
+    mega_role = "overview"
+
   [[main]]
   identifier = "industrial-water-treatment"
   name = "Industrial Water Treatment"
   pageRef = "/applications/industrial-water-treatment"
   parent = "applications"
   weight = 21
+
+    [main.params]
+    mega_group = "water"
+    description = "Pretreatment, RO, recirculation, utility water, and dosing-related valve points."
 
   [[main]]
   identifier = "industrial-wastewater"
@@ -87,12 +148,20 @@ weight = 20
   parent = "applications"
   weight = 22
 
+    [main.params]
+    mega_group = "water"
+    description = "Neutralization, suspended solids, variable pH, discharge, and treatment lines."
+
   [[main]]
   identifier = "chemical-dosing-injection"
   name = "Chemical Dosing & Injection"
   pageRef = "/applications/chemical-dosing-injection"
   parent = "applications"
   weight = 23
+
+    [main.params]
+    mega_group = "process"
+    description = "Metering pumps, injection points, back-pressure, relief, and tubing transitions."
 
   [[main]]
   identifier = "corrosive-chemical-transfer"
@@ -101,12 +170,20 @@ weight = 20
   parent = "applications"
   weight = 24
 
+    [main.params]
+    mega_group = "process"
+    description = "Acids, alkalis, oxidizers, storage tanks, transfer, and containment lines."
+
   [[main]]
   identifier = "chemical-processing"
   name = "Chemical Processing"
   pageRef = "/applications/chemical-processing"
   parent = "applications"
   weight = 25
+
+    [main.params]
+    mega_group = "process"
+    description = "Process lines, batch changes, automation needs, and reviewable documents."
 
 [[main]]
 identifier = "resources"
@@ -141,6 +218,20 @@ weight = 30
   pageRef = "/resources/faq"
   parent = "resources"
   weight = 33
+
+  [[main]]
+  identifier = "case-studies"
+  name = "Case Studies"
+  pageRef = "/resources/case-studies"
+  parent = "resources"
+  weight = 34
+
+  [[main]]
+  identifier = "insights"
+  name = "Insights"
+  pageRef = "/resources/insights"
+  parent = "resources"
+  weight = 35
 
 [[main]]
 identifier = "about"

@@ -6,7 +6,7 @@
     <description>Recent content on Nuvon Flow Control</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What information is needed for a valve RFQ?</title>
@@ -21,6 +21,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/resources/faq/can-nuvon-help-with-material-compatibility/</guid>
       <description>&lt;h2 id=&#34;short-answer&#34;&gt;Short answer&lt;/h2&gt;&#xA;&lt;p&gt;Yes. Nuvon can organize the media, concentration, temperature, pressure, exposure, cleaning, installation, and wetted-part questions that affect a preliminary material direction.&lt;/p&gt;&#xA;&lt;p&gt;The review may cover bodies, liners, seats, seals, diaphragms, gaskets, fittings, tubing, fasteners, and exposed accessories. It can identify missing inputs and uncertainties that should remain visible in a quotation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-not-included&#34;&gt;What is not included?&lt;/h2&gt;&#xA;&lt;p&gt;A preliminary review is not a universal compatibility guarantee or final engineering approval. Actual suitability may depend on impurities, mixed exposure, stress, permeation, crystallization, abrasion, cleaning practice, pressure-temperature limits, and manufacturer-specific construction.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Structuring a Wastewater Neutralization Valve Package</title>
+      <link>http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/</guid>
+      <description>&lt;p&gt;A wastewater neutralization project may begin with a short request such as “plastic valves for acid and alkali lines.” That description identifies the general environment, but it is not enough to review valve construction or prepare a controlled quotation.&lt;/p&gt;&#xA;&lt;p&gt;This representative case shows how the request can be made reviewable. It does not describe a named customer project or a completed supply reference.&lt;/p&gt;&#xA;&lt;h2 id=&#34;initial-request&#34;&gt;Initial request&lt;/h2&gt;&#xA;&lt;p&gt;The first list included isolation valves, check valves, and several actuated valves. It did not distinguish chemical unloading, storage transfer, dosing, recirculation, flushing, and treated-water duties.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Valve Selection Starts with Duty, Not the Valve Name</title>
+      <link>http://localhost:1313/resources/insights/duty-before-valve-name/</link>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/duty-before-valve-name/</guid>
+      <description>&lt;p&gt;“Ball valve,” “butterfly valve,” or “check valve” describes a product family, not a complete selection. Products with the same general name can differ in body construction, wetted materials, seals, pressure-temperature limits, connection standards, operating torque, and maintenance requirements.&lt;/p&gt;&#xA;&lt;h2 id=&#34;begin-with-the-required-function&#34;&gt;Begin with the required function&lt;/h2&gt;&#xA;&lt;p&gt;First define what the valve must do:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Isolate a line&lt;/li&gt;&#xA;&lt;li&gt;Prevent reverse flow&lt;/li&gt;&#xA;&lt;li&gt;Support throttling or frequent adjustment&lt;/li&gt;&#xA;&lt;li&gt;Handle solids, slurry, crystallization, or off-gassing&lt;/li&gt;&#xA;&lt;li&gt;Operate manually or through an actuator&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The function narrows the product family, but it still does not complete the selection.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Material Selection for Corrosive Service</title>
@@ -79,6 +93,20 @@
       <description>&lt;h2 id=&#34;where-fittings-fit-in-a-piping-package&#34;&gt;Where fittings fit in a piping package&lt;/h2&gt;&#xA;&lt;p&gt;Fittings connect valves, pumps, tanks, dosing accessories, instruments, and piping into a workable system. In corrosion-resistant projects, installation problems often come from mismatched pipe standards, connection methods, gasket materials, flange drilling, thread standards, or missing adapters rather than from the valve body itself.&lt;/p&gt;&#xA;&lt;p&gt;Fittings should be reviewed as part of the complete piping package. The material, pressure rating, temperature boundary, chemical exposure, installation method, maintenance access, and document requirements should match the valve and pipe system.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Clarifying a Sodium Hypochlorite Dosing Skid Scope</title>
+      <link>http://localhost:1313/resources/case-studies/sodium-hypochlorite-dosing-skid/</link>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/sodium-hypochlorite-dosing-skid/</guid>
+      <description>&lt;p&gt;A dosing-skid inquiry often lists a few valves, a pressure-relief device, an injection point, and tubing connections. The difficult part is not the number of components; it is understanding how chemical condition, pump behavior, pressure, and installation affect the complete assembly.&lt;/p&gt;&#xA;&lt;p&gt;This representative case is a working example, not a customer reference or a universal sodium hypochlorite material recommendation.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-received&#34;&gt;Information received&lt;/h2&gt;&#xA;&lt;p&gt;The initial scope identified sodium hypochlorite service and a target dosing rate. Concentration, storage temperature, pump type, discharge pressure, injection-point pressure, tubing standard, and outdoor exposure were not yet confirmed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Documentation Requirements Belong Before Quotation</title>
+      <link>http://localhost:1313/resources/insights/documentation-before-quotation/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/documentation-before-quotation/</guid>
+      <description>&lt;p&gt;Technical documents are often discussed after product and price, but they can affect product choice, supplier scope, review time, and delivery expectations. A quotation that does not define documents may appear complete while leaving important project work unresolved.&lt;/p&gt;&#xA;&lt;h2 id=&#34;documents-affect-the-supply-scope&#34;&gt;Documents affect the supply scope&lt;/h2&gt;&#xA;&lt;p&gt;Typical requirements may include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Product data sheets and approved technical schedules&lt;/li&gt;&#xA;&lt;li&gt;Dimensional, assembly, or interface drawings&lt;/li&gt;&#xA;&lt;li&gt;Installation, operation, and maintenance instructions&lt;/li&gt;&#xA;&lt;li&gt;Material, conformity, origin, or compliance declarations&lt;/li&gt;&#xA;&lt;li&gt;Inspection, test, calibration, or packing records&lt;/li&gt;&#xA;&lt;li&gt;Document numbering, language, format, and revision control&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Not every project requires every item. The point is to identify the expected set before commercial comparison.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Valve Selection by Application</title>
       <link>http://localhost:1313/resources/technical-guides/valve-selection-by-application/</link>
       <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
@@ -119,6 +147,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/applications/chemical-processing/</guid>
       <description>&lt;h2 id=&#34;application-context&#34;&gt;Application context&lt;/h2&gt;&#xA;&lt;p&gt;Chemical processing facilities often need a coordinated mix of manual valves, automated valves, check valves, fittings, pressure control items, and documentation. The same plant may include clean transfer, corrosive service, intermittent batches, flushing steps, utility chemicals, and maintenance bypasses.&lt;/p&gt;&#xA;&lt;p&gt;The useful scope is organized by process step. Reactor feed, storage transfer, neutralization, washdown, and packaged skids can each require a different balance of material compatibility, shutoff reliability, automation, cleanability, and inspection documents.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reviewing a Corrosive Transfer Line Valve Replacement</title>
+      <link>http://localhost:1313/resources/case-studies/corrosive-transfer-line-replacement/</link>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/case-studies/corrosive-transfer-line-replacement/</guid>
+      <description>&lt;p&gt;A replacement request may start with a photo, an old tag, and a nominal valve size. Those references help identify the existing installation, but they do not prove that a visually similar valve will fit the line or suit the current service.&lt;/p&gt;&#xA;&lt;p&gt;This representative case illustrates the review method and does not claim a completed customer replacement.&lt;/p&gt;&#xA;&lt;h2 id=&#34;replacement-evidence&#34;&gt;Replacement evidence&lt;/h2&gt;&#xA;&lt;p&gt;The available information included an old valve photograph, flange-to-flange measurement, actuator voltage, and the statement that the line handled a corrosive chemical.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Material Review Goes Beyond the Valve Body</title>
+      <link>http://localhost:1313/resources/insights/wetted-parts-beyond-body-material/</link>
+      <pubDate>Fri, 26 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/insights/wetted-parts-beyond-body-material/</guid>
+      <description>&lt;p&gt;A valve may be described by its body material, but corrosion-resistant performance depends on the complete construction. Seats, O-rings, diaphragms, liners, balls, stems, shafts, bearings, fasteners, and accessories can introduce different materials and different exposure conditions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;map-the-wetted-construction&#34;&gt;Map the wetted construction&lt;/h2&gt;&#xA;&lt;p&gt;Material review should identify every component that contacts the process fluid during normal operation, startup, shutdown, cleaning, leakage, or maintenance. Static and dynamic seals may see different stress, movement, and permeation conditions even when exposed to the same chemical.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Material Compatibility Review</title>
@@ -210,6 +252,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/footer/disclaimer/</guid>
       <description>&lt;h2 id=&#34;technical-information&#34;&gt;Technical information&lt;/h2&gt;&#xA;&lt;p&gt;Website content is intended for preliminary product, application, and project communication. It may help users prepare RFQs and organize duty conditions, but it is not a substitute for project-specific engineering review.&lt;/p&gt;&#xA;&lt;p&gt;Chemical compatibility, pressure-temperature limits, installation method, actuator sizing, connection standard, inspection requirements, and compliance obligations must be confirmed against actual project conditions, applicable standards, customer specifications, and approved documents.&lt;/p&gt;&#xA;&lt;h2 id=&#34;material-compatibility&#34;&gt;Material compatibility&lt;/h2&gt;&#xA;&lt;p&gt;Material guidance on this website is general and may not account for all concentration, temperature, impurity, abrasion, solvent, oxidizing, cleaning, intermittent exposure, outdoor, or mixed-service conditions. Final material selection should be confirmed by qualified project stakeholders.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Thermoplastic Flow Control Atlas</title>
+      <link>http://localhost:1313/resources/flow-control-atlas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resources/flow-control-atlas/</guid>
+      <description>&lt;p&gt;Use this atlas to structure an initial review. It does not replace the current technical data, chemical-resistance guidance, pressure-temperature limits, testing, or written approval for the exact product and duty.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

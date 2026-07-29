@@ -22,5 +22,12 @@
       <guid>http://localhost:1313/zh/resources/wastewater-neutralization-rfq-scenario/</guid>
       <description>&lt;p&gt;这是用于说明需求整理方法的代表性规划场景，不是已披露的客户项目，也不构成交付业绩或性能声明。&lt;/p&gt;&#xA;&lt;h2 id=&#34;初始需求&#34;&gt;初始需求&lt;/h2&gt;&#xA;&lt;p&gt;某废水中和区域需要切断阀、止回保护、管件和若干加药附件。最初的清单只有产品名称、管径和数量，把酸、碱、输送、排放和冲洗工况混在一起，没有说明每一项对应的管线服务。&lt;/p&gt;&#xA;&lt;p&gt;清单也没有浓度、温度、压力、管材、连接标准、执行方式、位号参考和文件要求。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么难以直接报价&#34;&gt;为什么难以直接报价&lt;/h2&gt;&#xA;&lt;p&gt;供应方可以用假设补齐空白，但不同假设会使报价难以比较。笼统的“阀门”无法说明该产品用于切断、调节、止回保护还是加药控制。阀体也不一定是每种工况的唯一决定因素，阀座、密封、隔膜、垫片和附件同样需要评审。&lt;/p&gt;&#xA;&lt;h2 id=&#34;更容易评审的结构&#34;&gt;更容易评审的结构&lt;/h2&gt;&#xA;&lt;p&gt;先按介质服务分组，再按产品分组：&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;服务分组&lt;/th&gt;&#xA;          &lt;th&gt;需要补充的信息&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;酸碱加药&lt;/td&gt;&#xA;          &lt;td&gt;化学品、浓度、流量、泵数据、管路接口和控制功能&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;化学品输送&lt;/td&gt;&#xA;          &lt;td&gt;来源与目的地、正常与设计边界、切断点、排放和冲洗&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;中和池&lt;/td&gt;&#xA;          &lt;td&gt;混合条件、pH 范围、固体、阀门位置、动作频率和维护空间&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;排放与取样&lt;/td&gt;&#xA;          &lt;td&gt;接触频率、残留化学品、连接、安全排放和操作通道&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;每个 BOM 行项目应增加产品功能、口径、连接、材料偏好、数量、位号、工况备注和文件状态。&lt;/p&gt;&#xA;&lt;h2 id=&#34;文件与待确认问题&#34;&gt;文件与待确认问题&lt;/h2&gt;&#xA;&lt;p&gt;首次 RFQ 应说明是否需要数据表、图纸、IOM 手册、声明、检验记录或包装说明。未知项应作为问题保持可见，而不是被静默转化为报价假设。&lt;/p&gt;&#xA;&lt;h2 id=&#34;实际价值&#34;&gt;实际价值&lt;/h2&gt;&#xA;&lt;p&gt;整理后的范围不会让最终选型自动完成，但可以提高下一轮评审效率：各产品系列可以在相同工况下比较，材料不确定性保持可见，文件要求也会在影响审批或发运前进入报价范围。&lt;/p&gt;&#xA;&lt;p&gt;可使用 &lt;a href=&#34;http://localhost:1313/zh/resources/rfq-submittal-inputs/&#34;&gt;RFQ 输入清单&lt;/a&gt;把相同结构应用到实际需求。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>热塑性防腐流体控制全景图</title>
+      <link>http://localhost:1313/zh/resources/flow-control-atlas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/zh/resources/flow-control-atlas/</guid>
+      <description>&lt;p&gt;本工具用于组织初步评审路径，不能替代针对具体产品与工况的制造商当前技术资料、耐化学性指南、压力—温度边界、试验记录或书面批准。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

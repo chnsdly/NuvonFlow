@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/zh/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -37,6 +37,32 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/resources/faq/can-nuvon-help-with-material-compatibility/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/wastewater-neutralization-valve-package/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/wastewater-neutralization-valve-package/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/wastewater-neutralization-valve-package/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/duty-before-valve-name/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/duty-before-valve-name/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/duty-before-valve-name/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/resources/technical-guides/material-selection-for-corrosive-service/</loc>
@@ -148,6 +174,32 @@
                 href="http://localhost:1313/zh/products/fittings/"
                 />
   </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/sodium-hypochlorite-dosing-skid/</loc>
+    <lastmod>2026-07-05T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/sodium-hypochlorite-dosing-skid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/sodium-hypochlorite-dosing-skid/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/documentation-before-quotation/</loc>
+    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/documentation-before-quotation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/documentation-before-quotation/"
+                />
+  </url><url>
     <loc>http://localhost:1313/zh/resources/technical-guides/valve-selection-by-application/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -234,7 +286,7 @@
                 />
   </url><url>
     <loc>http://localhost:1313/zh/resources/</loc>
-    <lastmod>2026-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-US"
@@ -244,6 +296,32 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/resources/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/corrosive-transfer-line-replacement/</loc>
+    <lastmod>2026-06-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/corrosive-transfer-line-replacement/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/corrosive-transfer-line-replacement/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/wetted-parts-beyond-body-material/</loc>
+    <lastmod>2026-06-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/wetted-parts-beyond-body-material/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/wetted-parts-beyond-body-material/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/project-support/</loc>
@@ -318,6 +396,19 @@
                 href="http://localhost:1313/zh/project-support/rfq-bom-support/"
                 />
   </url><url>
+    <loc>http://localhost:1313/zh/resources/case-studies/</loc>
+    <lastmod>2026-07-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/case-studies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/case-studies/"
+                />
+  </url><url>
     <loc>http://localhost:1313/zh/resources/technical-guides/</loc>
     <lastmod>2026-06-02T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -329,6 +420,19 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/resources/technical-guides/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/insights/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/insights/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/insights/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/about/</loc>
@@ -461,6 +565,18 @@
                 rel="alternate"
                 hreflang="zh-CN"
                 href="http://localhost:1313/zh/footer/disclaimer/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/resources/flow-control-atlas/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="http://localhost:1313/resources/flow-control-atlas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-CN"
+                href="http://localhost:1313/zh/resources/flow-control-atlas/"
                 />
   </url>
 </urlset>

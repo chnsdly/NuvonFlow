@@ -4,12 +4,30 @@ name = "产品"
 pageRef = "/products"
 weight = 10
 
+  [main.params]
+  mega = true
+  mega_kicker = "产品选型"
+  mega_title = "先从工况条件开始判断"
+  mega_text = "询价前按介质、材料、压力、温度、执行方式和文件需求查看产品系列。"
+  mega_groups = [
+    { id = "valves", title = "阀门产品系列" },
+    { id = "support", title = "系统配套产品" }
+  ]
+  mega_visual_url = "/resources/rfq-submittal-inputs/"
+  mega_visual_kicker = "工程评审"
+  mega_visual_title = "尽早准备工况参数"
+  mega_visual_text = "介质、浓度、温度、压力、口径、连接、数量和目标文件，有助于缩小选型范围。"
+  mega_visual_cta = "准备询价输入"
+
   [[main]]
   identifier = "products-overview"
   name = "全部产品"
   pageRef = "/products"
   parent = "products"
   weight = 10
+
+    [main.params]
+    mega_role = "overview"
 
   [[main]]
   identifier = "ball-valves"
@@ -18,12 +36,18 @@ weight = 10
   parent = "products"
   weight = 11
 
+    [main.params]
+    mega_group = "valves"
+
   [[main]]
   identifier = "butterfly-valves"
   name = "蝶阀"
   pageRef = "/products/butterfly-valves"
   parent = "products"
   weight = 12
+
+    [main.params]
+    mega_group = "valves"
 
   [[main]]
   identifier = "diaphragm-valves"
@@ -32,12 +56,18 @@ weight = 10
   parent = "products"
   weight = 13
 
+    [main.params]
+    mega_group = "valves"
+
   [[main]]
   identifier = "check-valves"
   name = "止回阀"
   pageRef = "/products/check-valves"
   parent = "products"
   weight = 14
+
+    [main.params]
+    mega_group = "valves"
 
   [[main]]
   identifier = "pressure-control-chemfeed"
@@ -46,12 +76,18 @@ weight = 10
   parent = "products"
   weight = 15
 
+    [main.params]
+    mega_group = "support"
+
   [[main]]
   identifier = "actuators"
   name = "执行器"
   pageRef = "/products/actuators"
   parent = "products"
   weight = 16
+
+    [main.params]
+    mega_group = "support"
 
   [[main]]
   identifier = "fittings"
@@ -60,11 +96,29 @@ weight = 10
   parent = "products"
   weight = 17
 
+    [main.params]
+    mega_group = "support"
+
 [[main]]
 identifier = "applications"
 name = "应用场景"
 pageRef = "/applications"
 weight = 20
+
+  [main.params]
+  mega = true
+  mega_kicker = "应用路径"
+  mega_title = "先从运行场景判断"
+  mega_text = "应用页面把系统场景、腐蚀风险、相关产品系列、文件需求和询价输入连接起来。"
+  mega_groups = [
+    { id = "water", title = "水处理与废水" },
+    { id = "process", title = "化学品与流程工况" }
+  ]
+  mega_visual_url = "/resources/rfq-submittal-inputs/"
+  mega_visual_kicker = "选型评审"
+  mega_visual_title = "把应用场景对应到工况参数"
+  mega_visual_text = "询价前建议准备会影响材料适配、阀门功能、防护范围和可评审文件的关键条件。"
+  mega_visual_cta = "准备询价输入"
 
   [[main]]
   identifier = "applications-overview"
@@ -73,12 +127,19 @@ weight = 20
   parent = "applications"
   weight = 20
 
+    [main.params]
+    mega_role = "overview"
+
   [[main]]
   identifier = "industrial-water-treatment"
   name = "工业水处理"
   pageRef = "/applications/industrial-water-treatment"
   parent = "applications"
   weight = 21
+
+    [main.params]
+    mega_group = "water"
+    description = "预处理、RO、循环水、公用工程水和加药点位。"
 
   [[main]]
   identifier = "industrial-wastewater"
@@ -87,12 +148,20 @@ weight = 20
   parent = "applications"
   weight = 22
 
+    [main.params]
+    mega_group = "water"
+    description = "中和、含固、pH 波动、排放与处理管线。"
+
   [[main]]
   identifier = "chemical-dosing-injection"
   name = "化学加药与注入"
   pageRef = "/applications/chemical-dosing-injection"
   parent = "applications"
   weight = 23
+
+    [main.params]
+    mega_group = "process"
+    description = "计量泵、注入点、背压、安全泄放和管路过渡。"
 
   [[main]]
   identifier = "corrosive-chemical-transfer"
@@ -101,12 +170,20 @@ weight = 20
   parent = "applications"
   weight = 24
 
+    [main.params]
+    mega_group = "process"
+    description = "酸、碱、氧化剂、储罐、输送与防护管线。"
+
   [[main]]
   identifier = "chemical-processing"
   name = "化工流程"
   pageRef = "/applications/chemical-processing"
   parent = "applications"
   weight = 25
+
+    [main.params]
+    mega_group = "process"
+    description = "流程管线、批次变化、自动化需求和可评审文件。"
 
 [[main]]
 identifier = "resources"
@@ -141,6 +218,20 @@ weight = 30
   pageRef = "/resources/faq"
   parent = "resources"
   weight = 33
+
+  [[main]]
+  identifier = "case-studies"
+  name = "案例研究"
+  pageRef = "/resources/case-studies"
+  parent = "resources"
+  weight = 34
+
+  [[main]]
+  identifier = "insights"
+  name = "行业洞察"
+  pageRef = "/resources/insights"
+  parent = "resources"
+  weight = 35
 
 [[main]]
 identifier = "about"

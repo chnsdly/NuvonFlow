@@ -1,0 +1,7 @@
+// Keep CSS min() available when this isolated module is compiled by Hugo's
+// LibSass-compatible pipeline.
+@function min($values...) {
+  @return unquote("min(#{$values})");
+}
+
+@import "flow-control-atlas-core";

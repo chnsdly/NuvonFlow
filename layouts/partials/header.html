@@ -4,14 +4,6 @@
 {{ $primaryItems := .Site.Menus.main }}
 {{ $activeLanguageFullLabel := .Site.Language.LanguageName | default .Site.Language.Params.label | default .Site.Language.Lang }}
 {{ $activeLanguageShortLabel := cond (eq .Site.Language.Lang "zh") "中文" (upper .Site.Language.Lang) }}
-{{ $megaReviewHref := "/resources/rfq-submittal-inputs/" | relLangURL }}
-{{ $applicationSummaries := dict
-  "industrial-water-treatment" (i18n "header_applications_desc_industrial_water_treatment")
-  "industrial-wastewater" (i18n "header_applications_desc_industrial_wastewater")
-  "chemical-dosing-injection" (i18n "header_applications_desc_chemical_dosing_injection")
-  "corrosive-chemical-transfer" (i18n "header_applications_desc_corrosive_chemical_transfer")
-  "chemical-processing" (i18n "header_applications_desc_chemical_processing")
-}}
 
 <header class="site-header" data-site-header>
   <div class="site-header__inner">
@@ -41,9 +33,7 @@
         {{ range $primaryItems }}
           {{ $isExact := $current.IsMenuCurrent "main" . }}
           {{ $isActive := or $isExact ($current.HasMenuCurrent "main" .) }}
-          {{ $isProductsMenu := eq .Identifier "products" }}
-          {{ $isApplicationsMenu := eq .Identifier "applications" }}
-          {{ $isMegaMenu := or $isProductsMenu $isApplicationsMenu }}
+          {{ $isMegaMenu := .Params.mega | default false }}
           {{ $submenuId := printf "site-header-submenu-%s" .Identifier }}
           <li class="site-header__item{{ if .HasChildren }} site-header__item--has-children{{ end }}{{ if $isMegaMenu }} site-header__item--mega{{ end }}{{ if $isActive }} is-active{{ end }}">
             <div class="site-header__item-control">
@@ -71,119 +61,64 @@
 
             {{ if .HasChildren }}
               <ul class="site-header__submenu{{ if $isMegaMenu }} site-header__submenu--mega{{ end }}" id="{{ $submenuId }}" aria-label="{{ printf (i18n "header_submenu_aria") .Name }}">
-                {{ if $isProductsMenu }}
-                  {{ $valveGroup := slice "ball-valves" "butterfly-valves" "diaphragm-valves" "check-valves" }}
-                  {{ $supportGroup := slice "pressure-control-chemfeed" "actuators" "fittings" }}
+                {{ if $isMegaMenu }}
+                  {{ $menuItem := . }}
+                  {{ $groupIds := slice }}
+                  {{ range .Params.mega_groups }}
+                    {{ $groupIds = $groupIds | append .id }}
+                  {{ end }}
+                  {{ if eq (len $groupIds) 0 }}
+                    {{ errorf "Mega menu %q must define at least one params.mega_groups entry" .Identifier }}
+                  {{ end }}
+                  {{ range .Children }}
+                    {{ $role := .Params.mega_role | default "" }}
+                    {{ $group := .Params.mega_group | default "" }}
+                    {{ if and (ne $role "overview") (not $group) }}
+                      {{ errorf "Mega menu child %q must define params.mega_group or params.mega_role = overview" .Identifier }}
+                    {{ else if and $group (not (in $groupIds $group)) }}
+                      {{ errorf "Mega menu child %q uses undefined group %q" .Identifier $group }}
+                    {{ end }}
+                  {{ end }}
+
                   <li class="site-header__mega-intro">
-                    <span class="site-header__mega-kicker font-meta">{{ i18n "header_products_mega_kicker" }}</span>
-                    <p class="site-header__mega-title">{{ i18n "header_products_mega_title" }}</p>
-                    <p class="site-header__mega-text">{{ i18n "header_products_mega_text" }}</p>
+                    <span class="site-header__mega-kicker font-meta">{{ .Params.mega_kicker }}</span>
+                    <p class="site-header__mega-title">{{ .Params.mega_title }}</p>
+                    <p class="site-header__mega-text">{{ .Params.mega_text }}</p>
                     {{ range .Children }}
-                      {{ if eq .Identifier "products-overview" }}
+                      {{ if eq (.Params.mega_role | default "") "overview" }}
                         {{ $childExact := $current.IsMenuCurrent "main" . }}
                         <a class="site-header__mega-overview" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
                       {{ end }}
                     {{ end }}
                   </li>
 
-                  <li class="site-header__mega-section">
-                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_products_mega_valve_group" }}</span>
-                    <ul class="site-header__mega-list">
-                      {{ range .Children }}
-                        {{ if in $valveGroup .Identifier }}
-                          {{ $childExact := $current.IsMenuCurrent "main" . }}
-                          <li>
-                            <a class="site-header__submenu-link site-header__submenu-link--entry" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>
-                              <span class="site-header__submenu-link-title">{{ .Name }}</span>
-                            </a>
-                          </li>
+                  {{ range .Params.mega_groups }}
+                    {{ $group := . }}
+                    <li class="site-header__mega-section">
+                      <span class="site-header__mega-section-title font-meta">{{ .title }}</span>
+                      <ul class="site-header__mega-list">
+                        {{ range $menuItem.Children }}
+                          {{ if eq (.Params.mega_group | default "") $group.id }}
+                            {{ $childExact := $current.IsMenuCurrent "main" . }}
+                            {{ $description := .Params.description | default "" }}
+                            <li>
+                              <a class="site-header__submenu-link {{ if $description }}site-header__submenu-link--described{{ else }}site-header__submenu-link--entry{{ end }}" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>
+                                <span class="site-header__submenu-link-title">{{ .Name }}</span>
+                                {{ with $description }}<span class="site-header__submenu-link-description">{{ . }}</span>{{ end }}
+                              </a>
+                            </li>
+                          {{ end }}
                         {{ end }}
-                      {{ end }}
-                    </ul>
-                  </li>
-
-                  <li class="site-header__mega-section">
-                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_products_mega_support_group" }}</span>
-                    <ul class="site-header__mega-list">
-                      {{ range .Children }}
-                        {{ if or (in $supportGroup .Identifier) (and (ne .Identifier "products-overview") (not (in $valveGroup .Identifier)) (not (in $supportGroup .Identifier))) }}
-                          {{ $childExact := $current.IsMenuCurrent "main" . }}
-                          <li>
-                            <a class="site-header__submenu-link site-header__submenu-link--entry" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>
-                              <span class="site-header__submenu-link-title">{{ .Name }}</span>
-                            </a>
-                          </li>
-                        {{ end }}
-                      {{ end }}
-                    </ul>
-                  </li>
+                      </ul>
+                    </li>
+                  {{ end }}
 
                   <li class="site-header__mega-visual">
-                    <a class="site-header__mega-visual-link" href="{{ $megaReviewHref }}">
-                      <span class="site-header__mega-visual-kicker font-meta">{{ i18n "header_products_mega_visual_kicker" }}</span>
-                      <span class="site-header__mega-visual-title">{{ i18n "header_products_mega_visual_title" }}</span>
-                      <span class="site-header__mega-visual-text">{{ i18n "header_products_mega_visual_text" }}</span>
-                      <span class="site-header__mega-visual-cta">{{ i18n "header_mega_visual_cta" }}</span>
-                    </a>
-                  </li>
-                {{ else if $isApplicationsMenu }}
-                  {{ $waterGroup := slice "industrial-water-treatment" "industrial-wastewater" }}
-                  <li class="site-header__mega-intro">
-                    <span class="site-header__mega-kicker font-meta">{{ i18n "header_applications_mega_kicker" }}</span>
-                    <p class="site-header__mega-title">{{ i18n "header_applications_mega_title" }}</p>
-                    <p class="site-header__mega-text">{{ i18n "header_applications_mega_text" }}</p>
-                    {{ range .Children }}
-                      {{ if eq .Identifier "applications-overview" }}
-                        {{ $childExact := $current.IsMenuCurrent "main" . }}
-                        <a class="site-header__mega-overview" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>{{ .Name }}</a>
-                      {{ end }}
-                    {{ end }}
-                  </li>
-
-                  <li class="site-header__mega-section">
-                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_applications_mega_water_group" }}</span>
-                    <ul class="site-header__mega-list">
-                      {{ range .Children }}
-                        {{ if in $waterGroup .Identifier }}
-                          {{ $childExact := $current.IsMenuCurrent "main" . }}
-                          <li>
-                            <a class="site-header__submenu-link site-header__submenu-link--described" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>
-                              <span class="site-header__submenu-link-title">{{ .Name }}</span>
-                              {{ with (index $applicationSummaries .Identifier) }}
-                                <span class="site-header__submenu-link-description">{{ . }}</span>
-                              {{ end }}
-                            </a>
-                          </li>
-                        {{ end }}
-                      {{ end }}
-                    </ul>
-                  </li>
-
-                  <li class="site-header__mega-section">
-                    <span class="site-header__mega-section-title font-meta">{{ i18n "header_applications_mega_process_group" }}</span>
-                    <ul class="site-header__mega-list">
-                      {{ range .Children }}
-                        {{ if and (ne .Identifier "applications-overview") (not (in $waterGroup .Identifier)) }}
-                          {{ $childExact := $current.IsMenuCurrent "main" . }}
-                          <li>
-                            <a class="site-header__submenu-link site-header__submenu-link--described" href="{{ .URL }}"{{ if $childExact }} aria-current="page"{{ end }}>
-                              <span class="site-header__submenu-link-title">{{ .Name }}</span>
-                              {{ with (index $applicationSummaries .Identifier) }}
-                                <span class="site-header__submenu-link-description">{{ . }}</span>
-                              {{ end }}
-                            </a>
-                          </li>
-                        {{ end }}
-                      {{ end }}
-                    </ul>
-                  </li>
-
-                  <li class="site-header__mega-visual">
-                    <a class="site-header__mega-visual-link" href="{{ $megaReviewHref }}">
-                      <span class="site-header__mega-visual-kicker font-meta">{{ i18n "header_applications_mega_visual_kicker" }}</span>
-                      <span class="site-header__mega-visual-title">{{ i18n "header_applications_mega_visual_title" }}</span>
-                      <span class="site-header__mega-visual-text">{{ i18n "header_applications_mega_visual_text" }}</span>
-                      <span class="site-header__mega-visual-cta">{{ i18n "header_mega_visual_cta" }}</span>
+                    <a class="site-header__mega-visual-link" href="{{ .Params.mega_visual_url | relLangURL }}">
+                      <span class="site-header__mega-visual-kicker font-meta">{{ .Params.mega_visual_kicker }}</span>
+                      <span class="site-header__mega-visual-title">{{ .Params.mega_visual_title }}</span>
+                      <span class="site-header__mega-visual-text">{{ .Params.mega_visual_text }}</span>
+                      <span class="site-header__mega-visual-cta">{{ .Params.mega_visual_cta }}</span>
                     </a>
                   </li>
                 {{ else }}

@@ -216,6 +216,14 @@
   gap: space(1);
 }
 
+.case-studies-list__meta,
+.insights-list__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: space(0.5) space(1);
+  color: var(--muted-text);
+}
+
 .products-list__grid--media .products-list__content {
   justify-items: center;
   text-align: center;

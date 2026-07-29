@@ -1,0 +1,206 @@
+{{ $langCode := or .Site.Language.LanguageCode .Site.Language.Lang }}
+{{ $lang := .Site.Language.Lang }}
+{{ $atlas := .Site.Data.flow_control_atlas }}
+{{ $ui := index $atlas.ui $lang }}
+{{ if not $ui }}{{ $ui = index $atlas.ui "en" }}{{ end }}
+{{ $description := .Description | default $ui.intro }}
+<!DOCTYPE html>
+<html lang="{{ $langCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ $description }}">
+    {{ $mainSCSS := resources.Get "scss/main.scss" | toCSS (dict "targetPath" "css/style.css") }}
+    <link rel="stylesheet" href="{{ $mainSCSS.RelPermalink }}">
+    {{ with resources.Get "scss/modules/flow-control-atlas.scss" }}
+      {{ $atlasCSS := . | toCSS (dict "targetPath" "css/flow-control-atlas.css") | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ $atlasCSS.RelPermalink }}" integrity="{{ $atlasCSS.Data.Integrity }}">
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .IsTranslated }}
+      {{ range .AllTranslations }}
+        <link rel="alternate" hreflang="{{ or .Language.LanguageCode .Language.Lang }}" href="{{ .Permalink }}">
+      {{ end }}
+    {{ end }}
+    {{ partial "seo.html" . }}
+    {{ with resources.Get "js/header.js" }}
+      {{ $headerJS := . | minify | fingerprint }}
+      <script src="{{ $headerJS.RelPermalink }}" integrity="{{ $headerJS.Data.Integrity }}" defer></script>
+    {{ end }}
+  </head>
+  <body class="site-body site-body--atlas">
+    {{ partial "header.html" . }}
+    {{ partial "breadcrumbs.html" . }}
+
+    <main class="atlas" data-atlas-root data-language="{{ $lang }}">
+      <header class="atlas__hero">
+        <div class="atlas__container atlas__hero-grid">
+          <div>
+            <p class="atlas__eyebrow">{{ $ui.eyebrow }}</p>
+            <h1 class="atlas__title">{{ $ui.title }}</h1>
+            <p class="atlas__lede">{{ $ui.intro }}</p>
+          </div>
+          <aside class="atlas__status" aria-label="{{ $ui.updated }}">
+            <span>{{ $ui.updated }}</span>
+            <strong>{{ $atlas.version }}</strong>
+            <p>{{ $ui.offline }}</p>
+          </aside>
+        </div>
+      </header>
+
+      <div class="atlas__container">
+        <div class="atlas__notice" role="note">
+          <strong>{{ if eq $lang "zh" }}使用边界{{ else }}Use boundary{{ end }}</strong>
+          <p>{{ $ui.disclaimer }}</p>
+        </div>
+
+        <nav class="atlas__tabs" aria-label="{{ if eq $lang "zh" }}全景图功能{{ else }}Atlas sections{{ end }}" role="tablist">
+          {{ range slice "selector" "materials" "valves" "fluids" "rfq" "sources" }}
+            <button
+              class="atlas__tab"
+              type="button"
+              role="tab"
+              id="atlas-tab-{{ . }}"
+              aria-controls="atlas-panel-{{ . }}"
+              aria-selected="{{ if eq . "selector" }}true{{ else }}false{{ end }}"
+              tabindex="{{ if eq . "selector" }}0{{ else }}-1{{ end }}"
+              data-atlas-tab="{{ . }}">
+              {{ index $ui.tabs . }}
+            </button>
+          {{ end }}
+        </nav>
+
+        <section class="atlas__panel" id="atlas-panel-selector" role="tabpanel" aria-labelledby="atlas-tab-selector" data-atlas-panel="selector">
+          <div class="atlas__section-heading">
+            <p class="atlas__kicker">{{ if eq $lang "zh" }}从工况到证据{{ else }}From duty to evidence{{ end }}</p>
+            <h2>{{ $ui.result.heading }}</h2>
+            <p>{{ if eq $lang "zh" }}先给出已有信息；结果会显示候选方向、风险和仍需向客户或制造商确认的问题。{{ else }}Enter what is known. The result separates candidate directions, risks, and the questions still requiring customer or manufacturer confirmation.{{ end }}</p>
+          </div>
+
+          <form class="atlas__selector" data-atlas-selector>
+            {{ range slice "fluid" "duty" "temperature" "pressure" "solids" "actuation" "connection" }}
+              <label class="atlas__field">
+                <span>{{ index $ui.fields . }}</span>
+                <select class="atlas__control" name="{{ . }}" data-atlas-control="{{ . }}"></select>
+              </label>
+            {{ end }}
+          </form>
+
+          <div class="atlas__results" aria-live="polite">
+            <section class="atlas__result atlas__result--wide">
+              <h3>{{ $ui.result.materials }}</h3>
+              <div data-atlas-result="materials"></div>
+            </section>
+            <section class="atlas__result">
+              <h3>{{ $ui.result.valves }}</h3>
+              <div data-atlas-result="valves"></div>
+            </section>
+            <section class="atlas__result">
+              <h3>{{ $ui.result.seals }}</h3>
+              <div data-atlas-result="seals"></div>
+            </section>
+            <section class="atlas__result atlas__result--risk">
+              <h3>{{ $ui.result.risks }}</h3>
+              <div data-atlas-result="risks"></div>
+            </section>
+            <section class="atlas__result">
+              <h3>{{ $ui.result.questions }}</h3>
+              <div data-atlas-result="questions"></div>
+            </section>
+            <section class="atlas__result atlas__result--wide">
+              <h3>{{ $ui.result.evidence }}</h3>
+              <div data-atlas-result="evidence"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="atlas__panel" id="atlas-panel-materials" role="tabpanel" aria-labelledby="atlas-tab-materials" data-atlas-panel="materials" hidden>
+          <div class="atlas__section-heading">
+            <h2>{{ $ui.library.materialHeading }}</h2>
+            <p>{{ $ui.library.materialIntro }}</p>
+          </div>
+          <label class="atlas__search">
+            <span class="atlas__visually-hidden">{{ $ui.library.search }}</span>
+            <input class="atlas__control" type="search" placeholder="{{ $ui.library.search }}" data-atlas-search="materials">
+          </label>
+          <div class="atlas__library" data-atlas-library="materials"></div>
+          <div class="atlas__section-heading atlas__section-heading--sub">
+            <h2>{{ $ui.library.sealHeading }}</h2>
+          </div>
+          <div class="atlas__library atlas__library--compact" data-atlas-library="seals"></div>
+        </section>
+
+        <section class="atlas__panel" id="atlas-panel-valves" role="tabpanel" aria-labelledby="atlas-tab-valves" data-atlas-panel="valves" hidden>
+          <div class="atlas__section-heading">
+            <h2>{{ $ui.library.valveHeading }}</h2>
+            <p>{{ $ui.library.valveIntro }}</p>
+          </div>
+          <label class="atlas__search">
+            <span class="atlas__visually-hidden">{{ $ui.library.search }}</span>
+            <input class="atlas__control" type="search" placeholder="{{ $ui.library.search }}" data-atlas-search="valves">
+          </label>
+          <div class="atlas__library" data-atlas-library="valves"></div>
+        </section>
+
+        <section class="atlas__panel" id="atlas-panel-fluids" role="tabpanel" aria-labelledby="atlas-tab-fluids" data-atlas-panel="fluids" hidden>
+          <div class="atlas__section-heading">
+            <h2>{{ $ui.library.fluidHeading }}</h2>
+            <p>{{ $ui.library.fluidIntro }}</p>
+          </div>
+          <div class="atlas__library" data-atlas-library="fluids"></div>
+        </section>
+
+        <section class="atlas__panel" id="atlas-panel-rfq" role="tabpanel" aria-labelledby="atlas-tab-rfq" data-atlas-panel="rfq" hidden>
+          <div class="atlas__section-heading">
+            <h2>{{ $ui.rfq.heading }}</h2>
+            <p>{{ $ui.rfq.intro }}</p>
+          </div>
+          <div class="atlas__rfq-layout">
+            <form class="atlas__rfq-form" data-atlas-rfq-form>
+              <div class="atlas__form-grid" data-atlas-rfq-fields></div>
+              <button class="button button--primary" type="submit">{{ $ui.rfq.generate }}</button>
+            </form>
+            <section class="atlas__rfq-output">
+              <h3>{{ $ui.rfq.output }}</h3>
+              <textarea class="atlas__control atlas__summary" readonly data-atlas-rfq-output></textarea>
+              <div class="atlas__actions">
+                <button class="button button--secondary" type="button" data-atlas-action="copy">{{ $ui.rfq.copy }}</button>
+                <button class="button button--secondary" type="button" data-atlas-action="download-rfq">{{ $ui.rfq.download }}</button>
+                <button class="button button--secondary" type="button" data-atlas-action="print">{{ $ui.rfq.print }}</button>
+              </div>
+              <p class="atlas__feedback" data-atlas-feedback aria-live="polite"></p>
+            </section>
+          </div>
+        </section>
+
+        <section class="atlas__panel" id="atlas-panel-sources" role="tabpanel" aria-labelledby="atlas-tab-sources" data-atlas-panel="sources" hidden>
+          <div class="atlas__section-heading">
+            <h2>{{ $ui.sources.heading }}</h2>
+            <p>{{ $ui.sources.intro }}</p>
+          </div>
+          <div class="atlas__source-list" data-atlas-sources></div>
+          <aside class="atlas__portable">
+            <div>
+              <h3>{{ $ui.sources.modelHeading }}</h3>
+              <p>{{ $ui.sources.modelIntro }}</p>
+            </div>
+            <button class="button button--primary" type="button" data-atlas-action="download-model">{{ $ui.sources.download }}</button>
+          </aside>
+        </section>
+
+        <noscript>
+          <p class="atlas__notice">{{ if eq $lang "zh" }}此工具需要启用浏览器 JavaScript。{{ else }}This tool requires JavaScript in the browser.{{ end }}</p>
+        </noscript>
+      </div>
+
+      <script id="flow-control-atlas-data" type="application/json">{{ $atlas | jsonify | safeHTML }}</script>
+      {{ with resources.Get "js/flow-control-atlas.js" }}
+        {{ $atlasJS := . | minify | fingerprint }}
+        <script src="{{ $atlasJS.RelPermalink }}" integrity="{{ $atlasJS.Data.Integrity }}" defer></script>
+      {{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

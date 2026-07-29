@@ -1207,6 +1207,13 @@ button.site-header__link::-moz-focus-inner {
   align-content: start;
   gap: calc(var(--space) * 1); }
 
+.case-studies-list__meta,
+.insights-list__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--space) * 0.5) calc(var(--space) * 1);
+  color: var(--muted-text); }
+
 .products-list__grid--media .products-list__content {
   justify-items: center;
   text-align: center; }
